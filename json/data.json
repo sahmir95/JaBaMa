@@ -1461,46 +1461,46 @@
   ],
   "cities": [
     {
-      " Id": 1,
+      " id": 1,
       "name": "qeshm",
-      "image": ""
+      "image": "https://cdn.jabama.com/image/jabama-images/1297502/a84cd23d-ea99-4457-bbff-adff03f28ecd.jpg"
     },
     {
-      " Id": 2,
+      " id": 2,
       "name": "kish",
-      "image": ""
+      "image": "https://cdn.jabama.com/original/jabama-images/0/8069ff5b-1e61-4650-b4e7-04c849ab3d8f.jpg"
     },
     {
-      " Id": 3,
+      " id": 3,
       "name": "ramsar",
-      "image": ""
+      "image": "https://cdn.jabama.com/original/jabama-images/0/5dd9b930-6fac-40d2-b0d0-25c1225f0b37.jpg"
     },
     {
-      " Id": 4,
+      " id": 4,
       "name": "rasht",
-      "image": ""
+      "image": "https://cdn.jabama.com/image/jabama-images/959393/2daefeaf-eb88-4354-a716-ee65adf2c6da.jpg"
     },
     {
-      " Id": 5,
+      " id": 5,
       "name": "masal",
-      "image": ""
+      "image": "https://cdn.jabama.com/image/jabama-images/1297502/f903885f-466d-4aaf-9e46-0678a7281955.jpg"
     }
   ],
   "category": [
     {
-      " Id": 1,
+      " id": 1,
       "type": "villa"
     },
     {
-      " Id": 2,
+      " id": 2,
       "type": "ecoTourism"
     },
     {
-      " Id": 3,
+      " id": 3,
       "type": "hotel"
     },
     {
-      " Id": 4,
+      " id": 4,
       "type": "kolbe"
     }
   ]
