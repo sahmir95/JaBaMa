@@ -17,6 +17,7 @@ export default function SwiperComponent({ images }) {
   const [swiperRef, setSwiperRef] = useState(null);
   const [isHide, setIsHide] = useState(true);
   const [isEnd, setIsEnd] = useState(false);
+  const [isHover, setIsHover] = useState(false);
 
   const nextHandler = () => {
     swiperRef.slideNext();
@@ -37,7 +38,11 @@ export default function SwiperComponent({ images }) {
     }
   };
   return (
-    <div className="w-[200px] h-[200px] flex justify-center items-center">
+    <div
+      onMouseEnter={() => setIsHover(true)}
+      onMouseLeave={() => setIsHover(false)}
+      className="w-full sm:h-[50%] md:h-[160px] flex justify-center items-center rounded"
+    >
       <Swiper
         cssMode={true}
         navigation={true}
@@ -53,9 +58,11 @@ export default function SwiperComponent({ images }) {
       >
         <div
           className={clsx(
-            "absolute justify-center  left-2 z-10 flex items-center bg-main-silver w-[28px] h-[28px] rounded-full top-1/2",
+            "absolute justify-center  left-2 z-10 flex items-center bg-main-snow w-[28px] h-[28px] rounded-full top-1/2",
             { "opacity-40": isHide === false },
-            { "opacity-100": isHide === "" }
+            { "opacity-100": isHide === "" },
+            { hidden: !isHover },
+            { flex: isHover }
           )}
         >
           <button
@@ -78,15 +85,17 @@ export default function SwiperComponent({ images }) {
         {imgs.map((item) => {
           return (
             <SwiperSlide>
-              <img src={item.image} />
+              <img className="rounded-lg" src={item.image} />
             </SwiperSlide>
           );
         })}
         <div
           class={clsx(
-            "absolute justify-center   top-1/2 right-2 z-10 flex items-center bg-main-silver rounded-full w-[28px] h-[28px]",
+            "absolute justify-center   top-1/2 right-2 z-10 flex items-center bg-main-snow rounded-full w-[28px] h-[28px]",
             { "opacity-40": isHide == true },
-            { "opacity-100": isHide == "" }
+            { "opacity-100": isHide == "" },
+            { hidden: !isHover },
+            { flex: isHover }
           )}
         >
           <button

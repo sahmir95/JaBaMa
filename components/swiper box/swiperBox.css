@@ -1,0 +1,26 @@
+.box {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  overflow-x: scroll;
+  direction: rtl;
+  scroll-behavior: smooth;
+}
+.box::-webkit-scrollbar {
+  background: transparent; /* make scrollbar transparent */
+  -webkit-appearance: none;
+  width: 0;
+  height: 0;
+}
+
+@media screen and (min-width: 320px) {
+  .box {
+    max-height: 720px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .box {
+    height: 300px;
+  }
+}
