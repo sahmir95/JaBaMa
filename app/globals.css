@@ -1,3 +1,34 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: medium;
+  src: url("../public/fonts/Qs_Iranyekan\ medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: bold;
+  src: url("../public/fonts/Qs_Iranyekan\ bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: light;
+  src: url("../public/fonts/Qs_Iranyekan\ light.woff") format("woff");
+}
+
+@font-face {
+  font-family: thin;
+  src: url("../public/fonts/Qs_Iranyekan\ thin.woff") format("woff");
+}
+
+@font-face {
+  font-family: extrabold;
+  src: url("../public/fonts/Qs_Iranyekan\ extrabold.woff") format("woff");
+}
+
+@font-face {
+  font-family: black_Iranyekan;
+  src: url("../public/fonts/Qs_Iranyekan\ black.woff") format("woff");
+}
+

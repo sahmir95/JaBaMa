@@ -1,12 +1,12 @@
 import React from 'react';
 
-const Page = () => {
+const Header = () => {
+
     return (
         <div>
-          welcome to landing
+
         </div>
     );
 };
 
-export default Page;
-
+export default Header;
