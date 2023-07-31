@@ -38,6 +38,16 @@ module.exports = {
       "main-blue": "#2c7df9",
       "main-favorite-red": "#f66047",
     },
+    screens: {
+      'sm': '320px',
+      // => @media (min-width: 320px) { ... }
+
+      'md': '768px',
+      // => @media (min-width: 768px) { ... }
+
+      'lg': '1024px',
+      // => @media (min-width: 1024px) { ... }
+    }
   },
   plugins: [],
 };
