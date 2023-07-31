@@ -2,6 +2,7 @@ import './globals.css'
 import {Inter} from 'next/font/google'
 import Menu from "@/components/menu/Menu";
 import React from "react";
+import AppBanner from "@/components/menu/jabamaAppNotif/AppBanner";
 
 const inter = Inter({subsets: ['latin']})
 
@@ -18,6 +19,7 @@ export default function RootLayout({children}) {
         <body className={inter.className}>
 
         {children}
+        <AppBanner display="lg:hidden"/>
         <Menu display="lg:hidden"/>
         </body>
         </html>
