@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Header = () => {
+const AppBanner = () => {
 
     return (
         <div>
@@ -9,4 +9,4 @@ const Header = () => {
     );
 };
 
-export default Header;
+export default AppBanner;

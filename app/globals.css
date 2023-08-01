@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  direction: rtl;
+}
+
 @font-face {
   font-family: medium;
   src: url("../public/fonts/Qs_Iranyekan\ medium.woff") format("woff");
