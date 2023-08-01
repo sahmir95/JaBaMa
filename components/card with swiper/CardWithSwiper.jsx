@@ -14,7 +14,7 @@ export default function CardWithSwiper({
   children,
 }) {
   return (
-    <div className="sm:w-[50%] md:w-[22.5%] h-full flex flex-col gap-2 items-end">
+    <div className="w-full h-full flex flex-col gap-2 items-end">
       <SwiperComponent images={images} />
       <div className="w-full flex flex-col gap-2">
         <div className="w-full flex  items-center gap-1">

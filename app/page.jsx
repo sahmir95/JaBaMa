@@ -1,4 +1,5 @@
 "use client";
+import CardWithSwiper from "@/components/card with swiper/CardWithSwiper";
 import BoxWithSwiper from "@/components/swiper box/BoxWithSwiper";
 
 import React, { use, useState } from "react";
@@ -59,9 +60,12 @@ const Page = () => {
       hasGas: true,
     },
   ]);
+  const numbers = [0, 1, 2, 3, 4, 5, 6];
   return (
     <div className="w-full h-screen flex justify-center items-center">
-      <BoxWithSwiper data={data[0]} />
+      <BoxWithSwiper data={data[0]} numbers={numbers}>
+        <CardWithSwiper />
+      </BoxWithSwiper>
     </div>
   );
 };

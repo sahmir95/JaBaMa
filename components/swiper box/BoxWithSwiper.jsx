@@ -6,8 +6,9 @@ import CardWithSwiper from "../card with swiper/CardWithSwiper";
 import { useRef, useState } from "react";
 import { Icon } from "@iconify/react";
 import clsx from "clsx";
+import React from "react";
 
-export default function BoxWithSwiper({ data }) {
+export default function BoxWithSwiper({ children, data, numbers }) {
   let scrl = useRef(null);
   const [scrollX, setscrollX] = useState(0);
   const [scrolEnd, setscrolEnd] = useState(false);
@@ -58,15 +59,21 @@ export default function BoxWithSwiper({ data }) {
       </button>
 
       <ul ref={scrl} onScroll={scrollCheck} className="box">
-        <CardWithSwiper
-          rate={data.rate}
-          comments={data.comments}
-          title={data.title}
-          province={data.province}
-          city={data.city}
-          price={data.price.base}
-          images={data.images}
-        />
+        {numbers.map((item) => {
+          return (
+            <li className="w-[22.5%]">
+              {React.cloneElement(children, {
+                rate: data.rate,
+                comments: data.comments,
+                title: data.title,
+                province: data.province,
+                city: data.city,
+                price: data.price.base,
+                images: data.images,
+              })}
+            </li>
+          );
+        })}
       </ul>
 
       <button
