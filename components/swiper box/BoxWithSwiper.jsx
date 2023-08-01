@@ -7,7 +7,7 @@ import { useRef, useState } from "react";
 import { Icon } from "@iconify/react";
 import clsx from "clsx";
 
-export default function BoxWithSwiper({ images }) {
+export default function BoxWithSwiper({ data }) {
   let scrl = useRef(null);
   const [scrollX, setscrollX] = useState(0);
   const [scrolEnd, setscrolEnd] = useState(false);
@@ -30,16 +30,15 @@ export default function BoxWithSwiper({ images }) {
     } else {
       setScrolStart(false);
     }
-
-    console.log(Math.floor(scrollX));
   };
   return (
     <div
       ref={withDiv}
-      className="sm:w-full sm:mr-[5%] lg:w-[70%] lg:mr-0 flex justify-center items-center pt-12 rounded relative"
+      className="sm:w-full sm:mr-[5%] lg:w-[80%] lg:mr-0 flex justify-center items-center pt-12 rounded relative"
     >
       <p className="font-light sm:text-xs sm:top-5 lg:text-base absolute lg:top-0 right-0">
-        اقامتِ با کیفیت در پایتخت با ما
+        اقامتِ با کیفیت در{" "}
+        <span>{data.city == "تهران" ? "پایتخت" : data.city}</span> با ما
       </p>
       <button
         className={clsx(
@@ -59,15 +58,15 @@ export default function BoxWithSwiper({ images }) {
       </button>
 
       <ul ref={scrl} onScroll={scrollCheck} className="box">
-        <CardWithSwiper images={images} />
-        <CardWithSwiper images={images} />
-        <CardWithSwiper images={images} />
-        <CardWithSwiper images={images} />
-        <CardWithSwiper images={images} />
-        <CardWithSwiper images={images} />
-        <CardWithSwiper images={images} />
-        <CardWithSwiper images={images} />
-        <CardWithSwiper images={images} />
+        <CardWithSwiper
+          rate={data.rate}
+          comments={data.comments}
+          title={data.title}
+          province={data.province}
+          city={data.city}
+          price={data.price.base}
+          images={data.images}
+        />
       </ul>
 
       <button

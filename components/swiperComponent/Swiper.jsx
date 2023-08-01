@@ -1,8 +1,14 @@
 "use client";
 
 import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
-import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper/modules";
-import { useEffect, useRef, useState } from "react";
+import {
+  Navigation,
+  Pagination,
+  Mousewheel,
+  Keyboard,
+  Lazy,
+} from "swiper/modules";
+import { lazy, useEffect, useRef, useState } from "react";
 import clsx from "clsx";
 // Import Swiper styles
 import "./swiper.css";
@@ -11,6 +17,8 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/mousewheel";
 import "swiper/css/keyboard";
+import "react-lazy-load-image-component/src/effects/blur.css";
+import { Icon } from "@iconify/react";
 
 export default function SwiperComponent({ images }) {
   const [imgs, setImgs] = useState(images);
@@ -41,7 +49,7 @@ export default function SwiperComponent({ images }) {
     <div
       onMouseEnter={() => setIsHover(true)}
       onMouseLeave={() => setIsHover(false)}
-      className="w-full sm:h-[50%] md:h-[160px] flex justify-center items-center rounded"
+      className="w-full sm:h-[50%] md:h-[180px] flex justify-center items-center rounded-lg"
     >
       <Swiper
         cssMode={true}
@@ -49,6 +57,7 @@ export default function SwiperComponent({ images }) {
         pagination={true}
         mousewheel={true}
         keyboard={true}
+        lazy={true}
         modules={[Navigation, Pagination, Mousewheel, Keyboard]}
         onSwiper={(swiper) => setSwiperRef(swiper)}
         onReachBeginning={() => setIsHide(true)}
@@ -69,23 +78,20 @@ export default function SwiperComponent({ images }) {
             onClick={() => nextHandler()}
             class="bg-white  flex justify-center items-center w-full h-full rounded-full shadow focus:outline-none"
           >
-            <svg
-              viewBox="0 0 20 20"
-              fill="currentColor"
-              class="chevron-left w-5 h-5"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
-                clip-rule="evenodd"
-              ></path>
-            </svg>
+            <Icon
+              icon="grommet-icons:next"
+              color="black"
+              width="14"
+              height="14"
+              hFlip={true}
+            />
           </button>
         </div>
         {imgs.map((item) => {
           return (
             <SwiperSlide>
-              <img className="rounded-lg" src={item.image} />
+              <img className="rounded-lg" src={item} loading="lazy" />
+              <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
             </SwiperSlide>
           );
         })}
@@ -102,17 +108,12 @@ export default function SwiperComponent({ images }) {
             onClick={prevHandler}
             class="bg-white  flex justify-center items-center w-full h-full rounded-full shadow focus:outline-none"
           >
-            <svg
-              viewBox="0 0 20 20"
-              fill="currentColor"
-              class="chevron-right w-5 h-5"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                clip-rule="evenodd"
-              ></path>
-            </svg>
+            <Icon
+              icon="grommet-icons:next"
+              color="black"
+              width="14"
+              height="14"
+            />
           </button>
         </div>
       </Swiper>
