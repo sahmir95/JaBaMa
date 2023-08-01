@@ -1,4 +1,5 @@
 "use client";
+
 import CardWithSwiper from "@/components/card with swiper/CardWithSwiper";
 import BoxWithSwiper from "@/components/swiper box/BoxWithSwiper";
 
