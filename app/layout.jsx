@@ -5,6 +5,7 @@ import React from "react";
 import AppBanner from "@/components/menu/jabamaAppNotif/AppBanner";
 import HeaderPop from "@/components/header/headerPop/HeaderPop";
 import HeaderLanding from "@/components/header/HeaderLanding";
+import Footer from "@/components/footer/Footer";
 
 const inter = Inter({subsets: ['latin']})
 
@@ -26,6 +27,7 @@ export default function RootLayout({children}) {
 
         <AppBanner display="lg:hidden"/>
         <Menu display="lg:hidden"/>
+        <Footer display="lg:block"/>
         </body>
         </html>
     )
