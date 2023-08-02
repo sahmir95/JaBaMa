@@ -8,7 +8,7 @@ import { Icon } from "@iconify/react";
 import clsx from "clsx";
 import React from "react";
 
-export default function BoxWithSwiper({ children, data, numbers }) {
+export default function BoxWithSwiper({ children, data, city }) {
   let scrl = useRef(null);
   const [scrollX, setscrollX] = useState(0);
   const [scrolEnd, setscrolEnd] = useState(false);
@@ -35,11 +35,11 @@ export default function BoxWithSwiper({ children, data, numbers }) {
   return (
     <div
       ref={withDiv}
-      className="sm:w-full sm:mr-[5%] lg:w-[80%] lg:mr-0 flex justify-center items-center pt-12 rounded relative"
+      className="sm:w-full lg:w-[80%] lg:mr-0 flex justify-center items-center pt-12 rounded relative"
     >
       <p className="font-light sm:text-xs sm:top-5 lg:text-base absolute lg:top-0 right-0">
-        اقامتِ با کیفیت در{" "}
-        <span>{data.city == "تهران" ? "پایتخت" : data.city}</span> با ما
+        اقامتِ با کیفیت در <span>{city == "تهران" ? "پایتخت" : city}</span> با
+        ما
       </p>
       <button
         className={clsx(
@@ -59,17 +59,17 @@ export default function BoxWithSwiper({ children, data, numbers }) {
       </button>
 
       <ul ref={scrl} onScroll={scrollCheck} className="box">
-        {numbers.map((item) => {
+        {data.map((item) => {
           return (
             <li className="w-[22.5%]">
               {React.cloneElement(children, {
-                rate: data.rate,
-                comments: data.comments,
-                title: data.title,
-                province: data.province,
-                city: data.city,
-                price: data.price.base,
-                images: data.images,
+                rate: item.rate,
+                comments: item.comments,
+                title: item.title,
+                province: item.province,
+                city: item.city,
+                // price: item.price.base,
+                images: item.images,
               })}
             </li>
           );
