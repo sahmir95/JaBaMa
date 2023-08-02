@@ -29,6 +29,7 @@ module.exports = {
       "main-light-silver": "#e7e8e9",
       "main-white-smoke": "#f0f0f0",
       "main-snow": "#f1f1f1",
+      "main-border-gray": "#dddedf",
       "main-light-grayish-silver": "#f5f5f5",
       "main-light-grayish-white": "#f7f7f7",
       "main-white": "#ffffff",
