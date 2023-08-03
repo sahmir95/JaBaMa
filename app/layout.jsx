@@ -6,6 +6,8 @@ import AppBanner from "@/components/menu/jabamaAppNotif/AppBanner";
 import HeaderPop from "@/components/header/headerPop/HeaderPop";
 import HeaderLanding from "@/components/header/HeaderLanding";
 import Footer from "@/components/footer/Footer";
+import HeaderPopDesktop from "@/components/header/headerPop/HeaderPopDesktop";
+import HeaderDesktop from "@/components/header/HeaderDesktop";
 
 const inter = Inter({subsets: ['latin']})
 
@@ -20,8 +22,10 @@ export default function RootLayout({children}) {
     return (
         <html lang="en">
         <body className={inter.className}>
-        <HeaderPop/>
+        <HeaderPop display="lg:hidden" img="/images/notifBanner.jpg"/>
+        <HeaderPopDesktop display="lg:block" img="/images/notifBannerDesktop.jpg"/>
         <HeaderLanding display="lg:hidden"/>
+        <HeaderDesktop/>
 
         {children}
 
