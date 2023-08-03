@@ -8,7 +8,8 @@ import { Icon } from "@iconify/react";
 import clsx from "clsx";
 import React from "react";
 
-export default function BoxWithSwiper({ children, data, numbers }) {
+export default function BoxWithSwiper({ children, data, city }) {
+  console.log(data)
   let scrl = useRef(null);
   const [scrollX, setscrollX] = useState(0);
   const [scrolEnd, setscrolEnd] = useState(false);
@@ -59,17 +60,18 @@ export default function BoxWithSwiper({ children, data, numbers }) {
       </button>
 
       <ul ref={scrl} onScroll={scrollCheck} className="box">
-        {numbers.map((item) => {
+        {data.map((item) => {
           return (
             <li className="w-[22.5%]">
               {React.cloneElement(children, {
-                rate: data.rate,
-                comments: data.comments,
-                title: data.title,
-                province: data.province,
-                city: data.city,
-                price: data.price.base,
-                images: data.images,
+                rate: item.rate,
+                comments: item.comments,
+                title: item.title,
+                province: item.province,
+                city: item.city,
+                images: item.images,
+                name: item.name,
+                image : item.image
               })}
             </li>
           );
