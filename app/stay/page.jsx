@@ -70,7 +70,7 @@ export default function Detail() {
                         <a className="underline">{data.province},{data.city}</a>
                     </div>
                 </div>
-                <div className="w-[80%] h-[1px] bg-main-light-gray mt-[20px]"></div>
+                <div className="w-full h-[1px] bg-main-light-gray mt-[20px]"></div>
                 <div className="w-full mt-[20px]">
                     <div className="font-bold">{data.type}</div>
                     <div className="flex justify-between items-center">
@@ -80,14 +80,28 @@ export default function Detail() {
                         </div>
                     </div>
                 </div>
-                <div className="w-[80%] h-[1px] bg-main-light-gray mt-[20px]"></div>
+                <div className="w-full h-[1px] bg-main-light-gray mt-[20px]"></div>
                 <div className="mt-[20px] flex justify-center items-center">
-                    <div className="w-[10%]"> <img width="24" height="24" src="https://img.icons8.com/external-tanah-basah-basic-outline-tanah-basah/24/1A1A1A/external-flash-multimedia-tanah-basah-basic-outline-tanah-basah.png" alt="thunder"/></div>
-                    <div className="w-[90%]">
-                        <p>رزرو آنی و قطعی جاباما</p>
-                        <p>برای رزرو نهایی این آپارتمان نیازی به تأیید از سمت میزبان نخواهید داشت و رزرو شما قطعی خواهد بود.</p>
+                    <div className="w-[15%] mt-[-20px] "> <img className="w-[36px] h-[25px]" src="https://img.icons8.com/external-tanah-basah-basic-outline-tanah-basah/24/1A1A1A/external-flash-multimedia-tanah-basah-basic-outline-tanah-basah.png" alt="thunder"/></div>
+                    <div className="w-[85%]">
+                        <p className="font-bold text-[0.9rem]">رزرو آنی و قطعی جاباما</p>
+                        <p className="font-light text-[0.75rem]">برای رزرو نهایی این آپارتمان نیازی به تأیید از سمت میزبان نخواهید داشت و رزرو شما قطعی خواهد بود.</p>
                     </div>
                 </div>
+                <div className="w-full h-[1px] bg-main-light-gray mt-[20px]"></div>
+                <div className="w-full flex justify-start items-start flex-col mt-[20px]">
+                    <div>
+                        <h2 className="font-bold text-[1rem]">مشخصات کلی {data.type}</h2>
+                    </div>
+                    <div className="mt-[20px] flex justify-center items-center">
+                        <div className="w-[15%] mt-[-20px] "> <img className="w-[32px] h-[25px]" src="https://img.icons8.com/external-tanah-basah-basic-outline-tanah-basah/24/external-line-wedding-tanah-basah-basic-outline-tanah-basah-27.png" alt="thunder"/></div>
+                        <div className="w-[85%]">
+                            <p className="font-bold text-[0.9rem]">درباره {data.type}</p>
+                            <p className="font-light text-[0.75rem]">{data.summary}</p>
+                        </div>
+                    </div>
+                </div>
+                <div className="w-full h-[600px]">1</div>
             </div>
 
         </div>
