@@ -70,6 +70,8 @@ export default function BoxWithSwiper({ children, data, city }) {
                 city: item.city,
                 // price: item.price.base,
                 images: item.images,
+                name: item.name,
+                image: item.image,
               })}
             </li>
           );
