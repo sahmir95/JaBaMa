@@ -31,6 +31,7 @@ module.exports = {
       "main-snow": "#f1f1f1",
       "main-border-gray": "#dddedf",
       "main-light-grayish-silver": "#f5f5f5",
+      "main-lightish-gray": "#f3f4f5",
       "main-light-grayish-white": "#f7f7f7",
       "main-white": "#ffffff",
       "main-light-orange": "#ffa41b",

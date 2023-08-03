@@ -20,8 +20,7 @@ export default function RootLayout({children}) {
     return (
         <html lang="en">
         <body className={inter.className}>
-        <HeaderPop/>
-        <HeaderLanding display="lg:hidden"/>
+
 
         {children}
 

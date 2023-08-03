@@ -36,6 +36,24 @@ html {
   src: url("../public/fonts/Qs_Iranyekan\ black.woff") format("woff");
 }
 
+@layer utilities {
+  @variants responsive {
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+
+    .no-scrollbar {
+        -ms-overflow-style: none;  
+        scrollbar-width: none; 
+    }
+  }
+}
+
+.customPadOption {
+  padding: 5.49px 11px 5.32px 14px;
+  line-height: 1.6;
+}
+
 .customPhoneRounded {
   border-radius: 22px 32px 32px 22px;
 }

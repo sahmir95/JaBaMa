@@ -1,43 +1,52 @@
+import SearchOption from "./SearchOption"
 
 
-export default SearchOptions = () => {
+const SearchOptions = () => {
+
   const filterFields = [
     {
       name: "انتخاب تاریخ",
-      icon: '',
+      icon: '/images/icon-calendar.png',
       onClick: () => console.log("are")
     },
     {
       name: "تعداد نفرات",
-      icon: '',
+      icon: '/images/icon-person.png',
       onClick: () => console.log("are")
     },
     {
       name: "فیلترها",
-      icon: '',
+      icon: '/images/icon-filter.png',
       onClick: () => console.log("are")
     },  
     {
       name: "انتخاب شهر",
-      icon: '',
       onClick: () => console.log("are")
     },
     {
       name: "قیمت برای هر شب",
-      icon: '',
       onClick: () => console.log("are")
     },         
     {
       name: "نوع اقامتگاه",
-      icon: '',
       onClick: () => console.log("are")
     },  
     
   ]
 
   return (
-    <div>
-        
+    <div className="overflow-x-hidden">
+      <div className="px-5 flex overflow-x-scroll no-scrollbar w-full whitespace-nowrap">
+          {filterFields.map((field) => {
+          return (
+            <>
+              <SearchOption name={field?.name} icon={field?.icon} onClick={field?.onClick} />
+            </>
+          )
+          })}
+      </div>
     </div>
   )
 }
+
+export default SearchOptions
