@@ -78,6 +78,10 @@
             "base": "2",
             "extra": "2"
           },
+          "price": {
+            "base": 2100000,
+            "extra": 200000
+          },
           "bedroom": {
             "rooms": 1,
             "single": 0,
@@ -123,6 +127,10 @@
             "base": "4",
             "extra": "2"
           },
+          "price": {
+            "base": 2100000,
+            "extra": 200000
+          },
           "bedroom": {
             "rooms": 1,
             "single": 0,
@@ -167,6 +175,10 @@
           "capacity": {
             "base": "8",
             "extra": "2"
+          },
+          "price": {
+            "base": 2100000,
+            "extra": 200000
           },
           "bedroom": {
             "rooms": 4,
@@ -479,6 +491,10 @@
             "base": "6",
             "extra": "2"
           },
+          "price": {
+            "base": 2100000,
+            "extra": 200000
+          },
           "bedroom": {
             "rooms": 3,
             "single": 0,
@@ -524,6 +540,10 @@
           "capacity": {
             "base": 6,
             "extra": 6
+          },
+          "price": {
+            "base": 2100000,
+            "extra": 200000
           },
           "bedroom": {
             "rooms": 3,
@@ -1505,5 +1525,3 @@
     }
   ]
 }
-
-

@@ -34,10 +34,12 @@ module.exports = {
       "main-light-grayish-white": "#f7f7f7",
       "main-white": "#ffffff",
       "main-light-orange": "#ffa41b",
-      "main-orange": "#ffa41b",
+      "main-orange": "#e08905",
       "main-dark-red": "#fb3449",
       "main-blue": "#2c7df9",
       "main-favorite-red": "#f66047",
+      "main-banner-app": "#fef5e6",
+      "main-transparent": "transparent"
     },
     screens: {
       'sm': '320px',
