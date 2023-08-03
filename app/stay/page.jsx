@@ -93,13 +93,42 @@ export default function Detail() {
                     <div>
                         <h2 className="font-bold text-[1rem]">مشخصات کلی {data.type}</h2>
                     </div>
-                    <div className="mt-[20px] flex justify-center items-center">
-                        <div className="w-[15%] mt-[-20px] "> <img className="w-[32px] h-[25px]" src="https://img.icons8.com/external-tanah-basah-basic-outline-tanah-basah/24/external-line-wedding-tanah-basah-basic-outline-tanah-basah-27.png" alt="thunder"/></div>
-                        <div className="w-[85%]">
-                            <p className="font-bold text-[0.9rem]">درباره {data.type}</p>
-                            <p className="font-light text-[0.75rem]">{data.summary}</p>
+                    <div className="mt-[20px] flex flex-col justify-around items-center gap-y-[20px]">
+                        <div className="w-full flex justify-start items-center">
+                            <div className="w-[50px] "> <img className="w-[28px] h-[30px]" src="https://img.icons8.com/external-tanah-basah-basic-outline-tanah-basah/24/external-line-wedding-tanah-basah-basic-outline-tanah-basah-27.png" alt="thunder"/></div>
+                            <div className="w-full">
+                                <p className="font-bold text-[0.9rem]">درباره {data.type}</p>
+                                <p className="font-light text-[0.75rem]">{data.summary}</p>
+                            </div>
                         </div>
+                        <div className="w-full flex justify-start items-center">
+                            <div className="w-[50px] "> <img className="w-[28px] h-[30px]" src="https://img.icons8.com/ios/50/user-group-man-man.png" alt="capacity"/> </div>
+                            <div className="w-full">
+                                <p className="font-bold text-[0.9rem]">ظرفیت</p>
+                                <p className="font-light text-[0.75rem]">ظرفیت تا {data.capacity.base + data.capacity.extra} ({data.capacity.base} نفر پایه + تا {data.capacity.extra} نفر اضافه)</p>
+                            </div>
+                        </div>
+                        <div className="w-full flex justify-start items-center ">
+                            <div className="w-[50px] "> <img className="w-[28px] h-[30px]" src="https://img.icons8.com/pastel-glyph/64/single-bed--v5.png" alt="bed"/></div>
+                            <div className="w-full">
+                                <p className="font-bold text-[0.9rem]">سرویس‌های خواب</p>
+                                <p className=" font-light text-[0.75rem]">{data.bedroom.rooms} اتاق . {data.bedroom.double} تخت دو نفره . {data.bedroom.single} تخت یک نفره . {data.bedroom.traditional} رخت خواب سنتی</p>
+                            </div>
+                        </div>
+                        <div className="w-full flex justify-start items-center">
+                            <div className="w-[50px] "> <img className="w-[28px] h-[30px]" src="https://img.icons8.com/external-those-icons-lineal-those-icons/24/external-Toilet-Paper-halloween-those-icons-lineal-those-icons.png" alt="paper"/></div>
+                            <div className="w-full">
+                                <p className="font-bold text-[0.9rem]">سرویس‌های بهداشتی</p>
+                                <p className="font-light text-[0.75rem]">{data.bathroom.persianWC} سرویس ایرانی . {data.bathroom.foreignWC} سرویس فرنگی . {data.bathroom.shower} حمام</p>
+                            </div>
+                        </div>
+
                     </div>
+                </div>
+                <div className="w-full h-[1px] bg-main-light-gray mt-[20px]"></div>
+                <div className="w-full">
+                    <h2 className="mt-[20px] font-bold">توضیحات {data.type}</h2>
+                    <div></div>
                 </div>
                 <div className="w-full h-[600px]">1</div>
             </div>
