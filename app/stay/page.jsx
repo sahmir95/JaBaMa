@@ -1,4 +1,5 @@
 import "../globals.css"
+import {ReadMoreLink} from "@/components/ReadMore/ReadMore";
 const data = {
         "id": 1,
         "title": "اجاره ویلا دوخوابه استخردار آبگرم سروستان کردان",
@@ -50,7 +51,11 @@ const data = {
         "hasElectricity": true,
         "hasGas": true
     }
+
+
+
 export default function Detail() {
+
     return (
         <div className="w-full flex justify-center items-center flex-col">
             <div className="w-full h-40">
@@ -81,11 +86,11 @@ export default function Detail() {
                     </div>
                 </div>
                 <div className="w-full h-[1px] bg-main-light-gray mt-[20px]"></div>
-                <div className="mt-[20px] flex justify-center items-center">
-                    <div className="w-[15%] mt-[-20px] "> <img className="w-[36px] h-[25px]" src="https://img.icons8.com/external-tanah-basah-basic-outline-tanah-basah/24/1A1A1A/external-flash-multimedia-tanah-basah-basic-outline-tanah-basah.png" alt="thunder"/></div>
-                    <div className="w-[85%]">
-                        <p className="font-bold text-[0.9rem]">رزرو آنی و قطعی جاباما</p>
-                        <p className="font-light text-[0.75rem]">برای رزرو نهایی این آپارتمان نیازی به تأیید از سمت میزبان نخواهید داشت و رزرو شما قطعی خواهد بود.</p>
+                <div className="mt-[20px] flex justify-start items-center">
+                    <div className="w-[50px] mt-[-20px] "> <img className="w-[36px] h-[25px]" src="https://img.icons8.com/external-tanah-basah-basic-outline-tanah-basah/24/1A1A1A/external-flash-multimedia-tanah-basah-basic-outline-tanah-basah.png" alt="thunder"/></div>
+                    <div className="w-full">
+                        <p className="w-full font-bold text-[0.9rem]">رزرو آنی و قطعی جاباما</p>
+                        <p className="w-full font-light text-[0.75rem]">برای رزرو نهایی این آپارتمان نیازی به تأیید از سمت میزبان نخواهید داشت و رزرو شما قطعی خواهد بود.</p>
                     </div>
                 </div>
                 <div className="w-full h-[1px] bg-main-light-gray mt-[20px]"></div>
@@ -128,7 +133,9 @@ export default function Detail() {
                 <div className="w-full h-[1px] bg-main-light-gray mt-[20px]"></div>
                 <div className="w-full">
                     <h2 className="mt-[20px] font-bold">توضیحات {data.type}</h2>
-                    <div></div>
+                    <div className="w-full">
+                        <ReadMoreLink text={data.description}/>
+                    </div>
                 </div>
                 <div className="w-full h-[600px]">1</div>
             </div>
