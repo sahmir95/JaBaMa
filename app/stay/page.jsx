@@ -1,5 +1,6 @@
 import "../globals.css"
 import {ReadMoreLink} from "@/components/ReadMore/ReadMore";
+import {Facility} from "@/components/facilities/Facility";
 const data = {
         "id": 1,
         "title": "اجاره ویلا دوخوابه استخردار آبگرم سروستان کردان",
@@ -22,7 +23,7 @@ const data = {
             "name": "مهرداد چهری"
         },
         "summary": "150 متر زیربنا",
-        "description": "وشصیشصیشصیشصیشصیشصیشصیشصیشصیشصیشصیشصیشصی 4 کیلومتر استخر رو بسته",
+        "description": "با سلام و احترام خدمت حضار گرامی و شاد باش میگم 4 کیلومتر استخر رو بسته",
         "capacity": {
             "base": 4,
             "extra": 3
@@ -42,11 +43,11 @@ const data = {
             "foreignWC": 0,
             "shower": 1
         },
-        "hasCooling": true,
+        "hasCooling": false,
         "hasHeating": true,
         "hasFurniture": true,
-        "hasTV": false,
-        "hasWifi": true,
+        "hasTV": true,
+        "hasWifi": false,
         "hasWater": true,
         "hasElectricity": true,
         "hasGas": true
@@ -55,7 +56,7 @@ const data = {
 
 
 export default function Detail() {
-
+    const facility = [data.hasCooling, data.hasTV, data.hasWater, data.hasGas, data.hasWifi,data.hasElectricity,data.hasFurniture, data.hasHeating]
     return (
         <div className="w-full flex justify-center items-center flex-col">
             <div className="w-full h-40">
@@ -133,11 +134,19 @@ export default function Detail() {
                 <div className="w-full h-[1px] bg-main-light-gray mt-[20px]"></div>
                 <div className="w-full">
                     <h2 className="mt-[20px] font-bold">توضیحات {data.type}</h2>
-                    <div className="w-full">
-                        <ReadMoreLink text={data.description}/>
+                    <div className="w-full mt-[20px]">
+                        <ReadMoreLink text={data.description} type={data.type}/>
                     </div>
                 </div>
+                <div className="w-full h-[1px] bg-main-light-gray mt-[20px]"></div>
+                <div  className="w-full mt-[20px] flex flex-col justify-start items-start gap-y-[20px]">
+                    <Facility faci={facility} type={data.type} Tv={data.hasTV} />
+                </div>
+
+
+
                 <div className="w-full h-[600px]">1</div>
+
             </div>
 
         </div>
