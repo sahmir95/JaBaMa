@@ -1,6 +1,6 @@
 "use client";
 import { Icon } from "@iconify/react";
-import React from "react";
+import React, { useState } from "react";
 import SwiperComponent from "../swiperComponent/Swiper";
 
 export default function CardWithSwiper({
@@ -11,7 +11,9 @@ export default function CardWithSwiper({
   city,
   province,
   price,
-  children,
+  bedroom,
+  capacity,
+  isCocacity,
 }) {
   return (
     <div className="w-full h-full flex flex-col gap-2 items-end">
@@ -23,19 +25,31 @@ export default function CardWithSwiper({
           <p className="font-light text-[0.625rem]">{`(${comments} دیدگاه)`}</p>
         </div>
         <p className="w-full font-medium text-sm text-right truncate">
-          {`${title.slice(
-            //boresh mide matn ro
-            title.indexOf("ویلا"), //az koja
-            title.indexOf(city) // ta koja
-          )}`}
+          {`${title.replace("اجاره", "").replace(`${city}`, "")}`}
         </p>
-        <p className="w-full font-medium text-[0.675rem] text-right text-main-slate-gray">
+        <p className="w-full h-4 font-medium text-[0.67rem] flex items-end text-right text-main-slate-gray">
           <span>{`استان ${province}،`}</span>
           <span> {city}</span>
+          {bedroom && (
+            <span className="flex items-end text-right">
+              <span className="flex items-end mx-[2px] text-xl"> . </span>
+              <span>{bedroom} اتاق</span>
+            </span>
+          )}
+          {isCocacity && (
+            <span className="flex items-end text-right">
+              <span className=" flex mr-[2px] text-xl"> . </span>
+              <span className="mx-1"> {capacity.base} نفر پایه </span> +
+              <span className="mr-1"> {capacity.extra} نفر اضافه </span>
+            </span>
+          )}
         </p>
-        <p className="w-full font-medium text-[0.75rem] flex  text-main-slate-gray">
-          <span className=" font-medium text-[0.8rem] text-main-black">
-            {price} تومان
+        <p className="w-full font-medium text-[0.75rem] flex items-center text-main-slate-gray">
+          <span className="sm:hidden text-main-black text-[0.65rem]">
+            شروع قیمت از:
+          </span>
+          <span className=" font-medium text-[0.8rem] mr-[4px] text-main-black">
+            {price && price} تومان
           </span>
           <span>/هرشب</span>
         </p>

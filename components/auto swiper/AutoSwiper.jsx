@@ -9,7 +9,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import "./autoSwiper.css";
+
 // import required modules
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 export default function AutoSwiper() {
@@ -21,7 +21,7 @@ export default function AutoSwiper() {
     "https://cdn.jabama.com/image/jabama-images/1297502/34609171-bc26-498d-a378-1862c117ed5f.jpg",
   ];
   return (
-    <div className="w-full sm:min-h-[160px] md:max-h-[360px] px-[20px] flex items-center justify-center">
+    <div className="w-full sm:min-h-[160px] md:hidden px-[20px] flex items-center justify-center">
       <Swiper
         dir="rtl"
         spaceBetween={30}

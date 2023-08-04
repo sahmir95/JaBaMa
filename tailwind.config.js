@@ -38,18 +38,18 @@ module.exports = {
       "main-blue": "#2c7df9",
       "main-favorite-red": "#f66047",
       "main-banner-app": "#fef5e6",
-      "main-transparent": "transparent"
+      "main-transparent": "transparent",
     },
     screens: {
-      'sm': '320px',
+      sm: "320px",
       // => @media (min-width: 320px) { ... }
 
-      'md': '768px',
+      md: "768px",
       // => @media (min-width: 768px) { ... }
 
-      'lg': '1024px',
+      lg: "1024px",
       // => @media (min-width: 1024px) { ... }
-    }
+    },
   },
   plugins: [],
 };

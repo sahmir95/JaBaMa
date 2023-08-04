@@ -1,7 +1,7 @@
 const IconsSection = () => {
   return (
-    <div className="w-full px-[20px]  h-auto flex flex-col items-center">
-      <div className="w-full flex justify-between pt-[8%]">
+    <div className="w-full px-[20px]  h-auto flex flex-col md:hidden items-center">
+      <div className="w-full flex justify-between pt-[8%] px-[8%]">
         <div className="w-[48px] flex flex-col justify-center items-center">
           <img className="" src="/images/Vila.png" alt="ویلا" />
           <p className="font-medium text-[0.75rem]">ویلا</p>
@@ -19,7 +19,7 @@ const IconsSection = () => {
           <p className="font-medium text-[0.75rem]">هتل</p>
         </div>
       </div>
-      <div className="w-full flex justify-between pt-[8%]">
+      <div className="w-full flex justify-between pt-[8%] px-[8%]">
         <div className="w-[48px] flex flex-col justify-center items-center">
           <img className="" src="/images/Vila.png" alt="ویلا" />
           <p className="font-medium text-[0.75rem]">ویلا</p>

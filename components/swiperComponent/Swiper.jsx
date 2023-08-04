@@ -8,7 +8,7 @@ import {
   Keyboard,
   Lazy,
 } from "swiper/modules";
-import { lazy, useEffect, useRef, useState } from "react";
+import React, { lazy, useEffect, useRef, useState } from "react";
 import clsx from "clsx";
 // Import Swiper styles
 import "./swiper.css";
@@ -49,7 +49,7 @@ export default function SwiperComponent({ images }) {
     <div
       onMouseEnter={() => setIsHover(true)}
       onMouseLeave={() => setIsHover(false)}
-      className="w-full sm:h-[50%] md:h-[180px] flex justify-center items-center rounded-lg"
+      className="w-full sm:h-[100px] md:h-[220px]  flex justify-center items-center rounded-lg"
     >
       <Swiper
         cssMode={true}
@@ -90,8 +90,12 @@ export default function SwiperComponent({ images }) {
         {imgs.map((item) => {
           return (
             <SwiperSlide>
-              <img className="rounded-lg" src={item} loading="lazy" />
-              <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+              <img
+                className="rounded-lg object-fill"
+                src={item}
+                loading="lazy"
+                placeholder="https://i.postimg.cc/8CVt73NY/wonderlane-N-As0-VQu7s-unsplash.jpg"
+              />
             </SwiperSlide>
           );
         })}
