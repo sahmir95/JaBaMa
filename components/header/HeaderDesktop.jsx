@@ -4,7 +4,7 @@ import {HiOutlineHeart} from "react-icons/hi";
 const HeaderDesktop = () => {
 
     return (
-        <div className="absolute inset-0 mt-[60px] w-full grid grid-cols-2 h-20 max-w-[1400px] mx-auto px-4">
+        <div className="absolute inset-0 mt-[60px] w-full grid grid-cols-2 h-20 max-w-[1400px] mx-auto px-4 z-40">
             <div className="flex items-center justify-start">
                 <a href="https://www.jabama.com/">
                     <img src="/images/white-logo.svg" alt="logo"/>
