@@ -11,6 +11,15 @@ const data = await getLocalData();
 const Page = () => {
   return (
     <div className="w-full min-h-screen flex flex-col items-center">
+      <section className="sm:hidden md:hidden lg:block relative">
+        <div className="shadowHeader">
+          <img
+            className="w-full h-full imageRendering object-cover"
+            src="/images/background.jpg"
+            alt="bg"
+          />
+        </div>
+      </section>
       <AutoSwiper />
       <IconsSection />
       <div className="w-full">
