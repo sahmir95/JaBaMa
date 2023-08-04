@@ -49,6 +49,27 @@ html {
   }
 }
 
+.bodyContainer {
+  background-color: white;
+  overflow: hidden;
+}
+
+body.modal-open {
+  overflow: hidden;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background: #7e7e7e7c;
+  z-index: 100;
+}
+
 .customPadOption {
   padding: 5.49px 11px 5.32px 14px;
   line-height: 1.6;

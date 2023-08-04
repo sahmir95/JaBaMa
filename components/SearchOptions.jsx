@@ -1,7 +1,36 @@
 import SearchOption from "./SearchOption"
+import { useState } from "react"
+import Modal from "./Modal"
+import FilterModal from "./filterModal"
 
 
 const SearchOptions = () => {
+
+
+  const [isOpen, setIsOpen] = useState(false)
+  const [modalType, setModalType] = useState("")
+
+  const modalClassName = (key) => {
+    switch (key) {
+      case "filter":
+        return "w-full h-full"
+        break;
+    
+      default:
+        break;
+    }
+  }
+
+  const renderModal = (key) => {
+    switch (key) {
+      case "filter":
+        return <FilterModal />
+        break;
+    
+      default:
+        break;
+    }
+  }
 
   const filterFields = [
     {
@@ -17,7 +46,10 @@ const SearchOptions = () => {
     {
       name: "فیلترها",
       icon: '/images/icon-filter.png',
-      onClick: () => console.log("are")
+      onClick: () => {
+        setModalType((prev) => "filter")
+        setIsOpen(true)
+      }
     },  
     {
       name: "انتخاب شهر",
@@ -35,17 +67,22 @@ const SearchOptions = () => {
   ]
 
   return (
-    <div className="overflow-x-hidden">
-      <div className="px-5 flex overflow-x-scroll no-scrollbar w-full whitespace-nowrap">
-          {filterFields.map((field) => {
-          return (
-            <>
-              <SearchOption name={field?.name} icon={field?.icon} onClick={field?.onClick} />
-            </>
-          )
-          })}
+    <>
+      <div className="overflow-x-hidden">
+        <div className="px-5 flex overflow-x-scroll no-scrollbar w-full whitespace-nowrap">
+            {filterFields.map((field) => {
+            return (
+              <>
+                <SearchOption name={field?.name} icon={field?.icon} onClick={field?.onClick} />
+              </>
+            )
+            })}
+        </div>
       </div>
-    </div>
+      <Modal isOpen={isOpen} setIsOpen={setIsOpen} className={modalClassName(modalType)}>
+        {renderModal(modalType)}
+      </Modal>
+    </>
   )
 }
 
