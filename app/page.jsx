@@ -67,6 +67,26 @@ const Page = () => {
                     </div>
                 </div>
             </section>
+            <section className="sm:hidden md:hidden lg:block relative">
+                <div className="absolute top-1/2 right-1/2 transformIcon flex items-center justify-center gap-16 rounded-lg w-fit mx-auto py-5 px-20 bg-main-white shadowBox">
+                    <a className="flex items-center justify-center flex-col px-4" href="#">
+                        <img className="w-[72px]" src="/images/Vila.png" alt="ویلا"/>
+                        <span className="font-medium text-lg">ویلا</span>
+                    </a>
+                    <a className="flex items-center justify-center flex-col px-4" href="#">
+                        <img className="w-[72px]" src="/images/Kolbe.png" alt="کلبه"/>
+                        <span className="font-medium text-lg">کلبه</span>
+                    </a>
+                    <a className="flex items-center justify-center flex-col px-4" href="#">
+                        <img className="w-[72px]" src="/images/Bumgardi.png" alt="بومگردی"/>
+                        <span className="font-medium text-lg">بومگردی</span>
+                    </a>
+                    <a className="flex items-center justify-center flex-col px-4" href="#">
+                        <img className="w-[72px]" src="/images/Hotel.png" alt="هتل"/>
+                        <span className="font-medium text-lg">هتل</span>
+                    </a>
+                </div>
+            </section>
         </div>
     );
 };
