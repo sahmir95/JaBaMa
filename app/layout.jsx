@@ -25,7 +25,7 @@ export default function RootLayout({children}) {
         <HeaderPop display="lg:hidden" img="/images/notifBanner.jpg"/>
         <HeaderPopDesktop display="lg:block" img="/images/notifBannerDesktop.jpg"/>
         <HeaderLanding display="lg:hidden"/>
-        <HeaderDesktop/>
+        <HeaderDesktop display="lg:flex"/>
 
         {children}
 
