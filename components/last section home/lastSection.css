@@ -1,0 +1,14 @@
+.text-box {
+  width: 100%;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-family: medium;
+  font-size: 0.875rem;
+}
+@media screen and (min-width: 1024px) {
+  .text-box {
+    -webkit-line-clamp: 2;
+  }
+}

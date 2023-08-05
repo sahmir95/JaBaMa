@@ -1,10 +1,10 @@
 import React from 'react';
 import {HiOutlineHeart} from "react-icons/hi";
 
-const HeaderDesktop = () => {
+const HeaderDesktop = ({display}) => {
 
     return (
-        <div className="grid grid-cols-2 h-20 max-w-[1400px] mx-auto px-4">
+        <div className={`sm:hidden md:hidden ${display} items-center justify-between absolute inset-0 mt-[60px] w-full h-20 max-w-[1400px] mx-auto px-4 z-40`}>
             <div className="flex items-center justify-start">
                 <a href="https://www.jabama.com/">
                     <img src="/images/white-logo.svg" alt="logo"/>

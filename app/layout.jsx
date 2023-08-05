@@ -24,12 +24,16 @@ export default function RootLayout({children}) {
     return (
         <html lang="en">
         <body className={inter.className}>
-            <Providers>
-                {children}
-            </Providers>
-            <AppBanner display="lg:hidden"/>
-            <Menu display="lg:hidden"/>
-            <Footer display="lg:block"/>
+        <HeaderPop display="lg:hidden" img="/images/notifBanner.jpg"/>
+        <HeaderPopDesktop display="lg:block" img="/images/notifBannerDesktop.jpg"/>
+        <HeaderLanding display="lg:hidden"/>
+        <HeaderDesktop display="lg:flex"/>
+
+        {children}
+
+        <AppBanner display="lg:hidden"/>
+        <Menu display="lg:hidden"/>
+        <Footer display="lg:block"/>
         </body>
         </html>
     )

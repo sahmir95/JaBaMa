@@ -1,19 +1,18 @@
-'use client'
-import React from 'react';
-import Link from 'next/link';
-import clsx from 'clsx';
+"use client";
+import React from "react";
+import Link from "next/link";
+import clsx from "clsx";
 
-const FavCard = ({ name, image }) => {
+export default function FavCard({ name, image }) {
   return (
-    <div className=''>
-      <Link href={'https://www.jabama.com/city-ramsar'}>
-        <img className='rounded h-[118px]' src={image} alt={name} />
-      </Link>
-      <div className="">
+    <div className="maskhare">
+      {/* <div className="w-full rounded">
+        <img className="h-[180px]  rounded w-[200px]" src={image} alt={name} />
+      </div> */}
+
+      <div className="w-full">
         <p className="">{`اجاره ویلا در  ${name}`}</p>
       </div>
     </div>
   );
-};
-
-export default FavCard;
+}
