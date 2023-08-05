@@ -1,5 +1,8 @@
 import "../globals.css"
 import {ReadMoreLink} from "@/components/ReadMore/ReadMore";
+import {Facility} from "@/components/facilities/Facility";
+import "../../public/images/clock.png"
+import "./page.css"
 const data = {
         "id": 1,
         "title": "اجاره ویلا دوخوابه استخردار آبگرم سروستان کردان",
@@ -22,14 +25,14 @@ const data = {
             "name": "مهرداد چهری"
         },
         "summary": "150 متر زیربنا",
-        "description": "وشصیشصیشصیشصیشصیشصیشصیشصیشصیشصیشصیشصیشصی 4 کیلومتر استخر رو بسته",
+        "description": "با سلام و احترام خدمت حضار گرامی و شاد باش میگم 4 کیلومتر استخر رو بسته",
         "capacity": {
             "base": 4,
             "extra": 3
         },
         "price": {
             "base": 2100000,
-            "extra": 200000
+            "extra": 200
         },
         "bedroom": {
             "rooms": 2,
@@ -42,11 +45,11 @@ const data = {
             "foreignWC": 0,
             "shower": 1
         },
-        "hasCooling": true,
+        "hasCooling": false,
         "hasHeating": true,
         "hasFurniture": true,
-        "hasTV": false,
-        "hasWifi": true,
+        "hasTV": true,
+        "hasWifi": false,
         "hasWater": true,
         "hasElectricity": true,
         "hasGas": true
@@ -55,7 +58,7 @@ const data = {
 
 
 export default function Detail() {
-
+    const facility = [data.hasCooling, data.hasTV, data.hasWater, data.hasGas, data.hasWifi,data.hasElectricity,data.hasFurniture, data.hasHeating]
     return (
         <div className="w-full flex justify-center items-center flex-col">
             <div className="w-full h-40">
@@ -133,11 +136,55 @@ export default function Detail() {
                 <div className="w-full h-[1px] bg-main-light-gray mt-[20px]"></div>
                 <div className="w-full">
                     <h2 className="mt-[20px] font-bold">توضیحات {data.type}</h2>
-                    <div className="w-full">
-                        <ReadMoreLink text={data.description}/>
+                    <div className="w-full mt-[20px]">
+                        <ReadMoreLink text={data.description} type={data.type}/>
                     </div>
                 </div>
+                <div className="w-full h-[1px] bg-main-light-gray mt-[20px]"></div>
+                <div  className="w-full mt-[20px] flex flex-col justify-start items-start gap-y-[20px]">
+                    <Facility faci={facility} type={data.type} Tv={data.hasTV} />
+                </div>
+                <div className="w-full h-[1px] bg-main-light-gray mt-[20px]"></div>
+                <div className="w-full flex justify-start items-center flex justify-start items-center flex-col">
+                    <div className="w-full mt-[20px] font-bold ">
+                        محاسبه قیمت {data.type}
+                    </div>
+                    <div className="w-full flex justify-start items-center mt-[20px]">
+                        <div className="w-[50px] mt-[-50px]">
+                            <img className="w-[28px] h-[28px]" src="https://img.icons8.com/ios/50/check-in-desk.png" alt="extra-person"/>
+                        </div>
+                        <div className="w-full flex justify-start items-start flex-col">
+                            <p className="font-medium text-[0.9rem]">نفر اضافه</p>
+                            <p className="font-light text-[0.75rem]">هزینه‌ای که برای نفرات بیش از استاندارد (سرویس خواب و ... ) به میلغ رزرو اضافه می‌شود.</p>
+                            <p className="font-light text-[0.75rem]">قیمت برای هر نفر اضافه به ازای هر شب :
+                            <strong className="font-bold text-[0.75rem]">{data.price.extra} هزار تومان</strong>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div className="w-full h-[1px] bg-main-light-gray mt-[20px]"></div>
+                <div className="w-full mt-[20px]">
+                    <div className="w-full font-bold">قوانین و مقررات {data.type}</div>
+                    <div className="w-full h-[140px] flex justify-between items-center">
+                        <div className="w-[48%] h-[100px] flex justify-around items-start flex-col rounded-[10px] border-[1px] border-solid border-main-light-gray shadow-none p-[10px]">
+                            <img className="w-[25px] h-[25px]" src="/images/clock.png" alt="clock"/>
+                            <p className="font-bold text-[1rem]">ساعت ورود</p>
+                            <p className="font-light text-[0.8rem]">02:00 (بعد از ظهر)</p>
+                        </div>
+                        <div className="w-[48%] h-[100px] flex justify-around items-start flex-col rounded-[10px] border-[1px] border-solid border-main-light-gray shadow-none p-[10px]">
+                            <img className="w-[25px] h-[25px]" src="/images/clock.png" alt="clock"/>
+                            <p className="font-bold text-[1rem]">ساعت خروج</p>
+                            <p className="font-light text-[0.8rem]">12:00 (ظهر)</p>
+                        </div>
+                    </div>
+                </div>
+                <hr class="dashed-2"/>
+
+
+
+
                 <div className="w-full h-[600px]">1</div>
+
             </div>
 
         </div>
