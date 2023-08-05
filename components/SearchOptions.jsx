@@ -2,9 +2,14 @@ import SearchOption from "./SearchOption"
 import { useState } from "react"
 import Modal from "./Modal"
 import FilterModal from "./filterModal"
+import { useDispatch, useSelector } from "react-redux";
+import { peopleIncrement } from "@/redux/features/filterSlice";
 
 
 const SearchOptions = () => {
+
+  const filter = useSelector((state) => state.filterReducer)
+  const dispatch = useDispatch()
 
 
   const [isOpen, setIsOpen] = useState(false)
@@ -36,7 +41,7 @@ const SearchOptions = () => {
     {
       name: "انتخاب تاریخ",
       icon: '/images/icon-calendar.png',
-      onClick: () => console.log("are")
+      onClick: () => dispatch(peopleIncrement())
     },
     {
       name: "تعداد نفرات",

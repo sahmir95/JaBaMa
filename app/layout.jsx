@@ -8,7 +8,7 @@ import HeaderLanding from "@/components/header/HeaderLanding";
 import Footer from "@/components/footer/Footer";
 import HeaderPopDesktop from "@/components/header/headerPop/HeaderPopDesktop";
 import HeaderDesktop from "@/components/header/HeaderDesktop";
-import { Providers } from '@/redux/provider';
+import { Providers } from '@/redux/provider/provider';
 
 
 const inter = Inter({subsets: ['latin']})
@@ -24,12 +24,9 @@ export default function RootLayout({children}) {
     return (
         <html lang="en">
         <body className={inter.className}>
-        <HeaderPop display="lg:hidden" img="/images/notifBanner.jpg"/>
-        <HeaderPopDesktop display="lg:block" img="/images/notifBannerDesktop.jpg"/>
-        <HeaderLanding display="lg:hidden"/>
-        <HeaderDesktop display="lg:flex"/>
-
-        {children}
+        <Providers>
+            {children}
+        </Providers>
 
         <AppBanner display="lg:hidden"/>
         <Menu display="lg:hidden"/>

@@ -85,7 +85,7 @@ export default function BoxWithSwiper({
       </div>
 
       <ul ref={scrl} onScroll={scrollCheck} className="box">
-        {data.map((item) => {
+        {data && data.map((item) => {
           return (
             <li>
               {React.cloneElement(children, {

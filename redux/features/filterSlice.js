@@ -21,8 +21,8 @@ const initialState = {
   hasGas: undefined,
 }
 
-export const counter = createSlice({
-  name: "counter",
+export const filter = createSlice({
+  name: "filter",
   initialState,
   reducers: {
     reset: () => initialState,
@@ -147,5 +147,5 @@ export const {
   gasReset,
   electricity,
   electricityReset
-} = counter.actions;
-export default counter.reducer;
+} = filter.actions;
+export default filter.reducer;
