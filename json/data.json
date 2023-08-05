@@ -1185,6 +1185,10 @@
             "base": "4",
             "extra": "2"
           },
+          "price": {
+            "base": 3990000,
+            "extra": 500000
+          },
           "bedroom": {
             "rooms": 2,
             "single": 0,

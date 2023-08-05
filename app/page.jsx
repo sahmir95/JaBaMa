@@ -5,6 +5,8 @@ import IconsSection from "@/components/icon section/IconsSection";
 import Favplc from "@/components/favplaces/Favplc";
 import BoxWithSwiper from "@/components/swiper box/BoxWithSwiper";
 import CardWithSwiper from "@/components/card with swiper/CardWithSwiper";
+import LastSection from "@/components/last section home/LastSection";
+import TagSection from "@/components/last section home/TagSection";
 
 const data = await getLocalData();
 
@@ -28,11 +30,29 @@ const Page = () => {
       <BoxWithSwiper
         data={data.data[0].vila}
         city={data.cities[2].province}
-        title="جذاب ترین ویلاها در مازندران"
+        title="جذاب ترین ویلاها در جاباما"
         subtitle="ویلاهای استخردار واسه سفر آخر هفته"
       >
         <CardWithSwiper isCocacity={false} />
       </BoxWithSwiper>
+      <BoxWithSwiper
+        data={data.data[1].hotel}
+        city={data.cities[2].province}
+        title="بهترین هتل ها با جاباما"
+        subtitle="اقامتِ باکیفت در بهترین هتل"
+      >
+        <CardWithSwiper isCocacity={false} />
+      </BoxWithSwiper>
+      <BoxWithSwiper
+        data={data.data[3].cottage}
+        city={data.cities[2].province}
+        title="کلبه‌های خاص"
+        subtitle="کلبه‌هلی مثلثی و چوبی"
+      >
+        <CardWithSwiper isCocacity={false} />
+      </BoxWithSwiper>
+      <LastSection />
+      <TagSection data={data.data[0].vila} />
     </div>
   );
 };

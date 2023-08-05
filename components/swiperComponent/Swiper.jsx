@@ -49,7 +49,7 @@ export default function SwiperComponent({ images }) {
     <div
       onMouseEnter={() => setIsHover(true)}
       onMouseLeave={() => setIsHover(false)}
-      className="w-full sm:h-[100px] md:h-[220px]  flex justify-center items-center rounded-lg"
+      className="w-full sm:h-full  box-border md:h-[220px]  lg:h-full flex justify-center items-center rounded-lg"
     >
       <Swiper
         cssMode={true}
@@ -91,7 +91,7 @@ export default function SwiperComponent({ images }) {
           return (
             <SwiperSlide>
               <img
-                className="rounded-lg object-fill"
+                className="w-full h-full object-cover"
                 src={item}
                 loading="lazy"
                 placeholder="https://i.postimg.cc/8CVt73NY/wonderlane-N-As0-VQu7s-unsplash.jpg"

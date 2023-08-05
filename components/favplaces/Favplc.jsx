@@ -36,33 +36,56 @@ const Favplc = ({ data, title }) => {
   return (
     <div
       ref={withDiv}
-      className="sm:w-full lg:w-[80%] lg:mr-0 flex justify-center items-center pt-10 rounded relative"
+      className="sm:w-full lg:w-full lg:px-20 lg:mr-0 flex flex-col justify-center items-center pt-10 rounded relative"
     >
-      <p className="font-medium sm:text-base sm:right-5 sm:top-5 lg:text-base absolute lg:top-0 right-0">
-        {title}
-      </p>
-      <button
-        className={clsx(
-          "sm:hidden md:block absolute left-0 top-0 border border-main-silver rounded-lg p-2",
-          { "opacity-40": scrolEnd },
-          { "opacity-100": !scrolEnd }
-        )}
-        onClick={() => slide(-150)}
-      >
-        <Icon
-          icon="grommet-icons:next"
-          color="black"
-          width="14"
-          height="14"
-          hFlip={true}
-        />
-      </button>
+      <div className="w-full flex items-center md:justify-between">
+        <p className="flex flex-col gap-3 pb-4 sm:w-2/3 font-light sm:font-medium  sm:text-lg  lg:text-base ">
+          <span>{title}</span>
+        </p>
+
+        <div className="flex items-start gap-2 pb-4">
+          <div className=" md:block border border-main-light-gray rounded-lg px-2 pb-2 pt-1 ml-4">
+            <button className="font-medium text-xs">مشاهده همه</button>
+          </div>
+          <button
+            className={clsx(
+              "sm:hidden md:block border border-main-silver rounded-lg p-2",
+              { "opacity-40": !scrolEnd },
+              { "opacity-100": scrolEnd }
+            )}
+            onClick={() => slide(+150)}
+          >
+            <Icon
+              icon="grommet-icons:next"
+              color="black"
+              width="14"
+              height="14"
+            />
+          </button>
+          <button
+            className={clsx(
+              "sm:hidden md:flex  border border-main-silver rounded-lg p-2",
+              { "opacity-40": scrolEnd },
+              { "opacity-100": !scrolEnd }
+            )}
+            onClick={() => slide(-150)}
+          >
+            <Icon
+              icon="grommet-icons:next"
+              color="black"
+              width="14"
+              height="14"
+              hFlip={true}
+            />
+          </button>
+        </div>
+      </div>
       <div ref={scrl} className="mybox">
         {data.map((item) => {
           return (
             <div>
               <img
-                className="w-full min-h-[108px] max-h-[216px] object-fill rounded-md"
+                className="w-full min-h-[108px] max-h-[216px] lg:max-h-[226px] object-fill rounded-md"
                 src={item.image}
               />
               <span className="w-full flex text-[.95rem] justify-start font-medium pl-1">
@@ -73,16 +96,6 @@ const Favplc = ({ data, title }) => {
           );
         })}
       </div>
-      <button
-        className={clsx(
-          "sm:hidden md:block absolute left-10 top-0 border border-main-silver rounded-lg p-2",
-          { "opacity-40": scrolStart },
-          { "opacity-100": !scrolStart }
-        )}
-        onClick={() => slide(+150)}
-      >
-        <Icon icon="grommet-icons:next" color="black" width="14" height="14" />
-      </button>
     </div>
   );
 };
