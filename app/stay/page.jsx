@@ -142,6 +142,8 @@ export default function Detail() {
                 <div  className="w-full mt-[20px] flex flex-col justify-start items-start gap-y-[20px]">
                     <Facility faci={facility} type={data.type} Tv={data.hasTV} />
                 </div>
+                <div className="w-full h-[1px] bg-main-light-gray mt-[20px]"></div>
+
 
 
 
