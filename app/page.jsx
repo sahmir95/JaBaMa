@@ -1,6 +1,5 @@
-import React, { useRef, useState } from "react";
-import { HiOutlineSearch } from "react-icons/hi";
-import { IoCloseCircleSharp } from "react-icons/io5";
+import React from "react";
+
 import AutoSwiper from "@/components/auto swiper/AutoSwiper";
 import { getLocalData } from "@/lib/localdata";
 import IconsSection from "@/components/icon section/IconsSection";
@@ -51,3 +50,5 @@ const Page = () => {
     </div>
   );
 };
+
+export default Page;

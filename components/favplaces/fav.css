@@ -30,6 +30,7 @@
     max-height: 320px;
   }
   .mybox div {
+    min-width: 27%;
     width: 50%;
     height: 100%;
   }
@@ -40,6 +41,7 @@
     height: 300px;
   }
   .mybox div {
+    min-width: 15%;
     width: 20%;
   }
 }
