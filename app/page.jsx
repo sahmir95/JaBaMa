@@ -18,7 +18,7 @@ const Page = () => {
       <LandingPage />
       <AutoSwiper />
       <IconsSection />
-      <div className="w-full">
+      <div className="w-full m-0">
         <Favplc data={data.cities} title={"محبوب ترین مقصد‌ها"} />
       </div>
       <BoxWithSwiper

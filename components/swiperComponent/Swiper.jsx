@@ -67,7 +67,7 @@ export default function SwiperComponent({ images }) {
       >
         <div
           className={clsx(
-            "absolute justify-center  left-2 z-10 flex items-center bg-main-snow w-[28px] h-[28px] rounded-full top-1/2",
+            "absolute justify-center  left-2 z-2 flex items-center bg-main-snow w-[28px] h-[28px] rounded-full top-1/2",
             { "opacity-40": isHide === false },
             { "opacity-100": isHide === "" },
             { hidden: !isHover },
