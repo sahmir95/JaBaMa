@@ -9,12 +9,20 @@ import CardWithSwiper from "@/components/card with swiper/CardWithSwiper";
 import LastSection from "@/components/last section home/LastSection";
 import TagSection from "@/components/last section home/TagSection";
 import LandingPage from "@/components/landingPage/LandingPage";
+import HeaderPop from "@/components/header/headerPop/HeaderPop";
+import HeaderPopDesktop from "@/components/header/headerPop/HeaderPopDesktop";
+import HeaderLanding from "@/components/header/HeaderLanding";
+import HeaderDesktop from "@/components/header/HeaderDesktop";
 
 const data = await getLocalData();
 
 const Page = () => {
   return (
       <div>
+          <HeaderPop display="lg:hidden" img="/images/notifBanner.jpg"/>
+          <HeaderPopDesktop display="lg:block" img="/images/notifBannerDesktop.jpg"/>
+          <HeaderLanding display="lg:hidden"/>
+          <HeaderDesktop display="lg:flex"/>
           <LandingPage />
           <div className="w-full min-h-screen flex flex-col items-center">
               <AutoSwiper />
