@@ -5,6 +5,7 @@ import "../../public/images/clock.png"
 import "./page.css"
 import {RulesComponent} from "@/components/rulesComponent/RulesComponent";
 import {CommentsComponent} from "@/components/commentsComponent/CommentsComponent";
+import Image from "../../components/imageComponent/Image";
 const data = {
         "id": 1,
         "title": "اجاره ویلا دوخوابه استخردار آبگرم سروستان کردان",
@@ -77,7 +78,8 @@ export default function Detail() {
     return (
         <div className="w-full flex justify-center items-center flex-col">
             <div className="w-full h-40">
-                <img className="sm:6 h-6" src="https://img.icons8.com/material-outlined/24/1A1A1A/right.png" alt="right"/>
+                {/*<img className="sm:6 h-6" src="https://img.icons8.com/material-outlined/24/1A1A1A/right.png" alt="right"/>*/}
+                <Image/>
             </div>
             <div className="mx-[20px] flex justify-center items-center flex-col">
                 <h1 className="sm:text-center font-medium text-lg ">{data.title}</h1>

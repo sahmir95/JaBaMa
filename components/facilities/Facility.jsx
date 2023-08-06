@@ -17,7 +17,7 @@ export const Facility = ({facility,type,}) => {
                     <div className="w-full h-[300px]  ">
                         <h2 className="w-full font-bold text-[0.9rem]">امکانات رفاهی {type}</h2>
                         <ul className="w-full h-[250px] flex justify-between items-start flex-col mt-[20px] ">
-                            {facility.map((item) => {
+                            {facility.sort((a,b) => Number(b.exist) - Number(a.exist)).map((item) => {
                                 return (
                                     <li key={item.name} className={clsx("w-full flex justify-start items-center",
                                         {"line-through": !item.exist},

@@ -1,3 +1,4 @@
+'use client'
 import React from 'react';
 import {Swiper, SwiperSlide} from "swiper/react";
 import {
@@ -7,7 +8,12 @@ import {
     Keyboard,
     Lazy,
 } from "swiper/modules"
+import "./Image.css"
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 const Image = () => {
+    const image = [1,2,3,4,5]
     return (
         <div>
             <Swiper
@@ -18,11 +24,16 @@ const Image = () => {
                     keyboard={true}
                     lazy={true}
                     modules={[Navigation, Pagination, Mousewheel, Keyboard]}
+                className="swiper1"
             >
+                {image.map((item) => {
+                   return (
+                           <SwiperSlide>
+                               <p>Hello World {item}</p>
+                           </SwiperSlide>
+                       )
+                })}
 
-                <SwiperSlide>
-
-                </SwiperSlide>
             </Swiper>
         </div>
     );
