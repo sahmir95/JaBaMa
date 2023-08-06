@@ -1,41 +1,26 @@
-
-    
 'use client'
 import React, { useState } from 'react';
 import Sidbar from '@/components/sidebar/Sidbar';
 import TitlePage from '@/components/titlepage/TiTlePage';
 import { Icon } from "@iconify/react";
 
-const FavoritePage = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [newListName, setNewListName] = useState('');
-
-  const handleAddList = () => {
-
-    // console.log('افزودن لیست جدید:', newListName);
-
-    setNewListName('');
-  
-    setIsModalOpen(false);
-  };
-
-  const handleModalClose = () => {
-    
-    setIsModalOpen(false);
-  };
-
+const FavoritePage = ({data}) => {
+const [favorite, setfavorite] = useState([1,2,3,4,5]);
   return (
     <div>
-      {false ? (
+      {favorite.length>0 ? (
         <div>
           <div className='flex items-center justify-center'>
             <TitlePage title="مورد علاقه ها" />
           </div>
-          <div className='flex mt-12'>
-            <div className='w-8 h-8 border rounded flex items-center justify-center  mr-5' onClick={() => setIsModalOpen(true)}>
-              <Icon icon="ep:plus" />
-            </div>
-            <p className='mr-3 text-sm text-main-deep-teal font-medium'>اضافه کردن لیست جدید</p>
+          <div className='flex gap-4 pt-5 mr-5  flex-col '>
+            {favorite.map((item)=>{
+              return(
+                <div>
+                  <p>hello world</p>
+                </div>
+              )
+            })}
           </div>
         </div>
       ) : (
@@ -61,28 +46,6 @@ const FavoritePage = () => {
           </div>
         </div>
       )}
-
-{isModalOpen && (
-  <div className=" w-full bottom-0 left-0 right-0 flex items-center justify-center bg-opacity-50 z-1000">
-    <div className="bg-main-slate-gray rounded-t-lg p-8">
-      <input
-        type="text"
-        value={newListName}
-        onChange={(e) => setNewListName(e.target.value)}
-        className="border border-gray-300 rounded px-3 py-2 mb-4"
-        placeholder="نام لیست جدید"
-      />
-      <div className="flex justify-between">
-        <button className="bg-main-button-gray text-main-deep-teal px-4 py-2 rounded" onClick={handleModalClose}>
-          بستن
-        </button>
-        <button className="bg-main-deep-teal text-main-white px-4 py-2 rounded mr-2" onClick={handleAddList}>
-          ایجاد لیست
-        </button>
-      </div>
-    </div>
-  </div>
-)}
     </div>
   );
 }

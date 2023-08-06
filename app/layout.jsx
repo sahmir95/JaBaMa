@@ -22,10 +22,10 @@ export default function RootLayout({children}) {
     return (
         <html lang="en">
         <body className={inter.className}>
-        {/* <HeaderPop display="lg:hidden" img="/images/notifBanner.jpg"/> */}
-        {/* <HeaderPopDesktop display="lg:block" img="/images/notifBannerDesktop.jpg"/> */}
-        {/* <HeaderLanding display="lg:hidden"/> */}
-        {/* <HeaderDesktop display="lg:flex"/> */}
+        <HeaderPop display="lg:hidden" img="/images/notifBanner.jpg"/>
+        <HeaderPopDesktop display="lg:block" img="/images/notifBannerDesktop.jpg"/>
+        <HeaderLanding display="lg:hidden"/>
+        <HeaderDesktop display="lg:flex"/>
 
         {children}
 
