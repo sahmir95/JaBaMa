@@ -26,7 +26,11 @@ export default function SwiperComponent({ images }) {
   const [isHide, setIsHide] = useState(true);
   const [isEnd, setIsEnd] = useState(false);
   const [isHover, setIsHover] = useState(false);
-
+  const [loading, setLoading] = useState(true);
+  const counter = useRef(0);
+  const imageLoaded = () => {
+    setLoading(false);
+  };
   const nextHandler = () => {
     swiperRef.slideNext();
     if (!isEnd) {
@@ -49,7 +53,7 @@ export default function SwiperComponent({ images }) {
     <div
       onMouseEnter={() => setIsHover(true)}
       onMouseLeave={() => setIsHover(false)}
-      className="w-full sm:h-full  box-border md:h-[220px]  lg:h-full flex justify-center items-center rounded-lg"
+      className="w-full aspect-[5/3] sm:h-full  box-border md:h-[220px]  lg:h-full flex justify-center items-center rounded-lg"
     >
       <Swiper
         cssMode={true}
@@ -90,12 +94,22 @@ export default function SwiperComponent({ images }) {
         {imgs.map((item) => {
           return (
             <SwiperSlide>
-              <img
-                className="w-full h-full object-cover"
-                src={item}
-                loading="lazy"
-                placeholder="https://i.postimg.cc/8CVt73NY/wonderlane-N-As0-VQu7s-unsplash.jpg"
-              />
+              <div
+                className="w-full h-full"
+                style={{
+                  backgroundImage: `url("/images/image-placeholder.svg")`,
+                  backgroundRepeat: "no-repeat",
+                  backgroundPosition: "center",
+                  backgroundSize: "cover",
+                }}
+              >
+                <img
+                  className="w-full h-full object-cover"
+                  key={item}
+                  src={item}
+                  loading="lazy"
+                />
+              </div>
             </SwiperSlide>
           );
         })}
