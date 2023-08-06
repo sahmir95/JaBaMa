@@ -21,13 +21,16 @@ const Favplc = ({ data, title }) => {
   };
 
   const scrollCheck = () => {
-    setscrollX(scrl.current.scrollLeft);
-    if (Math.floor(scrollX) < -(withDiv.current.scrollWidth + 150)) {
+    let newScrollLeft = scrl.current.scrollLeft;
+    if (
+      -(scrl.current.scrollWidth - scrl.current.clientWidth) >
+      newScrollLeft - 4
+    ) {
       setscrolEnd(true);
     } else {
       setscrolEnd(false);
     }
-    if (Math.floor(scrollX) > -5) {
+    if (newScrollLeft >= -1) {
       setScrolStart(true);
     } else {
       setScrolStart(false);
@@ -36,11 +39,14 @@ const Favplc = ({ data, title }) => {
   return (
     <div
       ref={withDiv}
-      className="sm:w-full lg:mt-[100px] lg:w-full lg:px-20 lg:mr-0 flex flex-col justify-center items-center pt-10 rounded relative"
+      className="sm:w-full lg:mt-[100px] lg:max-w-[1400px] lg:w-full  lg:mx-auto flex flex-col justify-center items-center pt-10 rounded"
     >
       <div className="w-full flex items-center md:justify-between">
-        <p className="flex sm:pr-5 flex-col gap-3 pb-4 sm:w-2/3 font-light sm:font-medium  sm:text-lg  lg:text-base ">
-          <span>{title}</span>
+        <p className="flex sm:pr-5 flex-col gap-2 pb-4 sm:w-2/3 font-light sm:font-medium   ">
+          <span className="sm:text-lg  lg:text-2xl">{title}</span>
+          <span className="sm:text-sm  lg:text-base font-light">
+            اقامتگاه در شهرهای پرطرفدار با ما
+          </span>
         </p>
 
         <div className="flex items-start gap-2 pb-4">
@@ -50,8 +56,8 @@ const Favplc = ({ data, title }) => {
           <button
             className={clsx(
               "sm:hidden md:block border border-main-silver rounded-lg p-2",
-              { "opacity-40": !scrolEnd },
-              { "opacity-100": scrolEnd }
+              { "opacity-40": scrolStart },
+              { "opacity-100": !scrolStart }
             )}
             onClick={() => slide(+150)}
           >
@@ -80,12 +86,12 @@ const Favplc = ({ data, title }) => {
           </button>
         </div>
       </div>
-      <div ref={scrl} className="mybox">
+      <div ref={scrl} onScroll={scrollCheck} className="mybox">
         {data.map((item) => {
           return (
             <div>
               <img
-                className="w-full min-h-[108px] max-h-[216px] lg:max-h-[226px] object-fill rounded-md"
+                className="aspect-[3/4] lg:aspect-[3/5] min-h-[108px] max-h-[216px] lg:max-h-[226px] object-fill rounded-md"
                 src={item.image}
               />
               <span className="w-full flex text-[.95rem] justify-start font-medium pl-1">
