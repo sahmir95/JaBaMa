@@ -42,8 +42,11 @@ const Favplc = ({ data, title }) => {
       className="sm:w-full lg:mt-[100px] lg:max-w-[1400px] lg:w-full  lg:mx-auto flex flex-col justify-center items-center pt-10 rounded"
     >
       <div className="w-full flex items-center md:justify-between">
-        <p className="flex sm:pr-5 flex-col gap-3 pb-4 sm:w-2/3 font-light sm:font-medium  sm:text-lg  lg:text-base ">
-          <span>{title}</span>
+        <p className="flex sm:pr-5 flex-col gap-2 pb-4 sm:w-2/3 font-light sm:font-medium   ">
+          <span className="sm:text-lg  lg:text-2xl">{title}</span>
+          <span className="sm:text-sm  lg:text-base font-light">
+            اقامتگاه در شهرهای پرطرفدار با ما
+          </span>
         </p>
 
         <div className="flex items-start gap-2 pb-4">
