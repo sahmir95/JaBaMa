@@ -12,7 +12,7 @@ const LastSection = () => {
   };
   return (
     <div>
-      <div className="w-full mt-7 flex flex-col gap-4">
+      <div className="w-full mt-7 flex flex-col gap-4 lg:mt-10">
         <p className="w-full px-4 lg:px-20 font-medium text-base">
           اجاره ویلا از جاباما
         </p>

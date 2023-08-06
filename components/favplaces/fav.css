@@ -28,6 +28,7 @@
 @media screen and (min-width: 320px) {
   .mybox {
     max-height: 320px;
+    gap: 14px;
   }
   .mybox div {
     min-width: 27%;
