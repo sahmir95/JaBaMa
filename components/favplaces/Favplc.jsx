@@ -21,13 +21,16 @@ const Favplc = ({ data, title }) => {
   };
 
   const scrollCheck = () => {
-    setscrollX(scrl.current.scrollLeft);
-    if (Math.floor(scrollX) < -(withDiv.current.scrollWidth + 150)) {
+    let newScrollLeft = scrl.current.scrollLeft;
+    if (
+      -(scrl.current.scrollWidth - scrl.current.clientWidth) >
+      newScrollLeft - 4
+    ) {
       setscrolEnd(true);
     } else {
       setscrolEnd(false);
     }
-    if (Math.floor(scrollX) > -5) {
+    if (newScrollLeft >= -1) {
       setScrolStart(true);
     } else {
       setScrolStart(false);
@@ -50,8 +53,8 @@ const Favplc = ({ data, title }) => {
           <button
             className={clsx(
               "sm:hidden md:block border border-main-silver rounded-lg p-2",
-              { "opacity-40": !scrolEnd },
-              { "opacity-100": scrolEnd }
+              { "opacity-40": scrolStart },
+              { "opacity-100": !scrolStart }
             )}
             onClick={() => slide(+150)}
           >
@@ -80,12 +83,12 @@ const Favplc = ({ data, title }) => {
           </button>
         </div>
       </div>
-      <div ref={scrl} className="mybox">
+      <div ref={scrl} onScroll={scrollCheck} className="mybox">
         {data.map((item) => {
           return (
             <div>
               <img
-                className="w-full min-h-[108px] max-h-[216px] lg:max-h-[226px] object-fill rounded-md"
+                className="aspect-[3/4] lg:aspect-[3/5] min-h-[108px] max-h-[216px] lg:max-h-[226px] object-fill rounded-md"
                 src={item.image}
               />
               <span className="w-full flex text-[.95rem] justify-start font-medium pl-1">

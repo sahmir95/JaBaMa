@@ -57,12 +57,21 @@
           "id": 2,
           "type": "ویلا",
           "title": "اجاره سوئیت یک خوابه جنگلی پاسارگاد نور",
+          "discount": 10,
           "rate": 3.9,
           "comments": 8,
           "HasImmediateReserve": true,
           "province": "مازندران",
           "city": "نور",
-          "images": ["", "", "", ""],
+          "images": [
+            "https://cdn.jabama.com/image/jabama-images/2758347/291ee616-cd06-4aaf-8011-5d323e60a107.jpeg",
+            "https://cdn.jabama.com/image/jabama-images/2758347/bfc3ddf0-f3a8-47f8-a752-118a659eb47f.jpeg",
+            "https://cdn.jabama.com/image/jabama-images/2758347/123ba6ac-ab76-464c-8e65-bfe776299484.jpeg",
+            "https://cdn.jabama.com/image/jabama-images/2758347/ced0296a-009e-4167-b0da-5169d03072a8.jpeg",
+            "https://cdn.jabama.com/image/jabama-images/2758347/fd032146-c911-41ee-9419-c612c68e02a7.jpeg",
+            "https://cdn.alibaba.ir/ostorage/hotel-accommodation-images/2023-04-09/6e76e8c7-4c61-4bd7-976b-c1b4715b908a.jpg",
+            "https://cdn.jabama.com/image/jabama-images/2758347/bb5a7b47-77ec-4330-9e70-44fb6551efac.jpeg"
+          ],
           "host": {
             "avatar": "./",
             "name": "امیرارسلان پورغلامی"
@@ -74,8 +83,8 @@
             "extra": "2"
           },
           "price": {
-            "base": 2100000,
-            "extra": 200000
+            "base": 1350000,
+            "extra": 50000
           },
           "bedroom": {
             "rooms": 1,
@@ -101,12 +110,22 @@
           "id": 3,
           "type": "ویلا",
           "title": "یکخوابه استخردار کیان",
+          "discount": 10,
           "rate": 4.7,
           "comments": 6,
           "HasImmediateReserve": false,
           "province": "البرز",
           "city": "چهارباغ",
-          "images": ["", "", "", ""],
+          "images": [
+            "https://cdn.jabama.com/image/jabama-images/2592168/c711d903-d5a1-4805-a1d0-85d54fc073c0.JPG",
+            "https://cdn.jabama.com/image/jabama-images/2592168/b62bf05f-ecbc-44b2-83b7-15a9757dc04c.jpg",
+            "https://cdn.jabama.com/image/jabama-images/2592168/10b5144c-240e-45ba-83b8-151507b3a9d3.jpg",
+            "https://cdn.jabama.com/image/jabama-images/2592168/028444b9-8b0a-45ed-b46e-abf8b6a5c65d.JPG",
+            "https://cdn.jabama.com/image/jabama-images/2592168/1bfcafac-b45b-446a-bb8e-b6b0d3eb1bd9.jpg",
+            "https://cdn.jabama.com/image/jabama-images/2592168/d1676156-9dcc-4159-aede-2d8f3ceb88c6.jpg",
+            "https://cdn.jabama.com/image/jabama-images/2592168/819a019a-11ef-475c-9eb0-30b65826251d.jpg",
+            "https://cdn.jabama.com/image/jabama-images/2592168/1f3bcf64-6ef8-4ee7-80b0-59968ddc404b.jpg"
+          ],
           "host": {
             "avatar": "./",
             "name": "کیان هادلو"
@@ -118,7 +137,7 @@
             "extra": "2"
           },
           "price": {
-            "base": 2100000,
+            "base": 1200000,
             "extra": 200000
           },
           "bedroom": {
@@ -144,37 +163,46 @@
         {
           "id": 4,
           "type": "ویلا",
-          "title": "اجاره ویلا چهارخوابه استخردار دهکده ساحلی کیش",
-          "rate": 4.5,
-          "comments": 5,
+          "title": "اجاره سوئیت شیرین - واحد آمستردام کیش",
+          "discount": 0,
+          "rate": 4.4,
+          "comments": 95,
           "HasImmediateReserve": false,
           "province": "هرمزگان",
           "city": "کیش",
-          "images": ["", "", "", ""],
+          "images": [
+            "https://cdn.jabama.com/image/jabama-images/959393/79db8b67-1b0e-411a-9b9f-1fc57ce23243.JPG",
+            "https://cdn.jabama.com/image/jabama-images/959393/b8fa02ce-d07d-4182-a55e-9bcd8dc02792.JPG",
+            "https://cdn.jabama.com/image/jabama-images/2056939/db578285-016e-45b1-8e80-57ad08a97cb2.jpg",
+            "https://cdn.jabama.com/image/800x509/jabama-images/959393/b9e5bfc8-4320-4f4d-86cc-927ac1915053.JPG",
+            "https://cdn.jabama.com/image/800x509/jabama-images/959393/eb75b931-a7c1-4f52-8159-c376ecd59bf5.JPG",
+            "https://cdn.jabama.com/image/jabama-images/959393/f842c25e-1a83-4be6-ad0f-564aec6df90c.JPG",
+            "https://cdn.jabama.com/image/jabama-images/959393/7e1ff4f3-0480-4da3-a485-0c6e77ff8fc7.JPG"
+          ],
           "host": {
             "avatar": "./",
-            "name": "محمد امین رخشاد"
+            "name": "مهران کبیری"
           },
-          "summary": "۳۰۰ متر زیربنا",
+          "summary": "33 متر زیربنا",
           "description": "ویلا در شهر کیش (دهکده ساحلی) واقع شده است. اقامتگاه در محیطی آرام، شهرکی و غیر بومی واقع است. اقامتگاه دارای دوربین مداربسته در محوطه شهرک و دارای نگهبان می باشد. شهرک دارای خشکویی، میوه فروشی، هایپرمارکت، رستوران، فست فود، جیگرکی، آرایشگاه و پت شاپ می باشد. هایپرمارکت شهرک دارای ارسال رایگان برای مهمانان عزیز می باشد. ویلا دربست است. اقامتگاه دارای 1 اتاق مستر می باشد. اقامتگاه فاقد پارکینگ است. بافت محله ویلا ساحلی و دسترسی به اقامتگاه آسفالت می باشد. وضعیت آنتن دهی همراه اول، ایرانسل و رایتل عالی می باشد. فاصله با سوپرمارکت و نانوایی حدود 2 دقیقه، با دریا 10 متر، با داروخانه و درمانگاه حدود 10 دقیقه و با پمپ بنزین حدود 7 دقیقه می باشد. اقامتگاه قبل از ورود مهمان بطور کامل نظافت خواهد شد.",
           "capacity": {
-            "base": "8",
-            "extra": "2"
+            "base": "2",
+            "extra": "1"
           },
           "price": {
-            "base": 2100000,
-            "extra": 200000
+            "base": 350000,
+            "extra": 150000
           },
           "bedroom": {
-            "rooms": 4,
+            "rooms": 0,
             "single": 0,
-            "double": 4,
-            "traditional": 2
+            "double": 1,
+            "traditional": 1
           },
           "bathroom": {
-            "persianWC": 1,
-            "foreignWC": 3,
-            "shower": 3
+            "persianWC": 0,
+            "foreignWC": 1,
+            "shower": 1
           },
           "hasCooling": true,
           "hasHeating": true,
@@ -240,9 +268,9 @@
           "id": 6,
           "title": "اجاره ویلا دوخوابه جنگلی پنت هاوس تنیان ماسال",
           "type": "ویلا",
-          "discount": "",
-          "rate": "",
-          "comments": "",
+          "discount": 5,
+          "rate": 4,
+          "comments": 8,
           "HasImmediateReserve": true,
           "province": "گیلان",
           "city": "ماسال",
@@ -259,6 +287,7 @@
             "https://cdn.jabama.com/image/jabama-images/2590047/e02eb02f-fa12-4b4e-afa3-19c58a095c52.jpg"
           ],
           "host": {
+            "avatar": "./",
             "name": "سیدامین موسوی"
           },
           "summary": "120 متر زیربنا",
@@ -298,7 +327,7 @@
           "id": 7,
           "title": "اجاره ویلا دو خوابه دوبلکس نوری ماسال",
           "type": "ویلا",
-          "discount": 84,
+          "discount": 10,
           "rate": 4.2,
           "comments": 84,
           "HasImmediateReserve": true,
@@ -357,6 +386,7 @@
           "id": 8,
           "title": "اجاره ویلا یک خوابه گیله کومه رشت",
           "type": "ویلا",
+          "discount": 0,
           "rate": 4.4,
           "comments": 32,
           "HasImmediateReserve": true,
@@ -406,6 +436,7 @@
           "id": 9,
           "title": "اجاره ویلا دوخوابه استخردار شقایق ۱۱ کوچصفهان",
           "type": "ویلا",
+          "discount": 0,
           "rate": 4.2,
           "comments": 5,
           "HasImmediateReserve": true,
@@ -419,6 +450,7 @@
             "https://cdn.jabama.com/image/383x240/jabama-images/2130130/5949a528-d6f4-4bc2-91ea-8d769445ef9c.jpeg"
           ],
           "host": {
+            "avatar": "./",
             "name": "محمد زین العابدین شیرازی"
           },
           "summary": "۱۱۰ متر زیربنا",
@@ -454,6 +486,7 @@
           "id": 10,
           "type": "ویلا",
           "title": "اجاره ویلا سه خوابه دهکده ساحلی ۱ کیش",
+          "discount": 0,
           "rate": 4.4,
           "comments": 8,
           "HasImmediateReserve": false,
@@ -518,6 +551,7 @@
             "https://cdn.jabama.com/image/383x240/jabama-images/1494419/633a0a36-b904-42ec-b1ee-46d33f8e8b21.jpeg"
           ],
           "host": {
+            "avatar": "./",
             "name": "فرشاد شیخ الاسلامی"
           },
           "summary": "۳۵۰ متر زیربنا",
@@ -1113,6 +1147,7 @@
           "id": 23,
           "type": "کلبه",
           "title": "رزرو کلبه دوخوابه جنگلی سامان 1 جواهرده",
+          "discount": 5,
           "rate": 4.7,
           "comments": 13,
           "HasImmediateReserve": true,
@@ -1163,6 +1198,7 @@
           "id": 24,
           "type": "کلبه",
           "title": "رزرو کلبه دوخوابه جنگلی باران 3",
+          "discount": 0,
           "rate": 5,
           "comments": 6,
           "HasImmediateReserve": false,
@@ -1213,6 +1249,7 @@
           "id": 25,
           "title": "اجاره کلبه سه خوابه سویئسی استخردار آبگرم دیلاچیک ماسال",
           "type": "کلبه",
+          "discount": 10,
           "rate": 4.3,
           "comments": 4,
           "HasImmediateReserve": true,
@@ -1230,6 +1267,7 @@
             "https://cdn.jabama.com/image/jabama-images/1479505/aae52a1c-9292-43a4-a447-ebfff981c7f6.jpeg"
           ],
           "host": {
+            "avatar": "./",
             "name": "مهدی زارع"
           },
           "summary": "150 متر زیربنا",
@@ -1268,6 +1306,7 @@
           "id": 26,
           "title": "اجاره کلبه یک خوابه سوئیسی بهار نارنج ماسال",
           "type": "کلبه",
+          "discount": 0,
           "rate": 5,
           "comments": 1,
           "HasImmediateReserve": true,
@@ -1338,6 +1377,7 @@
             "https://cdn.jabama.com/image/383x240/jabama-images/1681067/ba3f9198-bd66-4f0e-9f5c-2319aac7ce88.jpg"
           ],
           "host": {
+            "avatar": "./",
             "name": "ندا تقی زاد"
           },
           "summary": "۴۰ متر زیربنا",
@@ -1347,7 +1387,8 @@
             "extra": 1
           },
           "price": {
-            "base": 450000
+            "base": 450000,
+            "extra": 150000
           },
           "bedroom": {
             "rooms": 1,
@@ -1387,6 +1428,7 @@
             "https://cdn.jabama.com/image/383x240/jabama-images/1681067/ba3f9198-bd66-4f0e-9f5c-2319aac7ce88.jpg"
           ],
           "host": {
+            "avatar": "./",
             "name": "ندا تقی زاد"
           },
           "summary": "۴۰ متر زیربنا",
@@ -1396,7 +1438,8 @@
             "extra": 1
           },
           "price": {
-            "base": 450000
+            "base": 450000,
+            "extra": 0
           },
           "bedroom": {
             "rooms": 1,
@@ -1422,6 +1465,7 @@
           "id": 29,
           "title": "اجاره کلبه یک خوابه دلیزه 2",
           "type": "کلبه",
+          "discount": 0,
           "rate": 4.8,
           "comments": 30,
           "HasImmediateReserve": false,
@@ -1435,6 +1479,7 @@
             "https://cdn.jabama.com/image/383x240/jabama-images/1860892/8fd6cf37-47ac-4b14-aea4-a66d2b1edbb1.JPG"
           ],
           "host": {
+            "avatar": "./",
             "name": "خدیجه گرگانی"
           },
           "summary": "۴۰ متر زیربنا",
@@ -1443,7 +1488,8 @@
             "base": 2
           },
           "price": {
-            "base": 800000
+            "base": 800000,
+            "extra": 150000
           },
           "bedroom": {
             "rooms": 1,

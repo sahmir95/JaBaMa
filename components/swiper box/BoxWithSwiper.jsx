@@ -16,30 +16,32 @@ export default function BoxWithSwiper({
   subtitle,
 }) {
   let scrl = useRef(null);
-  const [scrollX, setscrollX] = useState(0);
   const [scrolEnd, setscrolEnd] = useState(false);
-  const [scrolStart, setScrolStart] = useState(0);
-  const withDiv = useRef(null);
+  const [scrolStart, setScrolStart] = useState(true);
   //Slide click
   const slide = (shift) => {
     scrl.current.scrollLeft += shift;
-    if (scrolStart <= 0) {
-      setScrolStart(scrolStart + shift);
+  };
+  let scrollLeftPrev = 0;
+  const scrollCheck = () => {
+    let newScrollLeft = scrl.current.scrollLeft;
+    if (
+      -(scrl.current.scrollWidth - scrl.current.clientWidth) >
+      newScrollLeft - 4
+    ) {
+      setscrolEnd(true);
+    } else {
+      setscrolEnd(false);
+    }
+    if (newScrollLeft >= -1) {
+      setScrolStart(true);
+    } else {
+      setScrolStart(false);
     }
   };
 
-  const scrollCheck = () => {
-    const size = data.length;
-    if (size * -150 >= scrolStart) {
-      setscrolEnd(true);
-    } else setscrolEnd(false);
-  };
-
   return (
-    <div
-      ref={withDiv}
-      className="sm:w-full sm:mt-8  sm:pr-5 lg:max-w-[1400px] lg:w-full lg:px-20 lg:mr-0 flex flex-col justify-start items-start rounded"
-    >
+    <div className="sm:w-full sm:mt-8  sm:pr-5 lg:max-w-[1400px] lg:w-full  lg:mx-auto  flex flex-col justify-start items-start rounded">
       <div className="w-full flex items-center md:justify-between">
         <p className="flex flex-col gap-3 pb-4 sm:w-2/3 font-light sm:font-medium  sm:text-lg  lg:text-base ">
           <span>{title}</span>
@@ -53,8 +55,8 @@ export default function BoxWithSwiper({
           <button
             className={clsx(
               "sm:hidden md:block border border-main-silver rounded-lg p-2",
-              { "opacity-40": !scrolEnd },
-              { "opacity-100": scrolEnd }
+              { "opacity-40": scrolStart },
+              { "opacity-100": !scrolStart }
             )}
             onClick={() => slide(+150)}
           >
