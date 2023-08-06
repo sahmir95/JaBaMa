@@ -63,12 +63,11 @@ const data = {
         {statement:"پذیرش 24 ساعته مهمان ممنوع", permission:false},
         {statement:"امکان پذیرش گروه‌های مجردی فراهم نمی‌باشد.", permission:false},
     ],
-    "comments": [
+    "reviews": [
         {commenter:"سید مصطفی",dateComment: "مرداد 1402"  ,comment:"خیلی خوب بود"},
         {commenter:"سید علی",dateComment: "تیر 1402"  ,comment:"مزخرف"},
         {commenter:"سید احمد",dateComment: "شهریور 1402"  ,comment:"پیدات می کنم"},
         {commenter:"سید نوید",dateComment: "اردیبهشت 1402"  ,comment:"تمیز نبود"},
-        {commenter:"سید امیر",dateComment: "آذر 1402"  ,comment:"برخورد میزبان فقط خوب بود"}
     ],
     }
 
@@ -197,7 +196,7 @@ export default function Detail() {
                 <hr className="dashed-2"/>
                 <RulesComponent rules={data.rules} type={data.type} />
                 <div className="w-full h-[1px] bg-main-light-gray mt-[8px]"></div>
-                <CommentsComponent comments={data.comments}/>
+                <CommentsComponent comments={data.reviews}/>
 
 
                 <div className="w-full h-[600px]">1</div>
