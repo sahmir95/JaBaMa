@@ -3,8 +3,8 @@ import MyComp from '../mycomp/MyComp';
 import { Icon } from "@iconify/react";
 const Sidbar = () => {
     return (
-      <div className=' w-[17rem] bg-main-white border border-main-light-gray rounded-lg mr-5 mt-5'>
-        <MyComp title=" سفرهای من" icon={<Icon icon="zondicons:travel"/>} desc="لیست سفرها و درخواست ها" showBorder={true} />
+      <div className=' w-[17rem] bg-main-white border border-main-light-gray rounded-lg mr-5 mt-5 shadow-lg'>
+        <MyComp title="سفرهای من" icon={<Icon icon="zondicons:travel"/>} desc="لیست سفرها و درخواست ها" showBorder={true} />
         <MyComp title="  مورد علاقه ها" icon={<Icon icon="teenyicons:heart-outline" />} desc="لیست اقامتگاه‌ها و هتل‌های مورد علاقه" showBorder={false} />
         <p className='font-bold text-[0.625rem] text-main-slate-gray mr-3 mt-7'>میزبانی اقامتگاه</p>
         <MyComp title="میزبان شوید" icon={<Icon icon="fluent:arrow-swap-20-regular" />} desc="لیست سفرها و درخواست ها" showBorder={false} />

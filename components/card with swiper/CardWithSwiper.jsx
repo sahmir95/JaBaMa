@@ -30,7 +30,7 @@ export default function CardWithSwiper({
   const height = 124;
   return (
     <div className="w-full h-full flex flex-col gap-2 items-end">
-      <div className={twMerge("w-full sm:h-[100px] md:h-[240px] lg:h-[192px]", classNames?.images)}>
+      <div className={twMerge("w-full", classNames?.images)}>
         <SwiperComponent images={images} />
       </div>
       <div className="w-full flex flex-col gap-2 lg:h-2/3">

@@ -1,0 +1,7 @@
+.dashed-2 {
+    width: 100%;
+    border: none;
+    height: 1px;
+    background: lightgray;
+    background: repeating-linear-gradient(90deg,lightgray,lightgray 2px,transparent 2px,transparent 6px);
+}
