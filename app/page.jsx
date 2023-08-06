@@ -27,6 +27,7 @@ const Page = () => {
           city={data.cities[2].province}
           title="جذاب ترین ویلاها در جاباما"
           subtitle="ویلاهای استخردار واسه سفر آخر هفته"
+          isBeginText={false}
         >
           <CardWithSwiper isCocacity={false} />
         </BoxWithSwiper>
@@ -35,6 +36,7 @@ const Page = () => {
           city={data.cities[2].province}
           title="بهترین هتل ها با جاباما"
           subtitle="اقامتِ باکیفت در بهترین هتل"
+          isBeginText={false}
         >
           <CardWithSwiper isCocacity={false} />
         </BoxWithSwiper>
@@ -43,6 +45,7 @@ const Page = () => {
           city={data.cities[2].province}
           title="کلبه‌های خاص"
           subtitle="کلبه‌هلی مثلثی و چوبی"
+          isBeginText={false}
         >
           <CardWithSwiper isCocacity={false} />
         </BoxWithSwiper>
