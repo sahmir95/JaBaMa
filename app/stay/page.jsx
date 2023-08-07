@@ -6,6 +6,7 @@ import "./page.css"
 import {RulesComponent} from "@/components/rulesComponent/RulesComponent";
 import {CommentsComponent} from "@/components/commentsComponent/CommentsComponent";
 import Image from "../../components/imageComponent/Image";
+import React from "react";
 const data = {
         "id": 1,
         "title": "اجاره ویلا دوخوابه استخردار آبگرم سروستان کردان",
@@ -77,11 +78,12 @@ const data = {
 export default function Detail() {
     return (
         <div className="w-full flex justify-center items-center flex-col">
-            <div className="w-full h-40">
-                {/*<img className="sm:6 h-6" src="https://img.icons8.com/material-outlined/24/1A1A1A/right.png" alt="right"/>*/}
-                <Image/>
+            <div className="w-full relative">
+                <Image images={data.images}/>
+                <img className="sm:6 h-6 absolute top-0 z-10" src="https://img.icons8.com/material-outlined/24/1A1A1A/right.png" alt="right"/>
+
             </div>
-            <div className="mx-[20px] flex justify-center items-center flex-col">
+            <div className="w-full px-[20px] mt-[20px] flex justify-center items-center flex-col">
                 <h1 className="sm:text-center font-medium text-lg ">{data.title}</h1>
                 <div className=" font-light flex justify-center items-center mt-5 text-xs gap-1">
                     <div className=" flex justify-center items-center gap-x-1 ">

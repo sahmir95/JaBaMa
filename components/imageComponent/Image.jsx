@@ -12,26 +12,33 @@ import "./Image.css"
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-const Image = () => {
-    const image = [1,2,3,4,5]
+
+const Image = ({images}) => {
     return (
         <div>
             <Swiper
                 cssMode={true}
-                    navigation={true}
-                    pagination={true}
-                    mousewheel={true}
-                    keyboard={true}
-                    lazy={true}
-                    modules={[Navigation, Pagination, Mousewheel, Keyboard]}
+                navigation={true}
+                pagination={true}
+                mousewheel={true}
+                keyboard={true}
+                lazy={true}
+                modules={[Navigation, Pagination, Mousewheel, Keyboard]}
                 className="swiper1"
             >
-                {image.map((item) => {
-                   return (
-                           <SwiperSlide>
-                               <p>Hello World {item}</p>
-                           </SwiperSlide>
-                       )
+                {images.map((item) => {
+                    return (
+                        <SwiperSlide>
+                            <div style={{
+                                backgroundImage: "url(/images/image-placeholder.svg)",
+                                backgroundSize: "cover",
+                                backgroundPosition: "center",
+                                backgroundRepeat: "no-repeat"
+                            }}>
+                                <img loading="lazy" className="aspect-[5/4] w-full " src={item}/>
+                            </div>
+                        </SwiperSlide>
+                    )
                 })}
 
             </Swiper>
