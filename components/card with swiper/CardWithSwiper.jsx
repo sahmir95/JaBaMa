@@ -19,18 +19,27 @@ export default function CardWithSwiper({
   hasReserv,
   hasFavorit,
 }) {
-  const height = 124;
+  const [isFavor, setIsFavor] = useState(false);
+  const triggerFavorit = () => {
+    setIsFavor(!isFavor);
+  };
   return (
     <div className="w-full h-full flex flex-col gap-2 items-end">
       <div className=" w-full relative">
         {hasFavorit && (
           <div className="absolute top-2 left-2 z-10">
-            <button>
-              <Icon
-                icon="material-symbols:favorite-outline"
-                color="white"
-                width="20"
-              />
+            <button onClick={triggerFavorit}>
+              {!isFavor && (
+                <Icon
+                  icon="material-symbols:favorite-outline"
+                  color="white"
+                  width="20"
+                  fill="red"
+                />
+              )}
+              {isFavor && (
+                <Icon icon="material-symbols:favorite" color="red" width="20" />
+              )}
             </button>
           </div>
         )}

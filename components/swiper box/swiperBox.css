@@ -25,6 +25,7 @@
 @media screen and (min-width: 1024px) {
   .box {
     height: 100%;
+    max-height: max-content;
   }
   .box li {
     width: 22.5%;
