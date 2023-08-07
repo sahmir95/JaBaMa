@@ -8,12 +8,12 @@ import {
     Keyboard,
     Lazy,
 } from "swiper/modules"
-import "./Image.css"
+import "./SwiperDetailPage.css"
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-const Image = ({images}) => {
+const SwiperDetailPage = ({images}) => {
     return (
         <div>
             <Swiper
@@ -46,4 +46,4 @@ const Image = ({images}) => {
     );
 };
 
-export default Image;
+export default SwiperDetailPage;

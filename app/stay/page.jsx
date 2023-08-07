@@ -5,7 +5,7 @@ import "../../public/images/clock.png"
 import "./page.css"
 import {RulesComponent} from "@/components/rulesComponent/RulesComponent";
 import {CommentsComponent} from "@/components/commentsComponent/CommentsComponent";
-import Image from "../../components/imageComponent/Image";
+import SwiperDetailPage from "../../components/swiperDetailPageComponent/SwiperDetailPage";
 import React from "react";
 const data = {
         "id": 1,
@@ -79,7 +79,7 @@ export default function Detail() {
     return (
         <div className="w-full flex justify-center items-center flex-col">
             <div className="w-full relative">
-                <Image images={data.images}/>
+                <SwiperDetailPage images={data.images}/>
                 <img className="sm:6 h-6 absolute top-0 z-10" src="https://img.icons8.com/material-outlined/24/1A1A1A/right.png" alt="right"/>
 
             </div>
