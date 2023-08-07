@@ -1,4 +1,4 @@
-import '../globals.css'
+import './globals.css'
 import {Inter} from 'next/font/google'
 import Menu from "@/components/menu/Menu";
 import React from "react";
@@ -22,9 +22,9 @@ export default function RootLayout({children}) {
 
         {children}
 
-        <AppBanner display="lg:hidden"/>
-        <Menu display="lg:hidden"/>
-        <Footer display="lg:block"/>
+        <AppBanner/>
+        <Menu/>
+        <Footer/>
         </body>
         </html>
     )
