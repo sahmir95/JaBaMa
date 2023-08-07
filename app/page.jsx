@@ -58,8 +58,8 @@ const Page = () => {
           <LastSection />
           <TagSection data={data.data[0].vila} />
         </div>    
+      </div>
     </>
-    </div>
   );
 };
 
