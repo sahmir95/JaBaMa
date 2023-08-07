@@ -14,6 +14,7 @@ export default function BoxWithSwiper({
   city,
   title,
   subtitle,
+  isBeginText,
 }) {
   let scrl = useRef(null);
   const [scrolEnd, setscrolEnd] = useState(false);
@@ -100,6 +101,8 @@ export default function BoxWithSwiper({
                 images: item.images,
                 bedroom: item.bedroom.rooms,
                 capacity: item.capacity,
+                hasDiscount: item.discount,
+                hasFavorit: true,
               })}
             </li>
           );
