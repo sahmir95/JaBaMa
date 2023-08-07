@@ -4,13 +4,13 @@ import {HiOutlineHeart} from "react-icons/hi";
 import {RiSearchLine} from "react-icons/ri";
 import styles from "./headerPages.module.css";
 
-const HeaderPages = () => {
+const HeaderPages = ({display,border,loc, comp}) => {
 
     const [value, setValue] = useState();
 
     return (
-        <div className="border-b border-b-main-light-gray">
-            <div className={`sm:hidden md:hidden lg:flex items-center justify-between mx-auto w-full h-20 max-w-[1400px] px-4 z-40`}>
+        <div className={`hidden lg:block ${display} ${border} ${loc}`}>
+            <div className={`flex items-center justify-between mx-auto w-full h-20 max-w-[1400px] px-4 z-40`}>
                 <div className="flex items-center justify-start">
                     <a href="https://www.jabama.com/">
                         <img src="/images/color-logo.svg" alt="logo"/>
@@ -27,7 +27,7 @@ const HeaderPages = () => {
                     />
                 </div>
                 <div className="flex items-center justify-end">
-                    <div className="flex items-center justify-center cursor-pointer ml-9 px-5 py-[13px] border border-main-light-gray rounded-lg">
+                    <div className="flex items-center justify-center cursor-pointer ml-5 px-5 py-[13px] border border-main-light-gray rounded-lg">
                         <HiOutlineHeart className="text-main-black text-xl ml-2"/>
                         <span className="text-main-black font-medium text-sm">مورد علاقه‌ها</span>
                     </div>
@@ -37,6 +37,7 @@ const HeaderPages = () => {
                     </div>
                 </div>
             </div>
+            {comp}
         </div>
     );
 };

@@ -7,7 +7,12 @@ import styles from "./not-found.module.css"
 const NotFound = () => {
     return (
         <>
-            <HeaderPages/>
+            <HeaderPages
+                display="static"
+                loc=""
+                border="border-b border-b-main-light-gray"
+                comp=""
+            />
             <div className="lg:hidden max-w-[1024px]">
                 <div className="flex items-center justify-center flex-col pt-[70px]">
                     <img className="mb-5" src="/images/404responsive.svg" alt="not-found"/>
@@ -22,7 +27,7 @@ const NotFound = () => {
                     </Link>
                 </div>
             </div>
-            <div className="sm:hidden md:hidden lg:block py-32">
+            <div className="hidden lg:block py-32">
                 <div className="flex items-center justify-center flex-col">
                     <img className="w-[297px] mb-[25px]" src="/images/404large.svg" alt="notfound"/>
                     <h2 className="font-light text-2xl">متاسفانه صفحه مورد نظر شما وجود ندارد.</h2>
