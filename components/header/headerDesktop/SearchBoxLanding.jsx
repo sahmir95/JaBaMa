@@ -1,11 +1,11 @@
 import React from "react";
-import Header from "@/components/header/Header";
+import HeaderMobile from "@/components/header/headerMobile/HeaderMobile";
 import { getLocalData } from "@/lib/localdata";
 
 const data = await getLocalData();
 const city = data.cities;
 
-const HeaderLanding = ({ display }) => {
+const SearchBoxLanding = ({ display }) => {
   return (
     <div className={display}>
       <div className="px-5 pt-[15px]">
@@ -14,9 +14,9 @@ const HeaderLanding = ({ display }) => {
           اجاره ویلا، سوئیت و اقامتگاه در شمال و سراسر ایران
         </h5>
       </div>
-      <Header data={city} />
+      <HeaderMobile data={city} />
     </div>
   );
 };
 
-export default HeaderLanding;
+export default SearchBoxLanding;

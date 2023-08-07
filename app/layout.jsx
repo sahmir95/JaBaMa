@@ -4,7 +4,6 @@ import Menu from "@/components/menu/Menu";
 import React from "react";
 import AppBanner from "@/components/menu/jabamaAppNotif/AppBanner";
 import Footer from "@/components/footer/Footer";
-import { Providers } from "@/redux/provider/privider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,13 +17,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Providers>
-          {children}
+        {children}
 
-          <AppBanner display="lg:hidden" />
-          <Menu display="lg:hidden" />
-          <Footer display="lg:block" />
-        </Providers>
+        <AppBanner display="lg:hidden" />
+        <Menu display="lg:hidden" />
+        <Footer display="lg:block" />
       </body>
     </html>
   );

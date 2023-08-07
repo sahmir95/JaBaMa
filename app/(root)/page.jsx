@@ -11,8 +11,8 @@ import TagSection from "@/components/last section home/TagSection";
 import LandingPage from "@/components/landingPage/LandingPage";
 import HeaderPop from "@/components/header/headerPop/HeaderPop";
 import HeaderPopDesktop from "@/components/header/headerPop/HeaderPopDesktop";
-import HeaderLanding from "@/components/header/HeaderLanding";
-import HeaderDesktop from "@/components/header/HeaderDesktop";
+import SearchBoxLanding from "@/components/header/headerDesktop/SearchBoxLanding";
+import HeaderDesktop from "@/components/header/headerDesktop/HeaderDesktop";
 
 const data = await getLocalData();
 

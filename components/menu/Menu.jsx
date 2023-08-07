@@ -10,23 +10,23 @@ const Menu = ({display}) => {
     return (
             <div className={`${display} bg-main-white flex items-center justify-center fixed bottom-0 w-full z-40 border-t border-t-main-gainsboro`}>
             <div className="flex flex-1 items-center justify-center flex-col py-3">
-                <IoHomeOutline className="text-lg"/>
+                <IoHomeOutline className="text-[22px] text-main-slate-gray"/>
                 <span className="font-light text-[.6rem] mt-1">خانه</span>
             </div>
             <div className="flex flex-1 items-center justify-center flex-col py-2">
-                <HiOutlineSquares2X2 className="text-lg"/>
+                <HiOutlineSquares2X2 className="text-[22px] text-main-slate-gray"/>
                 <span className="font-light text-[.6rem] mt-1">لیست شهرها</span>
             </div>
             <div className="flex flex-1 items-center justify-center flex-col py-2">
-                <PiSuitcaseRollingLight className="text-lg"/>
+                <PiSuitcaseRollingLight className="text-[22px] text-main-slate-gray"/>
                 <span className="font-light text-[.6rem] mt-1">سفرهای من</span>
             </div>
             <div className="flex flex-1 items-center justify-center flex-col py-2">
-                <PiHeartStraight className="text-lg"/>
+                <PiHeartStraight className="text-[22px] text-main-slate-gray"/>
                 <span className="font-light text-[.6rem] mt-1">علاقه‌مندی‌ها</span>
             </div>
             <div className="flex flex-1 items-center justify-center flex-col py-2">
-                <HiOutlineUser className="text-lg"/>
+                <HiOutlineUser className="text-[22px] text-main-slate-gray"/>
                 <span className="font-light text-[.6rem] mt-1">حساب کاربری</span>
             </div>
         </div>

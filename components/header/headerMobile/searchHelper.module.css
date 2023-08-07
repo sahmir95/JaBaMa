@@ -1,0 +1,16 @@
+.scrollHorizontal {
+    overflow-x: auto;
+}
+
+.scrollHorizontal::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+.scrollHorizontal::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.scrollHorizontal::-webkit-scrollbar-thumb {
+    background-color: transparent;
+}
