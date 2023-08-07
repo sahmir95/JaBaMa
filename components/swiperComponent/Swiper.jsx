@@ -94,22 +94,19 @@ export default function SwiperComponent({ images }) {
         {imgs.map((item) => {
           return (
             <SwiperSlide>
-              <div
-                className="w-full h-full"
+              <img
                 style={{
-                  backgroundImage: `url("/images/image-placeholder.svg")`,
-                  backgroundRepeat: "no-repeat",
+                  backgroundImage: "url(/images/image-placeholder.svg)",
                   backgroundPosition: "center",
                   backgroundSize: "cover",
+                  backgroundColor: "#d7d7d9",
                 }}
-              >
-                <img
-                  className="w-full h-full object-cover"
-                  key={item}
-                  src={item}
-                  loading="lazy"
-                />
-              </div>
+                className="w-full h-full object-cover"
+                key={item}
+                src={item}
+                loading="lazy"
+              />
+              <div class=" swiper-lazy-preloader-white "></div>
             </SwiperSlide>
           );
         })}
