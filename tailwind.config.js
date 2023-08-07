@@ -40,7 +40,6 @@ module.exports = {
       "main-blue": "#2c7df9",
       "main-favorite-red": "#f66047",
       "main-banner-app": "#fef5e6",
-      "main-button-gray": "#f3f4f5",
       "main-transparent": "transparent",
     },
     screens: {
