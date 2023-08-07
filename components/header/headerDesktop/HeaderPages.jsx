@@ -1,12 +1,9 @@
-'use client'
-import React, {useState} from 'react';
+import React from 'react';
 import {HiOutlineHeart} from "react-icons/hi";
-import {RiSearchLine} from "react-icons/ri";
-import styles from "./headerPages.module.css";
+import HeaderPagesSearch from "@/components/header/headerDesktop/HeaderPagesSearch";
 
-const HeaderPages = ({display,border,loc, comp}) => {
+const HeaderPages = ({display, border, loc, compFilter, compSearch}) => {
 
-    const [value, setValue] = useState();
 
     return (
         <div className={`hidden lg:block ${display} ${border} ${loc}`}>
@@ -16,18 +13,10 @@ const HeaderPages = ({display,border,loc, comp}) => {
                         <img src="/images/color-logo.svg" alt="logo"/>
                     </a>
                 </div>
-                <div className={`flex items-center justify-center border border-[#ddd] rounded-[10px] py-[14px] px-5 mr-[200px] ${styles.searchShadow}`}>
-                    <RiSearchLine className="text-main-light-orange ml-2"/>
-                    <input
-                        className="font-medium text-sm w-[260px] outline-none border-none"
-                        type="text"
-                        placeholder="جستجو شهر، استان یا اقامتگاه"
-                        value={value}
-                        onChange={(e)=> setValue(e.target.value)}
-                    />
-                </div>
+                {compSearch}
                 <div className="flex items-center justify-end">
-                    <div className="flex items-center justify-center cursor-pointer ml-5 px-5 py-[13px] border border-main-light-gray rounded-lg">
+                    <div
+                        className="flex items-center justify-center cursor-pointer ml-5 px-5 py-[13px] border border-main-light-gray rounded-lg">
                         <HiOutlineHeart className="text-main-black text-xl ml-2"/>
                         <span className="text-main-black font-medium text-sm">مورد علاقه‌ها</span>
                     </div>
@@ -37,7 +26,7 @@ const HeaderPages = ({display,border,loc, comp}) => {
                     </div>
                 </div>
             </div>
-            {comp}
+            {compFilter}
         </div>
     );
 };
