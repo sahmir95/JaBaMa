@@ -24,7 +24,7 @@ const Page = () => {
         display="lg:block"
         img="/images/notifBannerDesktop.jpg"
       />
-      <HeaderLanding display="lg:hidden" />
+      <SearchBoxLanding display="lg:hidden" />
       <HeaderDesktop display="lg:flex" />
       <LandingPage />
       <div className="w-full min-h-screen flex flex-col items-center">
