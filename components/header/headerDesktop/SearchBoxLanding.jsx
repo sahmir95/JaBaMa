@@ -5,9 +5,9 @@ import { getLocalData } from "@/lib/localdata";
 const data = await getLocalData();
 const city = data.cities;
 
-const SearchBoxLanding = ({ display }) => {
+const SearchBoxLanding = () => {
   return (
-    <div className={display}>
+    <div className="lg:hidden">
       <div className="px-5 pt-[15px]">
         <img className="h-[20px]" src="/images/color-logo.svg" alt="logo" />
         <h5 className="text-[.63rem] font-light mt-2">

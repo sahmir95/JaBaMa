@@ -3,9 +3,9 @@ import {FaTwitter} from "react-icons/fa6";
 import {FaInstagram} from "react-icons/fa6";
 import {FaArrowLeft} from "react-icons/fa6";
 
-const Footer = ({display}) => {
+const Footer = () => {
     return (
-        <div className={`${display} hidden border-t border-main-gainsboro bg-main-light-grayish-white w-full`}>
+        <div className="hidden lg:block border-t border-main-gainsboro bg-main-light-grayish-white w-full">
             <div className="px-4 max-w-[1400px] mx-auto">
                 <div className="pt-14">
                     <div className="grid grid-cols-4">

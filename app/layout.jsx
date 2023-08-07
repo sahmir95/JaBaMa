@@ -22,9 +22,9 @@ export default function RootLayout({children}) {
 
         {children}
 
-        <AppBanner display="lg:hidden"/>
-        <Menu display="lg:hidden"/>
-        <Footer display="lg:block"/>
+        <AppBanner/>
+        <Menu/>
+        <Footer/>
         </body>
         </html>
     )
