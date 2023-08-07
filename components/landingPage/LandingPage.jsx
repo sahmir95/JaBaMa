@@ -70,7 +70,7 @@ const LandingPage = () => {
                 </div>
             </section>
             <section className="sm:hidden md:hidden lg:block relative">
-                <div className={`absolute top-1/2 right-1/2 ${styles.transformIcon} flex items-center justify-center gap-16 rounded-lg w-fit mx-auto py-5 px-20 bg-main-white ${styles.shadowBox}`}>
+                <div className={`absolute top-1/2 right-1/2 ${styles.transformIcon} flex items-center justify-center gap-[40px] w-[720px] rounded-lg mx-auto py-5 px-20 bg-main-white ${styles.shadowBox}`}>
                     <a className="flex items-center justify-center flex-col px-4" href="#">
                         <img className="w-[72px]" src="/images/Vila.png" alt="ویلا"/>
                         <span className="font-medium text-lg">ویلا</span>
