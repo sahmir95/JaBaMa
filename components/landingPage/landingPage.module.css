@@ -1,0 +1,20 @@
+.shadowHeader::before {
+    position: absolute;
+    content: "";
+    inset: 0;
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(180deg, rgba(115,119,121,0.7455357142857143) 0%, rgba(115,119,121,0) 100%);
+}
+
+.imageRendering {
+    image-rendering: pixelated;
+}
+
+.shadowBox {
+    box-shadow: 0 0.125rem 1.5rem 0 rgba(14,16,17,.08);
+}
+
+.transformIcon {
+    transform: translate(50%, -40%);
+}
