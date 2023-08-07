@@ -1,15 +1,18 @@
 import React from 'react';
 import Link from "next/link";
 import {RiSearchLine} from "react-icons/ri";
+import HeaderPages from "@/components/header/headerDesktop/HeaderPages";
+import styles from "./not-found.module.css"
 
 const NotFound = () => {
     return (
-        <div>
+        <>
+            <HeaderPages/>
             <div className="lg:hidden max-w-[1024px]">
                 <div className="flex items-center justify-center flex-col pt-[70px]">
                     <img className="mb-5" src="/images/404responsive.svg" alt="not-found"/>
                     <h2 className="font-light text-base">متاسفانه <span
-                        className="relative font-medium text-base highlight"> صفحه مورد نظر شما وجود ندارد.</span></h2>
+                        className={`relative font-medium text-base ${styles.highlight}`}> صفحه مورد نظر شما وجود ندارد.</span></h2>
                     <p className="font-light text-sm mt-[10px] mb-[70px] w-[190px] text-center leading-7">اما می‌توانید هر
                         نوعی از اقامتگاه را در جاباما پیدا کنید</p>
                     <Link className="flex items-center justify-center border rounded-3xl px-[15px] py-[7px]" href="/">
@@ -29,7 +32,7 @@ const NotFound = () => {
                     </Link>
                 </div>
             </div>
-        </div>
+        </>
     );
 };
 
