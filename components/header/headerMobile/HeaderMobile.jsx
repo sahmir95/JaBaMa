@@ -3,9 +3,9 @@ import React, {useRef, useState} from 'react';
 import {FaSearch} from "react-icons/fa";
 import {FaArrowRight} from "react-icons/fa6";
 import {FaCircleXmark} from "react-icons/fa6";
-import SearchHelper from "@/components/header/SearchHelper";
+import SearchHelper from "@/components/header/headerMobile/SearchHelper";
 
-const Header = ({data}) => {
+const HeaderMobile = ({data}) => {
 
     const [searchMenu, setSearchMenu] = useState(false);
     const [value, setValue] = useState("");
@@ -44,8 +44,7 @@ const Header = ({data}) => {
                     <div>
                         {value && (
                             <FaCircleXmark onClick={deleteInputValue} className="text-main-slate-gray text-lg"/>
-                        )
-                        }
+                        )}
                     </div>
                 </div>
                 <div className="px-4">
@@ -66,4 +65,4 @@ const Header = ({data}) => {
     );
 };
 
-export default Header;
+export default HeaderMobile;

@@ -2,6 +2,9 @@
 import React, {useRef, useState} from 'react';
 import {HiOutlineSearch} from "react-icons/hi";
 import {IoCloseCircleSharp} from "react-icons/io5";
+import styles from "./landingPage.module.css";
+
+
 const LandingPage = () => {
 
     const [value, setValue] = useState("");
@@ -15,8 +18,8 @@ const LandingPage = () => {
     return (
         <div>
             <section className="sm:hidden md:hidden lg:block relative">
-                <div className="shadowHeader">
-                    <img className="w-full h-full imageRendering object-cover" src="/images/background.jpg" alt="bg"/>
+                <div className={styles.shadowHeader}>
+                    <img className={`w-full h-full ${styles.imageRendering} object-cover`} src="/images/background.jpg" alt="bg"/>
                 </div>
                 <div className="absolute inset-0 max-w-[1400px] mx-auto pt-[120px] px-4">
                     <div
@@ -67,7 +70,7 @@ const LandingPage = () => {
                 </div>
             </section>
             <section className="sm:hidden md:hidden lg:block relative">
-                <div className="absolute top-1/2 right-1/2 transformIcon flex items-center justify-center gap-16 rounded-lg w-fit mx-auto py-5 px-20 bg-main-white shadowBox">
+                <div className={`absolute top-1/2 right-1/2 ${styles.transformIcon} flex items-center justify-center gap-[40px] w-[720px] rounded-lg mx-auto py-5 px-20 bg-main-white ${styles.shadowBox}`}>
                     <a className="flex items-center justify-center flex-col px-4" href="#">
                         <img className="w-[72px]" src="/images/Vila.png" alt="ویلا"/>
                         <span className="font-medium text-lg">ویلا</span>
