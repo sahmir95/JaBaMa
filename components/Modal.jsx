@@ -21,7 +21,7 @@ const Modal = ({
   return (
     <div
       onClick={(e) => {
-        if (e && e.target.className.includes("overlay")) {
+        if (e && typeof e.target.className === "string" && e.target.className.includes("overlay")) {
           e.stopPropagation();
           onOverlayClick();
           setIsOpen(false);
@@ -30,7 +30,7 @@ const Modal = ({
       className={`overlay ${!isOpen ? "hidden" : ""}`}
     >
       <div
-        className={`bodyContainer ${className}`}
+        className={`bodyContainer animationScaleUp ${className}`}
       >
         {children}
       </div>

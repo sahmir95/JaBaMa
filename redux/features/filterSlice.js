@@ -10,6 +10,7 @@ const initialState = {
   },
   city: "",
   type: "",
+  sort: "",
   rate: "",
   hasWifi: undefined,
   hasCooling: undefined,
@@ -115,6 +116,52 @@ export const filter = createSlice({
     electricityReset: (state) => {
       state.hasElectricity = undefined;
     },
+    setTypeVilla: (state) => {
+      state.type = "villa"
+    },
+    setTypeCottage: (state) => {
+      state.type = "cottage"
+    },
+    setTypeHotel: (state) => {
+      state.type = "hotel"
+    },
+    setTypeEcoTourism: (state) => {
+      state.type = "ecoTourism"
+    },
+    setTypeReset: (state) => {
+      state.type = ""
+    },
+    setCityReset: (state) => {
+      state.city = ""
+    },
+    setCityMasal: (state) => {
+      state.city = "ماسال"
+    },
+    setCityQeshm: (state) => {
+      state.city = "قشم"
+    },
+    setCityRasht: (state) => {
+      state.city = "رشت"
+    },
+    setCityRamsar: (state) => {
+      state.city = "رامسر"
+    },
+    setCityKish: (state) => {
+      state.city = "کیش"
+    },
+    sortReset: (state) => {
+      state.sort = ""
+    },
+    sortExpensive: (state) => {
+      state.sort = "expensive"
+    },
+    sortRate: (state) => {
+      state.sort = "rate"
+    },
+    sortCheap: (state) => {
+      state.sort = "cheap"
+    },
+    
   },
 });
 
@@ -146,6 +193,21 @@ export const {
   gas,
   gasReset,
   electricity,
-  electricityReset
+  electricityReset,
+  setTypeVilla, 
+  setTypeCottage, 
+  setTypeHotel, 
+  setTypeEcoTourism, 
+  setTypeReset, 
+  setCityReset, 
+  setCityMasal, 
+  setCityQeshm, 
+  setCityRasht, 
+  setCityRamsar, 
+  setCityKish, 
+  sortReset, 
+  sortExpensive, 
+  sortRate, 
+  sortCheap
 } = filter.actions;
 export default filter.reducer;

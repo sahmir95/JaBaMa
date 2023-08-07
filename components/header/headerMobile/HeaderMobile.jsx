@@ -17,7 +17,7 @@ const HeaderMobile = ({data}) => {
     }
 
     return (
-        <div className="p-5 sticky top-1">
+        <div className="p-5 relative top-0">
             <div onClick={() => setSearchMenu(true)}
                  className="flex items-center justify-start border border-b-4 shadow-md border-b-main-light-orange border-main-gainsboro rounded-lg p-4">
                 <FaSearch className="text-main-slate-gray ml-4"/>

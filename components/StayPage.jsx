@@ -1,56 +1,148 @@
 "use client"
 
-import { useState } from "react"
-import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react"
 import Link from "next/link";
 import toFarsiNumber from "@/utils/toFaNumber";
-import SearchOptions from "@/components/SearchOptions";
 import CardWithSwiper from "@/components/card with swiper/CardWithSwiper";
-import Modal from "@/components/Modal";
 import { useDispatch, useSelector } from "react-redux";
+import { setTypeVilla , setTypeCottage , setTypeReset , setCityReset, reset , setCityKish, setCityRamsar } from "@/redux/features/filterSlice"
+import NoResultFound from "./NoResultFound";
+
+
 
 function StayPage({ stays }) {
 
-  const router = useRouter()
+  const [loading, setLoading] = useState(false);
+  const [products, setProducts] = useState(stays);
+  const [amount, setAmount] = useState(stays.length);
+  const filter = useSelector((state) => state.filterReducer);
+  const type = useSelector((state) => state.filterReducer.type);
+  const city = useSelector((state) => state.filterReducer.city);
+  const sort = useSelector((state) => state.filterReducer.sort);
+  const dispatch = useDispatch();
 
-  const filter = useSelector((state) => state.filterReducer)
-  const dispatch = useDispatch()
+
+  const titleMaker = () => {
+    let type = "ویلا و سوئیت"
+    let city = "سراسر کشور"
+    switch (filter.type) {
+      case "villa":
+        type = "ویلا"
+        break;
+      case "cottage":
+        type = "کلبه"
+        break;
+      case "hotel":
+        type = "هتل"
+        break;
+      case "ecoTourism":
+        type = "بومگردی"
+        break;
+      default:
+        break;
+    }
+    if (filter.city) {
+      city = filter.city
+    }
+    return `اجاره ${type} در ${city}`
+  }
+
+  useEffect(() => {
+    const handleSort = () => {
+      setProducts((prevProducts) => {
+        switch (sort) {
+          case "expensive":
+            return prevProducts.slice().sort((a, b) => b.price.base - a.price.base);
+          case "cheap":
+            return prevProducts.slice().sort((a, b) => a.price.base - b.price.base);
+          case "rate":
+            return prevProducts.slice().sort((a, b) => b.rate - a.rate);
+          default:
+            setProducts(stays)
+            handleFilters()
+        }
+      });
+    };
+    
+    handleSort();
+  }, [sort]);
 
 
-  const handleBack = () => {
-    if (window.history.length > 2) {
-      router.back();
-    } else {
-      router.push('/');
+  function filterCityDataAsync(data, city) {
+    return new Promise((resolve) => {
+      const filteredData = city === "" ? data : data.filter((item) => item.city === city)
+      setLoading(true)
+      resolve(filteredData);
+    });
+  }
+
+  function filterTypeDataAsync(data, type) {
+    return new Promise((resolve) => {
+      const filteredData = type === "" ? data : data.filter((item) => item.type === type)
+      setLoading(true)
+      resolve(filteredData);
+    });
+  }
+
+  const handleFilters = async () => {
+    setLoading(true);
+
+    try {
+      let filteredData = stays;
+
+      if (type !== "") {
+        filteredData = await filterTypeDataAsync(filteredData, type);
+      }
+
+      if (city !== "") {
+        filteredData = await filterCityDataAsync(filteredData, city);
+      }
+
+      setProducts(filteredData);
+      setAmount(filteredData.length);
+    } catch (error) {
+      console.warn(error);
+    } finally {
+      setLoading(false);
     }
   };
 
+  useEffect(() => {
+    handleFilters();
+  }, [type, city]);
+
   return (
     <>
-    <div className="flex flex-col py-3 border-b border-main-light-silver sticky">
-      <div className="pr-3 mb-3 pl-5 h-11 flex items-center">
-        <div onClick={handleBack} className="px-2 flex justify-center items-center">
-            <img className="h-3" src="/images/right-arrow.svg" alt="arrow" />
-        </div>
-        <div className="bg-main-lightish-gray p-3 w-full">
-          {/* <Search />   */}
-          <div>
-            <span>search {filter.people}</span>
-          </div>
-        </div>
-      </div>
-      <div className="font-medium text-xs">
-        <SearchOptions/>
-      </div>
-    </div>
-    <div className="px-5">
+    <div className="px-5 pb-20">
       <div className="pt-[1.45rem] pb-[0.6rem]">
-        <p className="mb-1 font-bold text-main-deep-teal">{`اجاره `}</p>
-        <p className="mt-2 font-medium text-xs text-main-slate-gray">{`${toFarsiNumber(stays.length)} اقامتگاه`}</p>
+        {/* <p onClick={() => dispatch(setTypeVilla())}>set villa</p>
+        <p onClick={() => dispatch(setTypeCottage())}>set cottage</p>
+        <p onClick={() => dispatch(setCityRamsar())}>set ramsar</p>
+        <p onClick={() => dispatch(setCityKish())}>set kish</p>
+        <p onClick={() => dispatch(setTypeReset())}>type reset</p>
+        <p onClick={() => dispatch(setCityReset())}>city reset</p>
+        <p onClick={() => dispatch(reset())}>all reset</p> */}
+        <p className="mb-1 font-bold text-main-deep-teal">{titleMaker()}</p>
+        <p className="mt-2 font-medium text-xs text-main-slate-gray">{`${toFarsiNumber(amount)} اقامتگاه`}</p>
       </div>
-      <div className="mt-4">
-          {stays?.length >= 1 &&
-          stays.map((stay) => {
+      {loading ? (
+            <div className="mt-4">
+            {[...Array(4)].map((_, index) => (
+              <div key={index} className="pb-6 animate-pulse">
+                <div className="h-44 bg-main-light-silver rounded"></div>
+                <div className="space-y-2 mt-2">
+                  {[...Array(4)].map((_, index) => (
+                    <div key={index} className="h-4 bg-main-light-silver rounded w-5/6"></div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+      ) : (
+      <div className="mt-4 pb-10">
+          {products?.length >= 1 ?
+          products
+            .map((stay) => {
               return (
               <div key={stay.id} className="pb-6">
                   <CardWithSwiper
@@ -67,7 +159,7 @@ function StayPage({ stays }) {
                       middle: "text-xs",
                       startPrice: "sm:inline text-xs",
                       bottom: "text-xs",
-                      price: "font-bold text-[0.9rem]",
+                      price: "font-bold text-[0.9rem] pl-[0.15rem]",
                     }}
                     province={stay?.province}
                     images={stay?.images}
@@ -75,8 +167,9 @@ function StayPage({ stays }) {
                   />
               </div>
               );
-          })}
+          }) : <NoResultFound />}
       </div>
+      )}
     </div>
   </>
   )

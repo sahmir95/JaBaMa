@@ -5,10 +5,10 @@ import {PiSuitcaseRollingLight} from "react-icons/pi";
 import {PiHeartStraight} from "react-icons/pi";
 import {HiOutlineUser} from "react-icons/hi";
 
-const Menu = () => {
+const Menu = ({display}) => {
 
     return (
-            <div className="lg:hidden bg-main-white flex items-center justify-center fixed bottom-0 w-full z-40 border-t border-t-main-gainsboro">
+            <div className={`${display} bg-main-white flex items-center justify-center fixed bottom-0 w-full border-t border-t-main-gainsboro`}>
             <div className="flex flex-1 items-center justify-center flex-col py-3">
                 <IoHomeOutline className="text-[22px] text-main-slate-gray"/>
                 <span className="font-light text-[.6rem] mt-1">خانه</span>
