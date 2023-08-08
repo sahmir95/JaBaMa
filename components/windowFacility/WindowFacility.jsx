@@ -23,11 +23,7 @@ export const WindowFacility = ({facility,onClose,type}) => {
                                 </li>
                             )
                         })}
-
-
-
                     </ul>
-
                 </div>
             </div>
         </div>
