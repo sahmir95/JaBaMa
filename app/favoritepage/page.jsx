@@ -4,9 +4,10 @@ import Sidbar from '@/components/sidebar/Sidbar';
 import TitlePage from '@/components/titlepage/TiTlePage';
 import { Icon } from "@iconify/react";
 import HeaderPages from '@/components/header/headerDesktop/HeaderPages';
+import ButtonFav from '@/components/buttonfav/ButtonFav';
 
 const FavoritePage = ({data}) => {
-const [favorite, setfavorite] = useState([1,2]);
+const [favorite, setfavorite] = useState([]);
   return (
     <>
      <HeaderPages
@@ -15,13 +16,14 @@ const [favorite, setfavorite] = useState([1,2]);
        border="border-b border-b-main-light-gray"
        compFilter=""
     />
+    <ButtonFav/>
     <div>
       {favorite.length>0 ? (
       <div className='flex'>
        <div className='hidden lg:block w-1/4 mb-10'>
          <Sidbar />
        </div>
-       <div className='w-full lg:w-3/4 p-4'>
+       <div className='w-full lg:w-3/4 '>
          <div >
            <TitlePage title='مورد علاقه ها' />
            <div className='w-full flex sm:flex-wrap'>
@@ -41,7 +43,7 @@ const [favorite, setfavorite] = useState([1,2]);
           <div className="hidden lg:block w-1/4 mb-10">
             <Sidbar />
           </div>
-          <div className="w-full lg:w-3/4 p-4">
+          <div className="w-full lg:w-3/4 ">
             <TitlePage title="مورد علاقه ها" />
             <div className="flex flex-col items-center justify-center">
               <img
