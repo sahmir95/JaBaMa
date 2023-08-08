@@ -1,8 +1,8 @@
 'use client'
-export const WindowComment = ({comments,onclose}) => {
+export const WindowComment = ({comments,onclose,openComment}) => {
     return (
         <div
-            className="w-full h-[100%] p-[20px] z-[999] fixed top-0 left-0 bottom-[-100%] bg-main-white ">
+            className={`w-full h-full p-[20px] z-[999] fixed top-0 left-0 bg-main-white transition-all ease ${openComment ? "bottom-0" : "bottom-[-100%]"}`}>
             <div onClick={onclose} className=" text-[20px] cursor-pointer ">
                 <img className="sm:w-5 h-6 cursor-pointer"
                      src="https://img.icons8.com/material-outlined/24/1A1A1A/right.png" alt="right"/>

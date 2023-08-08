@@ -15,6 +15,9 @@ module.exports = {
         extrabold: "extrabold",
         black_Iranyekan: "black_Iranyekan",
       },
+      boxShadow: {
+        '10xl': '0 0 10px 0 rgba(0, 0, 0, 0.07)',
+      }
     },
     colors: {
       "main-black": "#000000",

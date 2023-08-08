@@ -26,10 +26,10 @@ const SwiperDetailPage = ({images}) => {
                 modules={[Navigation, Pagination, Mousewheel, Keyboard]}
                 className="swiper1"
             >
-                {images.map((item) => {
+                {images.map((item,index) => {
                     return (
                         <SwiperSlide>
-                            <div style={{
+                            <div key={index} style={{
                                 backgroundImage: "url(/images/image-placeholder.svg)",
                                 backgroundSize: "cover",
                                 backgroundPosition: "center",
@@ -40,7 +40,6 @@ const SwiperDetailPage = ({images}) => {
                         </SwiperSlide>
                     )
                 })}
-
             </Swiper>
         </div>
     );
