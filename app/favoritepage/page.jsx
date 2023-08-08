@@ -3,29 +3,42 @@ import React, { useState } from 'react';
 import Sidbar from '@/components/sidebar/Sidbar';
 import TitlePage from '@/components/titlepage/TiTlePage';
 import { Icon } from "@iconify/react";
+import HeaderPages from '@/components/header/headerDesktop/HeaderPages';
 
 const FavoritePage = ({data}) => {
-const [favorite, setfavorite] = useState([1,2,3,4,5]);
+const [favorite, setfavorite] = useState([1,2]);
   return (
+    <>
+     <HeaderPages
+       display="static"
+       loc=""
+       border="border-b border-b-main-light-gray"
+       compFilter=""
+    />
     <div>
       {favorite.length>0 ? (
-        <div>
-          <div className='flex items-center justify-center'>
-            <TitlePage title="مورد علاقه ها" />
-          </div>
-          <div className='flex gap-4 pt-5 mr-5  flex-col '>
-            {favorite.map((item)=>{
-              return(
-                <div>
-                  <p>hello world</p>
-                </div>
-              )
-            })}
-          </div>
-        </div>
+      <div className='flex'>
+       <div className='hidden lg:block w-1/4 mb-10'>
+         <Sidbar />
+       </div>
+       <div className='w-full lg:w-3/4 p-4'>
+         <div >
+           <TitlePage title='مورد علاقه ها' />
+           <div className='w-full flex sm:flex-wrap'>
+             {favorite.map((item) => {
+               return (
+                 <div className='gap-4 pt-5 mr-5'>
+                   <p className=''>{item}</p>
+                 </div>
+               );
+             })}
+           </div>
+         </div>
+       </div>
+     </div>
       ) : (
         <div className="flex">
-          <div className="hidden lg:block w-1/4">
+          <div className="hidden lg:block w-1/4 mb-10">
             <Sidbar />
           </div>
           <div className="w-full lg:w-3/4 p-4">
@@ -47,6 +60,7 @@ const [favorite, setfavorite] = useState([1,2,3,4,5]);
         </div>
       )}
     </div>
+    </>
   );
 }
 
