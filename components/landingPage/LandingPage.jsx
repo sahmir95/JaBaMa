@@ -17,9 +17,9 @@ const LandingPage = () => {
 
     return (
         <div>
-            <section className="sm:hidden md:hidden lg:block relative">
+            <section className="hidden lg:block relative">
                 <div className={styles.shadowHeader}>
-                    <img className={`w-full h-full ${styles.imageRendering} object-cover`} src="/images/background.jpg" alt="bg"/>
+                    <img className={`w-full h-full ${styles.imageRendering} object-cover`} src="/images/backgroundhouse.jpg" alt="bg"/>
                 </div>
                 <div className="absolute inset-0 max-w-[1400px] mx-auto pt-[120px] px-4">
                     <div
