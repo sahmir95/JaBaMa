@@ -19,13 +19,10 @@ const data = await getLocalData();
 const Page = () => {
   return (
     <div>
-      <HeaderPop display="lg:hidden" img="/images/notifBanner.jpg" />
-      <HeaderPopDesktop
-        display="lg:block"
-        img="/images/notifBannerDesktop.jpg"
-      />
-      <SearchBoxLanding display="lg:hidden" />
-      <HeaderDesktop display="lg:flex" />
+      <HeaderPop />
+      <HeaderPopDesktop />
+      <SearchBoxLanding />
+      <HeaderDesktop />
       <LandingPage />
       <div className="w-full min-h-screen flex flex-col items-center">
         <AutoSwiper />

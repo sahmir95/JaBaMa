@@ -18,13 +18,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Providers>
-          {children}
-
-          <AppBanner display="lg:hidden" />
-          <Menu display="lg:hidden" />
-          <Footer display="lg:block" />
-        </Providers>
+        {children}
+        <AppBanner />
+        <Menu />
+        <Footer />
       </body>
     </html>
   );

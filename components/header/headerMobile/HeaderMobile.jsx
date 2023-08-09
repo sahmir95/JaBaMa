@@ -44,8 +44,7 @@ const HeaderMobile = ({data}) => {
                     <div>
                         {value && (
                             <FaCircleXmark onClick={deleteInputValue} className="text-main-slate-gray text-lg"/>
-                        )
-                        }
+                        )}
                     </div>
                 </div>
                 <div className="px-4">

@@ -5,7 +5,9 @@ import "../../public/images/clock.png"
 import "./page.css"
 import {RulesComponent} from "@/components/rulesComponent/RulesComponent";
 import {CommentsComponent} from "@/components/commentsComponent/CommentsComponent";
-import Image from "../../components/imageComponent/Image";
+import SwiperDetailPage from "../../components/swiperDetailPageComponent/SwiperDetailPage";
+import React from "react";
+import {FaHeartCircleCheck, FaShareNodes} from "react-icons/fa6";
 const data = {
         "id": 1,
         "title": "اجاره ویلا دوخوابه استخردار آبگرم سروستان کردان",
@@ -77,22 +79,36 @@ const data = {
 export default function Detail() {
     return (
         <div className="w-full flex justify-center items-center flex-col">
-            <div className="w-full h-40">
-                {/*<img className="sm:6 h-6" src="https://img.icons8.com/material-outlined/24/1A1A1A/right.png" alt="right"/>*/}
-                <Image/>
+            <div className="sm:w-full inline relative lg:hidden">
+                <SwiperDetailPage images={data.images} id={data.id}/>
+                <img className="w-6 h-6 absolute top-0 z-10" src="https://img.icons8.com/material-outlined/24/1A1A1A/right.png" alt="right"/>
+
             </div>
-            <div className="mx-[20px] flex justify-center items-center flex-col">
-                <h1 className="sm:text-center font-medium text-lg ">{data.title}</h1>
-                <div className=" font-light flex justify-center items-center mt-5 text-xs gap-1">
+            <div className="sm:w-full px-[20px] mt-[20px] flex justify-center items-center flex-col lg:">
+                <div className="sm:font-light flex justify-center items-center lg:justify-evenly">
+                    <h1 className="sm:text-center font-medium text-lg lg:text-[1rem] ">{data.title}</h1>
+                    <div className=" sm:font-light flex justify-center items-center flex-wrap mt-5 text-xs gap-1 lg: gap-[4px]">
                     <div className=" flex justify-center items-center gap-x-1 ">
-                        <img className="sm:3 h-3" src="https://img.icons8.com/material-rounded/24/FAB005/star--v1.png" alt="star--v1"/>
-                        <div className="font-medium">{data.rate}</div>
+                        <img className="w-3 h-3" src="https://img.icons8.com/material-rounded/24/FAB005/star--v1.png" alt="star--v1"/>
+                        <div className="sm:font-medium text-[0.7rem] lg:text-[0.9rem]">{data.rate}</div>
                         <a className="underline">(17 نظر ثبت شده)</a>
                     </div>
                     <p className="text-lg">.</p>
                     <div className="flex justify-center items-center gap-1">
-                        <img className="sm:3 h-3" src="https://img.icons8.com/fluency-systems-filled/48/FAB005/marker.png" alt="marker"/>
+                        <img className="w-3 h-3" src="https://img.icons8.com/fluency-systems-filled/48/FAB005/marker.png" alt="marker"/>
                         <a className="underline">{data.province},{data.city}</a>
+                    </div>
+                    <div className=" px-[8px] py-[4px] rounded-[16px] bg-main-dark-red mt-[8px] font-medium text-[0.65rem] text-main-white lg: mt-0 text-[0.8rem] px-[10px]">% تا {data.discount} درصد تخفیف</div>
+                </div>
+                    <div className="sm:hidden lg:inline flex justify-around items-center">
+                            <button className="w-[110px] h-fit flex items-center justify-between rounded-[8px] border-[1px] border-main-gainsboro bg-main-white px-2 py-[6px] cursor-pointer shadow-10xl">
+                                <div>
+                                    <FaShareNodes className="w-[12px] h-[12px] text-[8px] text-main-slate-gray"/>
+                                </div>
+                                <span className="h-[20px] border-[1px] border-main-light-gray"></span>
+                                <span className="h-[20px] font-medium text-[0.7rem]  text-main-deep-teal">اشتراک گذاری</span>
+                            </button>
+
                     </div>
                 </div>
                 <div className="w-full h-[1px] bg-main-light-gray mt-[20px]"></div>
@@ -199,12 +215,16 @@ export default function Detail() {
                 <RulesComponent rules={data.rules} type={data.type} />
                 <div className="w-full h-[1px] bg-main-light-gray mt-[8px]"></div>
                 <CommentsComponent comments={data.reviews}/>
-
-
-                <div className="w-full h-[600px]">1</div>
-
             </div>
-
+            <div className="w-full h-[1px] bg-main-light-gray mt-[20px]"></div>
+            <div className="w-full mt-[20px] flex flex-col px-[20px]">
+                <div className="font-bold">جستجو {data.type} مشابه</div>
+                <div className="w-full h-[200px] flex items-start scroll-smooth scroll-p-[20px] gap-x-[20px] mt-[20px] whitespace-nowrap overflow-x-scroll">
+                        <a href="#" className="w-fit h-fit bg-main-light-grayish-silver font-medium text-[0.9rem] p-[20px] border-[1px] border-main-light-gray rounded-[10px]">اجاره ویلا و سوئیت در کردان </a>
+                        <a href="#" className="w-fit h-fit bg-main-light-grayish-silver font-medium text-[0.9rem] p-[20px] border-[1px] border-main-light-gray rounded-[10px]">اجاره ویلا و سوئیت باربیکیودار (منقل) در کردان </a>
+                        <a href="#" className="w-fit h-fit bg-main-light-grayish-silver font-medium text-[0.9rem] p-[20px] border-[1px] border-main-light-gray rounded-[10px]">اجاره ویلا و سوئیت در استان البرز </a>
+                </div>
+            </div>
         </div>
     )
 }
