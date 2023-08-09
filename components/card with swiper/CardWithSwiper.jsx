@@ -23,14 +23,32 @@ export default function CardWithSwiper({
     middle: '',
     bottom: "",
     startPrice: "",
-    price: ""
+    price: "",
+    discount: "",
+    reserve: ""
   },
   isCocacity,
+  hasDiscount,
+  isBeginText,
+  hasReserv,
+  hasFavorit,
+  showDiscountPrice
 }) {
   const height = 124;
   return (
     <div className="w-full h-full flex flex-col gap-2 items-end">
-      <div className={twMerge("w-full", classNames?.images)}>
+      <div className={twMerge("w-full relative", classNames?.images)}>
+        {hasFavorit && (
+            <div className="absolute top-2 left-2 z-10">
+              <button>
+                <Icon
+                  icon="material-symbols:favorite-outline"
+                  color="white"
+                  width="20"
+                />
+              </button>
+            </div>
+          )}
         <SwiperComponent images={images} />
       </div>
       <div className="w-full flex flex-col gap-2 lg:h-2/3">
@@ -64,15 +82,40 @@ export default function CardWithSwiper({
             </span>
           )}
         </p>
+        {hasDiscount > 0 && (
+          <div className="w-full ">
+            <p className={twMerge("w-[42%] flex justify-center bg-[rgb(255,245,246)] text-main-dark-red py-[1px] rounded-2xl border border-main-dark-red font-medium text-[0.75rem]", classNames?.discount)}>
+              % تا {toFarsiNumber(hasDiscount)} درصد تخفیف
+            </p>
+          </div>
+        )}
         <p className={twMerge("w-full font-medium text-[0.75rem] flex items-center text-main-slate-gray", classNames?.bottom)}>
-          <span className={twMerge("sm:hidden lg:block text-main-black text-[0.65rem]", classNames?.startPrice)}>
-            شروع قیمت از:
-          </span>
+          {isBeginText && (
+            <span className={twMerge("sm:hidden lg:block text-main-black text-[0.65rem]", classNames?.startPrice)}>
+              شروع قیمت از:
+            </span>
+          )}
           <span className={twMerge(" font-medium text-[0.8rem] mr-[4px] text-main-black", classNames?.price)}>
-            {price && toFarsiNumber(price)} تومان
+            {hasDiscount > 0 ? (
+              <span className="text-right flex gap-1">
+                {showDiscountPrice && <span className="line-through text-main-silver hidden sm:inline">{toFarsiNumber(price)}</span>}
+                <span>{toFarsiNumber(price - (price * hasDiscount) / 100)}</span>
+              </span>
+            ) : (
+              <span>{toFarsiNumber(price)}</span>
+            )}{" "}
+            تومان
           </span>
-          <span>/هرشب</span>
+          <span>/ هرشب</span>
         </p>
+        {hasReserv && (
+          <div className="w-full">
+            <p className={twMerge(" w-[36%] py-[3px] flex gap-1 justify-center items-center border border-main-light-gray rounded-lg font-medium text-[0.65rem] text-main-deep-teal", classNames?.reserve)}>
+              <Icon icon="ant-design:thunderbolt-filled" width="12" />
+              <span>رزرو آنی و قطعی</span>
+            </p>
+          </div>
+        )}
       </div>
     </div>
   );

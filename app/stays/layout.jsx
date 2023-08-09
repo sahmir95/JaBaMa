@@ -14,7 +14,7 @@ export default function layout({children}) {
           <SupportCall />
         </div>
       </div>
-      <div className="flex flex-col pt-2 pb-3 border-b bg-main-white border-main-light-silver sticky top-0 z-50">
+      <div className="flex flex-col pt-2 pb-3 border-b bg-main-white border-main-light-silver h-fit sticky top-0 z-50">
         <div className="pr-3 mb-3 pl-5 h-11 flex items-center">
           <GoBackButton />
           <div className="bg-main-lightish-gray p-3 w-full">

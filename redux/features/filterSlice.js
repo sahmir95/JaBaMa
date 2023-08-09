@@ -22,6 +22,7 @@ const initialState = {
   hasGas: undefined,
 }
 
+
 export const filter = createSlice({
   name: "filter",
   initialState,

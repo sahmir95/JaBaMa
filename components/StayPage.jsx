@@ -139,12 +139,12 @@ function StayPage({ stays }) {
             ))}
           </div>
       ) : (
-      <div className="mt-4 pb-10">
+      <div className="mt-4 pb-10 flex flex-col md:grid md:grid-cols-2">
           {products?.length >= 1 ?
           products
             .map((stay) => {
               return (
-              <div key={stay.id} className="pb-6">
+              <div key={stay.id} className="pb-6 text">
                   <CardWithSwiper
                     price={stay?.price?.base}
                     rate={stay?.rate}
@@ -152,18 +152,24 @@ function StayPage({ stays }) {
                     title={stay?.title}
                     city={stay?.city}
                     classNames={{
-                      images: "sm:aspect-[8/5] sm:h-fit",
+                      images: "sm:aspect-[8/5] sm:h-fit md:aspect-[8/5] md:h-fit",
                       rate: "text-xs font-bold pl-[0.1rem]",
-                      comment: 'text-xs',
+                      comment: 'text-xs inline',
                       title: "",
-                      middle: "text-xs",
+                      middle: "text-xs ",
                       startPrice: "sm:inline text-xs",
                       bottom: "text-xs",
-                      price: "font-bold text-[0.9rem] pl-[0.15rem]",
+                      price: "font-bold flex items-center gap-x-1 text-[0.9rem] pl-[0.15rem]",
+                      reserve: "w-fit text-xs px-2 py-1 border-main-border-gray font-medium mt-[0.35rem]",
+                      discount: "w-fit text-xs px-2 py-[0.15rem] font-medium",
                     }}
                     province={stay?.province}
                     images={stay?.images}
                     capacity={stay?.capacity}
+                    hasDiscount={stay?.discount}
+                    isBeginText={true}
+                    hasReserv={stay?.HasImmediateReserve}
+                    hasFavorit={true}
                   />
               </div>
               );

@@ -6,8 +6,8 @@
           "id": 1,
           "title": "اجاره ویلا دوخوابه استخردار آبگرم سروستان کردان",
           "type": "villa",
-          "discount": 10,
           "rate": 4.2,
+          "discount": 10,
           "comments": 79,
           "HasImmediateReserve": true,
           "province": "البرز",
@@ -766,7 +766,7 @@
             "extra": 1
           },
           "price": {
-            "base": 4500000
+            "base": 4600000
           },
           "bedroom": {
             "rooms": 0,
