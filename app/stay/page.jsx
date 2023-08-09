@@ -8,6 +8,7 @@ import {CommentsComponent} from "@/components/commentsComponent/CommentsComponen
 import SwiperDetailPage from "../../components/swiperDetailPageComponent/SwiperDetailPage";
 import React from "react";
 import ButtonFav from "@/components/buttonfav/ButtonFav";
+import {ImageDetailComponent} from "@/components/imageDetailComponent/ImageDetailComponent";
 
 const data = {
     "id": 1,
@@ -153,7 +154,7 @@ export default function Detail() {
                     </div>
                 </div>
                 <div className="hidden lg:inline">
-
+                    <ImageDetailComponent images={data.images}/>
                 </div>
                 <div className="w-full h-[1px] bg-main-light-gray mt-[20px]"></div>
                 <div className="w-full mt-[20px]">
