@@ -1,3 +1,4 @@
+
 'use client'
 import React from 'react';
 import {HiOutlineHeart} from "react-icons/hi";
@@ -28,7 +29,10 @@ const HeaderPages = ({display, border, loc, compFilter, compSearch, position,bac
             </div>
             {compFilter}
         </div>
-    );
+      </div>
+      {compFilter}
+    </div>
+  );
 };
 
 export default HeaderPages;
