@@ -3,13 +3,17 @@ import {ReadMoreLink} from "@/components/ReadMore/ReadMore";
 import {Facility} from "@/components/facilities/Facility";
 import "../../public/images/clock.png"
 import "./page.css"
+import {RulesComponent} from "@/components/rulesComponent/RulesComponent";
+import {CommentsComponent} from "@/components/commentsComponent/CommentsComponent";
+import SwiperDetailPage from "../../components/swiperDetailPageComponent/SwiperDetailPage";
+import React from "react";
+import {FaHeartCircleCheck, FaShareNodes} from "react-icons/fa6";
 const data = {
         "id": 1,
         "title": "اجاره ویلا دوخوابه استخردار آبگرم سروستان کردان",
         "type": "ویلا",
         "discount": 10,
         "rate": 4.2,
-        "comments": 79,
         "HasImmediateReserve": true,
         "province": "البرز",
         "city": "کردان",
@@ -45,37 +49,66 @@ const data = {
             "foreignWC": 0,
             "shower": 1
         },
-        "hasCooling": false,
-        "hasHeating": true,
-        "hasFurniture": true,
-        "hasTV": true,
-        "hasWifi": false,
-        "hasWater": true,
-        "hasElectricity": true,
-        "hasGas": true
+        "facility":[{"exist": false, name:"سیستم سرمایشی" , icon: "https://img.icons8.com/sf-ultralight/25/air-conditioner.png", alt:"cooling-system"},
+            {"exist": true, name:"سیستم گرمایشی" , icon: "https://img.icons8.com/external-xnimrodx-lineal-xnimrodx/64/external-heater-electronics-xnimrodx-lineal-xnimrodx.png", alt:"heating-system"},
+            {"exist": true,name: "مبلمان" , icon: "https://img.icons8.com/ios/50/three-seater-sofa.png", alt:"furniture"},
+            {"exist": true, name: "تلویزیون" , icon: "https://img.icons8.com/external-royyan-wijaya-detailed-outline-royyan-wijaya/24/external-tv-furniture-royyan-wijaya-detailed-outline-royyan-wijaya.png", alt:"TV" },
+            {"exist": false, name:"وای فای" , icon: "https://img.icons8.com/external-outline-berkahicon/64/external-drop-smart-home-outline-berkahicon.png", alt:"wifi"},
+            {"exist": true, name:"آب" , icon: "https://img.icons8.com/external-outline-berkahicon/64/external-drop-smart-home-outline-berkahicon.png", alt:"water"},
+            {"exist": true, name:"برق" , icon: "https://img.icons8.com/external-royyan-wijaya-detailed-outline-royyan-wijaya/24/external-electric-plug-bolt-energy-royyan-wijaya-detailed-outline-royyan-wijaya.png", alt:"electricity"},
+            {"exist": true, name:"گاز" , icon: "https://img.icons8.com/external-xnimrodx-lineal-xnimrodx/64/external-gas-camping-xnimrodx-lineal-xnimrodx.png", alt:"gas"}],
+
+    "rules":[
+        {statement:"همراه داشتن کارت ملی الزامی می‌باشد.", permission:true},
+        {statement:"استعمال دخانیات مجاز نمی‌باشد.", permission:false},
+        {statement:"ورود حیوانات خانگی مجاز نمی‌باشد.", permission:false},
+        {statement:"برگزاری مراسم مجاز نمی‌باشد", permission:false},
+        {statement:"پذیرش 24 ساعته مهمان ممنوع", permission:false},
+        {statement:"امکان پذیرش گروه‌های مجردی فراهم نمی‌باشد.", permission:false},
+    ],
+    "reviews": [
+        {commenter:"سید مصطفی",dateComment: "مرداد 1402"  ,comment:"خیلی خوب بود"},
+        {commenter:"سید علی",dateComment: "تیر 1402"  ,comment:"مزخرف"},
+        {commenter:"سید احمد",dateComment: "شهریور 1402"  ,comment:"پیدات می کنم"},
+        {commenter:"سید نوید",dateComment: "اردیبهشت 1402"  ,comment:"تمیز نبود"},
+    ],
     }
 
 
 
 export default function Detail() {
-    const facility = [data.hasCooling, data.hasTV, data.hasWater, data.hasGas, data.hasWifi,data.hasElectricity,data.hasFurniture, data.hasHeating]
     return (
         <div className="w-full flex justify-center items-center flex-col">
-            <div className="w-full h-40">
-                <img className="sm:6 h-6" src="https://img.icons8.com/material-outlined/24/1A1A1A/right.png" alt="right"/>
+            <div className="sm:w-full inline relative lg:hidden">
+                <SwiperDetailPage images={data.images} id={data.id}/>
+                <img className="w-6 h-6 absolute top-0 z-10" src="https://img.icons8.com/material-outlined/24/1A1A1A/right.png" alt="right"/>
+
             </div>
-            <div className="mx-[20px] flex justify-center items-center flex-col">
-                <h1 className="sm:text-center font-medium text-lg ">{data.title}</h1>
-                <div className=" font-light flex justify-center items-center mt-5 text-xs gap-1">
+            <div className="sm:w-full px-[20px] mt-[20px] flex justify-center items-center flex-col lg:">
+                <div className="sm:font-light flex justify-center items-center lg:justify-evenly">
+                    <h1 className="sm:text-center font-medium text-lg lg:text-[1rem] ">{data.title}</h1>
+                    <div className=" sm:font-light flex justify-center items-center flex-wrap mt-5 text-xs gap-1 lg: gap-[4px]">
                     <div className=" flex justify-center items-center gap-x-1 ">
-                        <img className="sm:3 h-3" src="https://img.icons8.com/material-rounded/24/FAB005/star--v1.png" alt="star--v1"/>
-                        <div className="font-medium">{data.rate}</div>
+                        <img className="w-3 h-3" src="https://img.icons8.com/material-rounded/24/FAB005/star--v1.png" alt="star--v1"/>
+                        <div className="sm:font-medium text-[0.7rem] lg:text-[0.9rem]">{data.rate}</div>
                         <a className="underline">(17 نظر ثبت شده)</a>
                     </div>
                     <p className="text-lg">.</p>
                     <div className="flex justify-center items-center gap-1">
-                        <img className="sm:3 h-3" src="https://img.icons8.com/fluency-systems-filled/48/FAB005/marker.png" alt="marker"/>
+                        <img className="w-3 h-3" src="https://img.icons8.com/fluency-systems-filled/48/FAB005/marker.png" alt="marker"/>
                         <a className="underline">{data.province},{data.city}</a>
+                    </div>
+                    <div className=" px-[8px] py-[4px] rounded-[16px] bg-main-dark-red mt-[8px] font-medium text-[0.65rem] text-main-white lg: mt-0 text-[0.8rem] px-[10px]">% تا {data.discount} درصد تخفیف</div>
+                </div>
+                    <div className="sm:hidden lg:inline flex justify-around items-center">
+                            <button className="w-[110px] h-fit flex items-center justify-between rounded-[8px] border-[1px] border-main-gainsboro bg-main-white px-2 py-[6px] cursor-pointer shadow-10xl">
+                                <div>
+                                    <FaShareNodes className="w-[12px] h-[12px] text-[8px] text-main-slate-gray"/>
+                                </div>
+                                <span className="h-[20px] border-[1px] border-main-light-gray"></span>
+                                <span className="h-[20px] font-medium text-[0.7rem]  text-main-deep-teal">اشتراک گذاری</span>
+                            </button>
+
                     </div>
                 </div>
                 <div className="w-full h-[1px] bg-main-light-gray mt-[20px]"></div>
@@ -89,8 +122,8 @@ export default function Detail() {
                     </div>
                 </div>
                 <div className="w-full h-[1px] bg-main-light-gray mt-[20px]"></div>
-                <div className="mt-[20px] flex justify-start items-center">
-                    <div className="w-[50px] mt-[-20px] "> <img className="w-[36px] h-[25px]" src="https://img.icons8.com/external-tanah-basah-basic-outline-tanah-basah/24/1A1A1A/external-flash-multimedia-tanah-basah-basic-outline-tanah-basah.png" alt="thunder"/></div>
+                <div className="mt-[20px] flex justify-start items-start">
+                    <div className="w-[50px] mt-[8px] "> <img className="w-[36px] h-[25px]" src="https://img.icons8.com/external-tanah-basah-basic-outline-tanah-basah/24/1A1A1A/external-flash-multimedia-tanah-basah-basic-outline-tanah-basah.png" alt="thunder"/></div>
                     <div className="w-full">
                         <p className="w-full font-bold text-[0.9rem]">رزرو آنی و قطعی جاباما</p>
                         <p className="w-full font-light text-[0.75rem]">برای رزرو نهایی این آپارتمان نیازی به تأیید از سمت میزبان نخواهید داشت و رزرو شما قطعی خواهد بود.</p>
@@ -142,15 +175,15 @@ export default function Detail() {
                 </div>
                 <div className="w-full h-[1px] bg-main-light-gray mt-[20px]"></div>
                 <div  className="w-full mt-[20px] flex flex-col justify-start items-start gap-y-[20px]">
-                    <Facility faci={facility} type={data.type} Tv={data.hasTV} />
+                    <Facility facility={data.facility} type={data.type} />
                 </div>
                 <div className="w-full h-[1px] bg-main-light-gray mt-[20px]"></div>
                 <div className="w-full flex justify-start items-center flex justify-start items-center flex-col">
                     <div className="w-full mt-[20px] font-bold ">
                         محاسبه قیمت {data.type}
                     </div>
-                    <div className="w-full flex justify-start items-center mt-[20px]">
-                        <div className="w-[50px] mt-[-50px]">
+                    <div className="w-full flex justify-start items-start mt-[20px]">
+                        <div className="w-[50px] mt-[8px]">
                             <img className="w-[28px] h-[28px]" src="https://img.icons8.com/ios/50/check-in-desk.png" alt="extra-person"/>
                         </div>
                         <div className="w-full flex justify-start items-start flex-col">
@@ -178,15 +211,20 @@ export default function Detail() {
                         </div>
                     </div>
                 </div>
-                <hr class="dashed-2"/>
-
-
-
-
-                <div className="w-full h-[600px]">1</div>
-
+                <hr className="dashed-2"/>
+                <RulesComponent rules={data.rules} type={data.type} />
+                <div className="w-full h-[1px] bg-main-light-gray mt-[8px]"></div>
+                <CommentsComponent comments={data.reviews}/>
             </div>
-
+            <div className="w-full h-[1px] bg-main-light-gray mt-[20px]"></div>
+            <div className="w-full mt-[20px] flex flex-col px-[20px]">
+                <div className="font-bold">جستجو {data.type} مشابه</div>
+                <div className="w-full h-[200px] flex items-start scroll-smooth scroll-p-[20px] gap-x-[20px] mt-[20px] whitespace-nowrap overflow-x-scroll">
+                        <a href="#" className="w-fit h-fit bg-main-light-grayish-silver font-medium text-[0.9rem] p-[20px] border-[1px] border-main-light-gray rounded-[10px]">اجاره ویلا و سوئیت در کردان </a>
+                        <a href="#" className="w-fit h-fit bg-main-light-grayish-silver font-medium text-[0.9rem] p-[20px] border-[1px] border-main-light-gray rounded-[10px]">اجاره ویلا و سوئیت باربیکیودار (منقل) در کردان </a>
+                        <a href="#" className="w-fit h-fit bg-main-light-grayish-silver font-medium text-[0.9rem] p-[20px] border-[1px] border-main-light-gray rounded-[10px]">اجاره ویلا و سوئیت در استان البرز </a>
+                </div>
+            </div>
         </div>
     )
 }
