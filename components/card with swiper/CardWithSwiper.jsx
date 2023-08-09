@@ -1,4 +1,5 @@
 "use client";
+import { addDetailItem } from "@/redux/featchers/detailSlice";
 import {
   addFavoritePlace,
   removeFavorite,
@@ -38,9 +39,6 @@ export default function CardWithSwiper({
 
     setIsFavor(!isFavor);
   };
-  const handleClick = () => {
-    router.push("/new-page");
-  };
   return (
     <div className="w-full h-full flex flex-col gap-2 items-end">
       <div className=" w-full relative">
@@ -66,7 +64,9 @@ export default function CardWithSwiper({
       <Link
         href={{
           pathname: "/stay",
+          query: obj,
         }}
+        onClick={() => dispatch(addDetailItem(obj))}
         className="w-full"
       >
         <div className="w-full flex flex-col gap-2 lg:h-2/3">

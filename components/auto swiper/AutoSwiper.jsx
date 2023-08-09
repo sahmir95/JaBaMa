@@ -37,9 +37,9 @@ export default function AutoSwiper() {
         modules={[Autoplay, Pagination, Navigation]}
         className="swiper-wrapper swiper"
       >
-        {images.map((item) => {
+        {images.map((item, index) => {
           return (
-            <SwiperSlide>
+            <SwiperSlide key={index}>
               <img src={item} loading="lazy" />
             </SwiperSlide>
           );

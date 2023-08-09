@@ -7,10 +7,12 @@ import thunk from "redux-thunk";
 
 import dataSlice from "./featchers/dataSlice";
 import favoriteSlice from "./featchers/favoriteSlice";
+import detailSlice from "./featchers/detailSlice";
 
 const rootReducer = combineReducers({
   dataSlice,
   favoriteSlice,
+  detailSlice,
 });
 
 const persistConfig = {

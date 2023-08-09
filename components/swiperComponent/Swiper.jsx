@@ -8,7 +8,7 @@ import {
   Keyboard,
   Lazy,
 } from "swiper/modules";
-import React, { lazy, useEffect, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import clsx from "clsx";
 // Import Swiper styles
 import "./swiper.css";
@@ -61,7 +61,7 @@ export default function SwiperComponent({ images }) {
         pagination={true}
         mousewheel={true}
         keyboard={true}
-        lazy={true}
+        lazy={"true"}
         modules={[Navigation, Pagination, Mousewheel, Keyboard]}
         onSwiper={(swiper) => setSwiperRef(swiper)}
         onReachBeginning={() => setIsHide(true)}
@@ -80,7 +80,7 @@ export default function SwiperComponent({ images }) {
         >
           <button
             onClick={() => nextHandler()}
-            class="bg-white  flex justify-center items-center w-full h-full rounded-full shadow focus:outline-none"
+            className="bg-white  flex justify-center items-center w-full h-full rounded-full shadow focus:outline-none"
           >
             <Icon
               icon="grommet-icons:next"
@@ -91,9 +91,9 @@ export default function SwiperComponent({ images }) {
             />
           </button>
         </div>
-        {imgs.map((item) => {
+        {imgs.map((item, index) => {
           return (
-            <SwiperSlide>
+            <SwiperSlide key={index}>
               <img
                 style={{
                   backgroundImage: "url(/images/image-placeholder.svg)",
@@ -106,12 +106,12 @@ export default function SwiperComponent({ images }) {
                 src={item}
                 loading="lazy"
               />
-              <div class=" swiper-lazy-preloader-white "></div>
+              <div className=" swiper-lazy-preloader-white "></div>
             </SwiperSlide>
           );
         })}
         <div
-          class={clsx(
+          className={clsx(
             "absolute justify-center   top-1/2 right-2 z-10 flex items-center bg-main-snow rounded-full w-[28px] h-[28px]",
             { "opacity-40": isHide == true },
             { "opacity-100": isHide == "" },
@@ -121,7 +121,7 @@ export default function SwiperComponent({ images }) {
         >
           <button
             onClick={prevHandler}
-            class="bg-white  flex justify-center items-center w-full h-full rounded-full shadow focus:outline-none"
+            className="bg-white  flex justify-center items-center w-full h-full rounded-full shadow focus:outline-none"
           >
             <Icon
               icon="grommet-icons:next"

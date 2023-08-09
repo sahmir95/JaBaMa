@@ -49,8 +49,8 @@ export default function BoxWithSwiper({
           <span className="font-light text-xs">{subtitle}</span>
         </p>
 
-        <div className="flex items-start gap-2 pb-4">
-          <div className=" md:block border border-main-light-gray rounded-lg px-2 pb-2 pt-1 ml-4">
+        <div className=" flex items-start gap-2 pb-4 ">
+          <div className=" md:block border sm:ml-1 border-main-light-gray rounded-lg px-2 pb-2 pt-1 lg:ml-4">
             <button className="font-medium text-xs">مشاهده همه</button>
           </div>
           <button
