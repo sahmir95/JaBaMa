@@ -53,7 +53,7 @@ export default function SwiperComponent({ images }) {
     <div
       onMouseEnter={() => setIsHover(true)}
       onMouseLeave={() => setIsHover(false)}
-      className="w-full aspect-[5/3] sm:h-full  box-border md:h-[220px]  lg:h-full flex justify-center items-center rounded-lg"
+      className="w-full  sm:h-full  box-border md:h-[220px]  lg:h-full flex justify-center items-center rounded-lg"
     >
       <Swiper
         cssMode={true}
@@ -67,7 +67,7 @@ export default function SwiperComponent({ images }) {
         onReachBeginning={() => setIsHide(true)}
         onReachEnd={() => setIsHide(false)}
         dir="rtl"
-        className="swiper"
+        className="myswiper"
       >
         <div
           className={clsx(
@@ -101,7 +101,7 @@ export default function SwiperComponent({ images }) {
                   backgroundSize: "cover",
                   backgroundColor: "#d7d7d9",
                 }}
-                className="w-full h-full object-cover"
+                className="w-full aspect-[5/3] object-cover"
                 key={item}
                 src={item}
                 loading="lazy"

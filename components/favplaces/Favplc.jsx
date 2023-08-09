@@ -55,7 +55,7 @@ const Favplc = ({ data, title }) => {
           </div>
           <button
             className={clsx(
-              "sm:hidden md:block border border-main-silver rounded-lg p-2",
+              "sm:hidden lg:block border border-main-silver rounded-lg p-2",
               { "opacity-40": scrolStart },
               { "opacity-100": !scrolStart }
             )}
@@ -70,7 +70,7 @@ const Favplc = ({ data, title }) => {
           </button>
           <button
             className={clsx(
-              "sm:hidden md:flex  border border-main-silver rounded-lg p-2",
+              "sm:hidden lg:flex  border border-main-silver rounded-lg p-2",
               { "opacity-40": scrolEnd },
               { "opacity-100": !scrolEnd }
             )}

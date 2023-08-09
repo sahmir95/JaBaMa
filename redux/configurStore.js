@@ -3,11 +3,14 @@ import logger from "redux-logger";
 import persistReducer from "redux-persist/es/persistReducer";
 import persistStore from "redux-persist/es/persistStore";
 import storage from "redux-persist/lib/storage";
+import thunk from "redux-thunk";
 
 import dataSlice from "./featchers/dataSlice";
+import favoriteSlice from "./featchers/favoriteSlice";
 
 const rootReducer = combineReducers({
   dataSlice,
+  favoriteSlice,
 });
 
 const persistConfig = {
@@ -17,7 +20,7 @@ const persistConfig = {
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 
-const middlewares = [logger];
+const middlewares = [logger, thunk];
 
 const totalStore = () => {
   let store = configureStore({

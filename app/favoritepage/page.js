@@ -1,25 +1,41 @@
-'use client'
-import React, { useState } from 'react';
-import Sidbar from '@/components/sidebar/Sidbar';
-import TitlePage from '@/components/titlepage/TiTlePage';
+"use client";
+import React, { useState } from "react";
+import Sidbar from "@/components/sidebar/Sidbar";
+import TitlePage from "@/components/titlepage/TiTlePage";
 import { Icon } from "@iconify/react";
+import { useSelector } from "react-redux";
+import CardWithSwiper from "@/components/card with swiper/CardWithSwiper";
 
-const FavoritePage = ({data}) => {
-const [favorite, setfavorite] = useState([1,2,3,4,5]);
+const FavoritePage = () => {
+  const favorite = useSelector((state) => state.favoriteSlice.favorite);
+
   return (
     <div>
-      {favorite.length>0 ? (
+      {favorite.length > 0 ? (
         <div>
-          <div className='flex items-center justify-center'>
+          <div className="flex items-center justify-center">
             <TitlePage title="مورد علاقه ها" />
           </div>
-          <div className='flex gap-4 pt-5 mr-5  flex-col '>
-            {favorite.map((item)=>{
-              return(
-                <div>
-                  <p>hello world</p>
-                </div>
-              )
+          <div className="flex sm:flex-col gap-4 sm:p-5 ">
+            {favorite.map((item) => {
+              return (
+                <CardWithSwiper
+                  obj={item}
+                  rate={item.rate}
+                  comments={item.comments}
+                  title={item.title}
+                  province={item.province}
+                  city={item.city}
+                  price={item.price.base || 0}
+                  images={item.images}
+                  bedroom={item.bedroom.rooms}
+                  capacity={item.capacity}
+                  hasDiscount={item.discount}
+                  isCocacity={true}
+                  hasFavorit={true}
+                  isFavorite={true}
+                />
+              );
             })}
           </div>
         </div>
@@ -39,7 +55,10 @@ const [favorite, setfavorite] = useState([1,2,3,4,5]);
               <div className="lg:w-2/3 text-center">
                 <p className="font-light text-base text-main-slate-gray mt-2">
                   لیست اقامتگاه‌های{" "}
-                  <strong className="text-main-deep-teal font-bold">مورد علاقه شما</strong> خالی است.
+                  <strong className="text-main-deep-teal font-bold">
+                    مورد علاقه شما
+                  </strong>{" "}
+                  خالی است.
                 </p>
               </div>
             </div>
@@ -48,7 +67,6 @@ const [favorite, setfavorite] = useState([1,2,3,4,5]);
       )}
     </div>
   );
-}
+};
 
 export default FavoritePage;
-
