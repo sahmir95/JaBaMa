@@ -6,8 +6,10 @@ import { Icon } from "@iconify/react";
 
 import HeaderPages from "@/components/header/headerDesktop/HeaderPages";
 import ButtonFav from "@/components/buttonfav/ButtonFav";
-const FavoritePage = ({ data }) => {
-  const [favorite, setfavorite] = useState([]);
+import { useSelector } from "react-redux";
+import CardWithSwiper from "@/components/card with swiper/CardWithSwiper";
+const FavoritePage = () => {
+  const data = useSelector((state) => state.favoriteSlice.favorite);
 
   return (
     <>
@@ -19,7 +21,7 @@ const FavoritePage = ({ data }) => {
       />
       <ButtonFav />
       <div>
-        {favorite.length > 0 ? (
+        {data.length > 0 ? (
           <div className="flex">
             <div className="hidden lg:block w-1/4 mb-10">
               <Sidbar />
@@ -27,12 +29,27 @@ const FavoritePage = ({ data }) => {
             <div className="w-full lg:w-3/4 ">
               <div>
                 <TitlePage title="مورد علاقه ها" />
-                <div className="w-full flex sm:flex-wrap">
-                  {favorite.map((item) => {
+                <div className="w-full flex sm:flex-wrap sm:px-4 sm:flex-col sm:gap-3">
+                  {data.map((item) => {
                     return (
-                      <div className="gap-4 pt-5 mr-5">
-                        <p className="">{item}</p>
-                      </div>
+                      <CardWithSwiper
+                        obj={item}
+                        rate={item.rate}
+                        comments={item.comments}
+                        title={item.title}
+                        images={item.images}
+                        city={item.city}
+                        province={item.province}
+                        price={item.price.base}
+                        bedroom={item.bedroom.rooms}
+                        capacity={item.capacity}
+                        isCocacity={true}
+                        hasDiscount={item.discount}
+                        isBeginText={true}
+                        hasReserv={item.HasImmediateReserve}
+                        hasFavorit={true}
+                        isFavorite={true}
+                      />
                     );
                   })}
                 </div>

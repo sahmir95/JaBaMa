@@ -96,7 +96,10 @@ const Favplc = ({ data, title }) => {
               />
               <span className="w-full flex text-[.95rem] justify-start font-medium pl-1">
                 {item.name}،{" "}
-                <span className="font-light mr-1"> {item.province}</span>
+                <span className="font-light mr-1 sm:truncate">
+                  {" "}
+                  {item.province}
+                </span>
               </span>
             </div>
           );

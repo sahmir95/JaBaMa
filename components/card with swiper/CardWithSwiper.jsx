@@ -44,7 +44,7 @@ export default function CardWithSwiper({
       <div className=" w-full relative">
         {hasFavorit && (
           <div className="absolute top-2 left-2 z-10">
-            <button onClick={() => triggerFavorit(obj)}>
+            <Link href={"/favoritepage"} onClick={() => triggerFavorit(obj)}>
               {!isFavor && (
                 <Icon
                   icon="material-symbols:favorite-outline"
@@ -56,15 +56,14 @@ export default function CardWithSwiper({
               {isFavor && (
                 <Icon icon="material-symbols:favorite" color="red" width="20" />
               )}
-            </button>
+            </Link>
           </div>
         )}
-        <SwiperComponent images={images} />
+        <SwiperComponent obj={obj} images={images} />
       </div>
       <Link
         href={{
           pathname: "/stay",
-          query: obj,
         }}
         onClick={() => dispatch(addDetailItem(obj))}
         className="w-full"

@@ -19,18 +19,19 @@ import "swiper/css/mousewheel";
 import "swiper/css/keyboard";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import { Icon } from "@iconify/react";
+import { useDispatch } from "react-redux";
+import { addDetailItem } from "@/redux/featchers/detailSlice";
+import Link from "next/link";
 
-export default function SwiperComponent({ images }) {
+export default function SwiperComponent({ obj, images }) {
   const [imgs, setImgs] = useState(images);
   const [swiperRef, setSwiperRef] = useState(null);
   const [isHide, setIsHide] = useState(true);
   const [isEnd, setIsEnd] = useState(false);
   const [isHover, setIsHover] = useState(false);
-  const [loading, setLoading] = useState(true);
-  const counter = useRef(0);
-  const imageLoaded = () => {
-    setLoading(false);
-  };
+
+  const dispatch = useDispatch();
+
   const nextHandler = () => {
     swiperRef.slideNext();
     if (!isEnd) {
@@ -94,19 +95,28 @@ export default function SwiperComponent({ images }) {
         {imgs.map((item, index) => {
           return (
             <SwiperSlide key={index}>
-              <img
-                style={{
-                  backgroundImage: "url(/images/image-placeholder.svg)",
-                  backgroundPosition: "center",
-                  backgroundSize: "cover",
-                  backgroundColor: "#d7d7d9",
+              <Link
+                href={{
+                  pathname: "/stay",
+                  query: obj,
                 }}
-                className="w-full aspect-[5/3] object-cover"
-                key={item}
-                src={item}
-                loading="lazy"
-              />
-              <div className=" swiper-lazy-preloader-white "></div>
+                onClick={() => dispatch(addDetailItem(obj))}
+                className="w-full"
+              >
+                <img
+                  style={{
+                    backgroundImage: "url(/images/image-placeholder.svg)",
+                    backgroundPosition: "center",
+                    backgroundSize: "cover",
+                    backgroundColor: "#d7d7d9",
+                  }}
+                  className="w-full aspect-[5/3] object-cover"
+                  key={item}
+                  src={item}
+                  loading="lazy"
+                />
+                <div className=" swiper-lazy-preloader-white "></div>
+              </Link>
             </SwiperSlide>
           );
         })}
