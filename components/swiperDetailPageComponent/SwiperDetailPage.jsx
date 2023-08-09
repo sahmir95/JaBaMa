@@ -28,8 +28,8 @@ const SwiperDetailPage = ({images}) => {
             >
                 {images.map((item,index) => {
                     return (
-                        <SwiperSlide>
-                            <div key={index} style={{
+                        <SwiperSlide key={index}>
+                            <div  style={{
                                 backgroundImage: "url(/images/image-placeholder.svg)",
                                 backgroundSize: "cover",
                                 backgroundPosition: "center",
