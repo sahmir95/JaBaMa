@@ -29,9 +29,6 @@ const HeaderPages = ({display, border, loc, compFilter, compSearch, position,bac
             </div>
             {compFilter}
         </div>
-      </div>
-      {compFilter}
-    </div>
   );
 };
 
