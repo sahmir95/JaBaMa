@@ -18,7 +18,7 @@ export const Facility = ({ facility, type }) => {
               امکانات رفاهی {type}
             </h2>
             <ul className="w-full h-[250px] flex justify-between items-start flex-col mt-[20px] ">
-              {facility.map((item) => {
+              {[...facility].sort((a,b) => b.exist - a.exist).map((item) => {
                 return (
                   <li
                     key={item.name}
