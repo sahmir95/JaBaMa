@@ -12,7 +12,6 @@ import "./SwiperDetailPage.css";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-
 const SwiperDetailPage = ({ images }) => {
   return (
     <div>
@@ -22,7 +21,6 @@ const SwiperDetailPage = ({ images }) => {
         pagination={true}
         mousewheel={true}
         keyboard={true}
-        lazy={"true"}
         modules={[Navigation, Pagination, Mousewheel, Keyboard]}
         className="swiper1"
       >
