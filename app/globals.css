@@ -143,3 +143,9 @@ body.modal-open {
 .transformIcon {
     transform: translate(50%, -40%);
 }
+
+@media only screen and (min-width: 1024px) {
+    .customPadOption {
+        padding: 1rem 0.9rem;
+    }
+}

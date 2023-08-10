@@ -108,30 +108,24 @@ function StayPage({ stays }) {
   };
 
   useEffect(() => {
+    setLoading(true);
     handleFilters();
   }, [type, city]);
 
   return (
     <>
-    <div className="px-5 pb-20">
-      <div className="pt-[1.45rem] pb-[0.6rem]">
-        {/* <p onClick={() => dispatch(setTypeVilla())}>set villa</p>
-        <p onClick={() => dispatch(setTypeCottage())}>set cottage</p>
-        <p onClick={() => dispatch(setCityRamsar())}>set ramsar</p>
-        <p onClick={() => dispatch(setCityKish())}>set kish</p>
-        <p onClick={() => dispatch(setTypeReset())}>type reset</p>
-        <p onClick={() => dispatch(setCityReset())}>city reset</p>
-        <p onClick={() => dispatch(reset())}>all reset</p> */}
-        <p className="mb-1 font-bold text-main-deep-teal">{titleMaker()}</p>
-        <p className="mt-2 font-medium text-xs text-main-slate-gray">{`${toFarsiNumber(amount)} اقامتگاه`}</p>
+    <div className="px-5 lg:px-[1rem] pb-20 lg:max-w-[1400px] lg:mx-auto">
+      <div className="pt-[1.45rem] pb-[0.6rem] lg:pt-8">
+        <p className="mb-1 font-bold text-2xl text-main-deep-teal">{titleMaker()}</p>
+        <p className="mt-2 lg:mt-1 font-medium text-xs text-main-slate-gray lg:text-sm">{`${toFarsiNumber(amount)} اقامتگاه`}</p>
       </div>
       {loading ? (
-            <div className="mt-4">
-            {[...Array(4)].map((_, index) => (
+            <div className="`mt-4 pb-10 flex flex-col md:grid md:grid-cols-2 md:gap-x-[1.25rem] lg:grid-cols-4 lg:gap-x-[1.625rem]">
+            {[...Array(16)].map((_, index) => (
               <div key={index} className="pb-6 animate-pulse">
                 <div className="h-44 bg-main-light-silver rounded"></div>
                 <div className="space-y-2 mt-2">
-                  {[...Array(4)].map((_, index) => (
+                  {[...Array(16)].map((_, index) => (
                     <div key={index} className="h-4 bg-main-light-silver rounded w-5/6"></div>
                   ))}
                 </div>
@@ -139,12 +133,12 @@ function StayPage({ stays }) {
             ))}
           </div>
       ) : (
-      <div className="mt-4 pb-10 flex flex-col md:grid md:grid-cols-2">
+      <div className={`mt-4 pb-10 flex flex-col ${products?.length >= 1 ? 'md:grid md:grid-cols-2 md:gap-x-[1.25rem] lg:grid-cols-4 lg:gap-x-[1.625rem]' : ""}`}>
           {products?.length >= 1 ?
           products
             .map((stay) => {
               return (
-              <div key={stay.id} className="pb-6 text">
+              <div key={stay.id} className="pb-6 text lg:pb-[2.5rem]">
                   <CardWithSwiper
                     price={stay?.price?.base}
                     rate={stay?.rate}
@@ -152,8 +146,9 @@ function StayPage({ stays }) {
                     title={stay?.title}
                     city={stay?.city}
                     classNames={{
-                      images: "sm:aspect-[8/5] sm:h-fit md:aspect-[8/5] md:h-fit",
+                      images: "",
                       rate: "text-xs font-bold pl-[0.1rem]",
+                      aspect: 'sm:aspect-[8/5] md:aspect-[8/5] md:h-fit',
                       comment: 'text-xs inline',
                       title: "",
                       middle: "text-xs ",

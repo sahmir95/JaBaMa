@@ -19,6 +19,7 @@ export default function CardWithSwiper({
     images: "",
     title: "",
     rate: "",
+    aspect: "",
     comment: "",
     middle: '',
     bottom: "",
@@ -39,17 +40,17 @@ export default function CardWithSwiper({
     <div className="w-full h-full flex flex-col gap-2 items-end">
       <div className={twMerge("w-full relative", classNames?.images)}>
         {hasFavorit && (
-            <div className="absolute top-2 left-2 z-10">
-              <button>
-                <Icon
-                  icon="material-symbols:favorite-outline"
-                  color="white"
-                  width="20"
-                />
-              </button>
-            </div>
-          )}
-        <SwiperComponent images={images} />
+          <div className="absolute top-2 left-2 z-10">
+            <button>
+              <Icon
+                icon="material-symbols:favorite-outline"
+                color="white"
+                width="20"
+              />
+            </button>
+          </div>
+        )}
+        <SwiperComponent images={images} aspect={classNames?.aspect}/>
       </div>
       <div className="w-full flex flex-col gap-2 lg:h-2/3">
         <div className="w-full flex  items-center gap-1">
@@ -95,7 +96,7 @@ export default function CardWithSwiper({
               شروع قیمت از:
             </span>
           )}
-          <span className={twMerge(" font-medium text-[0.8rem] mr-[4px] text-main-black", classNames?.price)}>
+          <span className={twMerge("flex font-medium text-[0.75rem] mr-[4px] text-main-black", classNames?.price)}>
             {hasDiscount > 0 ? (
               <span className="text-right flex gap-1">
                 {showDiscountPrice && <span className="line-through text-main-silver hidden sm:inline">{toFarsiNumber(price)}</span>}

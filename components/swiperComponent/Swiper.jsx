@@ -19,8 +19,9 @@ import "swiper/css/mousewheel";
 import "swiper/css/keyboard";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import { Icon } from "@iconify/react";
+import { twMerge } from "tailwind-merge";
 
-export default function SwiperComponent({ images }) {
+export default function SwiperComponent({ images , aspect="" }) {
   const [imgs, setImgs] = useState(images);
   const [swiperRef, setSwiperRef] = useState(null);
   const [isHide, setIsHide] = useState(true);
@@ -53,7 +54,7 @@ export default function SwiperComponent({ images }) {
     <div
       onMouseEnter={() => setIsHover(true)}
       onMouseLeave={() => setIsHover(false)}
-      className="w-full aspect-[5/3] sm:h-full  box-border md:h-[220px]  lg:h-full flex justify-center items-center rounded-lg"
+      className={twMerge("w-full aspect-[5/3] sm:h-full  box-border md:h-[220px]  lg:h-full flex justify-center items-center rounded-lg", aspect)}
     >
       <Swiper
         cssMode={true}
