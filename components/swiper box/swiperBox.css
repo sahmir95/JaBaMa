@@ -2,7 +2,7 @@
   .box {
     width: 100%;
     display: flex;
-    gap: 10px;
+    gap: 12px;
     overflow-x: scroll;
     overflow-y: hidden;
     direction: rtl;
