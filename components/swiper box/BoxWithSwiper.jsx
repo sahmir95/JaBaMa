@@ -103,7 +103,7 @@ export default function BoxWithSwiper({
                 bedroom: item.bedroom.rooms,
                 capacity: item.capacity,
                 hasDiscount: item.discount,
-                hasFavorit: true,
+                hasFavorit: false,
                 isFavorite: false,
               })}
             </li>

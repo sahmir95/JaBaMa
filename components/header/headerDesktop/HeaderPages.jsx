@@ -41,6 +41,8 @@ const HeaderPages = ({
             <span className="font-medium text-sm mr-2">گروه سوم</span>
           </div>
         </div>
+      </div>
+    </div>
   );
 };
 
