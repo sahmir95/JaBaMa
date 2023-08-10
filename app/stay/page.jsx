@@ -29,7 +29,7 @@ export default function Detail() {
           <h1 className="sm:text-center font-medium text-lg lg:text-[1rem] ">
             {data.title}
           </h1>
-          <div className=" sm:font-light flex justify-center items-center flex-wrap mt-5 text-xs gap-1 lg: gap-[4px]">
+          <div className=" sm:font-light flex justify-center items-center flex-wrap mt-5 text-xs gap-1 lg:gap-[4px]">
             <div className=" flex justify-center items-center gap-x-1 ">
               <img
                 className="w-3 h-3"
@@ -52,9 +52,11 @@ export default function Detail() {
                 {data.province},{data.city}
               </a>
             </div>
-            <div className=" px-[8px] py-[4px] rounded-[16px] bg-main-dark-red mt-[8px] font-medium text-[0.65rem] text-main-white lg: mt-0 text-[0.8rem] px-[10px]">
-              % تا {data.discount} درصد تخفیف
-            </div>
+            {data.discount && (
+              <div className=" px-[8px] py-[4px] rounded-[16px] bg-main-dark-red mt-[8px] font-medium text-[0.65rem] text-main-white lg:mt-0 lg:text-[0.8rem] lg:px-[10px]">
+                % تا {data.discount} درصد تخفیف
+              </div>
+            )}
           </div>
           <div className="sm:hidden lg:inline flex justify-around items-center">
             <button className="w-[110px] h-fit flex items-center justify-between rounded-[8px] border-[1px] border-main-gainsboro bg-main-white px-2 py-[6px] cursor-pointer shadow-10xl">
@@ -72,15 +74,19 @@ export default function Detail() {
         <div className="w-full mt-[20px]">
           <div className="font-bold">{data.type}</div>
           <div className="flex justify-between items-center">
-            <div className="w-[70%] font-bold text-[0.9rem] text-main-slate-gray ">
-              اجاره {data.type} در {data.city} به میزبانی {data.host.name}
+            <div className="w-[70%] font-bold text-[0.9rem] text-main-slate-gray text-right">
+              {data.host.name}
             </div>
             <div className=" w-[30%] flex justify-end">
-              <img
-                src={data.host.avatar}
-                className="w-[50px] rounded-[50%] border-main-black border-[2px]"
-                alt="avatar"
-              />
+              {data.host.avatar ? (
+                <img
+                  src={data.host.avatar}
+                  className="w-[50px] h-[50px] rounded-[50%] border-main-black border-[2px]"
+                  alt="avatar"
+                />
+              ) : (
+                <div className="w-[50px] h-[50px] bg-main-slate-gray rounded-[50%] border-main-black border-[2px]"></div>
+              )}
             </div>
           </div>
         </div>
@@ -192,7 +198,7 @@ export default function Detail() {
           <Facility facility={data.facility} type={data.type} />
         </div>
         <div className="w-full h-[1px] bg-main-light-gray mt-[20px]"></div>
-        <div className="w-full flex justify-start items-center flex justify-start items-center flex-col">
+        <div className="w-full flex justify-start items-center flex-col">
           <div className="w-full mt-[20px] font-bold ">
             محاسبه قیمت {data.type}
           </div>

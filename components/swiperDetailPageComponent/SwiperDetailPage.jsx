@@ -22,7 +22,7 @@ const SwiperDetailPage = ({ images }) => {
         pagination={true}
         mousewheel={true}
         keyboard={true}
-        lazy={true}
+        lazy={"true"}
         modules={[Navigation, Pagination, Mousewheel, Keyboard]}
         className="swiper1"
       >
