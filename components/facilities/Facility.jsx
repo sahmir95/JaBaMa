@@ -19,7 +19,6 @@ export const Facility = ({ facility, type }) => {
               امکانات رفاهی {type}
             </h2>
             <ul className="w-full h-[250px] flex justify-between items-start flex-col mt-[20px] ">
-<<<<<<< HEAD
               {[...facility].sort((a,b) => b.exist - a.exist).map((item) => {
                 return (
                   <li
@@ -41,31 +40,6 @@ export const Facility = ({ facility, type }) => {
                   </li>
                 );
               })}
-=======
-              {[...data]
-                .sort((a, b) => b.exist - a.exist)
-                .map((item) => {
-                  return (
-                    <li
-                      key={item.name}
-                      className={clsx(
-                        "w-full flex justify-start items-center",
-                        { "line-through": !item.exist },
-                        { "text-main-light-silver": !item.exist }
-                      )}
-                    >
-                      <span className="w-[40px]">
-                        <img
-                          className="w-[24px] h-[24px]"
-                          src={item.icon}
-                          alt={item.alt}
-                        />
-                      </span>
-                      <span className="font-bold text-sm">{item.name}</span>
-                    </li>
-                  );
-                })}
->>>>>>> main
             </ul>
           </div>
           <div className="w-full flex justify-center items-center">
