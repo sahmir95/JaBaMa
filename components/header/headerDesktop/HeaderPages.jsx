@@ -26,7 +26,7 @@ const HeaderPages = ({display, border, loc, compFilter, compSearch, background, 
                         </div>
                     </div>
                 </div>
-                {compFilter}
+            {compFilter}
             </div>
         </div>
     );
