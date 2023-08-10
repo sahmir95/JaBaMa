@@ -8,9 +8,9 @@ import { RulesComponent } from "@/components/rulesComponent/RulesComponent";
 import { CommentsComponent } from "@/components/commentsComponent/CommentsComponent";
 import SwiperDetailPage from "../../components/swiperDetailPageComponent/SwiperDetailPage";
 import React from "react";
-import { FaShareNodes } from "react-icons/fa6";
 import { useSelector } from "react-redux";
 import ButtonFav from "@/components/buttonfav/ButtonFav";
+import {ImageDetailComponent} from "@/components/imageDetailComponent/ImageDetailComponent";
 
 export default function Detail() {
     const detailData = useSelector((state) => state.detailSlice.detailData);
@@ -54,6 +54,9 @@ export default function Detail() {
                     <div className="hidden lg:inline lg:flex lg:justify-around lg:items-center">
                         <ButtonFav/>
                     </div>
+                </div>
+                <div>
+                    <ImageDetailComponent data={data}/>
                 </div>
                 <div className="w-full h-[1px] bg-main-light-gray mt-[20px]"></div>
                 <div className="w-full mt-[20px]">

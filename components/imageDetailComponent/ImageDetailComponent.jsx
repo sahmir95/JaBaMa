@@ -1,48 +1,37 @@
-// 'use client'
+'use client'
 // import React, {useState} from "react";
-// export const ImageDetailComponent = ({data}) => {
+import clsx from "clsx";
+
+export const ImageDetailComponent = ({data}) => {
+    // const arr = Object.entries(data);
+
 
     // const [activeMouse,setActiveMouse]=useState(-1)
-
-    // const handleMouseLeave = () => {
-    //     setActiveMouse(-1)
-    // }
-
+    //
     // const handleMouseEnter = (index) => {
     //     setActiveMouse(index)
     // };
-
+    //
     // const handleMouseLeave = () => {
     //     setActiveMouse(-1)
     // };
 
-//     return (
-//         <>
-//             {data.map((item) => {
-//               return(
-//                       <div key={item.id} className="w-full">
-//                           <div className="w-full">
-//                               <img className="aspect-[5/4] w-full " src={item.images[0]} alt="image-0"/>
-//                           </div>
-//                           <div className="w-full">
-//                               <div>
-//                                   <img className="aspect-[5/4] w-full " src={item.images[1]} alt="image-1"/>
-//                               </div>
-//                               <div>
-//                                   <img className="aspect-[5/4] w-full " src={item.images[2]} alt="image-2"/>
-//                               </div>
-//                               <div>
-//                                   <img className="aspect-[5/4] w-full " src={item.images[3]} alt="image-3"/>
-//                               </div>
-//                               <div>
-//                                   <img className="aspect-[5/4] w-full " src={item.images[4]} alt="image-4"/>
-//                               </div>
-//                           </div>
-//                       </div>
-//                   )
-//
-//             })}
-//         </>
-//     );
-// };
+    return (
+        <div className="w-full h-full flex items-center gap-x-[10px] mt-[20px]">
+            <div className="w-[52%]">
+                <img className="w-full " src={data.images[0]} alt="image-0"/>
+            </div>
+            <div className="w-[50%] h-full flex flex-wrap items-center gap-[10px]">
+        {data.images.filter((item,index) => index > 0 && index < 5).map((item,index) => {
+                return (
+                        <div key={index} className="w-[45%] h-full">
+                            <img className="w-full" src={item} alt="image-0"/>
+                        </div>
+                )
+
+            })}
+            </div>
+        </div>
+    );
+}
 
