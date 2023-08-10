@@ -25,7 +25,7 @@ const [favorite, setfavorite] = useState([1,2,3]);
             </div>
             <div className="w-full lg:w-3/4 ">
               <div>
-              <div className="hidden lg:block mr-8 ">
+              <div className="w-full hidden lg:block lg:mr-5  ">
                 <TitlePage title="مورد علاقه ها" />
               </div>
                 <div className="w-full flex sm:flex-wrap">
@@ -41,12 +41,12 @@ const [favorite, setfavorite] = useState([1,2,3]);
             </div>
           </div>
         ) : (
-          <div className="flex">
-            <div className="hidden lg:block w-1/4 mb-10">
+          <div className="w-full flex justify-start">
+            <div className="hidden lg:block mb-10">
               <Sidbar />
             </div>
             <div className="w-full lg:w-3/4 h-3/4 ">
-              <div className="hidden lg:block mr-8 ">
+              <div className="hidden lg:block lg:w-full lg:mr-4">
                 <TitlePage title="مورد علاقه ها" />
               </div>
               <div className="flex flex-col items-center justify-center pt-20 ">
