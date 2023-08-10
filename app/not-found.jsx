@@ -4,6 +4,7 @@ import {RiSearchLine} from "react-icons/ri";
 import HeaderPages from "@/components/header/headerDesktop/HeaderPages";
 import styles from "./not-found.module.css"
 import HeaderPagesSearch from "@/components/header/headerDesktop/HeaderPagesSearch";
+import HeaderSinglePage from "@/components/header/headerMobile/HeaderSinglePage";
 
 const NotFound = () => {
     return (
@@ -15,6 +16,7 @@ const NotFound = () => {
                 compFilter=""
                 compSearch={<HeaderPagesSearch/>}
             />
+            <HeaderSinglePage/>
             <div className="lg:hidden max-w-[1024px]">
                 <div className="flex items-center justify-center flex-col pt-[70px]">
                     <img className="mb-5" src="/images/404responsive.svg" alt="not-found"/>
