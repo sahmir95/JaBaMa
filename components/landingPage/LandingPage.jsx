@@ -91,11 +91,11 @@ const LandingPage = () => {
                             <HiOutlineSearch className="text-main-white text-2xl"/>
                         </button>
                     </div>
-                    <div className="flex items-start justify-center flex-col h-full pb-[130px]">
-                        <h5 className="font-medium text-sm text-main-white">اجاره ویلا، سوئیت و اقامتگاه در شمال و سراسر
+                    <div className="flex items-start justify-center flex-col h-full mt-5 pb-[130px]">
+                        <h5 className="font-medium text-sm text-main-black mb-2">اجاره ویلا، سوئیت و اقامتگاه در شمال و سراسر
                             ایران</h5>
-                        <span className="font-medium text-lg text-main-white mt-2">پیشنهادهای جاباما برای سفرهای تابستانی</span>
-                        <h4 className="font-medium text-[26px] text-main-white">سفر از تو، جاباما</h4>
+                        {/*<span className="font-medium text-lg text-main-white mt-2">پیشنهادهای جاباما برای سفرهای تابستانی</span>*/}
+                        <h4 className="font-medium text-[24px] text-main-black mb-10">سفر تابستونی از تو، جاباما</h4>
                         <div className="flex items-center justify-center bg-main-white rounded-lg px-4 py-2 mt-3 w-fit">
                             <a className="font-medium text-sm text-main-black" href="#">
                                 مشاهده اقامتگاه‌ها
