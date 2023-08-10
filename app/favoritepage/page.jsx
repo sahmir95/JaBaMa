@@ -6,12 +6,12 @@ import HeaderPages from "@/components/header/headerDesktop/HeaderPages";
 import HeaderMobilePages from "@/components/header/headerMobile/HeaderMobilePages";
 
 const FavoritePage = ({ data }) => {
-  const [favorite, setfavorite] = useState([]);
+const [favorite, setfavorite] = useState([1,2,3]);
 
   return (
     <>
       <HeaderPages
-        display="static"
+        display="block"
         loc=""
         border="border-b border-b-main-light-gray"
         compFilter=""
@@ -25,11 +25,13 @@ const FavoritePage = ({ data }) => {
             </div>
             <div className="w-full lg:w-3/4 ">
               <div>
+              <div className="hidden lg:block mr-8 ">
                 <TitlePage title="مورد علاقه ها" />
+              </div>
                 <div className="w-full flex sm:flex-wrap">
                   {favorite.map((item) => {
                     return (
-                      <div className="gap-4 pt-5 mr-5">
+                      <div className="gap-4 pt-5 mr-16">
                         <p className="">{item}</p>
                       </div>
                     );
