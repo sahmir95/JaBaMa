@@ -4,7 +4,6 @@ import Sidbar from "@/components/sidebar/Sidbar";
 import TitlePage from "@/components/titlepage/TiTlePage";
 import HeaderPages from "@/components/header/headerDesktop/HeaderPages";
 import HeaderMobilePages from "@/components/header/headerMobile/HeaderMobilePages";
-import ButtonFav from "@/components/buttonfav/ButtonFav";
 import { useSelector } from "react-redux";
 import CardWithSwiper from "@/components/card with swiper/CardWithSwiper";
 const FavoritePage = () => {
@@ -20,16 +19,16 @@ const FavoritePage = () => {
         compFilter=""
       />
       <HeaderMobilePages title="مورد علاقه‌ها" />
-      <div>
+      <div className="w-full h-[2000px]">
         {data.length > 0 ? (
-          <div className="flex">
-            <div className="hidden lg:block w-1/4 mb-10">
+          <div className="w-full flex">
+            <div className="hidden lg:block mb-10 mr-5 lg:w-72">
               <Sidbar />
             </div>
-            <div className="w-full lg:w-3/4 ">
-              <div>
+            <div className="w-full h-full lg:w-2/4 ">
+              <div className="w-full h-full">
                 <TitlePage title="مورد علاقه ها" />
-                <div className="w-full flex sm:flex-wrap sm:px-4 sm:flex-col sm:gap-3">
+                <div className="w-[50%] h-[50%] flex flex-wrap flex-col mr-2 gap-3 ">
                   {data.map((item) => {
                     return (
                       <CardWithSwiper
