@@ -1,14 +1,15 @@
-import "../globals.css"
-import {ReadMoreLink} from "@/components/ReadMore/ReadMore";
-import {Facility} from "@/components/facilities/Facility";
-import "../../public/images/clock.png"
-import "./page.css"
-import {RulesComponent} from "@/components/rulesComponent/RulesComponent";
-import {CommentsComponent} from "@/components/commentsComponent/CommentsComponent";
+"use client";
+import "../globals.css";
+import { ReadMoreLink } from "@/components/ReadMore/ReadMore";
+import { Facility } from "@/components/facilities/Facility";
+import "../../public/images/clock.png";
+import "./page.css";
+import { RulesComponent } from "@/components/rulesComponent/RulesComponent";
+import { CommentsComponent } from "@/components/commentsComponent/CommentsComponent";
 import SwiperDetailPage from "../../components/swiperDetailPageComponent/SwiperDetailPage";
 import React from "react";
 import ButtonFav from "@/components/buttonfav/ButtonFav";
-import {ImageDetailComponent} from "@/components/imageDetailComponent/ImageDetailComponent";
+// import {ImageDetailComponent} from "@/components/imageDetailComponent/ImageDetailComponent";
 
 const data = {
     "id": 1,
@@ -111,7 +112,6 @@ const data = {
     ],
 }
 
-
 export default function Detail() {
     return (
         <div className="w-full flex justify-center items-center flex-col">
@@ -153,18 +153,18 @@ export default function Detail() {
                         <ButtonFav/>
                     </div>
                 </div>
-                <div className="hidden lg:inline">
-                    <ImageDetailComponent images={data.images}/>
-                </div>
+                {/*<div className="hidden lg:inline">*/}
+                {/*    <ImageDetailComponent images={data.images}/>*/}
+                {/*</div>*/}
                 <div className="w-full h-[1px] bg-main-light-gray mt-[20px]"></div>
                 <div className="w-full mt-[20px]">
                     <div className="font-bold">{data.type}</div>
                     <div className="flex justify-between items-center">
                         <div
                             className="w-[70%] font-bold text-[0.9rem] text-main-slate-gray ">اجاره {data.type} در {data.city} به
-                            میزبانی {data.host.name}</div>
+                            میزبانی {data.name}</div>
                         <div className=" w-[30%] flex justify-end">
-                            <img src={data.host.avatar}
+                            <img src={data.avatar}
                                  className="w-[50px] rounded-[50%] border-main-black border-[2px]" alt="avatar"/>
                         </div>
                     </div>
@@ -202,8 +202,8 @@ export default function Detail() {
                             <div className="w-full">
                                 <p className="font-bold text-[0.9rem]">ظرفیت</p>
                                 <p className="font-light text-[0.75rem]">ظرفیت
-                                    تا {data.capacity.base + data.capacity.extra} ({data.capacity.base} نفر پایه +
-                                    تا {data.capacity.extra} نفر اضافه)</p>
+                                    تا {data.base + data.extra} ({data.base} نفر پایه +
+                                    تا {data.extra} نفر اضافه)</p>
                             </div>
                         </div>
                         <div className="w-full flex justify-start items-center ">
@@ -212,9 +212,9 @@ export default function Detail() {
                                                             alt="bed"/></div>
                             <div className="w-full">
                                 <p className="font-bold text-[0.9rem]">سرویس‌های خواب</p>
-                                <p className=" font-light text-[0.75rem]">{data.bedroom.rooms} اتاق
-                                    . {data.bedroom.double} تخت دو نفره . {data.bedroom.single} تخت یک نفره
-                                    . {data.bedroom.traditional} رخت خواب سنتی</p>
+                                <p className=" font-light text-[0.75rem]">{data.rooms} اتاق
+                                    . {data.double} تخت دو نفره . {data.single} تخت یک نفره
+                                    . {data.traditional} رخت خواب سنتی</p>
                             </div>
                         </div>
                         <div className="w-full flex justify-start items-center">
@@ -223,8 +223,8 @@ export default function Detail() {
                                                             alt="paper"/></div>
                             <div className="w-full">
                                 <p className="font-bold text-[0.9rem]">سرویس‌های بهداشتی</p>
-                                <p className="font-light text-[0.75rem]">{data.bathroom.persianWC} سرویس ایرانی
-                                    . {data.bathroom.foreignWC} سرویس فرنگی . {data.bathroom.shower} حمام</p>
+                                <p className="font-light text-[0.75rem]">{data.persianWC} سرویس ایرانی
+                                    . {data.foreignWC} سرویس فرنگی . {data.shower} حمام</p>
                             </div>
                         </div>
                     </div>
@@ -255,7 +255,7 @@ export default function Detail() {
                             <p className="font-light text-[0.75rem]">هزینه‌ای که برای نفرات بیش از استاندارد (سرویس خواب
                                 و ... ) به میلغ رزرو اضافه می‌شود.</p>
                             <p className="font-light text-[0.75rem]">قیمت برای هر نفر اضافه به ازای هر شب :
-                                <strong className="font-bold text-[0.75rem]">{data.price.extra} هزار تومان</strong>
+                                <strong className="font-bold text-[0.75rem]">{data.extra} هزار تومان</strong>
                             </p>
                         </div>
                     </div>
@@ -297,8 +297,8 @@ export default function Detail() {
                     <a href="#"
                        className="w-fit h-fit bg-main-light-grayish-silver font-medium text-[0.9rem] p-[20px] border-[1px] border-main-light-gray rounded-[10px]">اجاره
                         ویلا و سوئیت در استان البرز </a>
-                </div>
-            </div>
         </div>
-    )
+      </div>
+    </div>
+  );
 }

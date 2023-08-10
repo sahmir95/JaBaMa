@@ -1,11 +1,37 @@
 'use client'
-import React, {useRef, useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import {HiOutlineSearch} from "react-icons/hi";
 import {IoCloseCircleSharp} from "react-icons/io5";
 import styles from "./landingPage.module.css";
+import HeaderPages from "@/components/header/headerDesktop/HeaderPages";
+import HeaderPagesSearch from "@/components/header/headerDesktop/HeaderPagesSearch";
 
 
 const LandingPage = () => {
+
+    const searchBoxRef = useRef(null);
+    const [isHeaderVisible, setHeaderVisible] = useState(false);
+
+    useEffect(() => {
+        const observerOptions = {
+            rootMargin: '-100px 0px 0px 0px',
+        };
+
+        const intersectionObserver = new IntersectionObserver(([entry]) => {
+            setHeaderVisible(entry.isIntersecting);
+        }, observerOptions);
+
+        const searchBox = searchBoxRef.current;
+        const searchBoxElement = searchBoxRef.current;
+
+        if (searchBox) {
+            intersectionObserver.observe(searchBox);
+        }
+
+        return () => {
+            intersectionObserver.disconnect();
+        };
+    }, []);
 
     const [value, setValue] = useState("");
     const refInput = useRef(null);
@@ -17,13 +43,22 @@ const LandingPage = () => {
 
     return (
         <div>
+            <HeaderPages
+                display={isHeaderVisible ? 'hidden' : 'block'}
+                loc="inset-0"
+                border="border-b border-b-main-light-gray"
+                compFilter=""
+                compSearch={<HeaderPagesSearch/>}
+                position="fixed"
+                background="bg-main-white"
+            />
             <section className="hidden lg:block relative">
                 <div className={styles.shadowHeader}>
-                    <img className={`w-full h-full ${styles.imageRendering} object-cover`} src="/images/backgroundhouse.jpg" alt="bg"/>
+                    <img className={`w-full h-[760px] ${styles.imageRendering} object-cover`} src="/images/backgroundhouse.jpg" alt="bg"/>
                 </div>
                 <div className="absolute inset-0 max-w-[1400px] mx-auto pt-[120px] px-4">
-                    <div
-                        className="flex items-center justify-between pl-4 border border-main-white rounded-lg w-fit mx-auto bg-main-white">
+                    <div ref={searchBoxRef}
+                         className="flex items-center justify-between pl-4 border border-main-white rounded-lg w-fit mx-auto bg-main-white">
                         <label className="flex items-center justify-center p-4 cursor-pointer"
                                htmlFor="search">
                             <div className="flex items-start justify-center flex-col pl-20">

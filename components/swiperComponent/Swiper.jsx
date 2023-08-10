@@ -8,7 +8,7 @@ import {
   Keyboard,
   Lazy,
 } from "swiper/modules";
-import React, { lazy, useEffect, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import clsx from "clsx";
 // Import Swiper styles
 import "./swiper.css";
@@ -53,7 +53,7 @@ export default function SwiperComponent({ images }) {
     <div
       onMouseEnter={() => setIsHover(true)}
       onMouseLeave={() => setIsHover(false)}
-      className="w-full aspect-[5/3] sm:h-full  box-border md:h-[220px]  lg:h-full flex justify-center items-center rounded-lg"
+      className="w-full  sm:h-full  box-border md:h-[220px]  lg:h-full flex justify-center items-center rounded-lg"
     >
       <Swiper
         cssMode={true}
@@ -61,13 +61,13 @@ export default function SwiperComponent({ images }) {
         pagination={true}
         mousewheel={true}
         keyboard={true}
-        lazy={true}
+        lazy={"true"}
         modules={[Navigation, Pagination, Mousewheel, Keyboard]}
         onSwiper={(swiper) => setSwiperRef(swiper)}
         onReachBeginning={() => setIsHide(true)}
         onReachEnd={() => setIsHide(false)}
         dir="rtl"
-        className="swiper"
+        className="myswiper"
       >
         <div
           className={clsx(
@@ -80,7 +80,7 @@ export default function SwiperComponent({ images }) {
         >
           <button
             onClick={() => nextHandler()}
-            class="bg-white  flex justify-center items-center w-full h-full rounded-full shadow focus:outline-none"
+            className="bg-white  flex justify-center items-center w-full h-full rounded-full shadow focus:outline-none"
           >
             <Icon
               icon="grommet-icons:next"
@@ -91,30 +91,27 @@ export default function SwiperComponent({ images }) {
             />
           </button>
         </div>
-        {imgs.map((item) => {
+        {imgs.map((item, index) => {
           return (
-            <SwiperSlide>
-              <div
-                className="w-full h-full"
+            <SwiperSlide key={index}>
+              <img
                 style={{
-                  backgroundImage: `url("/images/image-placeholder.svg")`,
-                  backgroundRepeat: "no-repeat",
+                  backgroundImage: "url(/images/image-placeholder.svg)",
                   backgroundPosition: "center",
                   backgroundSize: "cover",
+                  backgroundColor: "#d7d7d9",
                 }}
-              >
-                <img
-                  className="w-full h-full object-cover"
-                  key={item}
-                  src={item}
-                  loading="lazy"
-                />
-              </div>
+                className="w-full aspect-[5/3] object-cover"
+                key={item}
+                src={item}
+                loading="lazy"
+              />
+              <div className=" swiper-lazy-preloader-white "></div>
             </SwiperSlide>
           );
         })}
         <div
-          class={clsx(
+          className={clsx(
             "absolute justify-center   top-1/2 right-2 z-10 flex items-center bg-main-snow rounded-full w-[28px] h-[28px]",
             { "opacity-40": isHide == true },
             { "opacity-100": isHide == "" },
@@ -124,7 +121,7 @@ export default function SwiperComponent({ images }) {
         >
           <button
             onClick={prevHandler}
-            class="bg-white  flex justify-center items-center w-full h-full rounded-full shadow focus:outline-none"
+            className="bg-white  flex justify-center items-center w-full h-full rounded-full shadow focus:outline-none"
           >
             <Icon
               icon="grommet-icons:next"

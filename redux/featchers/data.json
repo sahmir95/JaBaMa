@@ -1,0 +1,1597 @@
+{
+  "data": [
+    {
+      "vila": [
+        {
+          "id": 1,
+          "title": "اجاره ویلا دوخوابه استخردار آبگرم سروستان کردان",
+          "type": "ویلا",
+          "discount": 10,
+          "rate": 4.2,
+          "comments": 79,
+          "HasImmediateReserve": true,
+          "province": "البرز",
+          "city": "کردان",
+          "images": [
+            "https://cdn.jabama.com/image/890x492/jabama-images/1737810/9e7aa908-13af-4708-84a4-0442400b0ebb.jpg",
+            "https://cdn.jabama.com/image/383x240/jabama-images/1479506/ace8fc11-97c4-443d-a259-5e6d317dc955.jpeg",
+            "https://cdn.jabama.com/image/383x240/jabama-images/1479506/2887048f-20a3-4a82-83c8-82e839bc1727.jpeg",
+            "https://cdn.jabama.com/image/383x240/jabama-images/1479506/def2c0f1-74a8-42bc-ad29-5bdc5813223d.jpeg",
+            "https://cdn.jabama.com/image/383x240/jabama-images/1479506/09c679dd-6ca1-4b14-9744-ce813b5bec72.jpeg"
+          ],
+          "host": {
+            "avatar": "https://cdn.jabama.com/image/jabama-images/image_500d6b88-93c4-4ff8-b55c-823300064bee.jpg",
+            "name": "مهرداد چهری"
+          },
+          "summary": "150 متر زیربنا",
+          "description": "وشصیشصیشصیشصیشصیشصیشصیشصیشصیشصیشصیشصیشصی 4 کیلومتر استخر رو بسته",
+          "capacity": {
+            "base": 4,
+            "extra": 3
+          },
+          "price": {
+            "base": 2100000,
+            "extra": 200000
+          },
+          "bedroom": {
+            "rooms": 2,
+            "single": 0,
+            "double": 2,
+            "traditional": 4
+          },
+          "bathroom": {
+            "persianWC": 1,
+            "foreignWC": 0,
+            "shower": 1
+          },
+          "hasCooling": true,
+          "hasHeating": true,
+          "hasFurniture": true,
+          "hasTV": false,
+          "hasWifi": true,
+          "hasWater": true,
+          "hasElectricity": true,
+          "hasGas": true
+        },
+        {
+          "id": 2,
+          "type": "ویلا",
+          "title": "اجاره سوئیت یک خوابه جنگلی پاسارگاد نور",
+          "discount": 10,
+          "rate": 3.9,
+          "comments": 8,
+          "HasImmediateReserve": true,
+          "province": "مازندران",
+          "city": "نور",
+          "images": [
+            "https://cdn.jabama.com/image/jabama-images/2758347/291ee616-cd06-4aaf-8011-5d323e60a107.jpeg",
+            "https://cdn.jabama.com/image/jabama-images/2758347/bfc3ddf0-f3a8-47f8-a752-118a659eb47f.jpeg",
+            "https://cdn.jabama.com/image/jabama-images/2758347/123ba6ac-ab76-464c-8e65-bfe776299484.jpeg",
+            "https://cdn.jabama.com/image/jabama-images/2758347/ced0296a-009e-4167-b0da-5169d03072a8.jpeg",
+            "https://cdn.jabama.com/image/jabama-images/2758347/fd032146-c911-41ee-9419-c612c68e02a7.jpeg",
+            "https://cdn.alibaba.ir/ostorage/hotel-accommodation-images/2023-04-09/6e76e8c7-4c61-4bd7-976b-c1b4715b908a.jpg",
+            "https://cdn.jabama.com/image/jabama-images/2758347/bb5a7b47-77ec-4330-9e70-44fb6551efac.jpeg"
+          ],
+          "host": {
+            "avatar": "./",
+            "name": "امیرارسلان پورغلامی"
+          },
+          "summary": "۵۰ متر زیربنا",
+          "description": "سوئیت در شهر نور واقع شده است. دسترسی به نور از بلوار آیت الله خامنه ایی امکان پذیر است اقامتگاه در محیطی آرام، ویلایی و غیر بومی واقع است. اقامتگاه دارای دوربین مداربسته و نگهبان شبانه روزی می باشد. سوئیت دربست است. سوئیت ۱ خوابه می باشد. بافت محله ویلا جنگلی و دسترسی به اقامتگاه آسفالت می باشد. وضعیت آنتن دهی اقامتگاه برای همراه اول،ایرانسل و رایتل عالی می باشد. اقامتگاه دارای وای فای رایگان می باشد. فاصله اقامتگاه تا دریا 10 دقیقه می باشد. اقامتگاه قبل از ورود مهمان بطور کامل نظافت خواهد شد. فاصله اقامتگاه تا سوپرمارکت و نانوایی4 دقیقه و تا پمپ بنزین 6 دقیقه می باشد. واحد دارای امکانات اختصاصی از قبیل حمام ترکی، سونای بخار،سونا خشک ، سالن بدنسازی، حوضچه آبسرد و سالن اجتماعات می باشد. فاصله تا مناطق تجاری ۱۰ دقیقه می باشد. برگزاری مراسم با هماهنگی میزبان مجاز می باشد. استفاده از سیستم صوتی با صدای بلند تا ساعت 1 بامداد امکان پذیر می باشد. پذیرش ۲۴ ساعته مهمان با هماهنگی میزبان امکان پذیر می باشد.",
+          "capacity": {
+            "base": "2",
+            "extra": "2"
+          },
+          "price": {
+            "base": 1350000,
+            "extra": 50000
+          },
+          "bedroom": {
+            "rooms": 1,
+            "single": 0,
+            "double": 1,
+            "traditional": 2
+          },
+          "bathroom": {
+            "persianWC": 1,
+            "foreignWC": 1,
+            "shower": 2
+          },
+          "hasCooling": true,
+          "hasHeating": true,
+          "hasFurniture": true,
+          "hasTV": true,
+          "hasWifi": true,
+          "hasWater": true,
+          "hasElectricity": true,
+          "hasGas": true
+        },
+        {
+          "id": 3,
+          "type": "ویلا",
+          "title": "یکخوابه استخردار کیان",
+          "discount": 10,
+          "rate": 4.7,
+          "comments": 6,
+          "HasImmediateReserve": false,
+          "province": "البرز",
+          "city": "چهارباغ",
+          "images": [
+            "https://cdn.jabama.com/image/jabama-images/2592168/c711d903-d5a1-4805-a1d0-85d54fc073c0.JPG",
+            "https://cdn.jabama.com/image/jabama-images/2592168/b62bf05f-ecbc-44b2-83b7-15a9757dc04c.jpg",
+            "https://cdn.jabama.com/image/jabama-images/2592168/10b5144c-240e-45ba-83b8-151507b3a9d3.jpg",
+            "https://cdn.jabama.com/image/jabama-images/2592168/028444b9-8b0a-45ed-b46e-abf8b6a5c65d.JPG",
+            "https://cdn.jabama.com/image/jabama-images/2592168/1bfcafac-b45b-446a-bb8e-b6b0d3eb1bd9.jpg",
+            "https://cdn.jabama.com/image/jabama-images/2592168/d1676156-9dcc-4159-aede-2d8f3ceb88c6.jpg",
+            "https://cdn.jabama.com/image/jabama-images/2592168/819a019a-11ef-475c-9eb0-30b65826251d.jpg",
+            "https://cdn.jabama.com/image/jabama-images/2592168/1f3bcf64-6ef8-4ee7-80b0-59968ddc404b.jpg"
+          ],
+          "host": {
+            "avatar": "./",
+            "name": "کیان هادلو"
+          },
+          "summary": "80 متر زیر بنا",
+          "description": "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.",
+          "capacity": {
+            "base": "4",
+            "extra": "2"
+          },
+          "price": {
+            "base": 1200000,
+            "extra": 200000
+          },
+          "bedroom": {
+            "rooms": 1,
+            "single": 0,
+            "double": 1,
+            "traditional": 4
+          },
+          "bathroom": {
+            "persianWC": 1,
+            "foreignWC": 1,
+            "shower": 1
+          },
+          "hasCooling": true,
+          "hasHeating": true,
+          "hasFurniture": true,
+          "hasTV": false,
+          "hasWifi": false,
+          "hasWater": true,
+          "hasElectricity": true,
+          "hasGas": true
+        },
+        {
+          "id": 4,
+          "type": "ویلا",
+          "title": "اجاره سوئیت شیرین - واحد آمستردام کیش",
+          "discount": 0,
+          "rate": 4.4,
+          "comments": 95,
+          "HasImmediateReserve": false,
+          "province": "هرمزگان",
+          "city": "کیش",
+          "images": [
+            "https://cdn.jabama.com/image/jabama-images/959393/79db8b67-1b0e-411a-9b9f-1fc57ce23243.JPG",
+            "https://cdn.jabama.com/image/jabama-images/959393/b8fa02ce-d07d-4182-a55e-9bcd8dc02792.JPG",
+            "https://cdn.jabama.com/image/jabama-images/2056939/db578285-016e-45b1-8e80-57ad08a97cb2.jpg",
+            "https://cdn.jabama.com/image/800x509/jabama-images/959393/b9e5bfc8-4320-4f4d-86cc-927ac1915053.JPG",
+            "https://cdn.jabama.com/image/800x509/jabama-images/959393/eb75b931-a7c1-4f52-8159-c376ecd59bf5.JPG",
+            "https://cdn.jabama.com/image/jabama-images/959393/f842c25e-1a83-4be6-ad0f-564aec6df90c.JPG",
+            "https://cdn.jabama.com/image/jabama-images/959393/7e1ff4f3-0480-4da3-a485-0c6e77ff8fc7.JPG"
+          ],
+          "host": {
+            "avatar": "./",
+            "name": "مهران کبیری"
+          },
+          "summary": "33 متر زیربنا",
+          "description": "ویلا در شهر کیش (دهکده ساحلی) واقع شده است. اقامتگاه در محیطی آرام، شهرکی و غیر بومی واقع است. اقامتگاه دارای دوربین مداربسته در محوطه شهرک و دارای نگهبان می باشد. شهرک دارای خشکویی، میوه فروشی، هایپرمارکت، رستوران، فست فود، جیگرکی، آرایشگاه و پت شاپ می باشد. هایپرمارکت شهرک دارای ارسال رایگان برای مهمانان عزیز می باشد. ویلا دربست است. اقامتگاه دارای 1 اتاق مستر می باشد. اقامتگاه فاقد پارکینگ است. بافت محله ویلا ساحلی و دسترسی به اقامتگاه آسفالت می باشد. وضعیت آنتن دهی همراه اول، ایرانسل و رایتل عالی می باشد. فاصله با سوپرمارکت و نانوایی حدود 2 دقیقه، با دریا 10 متر، با داروخانه و درمانگاه حدود 10 دقیقه و با پمپ بنزین حدود 7 دقیقه می باشد. اقامتگاه قبل از ورود مهمان بطور کامل نظافت خواهد شد.",
+          "capacity": {
+            "base": "2",
+            "extra": "1"
+          },
+          "price": {
+            "base": 350000,
+            "extra": 150000
+          },
+          "bedroom": {
+            "rooms": 0,
+            "single": 0,
+            "double": 1,
+            "traditional": 1
+          },
+          "bathroom": {
+            "persianWC": 0,
+            "foreignWC": 1,
+            "shower": 1
+          },
+          "hasCooling": true,
+          "hasHeating": true,
+          "hasFurniture": true,
+          "hasTV": false,
+          "hasWifi": false,
+          "hasWater": true,
+          "hasElectricity": true,
+          "hasGas": true
+        },
+        {
+          "id": 5,
+          "title": "اجاره ویلا سه خوابه آرمیا",
+          "type": "ویلا",
+          "discount": 30,
+          "rate": 4.3,
+          "comments": 4,
+          "HasImmediateReserve": false,
+          "province": "مازندران",
+          "city": "رامسر",
+          "images": [
+            "https://cdn.jabama.com/image/890x492/jabama-images/1354773/8fd5e350-1d33-4303-985e-2ded990aa3e2.jpg",
+            "https://cdn.jabama.com/image/383x240/jabama-images/1354773/a87f83b0-69d6-4ecb-a2a4-a7b103716daf.jpg",
+            "https://cdn.jabama.com/image/383x240/jabama-images/1354773/8417dded-4d20-4f00-88c2-2ac886751242.jpg",
+            "https://cdn.jabama.com/image/383x240/jabama-images/1354773/7b4e1e49-a9c4-4620-a51e-3e9b9315a1da.jpg",
+            "https://cdn.jabama.com/image/383x240/jabama-images/1354773/c281a76d-d8f0-4b59-b40e-efed005e2bea.jpg"
+          ],
+          "host": {
+            "avatar": "https://cdn.jabama.com/image/jabama-images/image_436d0bcd-eae8-4b97-9861-1c4572f4acc0.jpg",
+            "name": "محمود کمالی"
+          },
+          "summary": "200 متر زیربنا",
+          "description": "ویلا در شهر رامسر (بلوار معلم) واقع شده است. اقامتگاه در محیطی آرام، آپارتمانی و بومی واقع است.اقامتگاه دارای دوربین مداربسته برای پوشش دهی پارکینگ می باشد ویلا غیردربست است و میزبان در طبقه ی بالای واحد سکونت دارد. برای پارک 5 خودرو پارکینگ سرپوشیده دارد. قابل توجه مهمانان همراه با سالمند، کودک و افراد دارای معلولیت، این اقامتگاه در طبقه 1 و دارای 20 پله می باشد.بافت محله ویلا ساحلی و دسترسی به اقامتگاه آسفالت می باشد. وضعیت آنتن دهی همراه اول، ایرانسل و رایتل عالی می باشد. فاصله با دریا 12 دقیقه ، با تلکابین 10دقیقه ، با جنگل دالخانی 30 دقیقه، با سوپرمارکت و نانوایی 5 ،با پمپ بنزین 5 دقیقه است. اقامتگاه قبل از ورود مهمان بطور کامل نظافت خواهد شد. برای کودکان زیر دوسال نیاز به پرداخت هزینه نیست.",
+          "capacity": {
+            "base": 5,
+            "extra": 5
+          },
+          "price": {
+            "base": 2500000,
+            "extra": 200000
+          },
+          "bedroom": {
+            "rooms": 3,
+            "single": 1,
+            "double": 2,
+            "traditional": 5
+          },
+          "bathroom": {
+            "persianWC": 1,
+            "foreignWC": 1,
+            "shower": 1
+          },
+          "hasCooling": true,
+          "hasHeating": true,
+          "hasFurniture": true,
+          "hasTV": true,
+          "hasWifi": false,
+          "hasWater": true,
+          "hasElectricity": true,
+          "hasGas": true
+        },
+        {
+          "id": 6,
+          "title": "اجاره ویلا دوخوابه جنگلی پنت هاوس تنیان ماسال",
+          "type": "ویلا",
+          "discount": 5,
+          "rate": 4,
+          "comments": 8,
+          "HasImmediateReserve": true,
+          "province": "گیلان",
+          "city": "ماسال",
+          "images": [
+            "https://cdn.jabama.com/image/jabama-images/2590047/f5a3ec4e-307a-4ba4-9b7d-68814f228205.jpg",
+            "https://cdn.jabama.com/image/jabama-images/2590047/35b7bcb9-2807-46e0-a93e-ff813f98fa8e.jpg",
+            "https://cdn.jabama.com/image/jabama-images/2590047/c43048b2-ed71-4dce-807c-9cafbb2a1868.jpg",
+            "https://cdn.jabama.com/image/jabama-images/2590047/255f6890-072f-4133-9e62-cf8fa9b8b505.jpg",
+            "https://cdn.jabama.com/image/jabama-images/2590047/d76db8b5-eb9c-4a89-9e0d-236e278319f6.jpg",
+            "https://cdn.jabama.com/image/jabama-images/2590047/d6ef79c3-9feb-4ca9-9945-9c0cd13db847.jpg",
+            "https://cdn.jabama.com/image/jabama-images/2590047/496413ce-5787-4edb-b666-abca0dba21cc.jpg",
+            "https://cdn.jabama.com/image/jabama-images/2590047/a7302b63-0902-42d0-bc4f-296c048d8f31.jpg",
+            "https://cdn.jabama.com/image/jabama-images/2590047/8fa81bcf-b151-4c4b-9c15-6b27fc865820.jpg",
+            "https://cdn.jabama.com/image/jabama-images/2590047/e02eb02f-fa12-4b4e-afa3-19c58a095c52.jpg"
+          ],
+          "host": {
+            "avatar": "./",
+            "name": "سیدامین موسوی"
+          },
+          "summary": "120 متر زیربنا",
+          "description": "فاصله اقامتگاه با سوپرمارکت، استخر ماهی و نانوایی ۲ دقیقه می باشد. ودارای ۱۳۰ متر پنت هاوس الاچیق دار روی پنت هاوس ویو کوه جنگل شالیزار دریاچه",
+          "capacity": {
+            "base": 7,
+            "extra": 2
+          },
+          "price": {
+            "base": 1170000,
+            "extra": 200000
+          },
+          "bedroom": {
+            "rooms": 2,
+            "single": 0,
+            "double": 1,
+            "traditional": 7
+          },
+          "bathroom": {
+            "persianWC": 1,
+            "foreignWC": 1,
+            "shower": 1
+          },
+          "hasCooling": true,
+          "hasHeating": true,
+          "hasFurniture": true,
+          "hasTV": true,
+          "hasWifi": false,
+          "hasWater": true,
+          "hasElectricity": true,
+          "hasGas": true,
+          "hasParking": true,
+          "hasPool": false,
+          "hasBarbecue": true
+        },
+        {
+          "id": 7,
+          "title": "اجاره ویلا دو خوابه دوبلکس نوری ماسال",
+          "type": "ویلا",
+          "discount": 10,
+          "rate": 4.2,
+          "comments": 84,
+          "HasImmediateReserve": true,
+          "province": "گیلان",
+          "city": "ماسال",
+          "images": [
+            "https://cdn.jabama.com/image/jabama-images/972432/ad055fd7-7766-4699-b0fe-52333b26b62e.jpg",
+            "https://cdn.jabama.com/image/jabama-images/972432/4430e19a-8bd3-4571-b768-e91ab4662b9f.jpg",
+            "https://cdn.jabama.com/image/jabama-images/972432/4430e19a-8bd3-4571-b768-e91ab4662b9f.jpg",
+            "https://cdn.jabama.com/image/jabama-images/1456713/a54510ca-75dd-47a5-8027-9dae2e406fa5.jpeg",
+            "https://cdn.jabama.com/image/jabama-images/1456713/89cd9004-f057-4fd3-9ba9-767b9340e781.jpeg",
+            "https://cdn.jabama.com/image/jabama-images/972432/f1118a4f-9dfc-490a-93d7-4aac0e5263e7.jpg",
+            "https://cdn.jabama.com/image/jabama-images/972432/14a2a29c-2e22-459c-8736-183f9df217d1.jpg",
+            "https://cdn.jabama.com/image/jabama-images/972432/f24efb3d-714e-4fde-86d4-d4d2a111c348.jpg",
+            "https://cdn.jabama.com/image/jabama-images/1509168/1a240043-a2df-4d3e-9f76-c2edbf54f425.JPG",
+            "https://cdn.jabama.com/image/jabama-images/1509168/a86d1d28-5914-451a-9201-47f399f806cc.JPG"
+          ],
+          "host": {
+            "avatar": "https://cdn.jabama.com/image/jabama-images/image_b4e22067-145e-4b74-bdad-e80d47cd0dd2.jpg",
+            "name": "برزو نوری"
+          },
+          "summary": "190 متر زیربنا",
+          "description": "فاصله اقامتگاه با سوپرمارکت، استخر ماهی و نانوایی ۲ دقیقه می باشد. ودارای ۱۳۰ متر پنت هاوس الاچیق دار روی پنت هاوس ویو کوه جنگل شالیزار دریاچه",
+          "capacity": {
+            "base": 4,
+            "extra": 4
+          },
+          "price": {
+            "base": 3000000,
+            "extra": 400000
+          },
+          "bedroom": {
+            "rooms": 2,
+            "single": 0,
+            "double": 2,
+            "traditional": 4
+          },
+          "bathroom": {
+            "persianWC": 1,
+            "foreignWC": 1,
+            "shower": 2
+          },
+          "hasCooling": true,
+          "hasHeating": true,
+          "hasFurniture": true,
+          "hasTV": true,
+          "hasWifi": false,
+          "hasWater": true,
+          "hasElectricity": true,
+          "hasGas": true,
+          "hasParking": true,
+          "hasPool": false,
+          "hasBarbecue": true
+        },
+        {
+          "id": 8,
+          "title": "اجاره ویلا یک خوابه گیله کومه رشت",
+          "type": "ویلا",
+          "discount": 0,
+          "rate": 4.4,
+          "comments": 32,
+          "HasImmediateReserve": true,
+          "province": "گیلان",
+          "city": "رشت",
+          "images": [
+            "https://cdn.jabama.com/image/890x492/jabama-images/1827174/26306637-8ac1-414d-a888-92fc138151f0.jpg",
+            "https://cdn.jabama.com/image/383x240/jabama-images/1827174/ed00ce32-dcd4-44d0-9bb1-d74f6b70e38b.jpg",
+            "https://cdn.jabama.com/image/383x240/jabama-images/1827174/9fb79c71-4312-4cfb-a9b8-8c809b541535.jpg",
+            "https://cdn.jabama.com/image/383x240/jabama-images/1827174/5c633367-b05b-4506-bcf7-a2ba83fe33bc.jpg",
+            "https://cdn.jabama.com/image/383x240/jabama-images/1827174/ef529c1f-1b8c-4d96-91e5-f1d44241c6e7.jpg"
+          ],
+          "host": {
+            "avatar": "https://cdn.jabama.com/image/jabama-images/image_a5238b4c-0ffc-4c9b-ab2c-96dd948a3b57.jpg",
+            "name": "اکرم مژدهی"
+          },
+          "summary": "۲۰۰ متر زیربنا",
+          "description": "پذیرش تا ساعت 16 امکان پذیرمی باشد و درغیر این صورت باید تا یک ساعت قبل هماهنگی با میزبان انجام شود. استخر رو باز میباشد و به دلیل سردی هوا در فصل زمستان قابل استفاده نمی باشد. ابعاد استخر 6m×4m و دارای عمق 1.5m می باشد. برگزاری هرگونه مراسم با هماهنگی میزبان فقط مجاز می باشد. برای استفاده از استخر باید از قبل با میزبان هماهنگی لازم را به عمل بیاورید",
+          "capacity": {
+            "base": 8,
+            "extra": 2
+          },
+          "price": {
+            "base": 2170000
+          },
+          "bedroom": {
+            "rooms": 1,
+            "single": 0,
+            "double": 1,
+            "traditional": 8
+          },
+          "bathroom": {
+            "persianWC": 1,
+            "foreignWC": 1,
+            "shower": 1
+          },
+          "hasCooling": true,
+          "hasHeating": true,
+          "hasFurniture": true,
+          "hasTV": false,
+          "hasWifi": true,
+          "hasWater": true,
+          "hasElectricity": true,
+          "hasGas": true
+        },
+        {
+          "id": 9,
+          "title": "اجاره ویلا دوخوابه استخردار شقایق ۱۱ کوچصفهان",
+          "type": "ویلا",
+          "discount": 0,
+          "rate": 4.2,
+          "comments": 5,
+          "HasImmediateReserve": true,
+          "province": "گیلان",
+          "city": "کوچصفهان",
+          "images": [
+            "https://cdn.jabama.com/image/890x492/jabama-images/2130130/4325756a-ee89-4544-b0bc-0fa7b3993165.jpeg",
+            "https://cdn.jabama.com/image/383x240/jabama-images/2130130/ae42e5db-394b-4143-8c88-b10e737bedce.jpeg",
+            "https://cdn.jabama.com/image/383x240/jabama-images/2130130/516c1a18-463b-47cf-8e7a-7a401d830e2d.jpeg",
+            "https://cdn.jabama.com/image/383x240/jabama-images/2130130/4395fccd-df11-4870-8d78-7243ff9b7ec4.jpeg",
+            "https://cdn.jabama.com/image/383x240/jabama-images/2130130/5949a528-d6f4-4bc2-91ea-8d769445ef9c.jpeg"
+          ],
+          "host": {
+            "avatar": "./",
+            "name": "محمد زین العابدین شیرازی"
+          },
+          "summary": "۱۱۰ متر زیربنا",
+          "description": "ویلا در شهر کوچصفهان واقع شده است. وضعیت آنتن دهی همراه اول، ایرانسل و رایتل عالی می باشد. ویلا دربست است. برای پارک 2 خودرو پارکینگ دارد. فاصله اقامتگاه تا زیبا کنار و رشت 20 دقیقه می باشد. فاصله اقامتگاه با دریا و جنگل سیاهکل 25 دقیقه می باشد.",
+          "capacity": {
+            "base": 4,
+            "extra": 1
+          },
+          "price": {
+            "base": 2200000
+          },
+          "bedroom": {
+            "rooms": 2,
+            "single": 0,
+            "double": 2,
+            "traditional": 1
+          },
+          "bathroom": {
+            "persianWC": 1,
+            "foreignWC": 1,
+            "shower": 2
+          },
+          "hasCooling": true,
+          "hasHeating": true,
+          "hasFurniture": true,
+          "hasTV": false,
+          "hasWifi": true,
+          "hasWater": true,
+          "hasElectricity": true,
+          "hasGas": true
+        },
+        {
+          "id": 10,
+          "type": "ویلا",
+          "title": "اجاره ویلا سه خوابه دهکده ساحلی ۱ کیش",
+          "discount": 0,
+          "rate": 4.4,
+          "comments": 8,
+          "HasImmediateReserve": false,
+          "province": "هرمزگان",
+          "city": "کیش",
+          "images": [
+            "https://cdn.jabama.com/image/890x492/jabama-images/2415282/0d1889d0-72f9-4160-ad69-fd1e8885d85d.jpg",
+            "https://cdn.jabama.com/image/383x240/jabama-images/2415282/2c264d34-a477-4590-b86d-485a23250264.jpg",
+            "https://cdn.jabama.com/image/383x240/jabama-images/2415282/8639248f-bf39-4e39-848b-5beb070d04d3.jpg",
+            "https://cdn.jabama.com/image/383x240/jabama-images/2415282/bf543b6a-bcde-41de-8120-2e509d83838c.jpg",
+            "https://cdn.jabama.com/image/jabama-images/2415282/ca1d5a9a-4efc-4513-abc9-014600245f67.jpg"
+          ],
+          "host": {
+            "avatar": "https://cdn.jabama.com/original/jabama-images/12345/52acb96f-472e-413e-9204-9a02bab95a94.svg",
+            "name": "زهره خالقی"
+          },
+          "summary": "۱۶۸ متر زیربنا",
+          "description": "ویلا در شهر کیش (دهکده ساحلی) واقع شده است. اقامتگاه در محیطی آرام شهرکی و غیر بومی واقع است. اقامتگاه دارای نگهبان می باشد. ویلا نیمه دربست است. مشاعات اقامتگاه مشترک است. اقامتگاه دارای 1 اتاق مستر می باشد. اقامتگاه برای پارک 1 خودرو پارکینگ سرپوشیده و محیط باز برای پارک خودروهای بیشتر دارد. قابل توجه مهمانان همراه با سالمند، کودک و افراد دارای معلولیت، این اقامتگاه در طبقه 1 و دارای 19 پله می باشد. ویلا مجهز به آسانسور است.",
+          "capacity": {
+            "base": "6",
+            "extra": "2"
+          },
+          "price": {
+            "base": 2100000,
+            "extra": 200000
+          },
+          "bedroom": {
+            "rooms": 3,
+            "single": 0,
+            "double": 3,
+            "traditional": 1
+          },
+          "bathroom": {
+            "persianWC": 0,
+            "foreignWC": 3,
+            "shower": 3
+          },
+          "hasCooling": true,
+          "hasHeating": true,
+          "hasFurniture": true,
+          "hasTV": false,
+          "hasWifi": false,
+          "hasWater": true,
+          "hasElectricity": true,
+          "hasGas": true
+        },
+        {
+          "id": 11,
+          "type": "ویلا",
+          "title": "اجاره ویلا سه خواب شیخ الاسلام قشم",
+          "rate": 4.5,
+          "comments": 41,
+          "HasImmediateReserve": false,
+          "discount": 30,
+          "province": "هرمزگان",
+          "city": "قشم",
+          "images": [
+            "https://cdn.jabama.com/image/890x492/jabama-images/1494419/5195b374-2bd2-4f78-b218-23ac2574dd0d.jpeg",
+            "https://cdn.jabama.com/image/383x240/jabama-images/1463284/fcf6b89b-be0c-4fdf-9ed5-69bfa1ff39f5.jpeg",
+            "https://cdn.jabama.com/image/383x240/jabama-images/1494419/b1e96e0f-5210-4fc3-ae38-7c6a3e7d39a5.jpeg",
+            "https://cdn.jabama.com/image/383x240/jabama-images/1494419/ec154f0e-d919-4c56-b238-6e1035c54625.jpeg",
+            "https://cdn.jabama.com/image/383x240/jabama-images/1494419/633a0a36-b904-42ec-b1ee-46d33f8e8b21.jpeg"
+          ],
+          "host": {
+            "avatar": "./",
+            "name": "فرشاد شیخ الاسلامی"
+          },
+          "summary": "۳۵۰ متر زیربنا",
+          "description": "ویلا در شهر قشم واقع شده است. اقامتگاه در محیطی آرام، ویلایی و بومی واقع است. شهرک دارای نگهبان شبانه روزی می باشد. ویلا دربست است. برای پارک 4 خودرو پارکینگ روباز و مسقف دارد. قابل توجه مهمانان همراه با سالمند، کودک و افراد دارای معلولیت، این اقامتگاه در طبقه همکف و دارای 2 پله می باشد. بافت محله ویلا شهری و دسترسی به اقامتگاه آسفالت می باشد. فاصله اقامتگاه تا ساحل 4 دقیقه با خودرو می باشد. اقامتگاه قبل از ورود مهمان بطور کامل نظافت خواهد شد. فاصله اقامتگاه تا سوپرمارکت و نانوایی 1 دقیقه و تا پمپ بنزین 3 دقیقه می باشد..",
+          "capacity": {
+            "base": 6,
+            "extra": 6
+          },
+          "price": {
+            "base": 2100000,
+            "extra": 200000
+          },
+          "bedroom": {
+            "rooms": 3,
+            "single": 2,
+            "double": 2,
+            "traditional": 6
+          },
+          "bathroom": {
+            "persianWC": 1,
+            "foreignWC": 1,
+            "shower": 1
+          },
+          "hasCooling": true,
+          "hasHeating": false,
+          "hasFurniture": true,
+          "hasTV": true,
+          "hasWifi": false,
+          "hasWater": true,
+          "hasElectricity": true,
+          "hasGas": true
+        }
+      ]
+    },
+    {
+      "hotel": [
+        {
+          "id": 12,
+          "title": "رزرو هتل ترنج (پنج ستاره)",
+          "type": "هتل",
+          "rate": 4.1,
+          "comments": 36,
+          "HasImmediateReserve": true,
+          "city": "کیش",
+          "province": "هرمزگان",
+          "images": [
+            "https://cdn.alibaba.ir/inh/domestic-hotel/image_2e4e3805-32a3-43bf-852f-098f5b1428e2.jpg",
+            "https://cdn.alibaba.ir/inh/domestic-hotel/image_514912c1-a1a2-4d1d-a1b1-e8e279d35d4c.jpg",
+            "https://cdn.alibaba.ir/inh/domestic-hotel/image_10c48b69-0d14-4382-b033-a2c2daa06695.jpg",
+            "https://cdn.alibaba.ir/inh/domestic-hotel/image_b9a33346-e009-458e-8f35-75739b008d74.jpg",
+            "https://cdn.alibaba.ir/inh/domestic-hotel/image_d22b76c4-8af0-4287-b94f-43cf9a110c33.jpg"
+          ],
+          "host": {
+            "name": "مدیریت هتل ترنج"
+          },
+          "summary": "هتل ترنج کیش هتلی پنج ستاره در شمال غرب جزیره است  ",
+          "description": " هتل ترنج کیش هتلی پنج ستاره در شمال غرب جزیره است که فاز یک آن روی آب‌های خلیج فارس در سال ۱۳۹۴ساخته شده است. فاز دوم آن نیز در ساحل و پشت فاز اول به صورت طبقاتی ساخته شده است. طراحی این هتل مانند بته جقه است و در ساخت آن به مسائل محیط زیست توجه شده. هتل ترنج کیش در منطقه‌ایی دست نخورده و اکوسیستمی پاک قرارگرفته است و با طراحی منحصربه‌فرد خود باعث می‌شود بتوانید زیبایی خلیج فارس و غروب و طلوع خورشید را ببینید. هتل ترنج کیش دارای امکانات و محیط زیبا و مدرن است که باعث می‌شود خاطره خوبی برای شما از سفر به کیش در ذهنتان حک شود.",
+          "capacity": {
+            "base": 2,
+            "extra": 0
+          },
+          "price": {
+            "base": 3500000
+          },
+          "bedroom": {
+            "rooms": 1,
+            "single": 0,
+            "double": 2,
+            "traditional": 0
+          },
+          "bathroom": {
+            "persianWC": 1,
+            "foreignWC": 1,
+            "shower": 1
+          },
+          "hasCooling": true,
+          "hasHeating": true,
+          "hasFurniture": true,
+          "hasTV": false,
+          "hasWifi": true,
+          "hasWater": true,
+          "hasElectricity": true,
+          "hasGas": true
+        },
+        {
+          "id": 13,
+          "type": "هتل",
+          "title": "رزرو هتل آپارتمان ترنج متین",
+          "rate": 4.7,
+          "comments": 8,
+          "HasImmediateReserve": true,
+          "province": "مازندران",
+          "city": "رامسر",
+          "images": [
+            "https://cdn.alibaba.ir/ostorage/hotel-accommodation-images/2023-04-09/6e76e8c7-4c61-4bd7-976b-c1b4715b908a.jpg",
+            "https://cdn.alibaba.ir/inh/domestic-hotel/image_fda66c65-1e93-4cd9-a8a1-1bf6aa2bf984.jpg",
+            "https://cdn.alibaba.ir/inh/domestic-hotel/image_64c2e1d5-a8ee-44c9-a362-b2907f31ca1f.jpg",
+            "https://cdn.alibaba.ir/inh/domestic-hotel/image_5fff042d-bf6e-4696-9cc5-4960e8b4be7a.jpg",
+            "https://cdn.alibaba.ir/inh/domestic-hotel/image_49fc58a2-4259-4f95-904e-ffa4c92597cc.jpg"
+          ],
+          "host": {
+            "name": "مدیریت هتل آپارتمان ترنج متین رامسر"
+          },
+          "summary": "هتل آپارتمان ترنج متین رامسر",
+          "description": "هتل ترنج متین یک هتل ممتاز و استاندارد در بلوار باهنر رامسر است که در سال ۱۳۹۶ شروع به فعالیت کرده است. این هتل سه ستاره ۲۵ واحد اقامتی در دو بلوک ۵ طبقه دارد که بسیار شیک و مجلل طراحی شده. دسترسی هتل ترنج رامسر به ساحل دریای کاسپین، تله کابین رامسر و مراکز خرید این شهر بسیار عالی است و این مورد یکی از مزیت های مهم این هتل به شمار می رود. هتل ترنج رامسر با ایجاد امکانات رفاهی بسیار عالی و خدمات مناسب پذیرای میهمانان عزیز است. هزینه رزرو هتل ترنج رامسر قیمت رزرو اقامتگاه در هتل ترنج رامسر به طور کلی قیمت تقریبی ۷۰۰ هزار تومان تا ۳ میلیون و ۵۰۰ هزار تومان را دارد. با توجه به ظرفیت، قیمت تقریبی آپارتمان های هتل ترنج برای دو نفر ۷۰۰ هزار تا ۸۰۰ هزار تومان، برای چهار نفر ۱ میلیون تا ۱ میلیون و ۲۰۰ هزار تومان، برای شش نفر ۱ میلیون و ۴۰۰ هزار تا ۲ میلیون و ۳۰۰ هزار تومان و برای هشت نفر ۳ میلیون و ۲۰۰ هزار تا ۳ میلیون و ۵۰۰ هزار خواهد بود. قیمت آپارتمان های vip هتل تقریبا  ۲ میلیون تومان و قیمت آپارتمان های پرزیدنتال هتل ترنج تقریبا ۳ میلیون تومان است.امکانات عمومی هتل ترنج رامسر امکانات و خدمات اقامتگاه ها شامل روم سرویس، مبلمان، آباژور، رخت آویز، حمام، تلفن داخلی، صندوق امانات داخلی اتاق، تلویزیون، یخچال، دراور، چای ساز، بالکن، کمد لباس، امکانات پخت و پز، سرویس بهداشتی و لوازم بهداشتی است.از دیگر امکانات این هتل می توان لابی ۵۰ متری در طبقه همکف با ظرفیت ۲۵ نفر، صندوق امانات، اتاق چمدان، گیم نت، سالن بیلیارد، پذیرش ۲۴ ساعته، ترانسفر رفت و ترانسفر برگشت با هزینه اضافه، نمازخانه، کافی شاپ، فضای سبز، جکوزی، پارکینگ، سالن ماساژ، خشکشویی، اینترنت، مینی بار البته با هزینه اضافه رستوران اشاره کرد. هتل ترنج رامسر خدمات خانه داری، خدمات معلولین و خدمات بیدارباش را نیز ارائه می کند. امکانات ویژه هتل ترنج رامسر رستوران هتل ترنج متین با ظرفیت ۶۰ نفر و امکان سرو انواع غذای ایرانی، فرنگی و محلی لذیذ در فضایی بسیار زیبا و آرام یکی از بهترین امکانات این هتل است. کافی شاپ هتل با ایجاد دکوری و فضای بسیار زیبا، استفاده از کادر مجرب و کاربلد و  ارائه منوی متنوع توانسته نظر مثبت بسیاری از میهمانان هتل را به خود جلب کند. از دیگر امکانات ویژه هتل می توان به پارکینگ هتل با ظرفیت ۲۰ خودرو و اینترنت هتل که برای میهمانان کاملا رایگان است اشاره کرد.انواع اتاق های هتل ترنج رامسر اقامتگاه های این هتل به صورت آپارتمان با مساحت ۱۰۰ تا ۳۰۰ متر مربع در ۵ طبقه و از نظر استفاده از فضا شیک، استاندارد و پر امکانات طراحی شده است. به طور کلی اقامتگاه های این هتل به آپارتمان یک خوابه، دو خوابه، سه خوابه، سه خوابه vip، دوبلکس رویال و پرزیدنتال تقسیم می شود. ظرفیت این آپارتمان ها از ۲ تا ۸ نفر است. اقامتگاه های هتل ترنج رامسر اتاق نشیمن، آشپزخانه با امکان پخت و پز و اتاق خواب مجزا دارد. آپارتمان های vip هتل از متراژ بیشتر نسبت به بقیه اقامتگاه ها و تراس با نمای رو به دریا دارد. آپارتمان های پرزیدنتال هتل پر امکانات ترین اقامتگاه هتل به شمار می رود و علاوه بر تراس رو به دریا مجهز به میز بیلیارد، صندلی ماساژور و دستگاه های چند منظوره بدنسازی است. واحدهای پرزیدنتال در طبقه ۵ واقع شده و تنها واحد این مجموعه به شمار می رود که به روف گاردن دسترسی دارد. روف گاردن هتل ترنج فضای سبز، جکوزی و سونا دارد. موقعیت جغرافیایی هتل ترنج رامسر آدرس دقیق هتل ترنج رامسر بلوار باهنر (لیدو)، کوچه ساحل، انتهای ساحل ۷ است. یکی از مزیت های مهم هتل ترنج رامسر دسترسی بسیار عالی این هتل به ساحل دریای کاسپین است به طوریکه تنها با ۳ دقیقه پیاده روی می توانید خود را به ساحل دریا برسانید. هتل همچنین به تله کابین و مراکز خرید رامسر دسترسی عالی دارد. هتل در نزدیکی فرودگاه رامسر ساخته شده و میهمانان با استفاده از خدمات هتل میتوانند دسترسی بهتری به مراکز مهم شهری داشته باشند. فاصله هتل ترنج تا مراکز مهم رامسر ·فاصله تا پلاژهای رامسر (۱ کیلومتر) ·فاصله تا موزه تماشاگه خزر رامسر (۴ کیلومتر) ·فاصله تا آبگرم هتل آزادی (۴ کیلومتر) ·فاصله تا هتل قدیم رامسر (۴ کیلومتر) ·فاصله تا پارک آبی رامسر (۵ کیلومتر) ·فاصله تا فرودگاه (۷ کیلومتر) ·فاصله تا تله کابین رامسر (۹ کیلومتر) ·فاصله تا غارهای رامسر (۱۰ کیلومتر) ·فاصله تا پارک جنگل صفارود (۱۱ کیلومتر) ·فاصله تا قلعه مارکوه (۱۳ کیلومتر) ·فاصله تا سد میجران (۱۸ کیلومتر) ·فاصله تا جنگل دالخانی (۲۱ کیلومتر) ·فاصله تا ییلاق گرسماسر (۴۹ کیلومتر) نظرات مسافران درباره هتل ترنج رامسر دسترسی بسیار عالی هتل به ساحل دریا و اماکن گردشگری رامسر باعث جلب رضایت میهمانان هتل شده به طوری که بیشترین امتیاز مثبت ثبت شده برای هتل ترنج به علت دسترسی بسیار خوب این هتل به دریاست. امتیاز ثبت شده از سوی میهمانان هتل ترنج هیچ وقت از حد متوسط پایین تر نبوده است و این مورد باعث شده امتیاز هتل در تمامی نظر سنجی ها بسیار بالا ثبت شود. پس از موقعیت مکانی بسیار عالی بیشترین امتیاز ثبت شده از این هتل به ترتیب برای کیفیت اتاق ها، امکانات هتل و  قیمت رزرو اتاق بوده است. اکثر سفرهای ثبت شده برای این هتل به صورت خانوادگی صورت گرفته که این خانواده ها عموما از نظافت و کیفیت اتاق ها به شدت ابراز رضایت کرده اند. جدید بودن و کایی وسایل اتاق ها، برخورد خوب کارکنان و پرسنل هتل، پذیرش عالی هتل و بزرگ بودن فضای اتاق ها از دیگر موارد مثبتی است که میهمانان هتل به آن توجه کرده اند. البته مسافران هتل از کیفیت صبحانه هتل انتقاد کرده اند و منوی صبحانه را بی کیفیت توصیف کرده اند. قوانین و مقررات هتل ترنج رامسر·هزینه برای اقامت کودکان زیر ۶ سال در صورت استفاده نکردن از سرویس اضافه کاملا رایگان خواهد بود.·پذیرش خانم تنها فقط با ارائه مدارک شناسایی معتبر و شناسنامه عکس دار امکان پذیر است.·پذیرش زوجین تنها با ارائه صیغه نامه با مهر برجسته محضر و مدارک شناسایی معتبر امکان پذیر است.·سرویس اضافه به صورت کاناپه تختشو ارائه می شود و در صورت درخواست با توجه به تفاوت قیمت سرویس باید مبلغ اضافه داخل هتل پرداخت شود.·تنها واحدهای پرزیدنتال به روف گاردن دسترسی دارند.",
+          "capacity": {
+            "base": 2,
+            "extra": 1
+          },
+          "price": {
+            "base": 1800000
+          },
+          "bedroom": {
+            "rooms": 2,
+            "single": 1,
+            "double": 2,
+            "traditional": 0
+          },
+          "bathroom": {
+            "persianWC": 1,
+            "foreignWC": 1,
+            "shower": 1
+          },
+          "hasCooling": true,
+          "hasHeating": true,
+          "hasFurniture": true,
+          "hasTV": true,
+          "hasWifi": true,
+          "hasWater": true,
+          "hasElectricity": true,
+          "hasGas": true
+        },
+        {
+          "id": 14,
+          "title": "اجاره روزانه آپارتمان یک خوابه گلسا 1 ماسال",
+          "type": "هتل",
+          "rate": 1,
+          "comments": 1,
+          "HasImmediateReserve": true,
+          "province": "گیلان",
+          "city": "ماسال",
+          "images": [
+            "https://cdn.jabama.com/image/jabama-images/2590047/f5a3ec4e-307a-4ba4-9b7d-68814f228205.jpg",
+            "https://cdn.jabama.com/image/jabama-images/2590047/35b7bcb9-2807-46e0-a93e-ff813f98fa8e.jpg",
+            "https://cdn.jabama.com/image/jabama-images/2590047/c43048b2-ed71-4dce-807c-9cafbb2a1868.jpg",
+            "https://cdn.jabama.com/image/jabama-images/2590047/255f6890-072f-4133-9e62-cf8fa9b8b505.jpg",
+            "https://cdn.jabama.com/image/jabama-images/2590047/d76db8b5-eb9c-4a89-9e0d-236e278319f6.jpg",
+            "https://cdn.jabama.com/image/jabama-images/2590047/d6ef79c3-9feb-4ca9-9945-9c0cd13db847.jpg",
+            "https://cdn.jabama.com/image/jabama-images/2590047/496413ce-5787-4edb-b666-abca0dba21cc.jpg",
+            "https://cdn.jabama.com/image/jabama-images/2590047/a7302b63-0902-42d0-bc4f-296c048d8f31.jpg",
+            "https://cdn.jabama.com/image/jabama-images/2590047/8fa81bcf-b151-4c4b-9c15-6b27fc865820.jpg",
+            "https://cdn.jabama.com/image/jabama-images/2590047/e02eb02f-fa12-4b4e-afa3-19c58a095c52.jpg"
+          ],
+          "host": {
+            "name": "لیلا محمدی"
+          },
+          "summary": "65 متر زیربنا",
+          "description": "",
+          "capacity": {
+            "base": 2,
+            "extra": 2
+          },
+          "price": {
+            "base": 900000,
+            "extra": 200000
+          },
+          "bedroom": {
+            "rooms": 1,
+            "single": 1,
+            "double": 0,
+            "traditional": 3
+          },
+          "bathroom": {
+            "persianWC": 1,
+            "foreignWC": 0,
+            "shower": 1
+          },
+          "hasCooling": true,
+          "hasHeating": true,
+          "hasFurniture": true,
+          "hasTV": false,
+          "hasWifi": false,
+          "hasWater": true,
+          "hasElectricity": true,
+          "hasGas": true,
+          "hasParking": false,
+          "hasPool": false,
+          "hasBarbecue": false
+        },
+        {
+          "id": 15,
+          "title": "اجاره مجتمع اقامتگاهی بوتیک هتل کچا - واحد دو تخته لوکس رشت",
+          "type": "هتل",
+          "rate": 2,
+          "comments": 1,
+          "HasImmediateReserve": true,
+          "province": "گیلان",
+          "city": "رشت",
+          "images": [
+            "https://cdn.jabama.com/image/890x492/jabama-images/1973573/203a71dc-c631-4721-bf97-b823b606525f.jpg",
+            "https://cdn.jabama.com/image/383x240/jabama-images/1973573/b0cd65ad-9bc2-43e5-b7d1-151b6f3d7048.jpg",
+            "https://cdn.jabama.com/image/383x240/jabama-images/1973573/b03c1bee-03c6-4403-b205-532dcf240bb5.jpg",
+            "https://cdn.jabama.com/image/383x240/jabama-images/1973573/1f9ad670-401c-4819-bced-bea16fa45493.jpg",
+            "https://cdn.jabama.com/image/383x240/jabama-images/1973573/4d49e1fa-ac8a-482d-ad16-5e28cb534f37.jpg"
+          ],
+          "host": {
+            "name": " بوتیک هتل کچا"
+          },
+          "summary": "۳۳ متر زیربنا",
+          "description": "استعمال دخانیات در فضای داخلی اتاق ممنوع است. ورود حیوان خانگی در فضای داخلی اتاق ممنوع است. برای نفر مهمان مبل تخت خواب شو موجود می باشد. در این اقامتگاه رستوران با سرو غذاهای محلی ( برای نهار و شام ) و کافه و قلیان شامل هزینه ی مجزا می باشد و صبحانه هزینه ی جداگانه ندارد. در واحدهای لوکس یک عدد وان اختصاصی در اتاق موجود می باشد. امکان پذیرش گروه های مجردی فقط خانم فراهم است",
+          "capacity": {
+            "base": 2,
+            "extra": 1
+          },
+          "price": {
+            "base": 4500000
+          },
+          "bedroom": {
+            "rooms": 0,
+            "single": 0,
+            "double": 1,
+            "traditional": 1
+          },
+          "bathroom": {
+            "persianWC": 0,
+            "foreignWC": 1,
+            "shower": 1
+          },
+          "hasCooling": true,
+          "hasHeating": true,
+          "hasFurniture": true,
+          "hasTV": false,
+          "hasWifi": true,
+          "hasWater": true,
+          "hasElectricity": true,
+          "hasGas": true
+        },
+        {
+          "id": 16,
+          "title": "اجاره مجتمع اقامتگاهی بوتیک هتل فولتون قشم",
+          "type": "هتل",
+          "rate": 3.8,
+          "comments": 37,
+          "HasImmediateReserve": true,
+          "city": "قشم",
+          "province": "هرمزگان",
+          "images": [
+            "https://hotelyar.com/pic/2227/%D8%A8%D9%88%D8%AA%DB%8C%DA%A9-%D9%88%D9%86%D9%88%D8%B4%DA%A9-%D8%B3%D8%A7%D8%B1%DB%8C-%D9%86%D9%85%D8%A7%DB%8C-%D8%AE%D8%A7%D8%B1%D8%AC%DB%8C-3.jpg",
+            "https://hotelyar.com/pic/2227/%D8%A8%D9%88%D8%AA%DB%8C%DA%A9-%D9%88%D9%86%D9%88%D8%B4%DA%A9-%D8%B3%D8%A7%D8%B1%DB%8C-%D9%86%D9%85%D8%A7%DB%8C-%D8%AE%D8%A7%D8%B1%D8%AC%DB%8C-2.jpg",
+            "https://hotelyar.com/pic/2227/%D8%A8%D9%88%D8%AA%DB%8C%DA%A9-%D9%88%D9%86%D9%88%D8%B4%DA%A9-%D8%B3%D8%A7%D8%B1%DB%8C-%D9%86%D9%85%D8%A7%DB%8C-%D8%AE%D8%A7%D8%B1%D8%AC%DB%8C-5.jpg",
+            "https://hotelyar.com/pic/2227/%D8%A8%D9%88%D8%AA%DB%8C%DA%A9-%D9%88%D9%86%D9%88%D8%B4%DA%A9-%D8%B3%D8%A7%D8%B1%DB%8C-%D9%86%D9%85%D8%A7%DB%8C-%D8%AE%D8%A7%D8%B1%D8%AC%DB%8C.jpg",
+            "https://hotelyar.com/pic/2227/%D8%A8%D9%88%D8%AA%DB%8C%DA%A9-%D9%88%D9%86%D9%88%D8%B4%DA%A9-%D8%B3%D8%A7%D8%B1%DB%8C-%D8%B1%D8%B3%D8%AA%D9%88%D8%B1%D8%A7%D9%86-%D8%B3%D9%86%D8%AA%DB%8C-1.jpg"
+          ],
+          "host": {
+            "name": "بوتیک هتل فولتون"
+          },
+          "summary": "۳۳ متر زیربنا",
+          "description": "بوتیک هتل فولتون قشم از بزرگراه خلیج فارس قابل دسترسی می‌باشد و در کنار ساحل خلیج فارس قرار گرفته است. ساخت هتل در سال 1394 به پایان رسید و در سال 1398 آخرین بازسازی خود را به سرانجام رساند. این بوتیک هتل با 20 اتاق، 6 سوئیت، 2 ویلا، و 2 آپارتمان از مسافران جزیره قشم پذیرایی می‌کند.",
+          "capacity": {
+            "base": 2,
+            "extra": 1
+          },
+          "price": {
+            "base": 4500000
+          },
+          "bedroom": {
+            "rooms": 0,
+            "single": 0,
+            "double": 1,
+            "traditional": 1
+          },
+          "bathroom": {
+            "persianWC": 0,
+            "foreignWC": 1,
+            "shower": 1
+          },
+          "hasCooling": true,
+          "hasHeating": true,
+          "hasFurniture": true,
+          "hasTV": false,
+          "hasWifi": true,
+          "hasWater": true,
+          "hasElectricity": true,
+          "hasGas": true
+        }
+      ]
+    },
+    {
+      "ecoTourism": [
+        {
+          "id": 17,
+          "title": "اقامتگاه سنتی دنیای صوفی - واحد بایزیدبسطامی",
+          "type": "بومگردی",
+          "discount": 20,
+          "rate": 4,
+          "comments": 22,
+          "HasImmediateReserve": false,
+          "city": "کیش",
+          "province": "هرمزگان",
+          "images": [
+            "https://cdn.jabama.com/image/890x492/jabama-images/1479506/fb1d7098-d3db-4776-a078-6e5c391dd912.jpg",
+            "https://cdn.jabama.com/image/383x240/jabama-images/1479506/16261eb8-3906-448c-96e9-c939beaf7657.jpg",
+            "https://cdn.jabama.com/image/383x240/jabama-images/1479506/d24498f1-9531-42ee-bd7e-7962f120b1c0.jpg",
+            "https://cdn.jabama.com/image/jabama-images/1479506/7270f8cf-fee3-44de-8eea-6027759c72d8.jpg",
+            "https://cdn.jabama.com/image/jabama-images/1479506/39c5364b-9b01-45b2-a7f4-108cfec296c7.jpg"
+          ],
+          "host": {
+            "avatar": "https://cdn.jabama.com/image/jabama-images/image_35950d74-171c-419a-b4e0-cff65b519302.jpg",
+            "name": "  سعیدرضا نوری"
+          },
+          "summary": "۱۲ متر زیربنا",
+          "description": "کودکان زیر 7 سال بدون هماهنگی با میزبان مطلقاً پذیرش نمی شوند. استعمال دخانیات داخل فضای واحد مجاز نمی باشد. برگزاری مراسم با هماهنگی میزبان می باشد. سرویس بهداشتی و حمام این واحد از داخل اتاق، با واحد رابعه عدویه یکی می باشد.        ",
+          "capacity": {
+            "base": 2,
+            "extra": 1
+          },
+          "price": {
+            "base": 720000,
+            "extra": 300000
+          },
+          "bedroom": {
+            "rooms": 1,
+            "single": 0,
+            "double": 1,
+            "traditional": 1
+          },
+          "bathroom": {
+            "persianWC": 0,
+            "foreignWC": 1,
+            "shower": 1
+          },
+          "hasCooling": true,
+          "hasHeating": true,
+          "hasFurniture": true,
+          "hasTV": false,
+          "hasWifi": true,
+          "hasWater": true,
+          "hasElectricity": true,
+          "hasGas": true
+        },
+        {
+          "id": 18,
+          "title": "جاره بوم گردی جمول - واحد چهارتخته لنچ هرمز",
+          "type": "بومگردی",
+          "rate": 5,
+          "comments": 1,
+          "HasImmediateReserve": true,
+          "city": "کیش",
+          "province": "هرمزگان",
+          "images": [
+            "https://cdn.jabama.com/image/890x492/jabama-images/2060670/6a32b640-b06a-4b75-853a-817ab7366f15.jpg",
+            "https://cdn.jabama.com/image/383x240/jabama-images/2060670/ffffc036-cc47-4879-bfc2-120d283d23fa.jpg",
+            "https://cdn.jabama.com/image/383x240/jabama-images/2060670/951b7d41-b566-4dd5-8681-70f7888109f9.jpg",
+            "https://cdn.jabama.com/image/jabama-images/2060670/3eff0aba-6758-40a8-86b5-0857d9709bc6.jpg",
+            "https://cdn.jabama.com/image/jabama-images/2060670/95318b07-37b0-43af-a148-e1a3230feac6.jpg"
+          ],
+          "host": {
+            "avatar": "https://cdn.jabama.com/image/jabama-images/image_56aad350-0474-4448-9f02-f1591ba04abe.jpg",
+            "name": " مریم بنگلک"
+          },
+          "summary": "۲۰ متر زیربنا",
+          "description": "امتگاه جمول با محیطی دوستانه، روبه روی ساحل و فاصله ای کم با قلعه باستانی پرتغالی ها در تیاب بندر واقع شده است. این اقامتگاه بومگردی در فضایی 270 متری در تیاب بندر واقع شده است. تجهیزات و ملزومات اولیه در آشپزخانه بومگردی موجود است. سرویس خواب این اقامتگاه رخت خواب سنتی و تخت می باشد. سرویس بهداشتی، حمام، آشپزخانه به صورت مشترک برای تمام واحد ها وجود دارد. بافت محله کویری و مسیر دستررسی به اقامتگاه آسفالت می باشد",
+          "capacity": {
+            "base": 4,
+            "extra": 1
+          },
+          "price": {
+            "base": 1260000,
+            "extra": 200000
+          },
+          "bedroom": {
+            "rooms": 1,
+            "single": 2,
+            "double": 1,
+            "traditional": 1
+          },
+          "bathroom": {
+            "persianWC": 0,
+            "foreignWC": 0,
+            "shower": 0
+          },
+          "hasCooling": true,
+          "hasHeating": true,
+          "hasFurniture": true,
+          "hasTV": false,
+          "hasWifi": true,
+          "hasWater": true,
+          "hasElectricity": true,
+          "hasGas": true
+        },
+        {
+          "id": 19,
+          "type": "بومگردی",
+          "title": "اجاره بومگردی به یاد ماندنی - واحد سه خوابه استخردار آبگرم طهران",
+          "rate": 4.8,
+          "comments": 25,
+          "HasImmediateReserve": true,
+          "province": "مازندران",
+          "city": "رامسر",
+          "images": [
+            "https://cdn.jabama.com/image/890x492/jabama-images/1684177/98fe1c99-afff-4458-b9ad-abea549dd906.jpg",
+            "https://cdn.jabama.com/image/383x240/jabama-images/1684177/6bff1934-6e1d-4f28-b3f7-6b946073fe33.jpg",
+            "https://cdn.jabama.com/image/383x240/jabama-images/1684177/8a55cb16-d6e0-4513-be1d-52bcc9f1eda1.jpg",
+            "https://cdn.jabama.com/image/383x240/jabama-images/1684177/849ff9e9-efe7-4898-ad7b-00d7610b8303.jpg",
+            "https://cdn.jabama.com/image/383x240/jabama-images/1684177/c9ec0ecf-3943-4dc5-bf0b-8b366954c62a.jpg"
+          ],
+          "host": {
+            "avatar": "https://cdn.jabama.com/original/jabama-images/12345/52acb96f-472e-413e-9204-9a02bab95a94.svg",
+            "name": "عارف باقرزاده وشکی"
+          },
+          "summary": "180 متر زیربنا",
+          "description": "در زمان تحویل اقامتگاه، مهمان عزیز حتما کارت ملی هوشمند در اختیار داشته باشد و مهمان اتباع جهت رزرو اقامتگاه باید با پشتیبانی تماس بگیرد. امکان پخت و پز و آشپزی در اقامتگاه وجود ندارد. امکان پذیرش گروه\u200Cهای مجردی فقط برای خانم ها فراهم می\u200Cباشد. پذیرش تا ساعت 12 شب امکان پذیر است. غذاهاي بومي محلي مجموعه ي به ياد ماندني شامل مرغ شكم پر، مرغ ترش، زرشك پلو مرغ ، ماهي، ميرزاقاسمي، باقالي قاتق و كال كباب است. براي سفارش بايد از ٢٤ ساعت قبل با ميزبان هماهنگي انجام شود. جکوزی این واحد به صورت روباز ولی استخر سرپوشیده است. گروه مجموعه بیاد ماندنی پس سالها مطالعه و بررسی در مورد آداب ، فرهنگ و سبک زندگی مردم شمال و اینکه در گذشته خانه هایشان با چه معماری منحصر به فردی ساخته می\u200Cشد به فکر فرو برد تا این فرهنگ و سنت گذشتگان را سینه به سینه هدایت کنیم و به آیندگان معرفی کنیم از این رو از مهندسین ، طراحان و مشاوران خبره برای پیشبرد اهدافمان استفاده کردیم تا تلفیقی از معماری قدیم و مدرن را برای رفاه و آسایش مهمانانمان هم فراهم کنیم. یکی از جاذبه های این مجموعه استخر و جکوزی مجزا برای هر واحد که همجوار زمین های شالیزاری برنج با چشم انداز کوه است، زیبایی دو چندانی به اقامتگاه می\u200Cدهد، ضمنا نزدیکی با ساحل و جنگل کمتر از چند دقیقه و دسترسی آسان به مراکز خرید و مرکز شهر یکی دیگر از ویژگی های این مجموعه می باشد در آخر هم امیدواریم میزبان تک تک هم وطنانمان عزیزمان باشیم.",
+          "capacity": {
+            "base": 5,
+            "extra": 3
+          },
+          "price": {
+            "base": 2800000,
+            "extra": 500000
+          },
+          "bedroom": {
+            "rooms": 3,
+            "single": 0,
+            "double": 3,
+            "traditional": 2
+          },
+          "bathroom": {
+            "persianWC": 2,
+            "foreignWC": 2,
+            "shower": 2
+          },
+          "hasCooling": true,
+          "hasHeating": true,
+          "hasFurniture": true,
+          "hasTV": true,
+          "hasWifi": false,
+          "hasWater": true,
+          "hasElectricity": true,
+          "hasGas": true
+        },
+        {
+          "id": 20,
+          "title": "اجاره بوم گردی تی شین - واحد ویژه 1 رشت",
+          "type": "بوم گردی",
+          "rate": 4.2,
+          "comments": 17,
+          "HasImmediateReserve": true,
+          "province": "گیلان",
+          "city": "رشت",
+          "images": [
+            "https://cdn.jabama.com/image/890x492/jabama-images/2057241/64c9d3d3-e993-4696-97f5-f052a245e793.jpg",
+            "https://cdn.jabama.com/image/383x240/jabama-images/1751724/4e80547d-3c24-47a0-b5c0-dc8b40f4ed99.JPG",
+            "https://cdn.jabama.com/image/383x240/jabama-images/543053/d567d71c-82b5-40b4-8e08-7007402f1e65.jpg",
+            "https://cdn.jabama.com/image/383x240/jabama-images/543053/6719655e-0810-465d-a700-bbf854449170.jpg",
+            "https://cdn.jabama.com/image/383x240/jabama-images/543053/db8f2742-0a6c-4946-a933-6c63afddeefd.jpg"
+          ],
+          "host": {
+            "name": "هومن حقیقی فرد"
+          },
+          "summary": "۲۵ متر زیربنا",
+          "description": "کلبه در شهر رشت (روستای شهرستان) واقع شده است. اقامتگاه در محیطی آرام، روستایی و بومی واقع است. اقامتگاه دارای دوربین مداربسته در حیاط و درب ورودی و نگهبان شبانه روزی می باشد. کلبه غیردربست است. برای پارک 2 خودرو پارکینگ روباز دارد. قابل توجه مهمانان همراه با سالمند، کودک و افراد دارای معلولیت، این اقامتگاه در طبقه همکف و دارای 10 پله برای طبقه دوم می باشد. استعمال دخانیات داخل حیاط مجاز می باشد. بافت محله کلبه روستایی و دسترسی به اقامتگاه آسفالت می باشد. وضعیت آنتن دهی همراه اول، متوسط ایرانسل عالی و رایتل متوسط می باشد. فاصله با دریا 40 دقیقه، با جنگل 10 دقیقه، با سوپرمارکت و نانوایی 5 دقیقه و با پمپ بنزین 15 دقیقه می باشد. اقامتگاه قبل از ورود مهمان بطور کامل نظافت خواهد شد. از پذیرش افراد بومی معذوریم.",
+          "capacity": {
+            "base": 3,
+            "extra": 2
+          },
+          "price": {
+            "base": 450000
+          },
+          "bedroom": {
+            "rooms": 0,
+            "single": 0,
+            "double": 0,
+            "traditional": 5
+          },
+          "bathroom": {
+            "persianWC": 0,
+            "foreignWC": 1,
+            "shower": 1
+          },
+          "hasCooling": true,
+          "hasHeating": true,
+          "hasFurniture": true,
+          "hasTV": false,
+          "hasWifi": true,
+          "hasWater": true,
+          "hasElectricity": true,
+          "hasGas": true
+        },
+        {
+          "id": 21,
+          "title": "اجاره بوم گردی خانه دوست - واحد حجله قشم",
+          "type": "بوم گردی",
+          "rate": 4.1,
+          "comments": 96,
+          "HasImmediateReserve": true,
+          "city": "قشم",
+          "province": "هرمزگان",
+          "images": [
+            "https://cdn.jabama.com/image/890x492/jabama-images/959393/7e28b12e-f98f-48b1-b2db-3a7b2da45f95.JPG",
+            "https://cdn.jabama.com/image/383x240/jabama-images/959393/6e9dac27-d7ff-4c71-860c-2a302a07ab4b.JPG",
+            "https://cdn.jabama.com/image/383x240/jabama-images/959393/e9eb454a-3a29-4205-a727-04a07d7a980c.JPG",
+            "https://cdn.jabama.com/image/383x240/jabama-images/959393/a45a82f3-3560-4e77-a8e0-b2dc24fcf96d.JPG",
+            "https://cdn.jabama.com/image/383x240/jabama-images/959393/3435b89b-e2dc-4003-ab25-460fba4bef36.JPG"
+          ],
+          "host": {
+            "avatar": "https://cdn.jabama.com/image/jabama-images/image_290b4a43-8caf-4503-9e4a-9b63fcee72ed.jpg",
+            "name": "هومن حقیقی فرد"
+          },
+          "summary": "۶ متر زیربنا",
+          "description": "اتاق حجله از جمله اتاق‌های سنتی و اشتراکی مجموعه اقامتگاه بومگردی خانه دوست به حساب می آید که سرویس بهداشتی و حمام این اتاق در حیاط اقامتگاه واقع شده است. این اتاق با ظرفیت پایه ۱ نفر و ظرفیت اضافه ۱ نفر توانایی میزبانی ۲ مهمان را دارد. لازم به ذکر است صبحانه نهار و شام جداگانه است و طبق منوی اقامتگاه با پرداخت هزینه انجام می شود. گشت جزیره و ویژه و هنگام هرمز و گشت آبی را از دست ندهید. اقامتگاه در منطقه سوزا قرار دارد وفاصله اقامتگاه تا قشم ۲۳ کیلومتر تا جزیره ناز ۲ کیلومتر تا دره ستاره ها ۹ کیلومتر و تا هنگام ۱۷ کیلومتر است. این قیمت برای میهمانان ایرانی است. دوستان عزیزی که از خارج ایران قصد دارند میهمان ما باشند لطفا حتما قبل از رزرو با پشتیبانی تماس حاصل فرمایند و شرایط را جویا شوند. لازم به ذکر است از پذیرش میهمانان خارجی بدون هماهنگی معذوریم. ‌مهمان بیایید و دوست بمانید..",
+          "capacity": {
+            "base": 1,
+            "extra": 1
+          },
+          "price": {
+            "base": 200000,
+            "extra": 150000
+          },
+          "bedroom": {
+            "rooms": 0,
+            "single": 1,
+            "double": 0,
+            "traditional": 2
+          },
+          "bathroom": {
+            "persianWC": 0,
+            "foreignWC": 0,
+            "shower": 0
+          },
+          "hasCooling": true,
+          "hasHeating": true,
+          "hasFurniture": false,
+          "hasTV": true,
+          "hasWifi": true,
+          "hasWater": true,
+          "hasElectricity": true,
+          "hasGas": true
+        },
+        {
+          "id": 22,
+          "title": "اجاره بوم گردی خانه مانگرو - واحد کررابو قشم",
+          "type": "بوم گردی",
+          "rate": 4.4,
+          "comments": 24,
+          "HasImmediateReserve": true,
+          "city": "قشم",
+          "province": "هرمزگان",
+          "images": [
+            "https://cdn.jabama.com/image/890x492/jabama-images/1479506/7b806ddf-5b98-4294-a473-bc1a42b3a9c1.jpg",
+            "https://cdn.jabama.com/image/383x240/jabama-images/1479506/27e0bcce-1db0-4966-918d-42a9213b34b7.jpg",
+            "https://cdn.jabama.com/image/383x240/jabama-images/1479506/8aaa3b85-51b1-4ba7-a188-56d7e1aa3716.jpg",
+            "https://cdn.jabama.com/image/383x240/jabama-images/1479506/faf1919e-8d18-4db2-b772-179c6fcd9282.jpg",
+            "https://cdn.jabama.com/image/383x240/jabama-images/1479506/79f6d1f7-529a-429c-84be-623ce4dad9d3.jpg"
+          ],
+          "host": {
+            "name": "حامد برخوردار"
+          },
+          "summary": "۱۵ متر زیربنا",
+          "description": "خانه مانگرو با فضایی منحصر به فرد در ورودی منطقه گردشگری جزیره قشم قراردارد. این بومگردی در فضایی 480 متری در رو به رو روستای دهخدا واقع شده است. کنار اقامتگاه جای پارک خودرو به صورت اشتراکی در اختیار میهمانان عزیز قرار داده شده است. در این مکان با معماری و تجهیزات خاص خود سعی شده آرامش را برای گردشگران عزیز رقم بزند. بافت محله روستایی و مسیر دسترسی به اقامتگاه 700 متر خاکی می باشد. وضعیت آنتن دهی ایرانسل، رایتل و همراه اول متوسط می باشد. دارای تور تفریحی آبی با هزینه جداگانه و کمپ شبانه. فاصله تا سوپر مارکت و امکانات رفاهی 5 دقیقه با ماشین ، تا جنگل حرا 7 دقیقه با ماشین، فرودگاه 8 کیلومتر، دره ستارگان 35 کیلومتر، چاهکو 30 دقیقه، دریا 7 دقیقه با ماشین می باشد.",
+          "capacity": {
+            "base": 2,
+            "extra": 1
+          },
+          "price": {
+            "base": 700000,
+            "extra": 200000
+          },
+          "bedroom": {
+            "rooms": 0,
+            "single": 0,
+            "double": 1,
+            "traditional": 1
+          },
+          "bathroom": {
+            "persianWC": 0,
+            "foreignWC": 1,
+            "shower": 1
+          },
+          "hasCooling": true,
+          "hasHeating": false,
+          "hasFurniture": true,
+          "hasTV": false,
+          "hasWifi": false,
+          "hasWater": true,
+          "hasElectricity": true,
+          "hasGas": false
+        }
+      ]
+    },
+    {
+      "cottage": [
+        {
+          "id": 23,
+          "type": "کلبه",
+          "title": "رزرو کلبه دوخوابه جنگلی سامان 1 جواهرده",
+          "discount": 5,
+          "rate": 4.7,
+          "comments": 13,
+          "HasImmediateReserve": true,
+          "province": "مازندران",
+          "city": "رامسر",
+          "images": [
+            "https://cdn.jabama.com/image/890x492/jabama-images/2374590/c0954898-93c5-4b43-8432-c36c374c2d51.jpeg",
+            "https://cdn.jabama.com/image/383x240/jabama-images/1684177/6b2e8eab-dc5d-4fd4-9261-4a3fbb51e417.jpeg",
+            "https://cdn.jabama.com/image/383x240/jabama-images/2374590/28072ebf-4c4f-4540-97fa-d552095fb61c.jpeg",
+            "https://cdn.jabama.com/image/383x240/jabama-images/2374590/3f42b1f3-8ac4-4d9c-a987-b3bd4bbec6da.jpeg",
+            "https://cdn.jabama.com/image/383x240/jabama-images/2374590/bde0d5a5-225f-49b9-ae59-9bf71cb1c0b5.jpeg"
+          ],
+          "host": {
+            "avatar": "https://cdn.jabama.com/image/jabama-images/image_072788a5-8fce-4244-b101-a331cc2810df.jpeg",
+            "name": "سامان سعیدی"
+          },
+          "summary": "100 متر زیربنا",
+          "description": "دارای بالکن بی نظیر سی متری به همراه باربیکیو می باشد. دسترسی آسان به سوپر مارکت و نانوایی امکان پذیر است. این اقامتگاه در منطقه ای ساکت به همراه نگهبان و سرایدار واقع شده است. برگزاری مراسم با هماهنگی میزبان مانعی ندارد. استعمال دخانیات در تراس و محوطه بیرونی مانعی ندارد.",
+          "capacity": {
+            "base": 4,
+            "extra": 2
+          },
+          "price": {
+            "base": 3990000,
+            "extra": 500000
+          },
+          "bedroom": {
+            "rooms": 2,
+            "single": 0,
+            "double": 2,
+            "traditional": 2
+          },
+          "bathroom": {
+            "persianWC": 1,
+            "foreignWC": 0,
+            "shower": 1
+          },
+          "hasCooling": true,
+          "hasHeating": true,
+          "hasFurniture": true,
+          "hasTV": true,
+          "hasWifi": true,
+          "hasWater": true,
+          "hasElectricity": true,
+          "hasGas": true
+        },
+        {
+          "id": 24,
+          "type": "کلبه",
+          "title": "رزرو کلبه دوخوابه جنگلی باران 3",
+          "discount": 0,
+          "rate": 5,
+          "comments": 6,
+          "HasImmediateReserve": false,
+          "province": "مازندران",
+          "city": "رامسر",
+          "images": [
+            "https://cdn.jabama.com/image/890x492/jabama-images/2381654/4d918d02-819e-4914-8754-6417a4804a99.jpg",
+            "https://cdn.jabama.com/image/383x240/jabama-images/2381654/0a0f819c-05d3-4ac0-b8dc-2cf7a6c3d71e.jpg",
+            "https://cdn.jabama.com/image/383x240/jabama-images/2381654/fd959af8-6cdf-4eb9-a179-bc139a2704b8.jpg",
+            "https://cdn.jabama.com/image/383x240/jabama-images/2381654/0ee9ecb1-0b65-4fb4-903c-3bb33d7eeb1e.jpg",
+            "https://cdn.jabama.com/image/383x240/jabama-images/2381654/68f79720-f542-4d99-8747-8261c966bf54.jpg"
+          ],
+          "host": {
+            "avatar": "https://cdn.jabama.com/image/jabama-images/image_e6aa1621-28bc-4185-ae82-bb6e183a1aa2.jpg",
+            "name": "کبری هادی رمکی"
+          },
+          "summary": "115 متر زیربنا",
+          "description": "کلبه باران دوخوابه در ابتدای یک باغ ۳۰هزار متری وبا چشم انداز باغ و جنگل در روستای سرسبز و زیبای کلیج\u200Cکوه در ۶ کیلومتری شهر رامسر قرار دارد. در طبقه همکف پارکینگ و در طبقه دوم پذیرایی، اتاق خواب، سرویس، آشپزخانه و دوتراس یکی کوچک و دیگری بزرگ قرار دارد .",
+          "capacity": {
+            "base": "4",
+            "extra": "2"
+          },
+          "price": {
+            "base": 3990000,
+            "extra": 500000
+          },
+          "bedroom": {
+            "rooms": 2,
+            "single": 0,
+            "double": 2,
+            "traditional": 2
+          },
+          "bathroom": {
+            "persianWC": 1,
+            "foreignWC": 0,
+            "shower": 1
+          },
+          "hasCooling": true,
+          "hasHeating": true,
+          "hasFurniture": true,
+          "hasTV": true,
+          "hasWifi": true,
+          "hasWater": true,
+          "hasElectricity": true,
+          "hasGas": true
+        },
+        {
+          "id": 25,
+          "title": "اجاره کلبه سه خوابه سویئسی استخردار آبگرم دیلاچیک ماسال",
+          "type": "کلبه",
+          "discount": 10,
+          "rate": 4.3,
+          "comments": 4,
+          "HasImmediateReserve": true,
+          "province": "گیلان",
+          "city": "ماسال",
+          "images": [
+            "https://cdn.jabama.com/image/jabama-images/1479505/9bc00741-0ea7-4f4b-bd9c-be6bfff67208.jpeg",
+            "https://cdn.jabama.com/image/jabama-images/1479505/97ae6426-7a38-4df1-99ea-b0545e426d41.jpeg",
+            "https://cdn.jabama.com/image/jabama-images/1479505/f818f4f6-5d5e-43fa-8876-af7b3784e440.jpeg",
+            "https://cdn.jabama.com/image/jabama-images/1479505/b36dae30-1075-4264-8be9-5547288fbb85.jpeg",
+            "https://cdn.jabama.com/image/jabama-images/1479505/26827995-89f3-4723-8024-a6e58e5b08f7.jpeg",
+            "https://cdn.jabama.com/image/jabama-images/1479505/6eb3504d-9898-4c05-8038-5a5e574f7a1f.jpeg",
+            "https://cdn.jabama.com/image/jabama-images/1479505/c3b4eb6d-5fa6-4d43-988a-d54d6624e668.jpeg",
+            "https://cdn.jabama.com/image/jabama-images/1479505/2fbfb254-1a14-491d-85c7-d9f4fbb22621.jpeg",
+            "https://cdn.jabama.com/image/jabama-images/1479505/aae52a1c-9292-43a4-a447-ebfff981c7f6.jpeg"
+          ],
+          "host": {
+            "avatar": "./",
+            "name": "مهدی زارع"
+          },
+          "summary": "150 متر زیربنا",
+          "description": "",
+          "capacity": {
+            "base": 4,
+            "extra": 4
+          },
+          "price": {
+            "base": 3500000,
+            "extra": 300000
+          },
+          "bedroom": {
+            "rooms": 3,
+            "single": 0,
+            "double": 3,
+            "traditional": 2
+          },
+          "bathroom": {
+            "persianWC": 1,
+            "foreignWC": 1,
+            "shower": 3
+          },
+          "hasCooling": true,
+          "hasHeating": true,
+          "hasFurniture": true,
+          "hasTV": true,
+          "hasWifi": true,
+          "hasWater": true,
+          "hasElectricity": true,
+          "hasGas": true,
+          "hasParking": true,
+          "hasPool": true
+        },
+        {
+          "id": 26,
+          "title": "اجاره کلبه یک خوابه سوئیسی بهار نارنج ماسال",
+          "type": "کلبه",
+          "discount": 0,
+          "rate": 5,
+          "comments": 1,
+          "HasImmediateReserve": true,
+          "province": "گیلان",
+          "city": "ماسال",
+          "images": [
+            "https://cdn.jabama.com/image/jabama-images/1745694/ea3b3647-444b-473c-bdb7-c608d8b60c75.jpg",
+            "https://cdn.jabama.com/image/jabama-images/1745694/a2e6b958-1f0e-4b6d-8912-141dfd39127b.jpg",
+            "https://cdn.jabama.com/image/jabama-images/1745694/395dea0d-01b3-4fa1-b83d-8daa65324f4a.jpg",
+            "https://cdn.jabama.com/image/jabama-images/1745694/d9436b31-2c6b-45c8-9fd6-e82fefbb3b6d.jpg",
+            "https://cdn.jabama.com/image/jabama-images/1745694/771a5d0f-2785-4475-abcb-24eec51aae47.jpg",
+            "https://cdn.jabama.com/image/jabama-images/1745694/771a5d0f-2785-4475-abcb-24eec51aae47.jpg",
+            "https://cdn.jabama.com/image/jabama-images/1745694/771a5d0f-2785-4475-abcb-24eec51aae47.jpg",
+            "https://cdn.jabama.com/image/jabama-images/1745694/a6cbdd7c-3d5d-4c22-b0d4-7bddad8198c4.jpg",
+            "https://cdn.jabama.com/image/jabama-images/1745694/a6cbdd7c-3d5d-4c22-b0d4-7bddad8198c4.jpg"
+          ],
+          "host": {
+            "avatar": "https://cdn.jabama.com/image/jabama-images/image_35131158-ff7f-49bf-a744-1936f991a569.jpg",
+            "name": "سیدمجید مستجابی"
+          },
+          "summary": " متر زیربنا ۶۰",
+          "description": "کلبه شیک و دربست با چشم انداز روبه کوه. در منطقه توریستی بسیار زیبا و دیدنی ماسال شاندرمن واقع است.",
+          "capacity": {
+            "base": 2,
+            "extra": 3
+          },
+          "price": {
+            "base": 1366000,
+            "extra": 300000
+          },
+          "bedroom": {
+            "rooms": 1,
+            "single": 0,
+            "double": 1,
+            "traditional": 3
+          },
+          "bathroom": {
+            "persianWC": 1,
+            "foreignWC": 1,
+            "shower": 1
+          },
+          "hasCooling": true,
+          "hasHeating": true,
+          "hasFurniture": true,
+          "hasTV": true,
+          "hasWifi": true,
+          "hasWater": true,
+          "hasElectricity": true,
+          "hasGas": true,
+          "hasParking": false,
+          "hasPool": false
+        },
+        {
+          "id": 27,
+          "title": "اجاره کلبه یک خوابه دوبلکس نارنج رشت",
+          "type": "کلبه",
+          "discount": 10,
+          "rate": 3.3,
+          "comments": 7,
+          "HasImmediateReserve": true,
+          "province": "گیلان",
+          "city": "رشت",
+          "images": [
+            "https://cdn.jabama.com/image/890x492/jabama-images/1681067/717b31f8-9df1-4297-93b9-9982858abcce.jpg",
+            "https://cdn.jabama.com/image/383x240/jabama-images/1681067/ce4ba7b2-2b87-4a88-99b6-3f3913a763a3.jpg",
+            "https://cdn.jabama.com/image/383x240/jabama-images/1681067/959bb4a2-83d1-43a4-b82d-0b0d71545622.jpg",
+            "https://cdn.jabama.com/image/383x240/jabama-images/1681067/5e294b73-e683-4521-bf6a-6368084d4672.jpg",
+            "https://cdn.jabama.com/image/383x240/jabama-images/1681067/ba3f9198-bd66-4f0e-9f5c-2319aac7ce88.jpg"
+          ],
+          "host": {
+            "avatar": "./",
+            "name": "ندا تقی زاد"
+          },
+          "summary": "۴۰ متر زیربنا",
+          "description": "کلبه در شهر رشت (روستای شهرستان) واقع شده است. اقامتگاه در محیطی آرام، روستایی و بومی واقع است. اقامتگاه دارای دوربین مداربسته در حیاط و درب ورودی و نگهبان شبانه روزی می باشد. کلبه غیردربست است. برای پارک 2 خودرو پارکینگ روباز دارد. قابل توجه مهمانان همراه با سالمند، کودک و افراد دارای معلولیت، این اقامتگاه در طبقه همکف و دارای 10 پله برای طبقه دوم می باشد. استعمال دخانیات داخل حیاط مجاز می باشد. بافت محله کلبه روستایی و دسترسی به اقامتگاه آسفالت می باشد. وضعیت آنتن دهی همراه اول، متوسط ایرانسل عالی و رایتل متوسط می باشد. فاصله با دریا 40 دقیقه، با جنگل 10 دقیقه، با سوپرمارکت و نانوایی 5 دقیقه و با پمپ بنزین 15 دقیقه می باشد. اقامتگاه قبل از ورود مهمان بطور کامل نظافت خواهد شد. از پذیرش افراد بومی معذوریم.",
+          "capacity": {
+            "base": 5,
+            "extra": 1
+          },
+          "price": {
+            "base": 450000,
+            "extra": 150000
+          },
+          "bedroom": {
+            "rooms": 1,
+            "single": 2,
+            "double": 1,
+            "traditional": 1
+          },
+          "bathroom": {
+            "persianWC": 1,
+            "foreignWC": 0,
+            "shower": 1
+          },
+          "hasCooling": true,
+          "hasHeating": true,
+          "hasFurniture": true,
+          "hasTV": false,
+          "hasWifi": true,
+          "hasWater": true,
+          "hasElectricity": true,
+          "hasGas": true
+        },
+        {
+          "id": 28,
+          "title": "اجاره کلبه یک خوابه دوبلکس نارنج رشت",
+          "type": "کلبه",
+          "discount": 10,
+          "rate": 3.3,
+          "comments": 7,
+          "HasImmediateReserve": true,
+          "province": "گیلان",
+          "city": "رشت",
+          "images": [
+            "https://cdn.jabama.com/image/890x492/jabama-images/1681067/717b31f8-9df1-4297-93b9-9982858abcce.jpg",
+            "https://cdn.jabama.com/image/383x240/jabama-images/1681067/ce4ba7b2-2b87-4a88-99b6-3f3913a763a3.jpg",
+            "https://cdn.jabama.com/image/383x240/jabama-images/1681067/959bb4a2-83d1-43a4-b82d-0b0d71545622.jpg",
+            "https://cdn.jabama.com/image/383x240/jabama-images/1681067/5e294b73-e683-4521-bf6a-6368084d4672.jpg",
+            "https://cdn.jabama.com/image/383x240/jabama-images/1681067/ba3f9198-bd66-4f0e-9f5c-2319aac7ce88.jpg"
+          ],
+          "host": {
+            "avatar": "./",
+            "name": "ندا تقی زاد"
+          },
+          "summary": "۴۰ متر زیربنا",
+          "description": "کلبه در شهر رشت (روستای شهرستان) واقع شده است. اقامتگاه در محیطی آرام، روستایی و بومی واقع است. اقامتگاه دارای دوربین مداربسته در حیاط و درب ورودی و نگهبان شبانه روزی می باشد. کلبه غیردربست است. برای پارک 2 خودرو پارکینگ روباز دارد. قابل توجه مهمانان همراه با سالمند، کودک و افراد دارای معلولیت، این اقامتگاه در طبقه همکف و دارای 10 پله برای طبقه دوم می باشد. استعمال دخانیات داخل حیاط مجاز می باشد. بافت محله کلبه روستایی و دسترسی به اقامتگاه آسفالت می باشد. وضعیت آنتن دهی همراه اول، متوسط ایرانسل عالی و رایتل متوسط می باشد. فاصله با دریا 40 دقیقه، با جنگل 10 دقیقه، با سوپرمارکت و نانوایی 5 دقیقه و با پمپ بنزین 15 دقیقه می باشد. اقامتگاه قبل از ورود مهمان بطور کامل نظافت خواهد شد. از پذیرش افراد بومی معذوریم.",
+          "capacity": {
+            "base": 5,
+            "extra": 1
+          },
+          "price": {
+            "base": 450000,
+            "extra": 0
+          },
+          "bedroom": {
+            "rooms": 1,
+            "single": 2,
+            "double": 1,
+            "traditional": 1
+          },
+          "bathroom": {
+            "persianWC": 1,
+            "foreignWC": 0,
+            "shower": 1
+          },
+          "hasCooling": true,
+          "hasHeating": true,
+          "hasFurniture": true,
+          "hasTV": false,
+          "hasWifi": true,
+          "hasWater": true,
+          "hasElectricity": true,
+          "hasGas": true
+        },
+        {
+          "id": 29,
+          "title": "اجاره کلبه یک خوابه دلیزه 2",
+          "type": "کلبه",
+          "discount": 0,
+          "rate": 4.8,
+          "comments": 30,
+          "HasImmediateReserve": false,
+          "city": "قشم",
+          "province": "هرمزگان",
+          "images": [
+            "https://cdn.jabama.com/image/890x492/jabama-images/1860892/50213cdb-57cb-477a-8733-536180ad3ff8.JPG",
+            "https://cdn.jabama.com/image/383x240/jabama-images/1860892/91e7df5d-bc52-4b64-a999-51162c285706.jpg",
+            "https://cdn.jabama.com/image/383x240/jabama-images/1860892/3660d0f5-e415-443f-a9b5-1c5d5a1e39e7.JPG",
+            "https://cdn.jabama.com/image/383x240/jabama-images/1860892/8fd6cf37-47ac-4b14-aea4-a66d2b1edbb1.JPG",
+            "https://cdn.jabama.com/image/383x240/jabama-images/1860892/8fd6cf37-47ac-4b14-aea4-a66d2b1edbb1.JPG"
+          ],
+          "host": {
+            "avatar": "./",
+            "name": "خدیجه گرگانی"
+          },
+          "summary": "۴۰ متر زیربنا",
+          "description": "کلبه در روستا هلی خال واقع شده است. اقامتگاه در محیطی آرام روستایی و بومی واقع است. اقامتگاه دارای دوربین مداربسته در حیاط می باشد کلبه غیردربست است. حیاط و پارکینگ اقامتگاه مشترک است. اقامتگاه برای پارک 3 خودرو پارکینگ روباز دارد. قابل توجه مهمانان همراه با سالمند، کودک و افراد دارای معلولیت، این اقامتگاه دوبلکس و دارای 8 پله برای طبقه دوم می باشد.",
+          "capacity": {
+            "base": 2
+          },
+          "price": {
+            "base": 800000,
+            "extra": 150000
+          },
+          "bedroom": {
+            "rooms": 1,
+            "single": 0,
+            "double": 1,
+            "traditional": 0
+          },
+          "bathroom": {
+            "persianWC": 1,
+            "foreignWC": 0,
+            "shower": 1
+          },
+          "hasCooling": true,
+          "hasHeating": true,
+          "hasFurniture": true,
+          "hasTV": false,
+          "hasWifi": true,
+          "hasWater": true,
+          "hasElectricity": true,
+          "hasGas": true
+        }
+      ]
+    }
+  ],
+  "cities": [
+    {
+      " id": 1,
+      "name": "قشم",
+      "province": "هرمزگان",
+      "image": "https://cdn.jabama.com/image/jabama-images/1297502/a84cd23d-ea99-4457-bbff-adff03f28ecd.jpg"
+    },
+    {
+      " id": 2,
+      "name": "کیش",
+      "province": "هرمزگان",
+      "image": "https://cdn.jabama.com/original/jabama-images/0/8069ff5b-1e61-4650-b4e7-04c849ab3d8f.jpg"
+    },
+    {
+      " id": 3,
+      "name": "رامسر",
+      "province": "مازندران",
+      "image": "https://cdn.jabama.com/original/jabama-images/0/5dd9b930-6fac-40d2-b0d0-25c1225f0b37.jpg"
+    },
+    {
+      " id": 4,
+      "name": "رشت",
+      "province": "گیلان",
+      "image": "https://cdn.jabama.com/image/jabama-images/959393/2daefeaf-eb88-4354-a716-ee65adf2c6da.jpg"
+    },
+    {
+      " id": 5,
+      "name": "ماسال",
+      "province": "گیلان",
+      "image": "https://cdn.jabama.com/image/jabama-images/1297502/f903885f-466d-4aaf-9e46-0678a7281955.jpg"
+    },
+    {
+      " id": 6,
+      "name": "تهران",
+      "province": "تهران",
+      "image": "https://cdn.jabama.com/original/jabama-images/0/e4d04ca8-6c47-4641-a7f2-d0457426994a.jpg"
+    },
+    {
+      " id": 7,
+      "name": "محمودآباد",
+      "province": "مازندران",
+      "image": "https://cdn.jabama.com/image/jabama-images/1530486/48158abc-878b-4870-ba15-21ac2d8eae03.jpg"
+    },
+    {
+      " id": 8,
+      "name": "چالوس",
+      "province": "مازندران",
+      "image": "https://cdn.jabama.com/image/jabama-images/1297502/d00bfe3f-2ef2-410d-8c6c-18975ae38b7c.jpg"
+    },
+    {
+      " id": 9,
+      "name": "بندر انزلی",
+      "province": "گیلان",
+      "image": "https://cdn.jabama.com/image/jabama-images/1297502/a84cd23d-ea99-4457-bbff-adff03f28ecd.jpg"
+    },
+    {
+      " id": 10,
+      "name": "نوشهر",
+      "province": "مازندران",
+      "image": "https://cdn.jabama.com/image/jabama-images/1297502/8c957f43-be03-45c5-bfac-d416944b6b13.jpg"
+    }
+  ],
+  "category": [
+    {
+      " id": 1,
+      "type": "villa"
+    },
+    {
+      " id": 2,
+      "type": "ecoTourism"
+    },
+    {
+      " id": 3,
+      "type": "hotel"
+    },
+    {
+      " id": 4,
+      "type": "kolbe"
+    }
+  ]
+}
