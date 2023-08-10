@@ -4,7 +4,6 @@ import Sidbar from "@/components/sidebar/Sidbar";
 import TitlePage from "@/components/titlepage/TiTlePage";
 import HeaderPages from "@/components/header/headerDesktop/HeaderPages";
 import HeaderMobilePages from "@/components/header/headerMobile/HeaderMobilePages";
-
 import ButtonFav from "@/components/buttonfav/ButtonFav";
 import { useSelector } from "react-redux";
 import CardWithSwiper from "@/components/card with swiper/CardWithSwiper";
@@ -15,7 +14,7 @@ const FavoritePage = () => {
   return (
     <>
       <HeaderPages
-        display="block"
+        display="static"
         loc=""
         border="border-b border-b-main-light-gray"
         compFilter=""
@@ -29,9 +28,7 @@ const FavoritePage = () => {
             </div>
             <div className="w-full lg:w-3/4 ">
               <div>
-              <div className="w-full hidden lg:block lg:mr-5  ">
                 <TitlePage title="مورد علاقه ها" />
-
                 <div className="w-full flex sm:flex-wrap sm:px-4 sm:flex-col sm:gap-3">
                   {data.map((item) => {
                     return (
@@ -53,7 +50,6 @@ const FavoritePage = () => {
                         hasFavorit={true}
                         isFavorite={true}
                       />
-
                     );
                   })}
                 </div>
@@ -61,12 +57,12 @@ const FavoritePage = () => {
             </div>
           </div>
         ) : (
-          <div className="w-full flex justify-start">
-            <div className="hidden lg:block mb-10">
+          <div className="flex">
+            <div className="hidden lg:block w-1/4 mb-10">
               <Sidbar />
             </div>
             <div className="w-full lg:w-3/4 h-3/4 ">
-              <div className="hidden lg:block lg:w-full lg:mr-4">
+              <div className="hidden lg:block mr-8 ">
                 <TitlePage title="مورد علاقه ها" />
               </div>
               <div className="flex flex-col items-center justify-center pt-20 ">
