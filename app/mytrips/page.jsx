@@ -6,7 +6,7 @@ import HeaderPages from "@/components/header/headerDesktop/HeaderPages";
 import HeaderMobilePages from "@/components/header/headerMobile/HeaderMobilePages";
 
 const MyTrips = ({ data }) =>{
-    const [favorite, setfavorite] = useState([]);
+    const [favorite, setfavorite] = useState([1,2,4]);
     return (
         <>
           <HeaderPages
@@ -18,12 +18,12 @@ const MyTrips = ({ data }) =>{
         <HeaderMobilePages title= "سفرهای من"/>
           <div>
             {favorite.length > 0 ? (
-              <div className="flex">
+              <div className="flex ">
                 <div className="hidden lg:block w-1/4 mb-10">
                   <Sidbar />
                 </div>
                 <div className="w-full lg:w-3/4  ">
-                    <div className="hidden lg:block mr-8 ">
+                    <div className="hidden lg:block lg:w-full lg:mr-4">
                       <TitlePage title="سفرهای من" />
                     </div>
                   <div>
@@ -40,12 +40,12 @@ const MyTrips = ({ data }) =>{
                 </div>
               </div>
             ) : (
-              <div className="flex">
-                <div className="hidden lg:block w-1/4 mb-10">
+              <div className="w-full flex justify-start">
+                <div className="hidden lg:inline lg:mb-10">
                   <Sidbar />
                 </div>
                 <div className="w-full lg:w-3/4 ">
-                    <div className="hidden lg:block mr-8 ">
+                    <div className="w-full hidden lg:block lg:mr-4 ">
                       <TitlePage title="سفرهای من" />
                     </div>
                   <div className="flex flex-col items-center justify-center pt-20">
