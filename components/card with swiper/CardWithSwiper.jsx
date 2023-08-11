@@ -62,7 +62,7 @@ export default function CardWithSwiper({
       <div className={twMerge("w-full relative", classNames?.images)}>
         {hasFavorit && (
           <div className="absolute top-2 left-2 z-10">
-            <Link href={"/favoritepage"} onClick={() => triggerFavorit(obj)}>
+            <Link href={"/favorites"} onClick={() => triggerFavorit(obj)}>
               {!isFavor && (
                 <Icon
                   icon="material-symbols:favorite-outline"
