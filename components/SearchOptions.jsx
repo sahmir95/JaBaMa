@@ -3,11 +3,16 @@
 import SearchOption from "./SearchOption"
 import { useEffect, useState } from "react"
 import Modal from "./Modal"
-import FilterModal from "./filterModal"
+import TypeModal from "./TypeModal"
+import CityModal from "./CityModal"
+import TypeTool from "./TypeTool"
+import CityTool from "./CityTool"
 import CategoryModal from "./CategoryModal"
+import CategoryTool from "./CategoryTool"
 import { useDispatch, useSelector } from "react-redux";
 import { peopleIncrement, setCityReset, setTypeReset } from "@/redux/features/filterSlice";
 import { sortReset } from "@/redux/features/filterSlice";
+import ToolTip from "./ToolTip"
 
 
 const SearchOptions = ({ mode }) => {
@@ -21,13 +26,87 @@ const SearchOptions = ({ mode }) => {
 
   const [isOpen, setIsOpen] = useState(false)
   const [modalType, setModalType] = useState("")
+  const [isTooltipOpen, setIsTooltipOpen] = useState({
+    city: false,
+    type: false,
+    sort: false
+  })
+  const [tooltipType, setTooltipType] = useState("")
+
+
+  const handleCityClick = () => {
+    if (window.innerWidth < 1023) {
+      setModalType("city");
+      setIsOpen(true);
+    } else {
+      setIsTooltipOpen((prev) => ({
+        ...prev,
+        city: true,
+        sort: false,
+        type: false
+      }))
+      setTooltipType("city");
+    }
+  };
+
+  const handleSortClick = () => {
+    if (window.innerWidth < 1023) {
+      setModalType("sort");
+      setIsOpen(true);
+    } else {
+      setIsTooltipOpen((prev) => ({
+        ...prev,
+        sort: true,
+        city: false,
+        type: false,
+      }))
+      setTooltipType("sort");
+    }
+  };
+
+  const handleTypeClick = () => {
+    if (window.innerWidth < 1023) {
+      setModalType("type");
+      setIsOpen(true);
+    } else {
+      setIsTooltipOpen((prev) => ({
+        ...prev,
+        type: true,
+        city: false,
+        sort: false,
+      }))
+      setTooltipType("type");
+    }
+  };
+
+  const handleTooltipClick = (type) => {
+    setIsTooltipOpen((prevTooltipStates) => ({
+      ...prevTooltipStates,
+      [type]: false,
+    }));
+  };
 
   const modalClassName = (key) => {
     switch (key) {
-      case "filter":
-        return "w-full h-1/2"
-      case "categories":
-        return "w-full h-[30vh]"
+      case "sort":
+        return "w-full h-fit"
+      case "type":
+        return "w-full h-fit"
+      case "city":
+        return "w-full h-fit"
+      default:
+        break;
+    }
+  }
+
+  const tooltipClassName = (key) => {
+    switch (key) {
+      case "city":
+        return "w-fit h-fit"
+      case "sort":
+        return "w-fit h-fit"
+      case "type":
+        return "w-fit h-fit"
       default:
         break;
     }
@@ -35,11 +114,26 @@ const SearchOptions = ({ mode }) => {
 
   const renderModal = (key) => {
     switch (key) {
-      case "filter":
-        return <FilterModal />
-      case "categories":
+      case "city":
+        return <CityModal />
+      case "sort":
         return <CategoryModal />
+      case "type":
+        return <TypeModal />
     
+      default:
+        break;
+    }
+  }
+
+  const renderTooltip = (key) => {
+    switch (key) {
+      case "city":
+        return <CityTool />
+      case "sort":
+        return <CategoryTool />
+      case "type":
+        return <TypeTool />
       default:
         break;
     }
@@ -52,26 +146,24 @@ const SearchOptions = ({ mode }) => {
         return [
           {
             name: `دسته بندی`,
+            type: "sort",
             icon: '/images/icon-filter.png',
             redux: sort,
-            onClick: () => {
-              setModalType((prev) => "categories")
-              setIsOpen(true)
-            },
+            onClick: () => handleSortClick(),
             reset: () => dispatch(sortReset()),
           },
           {
             name: "شهر",
+            type: "city",
             redux: city,
-            onClick: () => {
-            },
+            onClick: () => handleCityClick(),
             reset: () => dispatch(setCityReset()),
           },
           {
             name: "نوع اقامتگاه",
+            type: "type",
             redux: type,
-            onClick: () => {
-            },
+            onClick: () => handleTypeClick(),
             reset: () => dispatch(setTypeReset()),
           },
         ]
@@ -135,14 +227,17 @@ const SearchOptions = ({ mode }) => {
         <div className="px-5 flex overflow-x-scroll no-scrollbar w-full whitespace-nowrap lg:px-4">
             {filterFields(mode)?.map((field) => {
             return (
-              <>
-                <SearchOption redux={field?.redux} reset={field?.reset} name={field?.name} icon={field?.icon} onClick={field?.onClick} />
-              </>
+              <div className="relative">
+                <SearchOption redux={field?.redux} isOpen={isTooltipOpen[field?.type]} setIsOpen={() => handleTooltipClick(field?.type)} reset={field?.reset} name={field?.name} icon={field?.icon} onClick={field?.onClick} />
+                <ToolTip isOpen={isTooltipOpen[field?.type]} setIsOpen={() => handleTooltipClick(field?.type)} className={tooltipClassName(field?.type)}>
+                  {renderTooltip(field?.type)}
+                </ToolTip>
+              </div>
             )
             })}
         </div>
       </div>
-      <Modal isOpen={isOpen} setIsOpen={setIsOpen} className={modalClassName(modalType)}>
+      <Modal isOpen={isOpen} setIsOpen={() => setIsOpen(false)} className={modalClassName(modalType)}>
         {renderModal(modalType)}
       </Modal>
     </>

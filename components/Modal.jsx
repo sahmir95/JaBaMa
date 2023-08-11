@@ -11,11 +11,20 @@ const Modal = ({
 
   
   useEffect(() => {
-    if (isOpen) {
-      document.body.classList.add("modal-open");
-    } else {
-      document.body.classList.remove("modal-open");
-    }
+    const handleWindowResize = () => {
+      if (window.innerWidth < 1023) {
+        if (isOpen) {
+          document.body.classList.add("modal-open");
+        } else {
+          document.body.classList.remove("modal-open");
+        }
+      }
+    };
+    handleWindowResize();
+    window.addEventListener("resize", handleWindowResize);
+    return () => {
+      window.removeEventListener("resize", handleWindowResize);
+    };
   }, [isOpen]);
 
   return (
@@ -23,11 +32,11 @@ const Modal = ({
       onClick={(e) => {
         if (e && typeof e.target.className === "string" && e.target.className.includes("overlay")) {
           e.stopPropagation();
+          setIsOpen();
           onOverlayClick();
-          setIsOpen(false);
         }
       }}
-      className={`overlay ${!isOpen ? "hidden" : ""}`}
+      className={`overlay ${!isOpen ? "hidden" : ""} lg:hidden`}
     >
       <div
         className={`bodyContainer animationScaleUp ${className}`}

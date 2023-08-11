@@ -17,7 +17,7 @@ export default function layout({children}) {
       <HeaderPages
                 display="sticky top-0 z-20 bg-main-white"
                 loc=""
-                border="border-b border-main-border-gray py-4"
+                border="border-b border-main-border-gray pb-4 dxl:pt-[0.8rem]"
                 compFilter={<SearchOptions mode={"essential"}/>}
                 compSearch={<HeaderPagesSearch/>}
             />

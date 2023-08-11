@@ -61,10 +61,38 @@ body {
   overflow: hidden;
 }
 
+.tooltipContainer {
+    position: absolute;
+    z-index: 1000;
+    top: 1rem;
+    right: 0;
+    background-color: white;
+    overflow: hidden;
+}
+
 body.modal-open {
   overflow: hidden;
 }
 
+.overlay {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background: #7e7e7e7c;
+    z-index: 900;
+}
+
+.tooltip {
+position: fixed;
+width: 100vw;
+height: 100vh;
+z-index: 900;
+}
+  
 .customButtonPad {
     padding: 8.675px 14px 8.675px 13px;
 }
@@ -79,23 +107,26 @@ body.modal-open {
         transform: scale(1) translateY(0);
     }
 }
+
+@keyframes scaleuptwo {
+    0% {
+        opacity: 0;
+        transform: scale(1) translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
 .animationScaleUp {
     border-radius: 24px 24px 0 0;
     animation: scaleup 0.3s cubic-bezier(.165,.84,.44,1) forwards;
 }
-
-
-.overlay {
-  position: fixed;
-  inset: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
-  height: 100vh;
-  background: #7e7e7e7c;
-  z-index: 900;
+.animationScaleUpTwo {
+    border-radius: 0.75rem;
+    animation: scaleuptwo 0.3s cubic-bezier(.165,.84,.44,1) forwards;
 }
+
 
 .customPadOption {
   padding: 5.49px 11px 5.32px 14px;
@@ -144,8 +175,8 @@ body.modal-open {
     transform: translate(50%, -40%);
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1601px) {
     .customPadOption {
-        padding: 1rem 0.9rem;
+        padding: 1.1rem 0.9rem;
     }
 }

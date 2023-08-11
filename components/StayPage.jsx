@@ -115,9 +115,9 @@ function StayPage({ stays }) {
   return (
     <>
     <div className="px-5 lg:px-[1rem] pb-20 lg:max-w-[1400px] lg:mx-auto">
-      <div className="pt-[1.45rem] pb-[0.6rem] lg:pt-8">
-        <p className="mb-1 font-bold text-2xl text-main-deep-teal">{titleMaker()}</p>
-        <p className="mt-2 lg:mt-1 font-medium text-xs text-main-slate-gray lg:text-sm">{`${toFarsiNumber(amount)} اقامتگاه`}</p>
+      <div className="pt-[1.45rem] xl:pt-[1.7rem] dxl:pt-[2rem] pb-[0.6rem]">
+        <p className="mb-1 font-bold lg:text-[1.3rem] dxl:text-2xl text-main-deep-teal">{titleMaker()}</p>
+        <p className="mt-2 lg:mt-[0.35rem] dxl:mt-1 font-medium text-xs text-main-slate-gray dxl:text-sm">{`${toFarsiNumber(amount)} اقامتگاه`}</p>
       </div>
       {loading ? (
             <div className="`mt-4 pb-10 flex flex-col md:grid md:grid-cols-2 md:gap-x-[1.25rem] lg:grid-cols-4 lg:gap-x-[1.625rem]">
@@ -138,7 +138,7 @@ function StayPage({ stays }) {
           products
             .map((stay) => {
               return (
-              <div key={stay.id} className="pb-6 text lg:pb-[2.5rem]">
+              <div key={stay.id} className="mb-6 text lg:mb-[2.5rem]">
                   <CardWithSwiper
                     price={stay?.price?.base}
                     rate={stay?.rate}
