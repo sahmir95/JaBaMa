@@ -1,7 +1,7 @@
 "use client"
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { sortCheap,sortExpensive,sortRate,sortReset } from "@/redux/features/filterSlice";
+import { sortCheap,sortExpensive,sortRate,sortReset } from "@/redux/featchers/filterSlice";
 import { AiOutlineCheckSquare,AiFillCheckSquare } from "react-icons/ai"
 function CategoryTool() {
 

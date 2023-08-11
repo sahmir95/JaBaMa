@@ -1,7 +1,7 @@
 "use client"
 
 import { useDispatch, useSelector } from "react-redux"
-import { reset } from "@/redux/features/filterSlice"
+import { reset } from "@/redux/featchers/filterSlice"
 
 const NoResultFound = () => {
 

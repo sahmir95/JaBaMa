@@ -10,8 +10,8 @@ import CityTool from "./CityTool"
 import CategoryModal from "./CategoryModal"
 import CategoryTool from "./CategoryTool"
 import { useDispatch, useSelector } from "react-redux";
-import { peopleIncrement, setCityReset, setTypeReset } from "@/redux/features/filterSlice";
-import { sortReset } from "@/redux/features/filterSlice";
+import { peopleIncrement, setCityReset, setTypeReset } from "@/redux/featchers/filterSlice";
+import { sortReset } from "@/redux/featchers/filterSlice";
 import ToolTip from "./ToolTip"
 
 

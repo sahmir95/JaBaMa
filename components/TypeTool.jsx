@@ -1,7 +1,7 @@
 "use client"
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { setTypeCottage,setTypeEcoTourism,setTypeHotel,setTypeVilla,setTypeReset } from "@/redux/features/filterSlice";
+import { setTypeCottage,setTypeEcoTourism,setTypeHotel,setTypeVilla,setTypeReset } from "@/redux/featchers/filterSlice";
 import { AiOutlineCheckSquare,AiFillCheckSquare } from "react-icons/ai"
 function TypeTool() {
 

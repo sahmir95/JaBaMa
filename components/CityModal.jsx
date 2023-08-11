@@ -8,7 +8,7 @@ import {
   setCityRamsar,
   setCityRasht,
   setCityReset
-} from "@/redux/features/filterSlice";
+} from "@/redux/featchers/filterSlice";
 import { AiOutlineCheckSquare, AiFillCheckSquare } from "react-icons/ai";
 function CityTool() {
   const city = useSelector((state) => state.filterReducer.city);

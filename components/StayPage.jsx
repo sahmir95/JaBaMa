@@ -5,7 +5,7 @@ import Link from "next/link";
 import toFarsiNumber from "@/utils/toFaNumber";
 import CardWithSwiper from "@/components/card with swiper/CardWithSwiper";
 import { useDispatch, useSelector } from "react-redux";
-import { setTypeVilla , setTypeCottage , setTypeReset , setCityReset, reset , setCityKish, setCityRamsar } from "@/redux/features/filterSlice"
+import { setTypeVilla , setTypeCottage , setTypeReset , setCityReset, reset , setCityKish, setCityRamsar } from "@/redux/featchers/filterSlice"
 import NoResultFound from "./NoResultFound";
 
 
