@@ -14,7 +14,6 @@ export default function BoxWithSwiper({
   city,
   title,
   subtitle,
-  isBeginText,
 }) {
   let scrl = useRef(null);
   const [scrolEnd, setscrolEnd] = useState(false);
@@ -88,7 +87,7 @@ export default function BoxWithSwiper({
       </div>
 
       <ul ref={scrl} onScroll={scrollCheck} className="box">
-        {data.map((item) => {
+        {data && data.map((item) => {
           return (
             <li key={item.id}>
               {React.cloneElement(children, {
