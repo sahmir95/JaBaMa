@@ -1,12 +1,11 @@
 import React from 'react';
 import {HiOutlineHeart} from "react-icons/hi";
-import HeaderPagesSearch from "@/components/header/headerDesktop/HeaderPagesSearch";
 
-const HeaderPages = ({display, border, loc, compFilter, compSearch}) => {
+const HeaderPages = ({display, border, loc, compFilter, compSearch, background, position}) => {
 
 
     return (
-        <div className={`hidden lg:block ${display} ${border} ${loc}`}>
+        <div className={`hidden lg:${display} h-fit ${background} ${position} ${border} ${loc} z-[60]`}>
             <div className='max-w-[1400px] flex flex-col mx-auto'>
                 <div className={`flex items-center justify-between mx-auto w-full h-20 px-4 z-40`}>
                     <div className="flex items-center justify-start">

@@ -44,14 +44,99 @@
             "foreignWC": 0,
             "shower": 1
           },
-          "hasCooling": true,
-          "hasHeating": true,
-          "hasFurniture": true,
-          "hasTV": false,
-          "hasWifi": true,
-          "hasWater": true,
-          "hasElectricity": true,
-          "hasGas": true
+
+          "facility": [
+            {
+              "exist": true,
+              "name": "سیستم سرمایشی",
+              "icon": "https://img.icons8.com/sf-ultralight/25/air-conditioner.png",
+              "alt": "cooling-system"
+            },
+            {
+              "exist": true,
+              "name": "سیستم گرمایشی",
+              "icon": "https://img.icons8.com/external-xnimrodx-lineal-xnimrodx/64/external-heater-electronics-xnimrodx-lineal-xnimrodx.png",
+              "alt": "heating-system"
+            },
+            {
+              "exist": true,
+              "name": "مبلمان",
+              "icon": "https://img.icons8.com/ios/50/three-seater-sofa.png",
+              "alt": "furniture"
+            },
+            {
+              "exist": false,
+              "name": "تلویزیون",
+              "icon": "https://img.icons8.com/external-royyan-wijaya-detailed-outline-royyan-wijaya/24/external-tv-furniture-royyan-wijaya-detailed-outline-royyan-wijaya.png",
+              "alt": "TV"
+            },
+            {
+              "exist": true,
+              "name": "وای فای",
+              "icon": "https://img.icons8.com/external-outline-berkahicon/64/external-drop-smart-home-outline-berkahicon.png",
+              "alt": "wifi"
+            },
+            {
+              "exist": true,
+              "name": "آب",
+              "icon": "https://img.icons8.com/external-outline-berkahicon/64/external-drop-smart-home-outline-berkahicon.png",
+              "alt": "water"
+            },
+            {
+              "exist": true,
+              "name": "برق",
+              "icon": "https://img.icons8.com/external-royyan-wijaya-detailed-outline-royyan-wijaya/24/external-electric-plug-bolt-energy-royyan-wijaya-detailed-outline-royyan-wijaya.png",
+              "alt": "electricity"
+            },
+            {
+              "exist": true,
+              "name": "گاز",
+              "icon": "https://img.icons8.com/external-xnimrodx-lineal-xnimrodx/64/external-gas-camping-xnimrodx-lineal-xnimrodx.png",
+              "alt": "gas"
+            }
+          ],
+          "reviews": [
+            {
+              "commenter": "سید مصطفی",
+              "dateComment": "مرداد 1402",
+              "comment": "خیلی خوب بود"
+            },
+            {
+              "commenter": "سید علی",
+              "dateComment": "تیر 1402",
+              "comment": "مزخرف"
+            },
+            {
+              "commenter": "سید احمد",
+              "dateComment": "شهریور 1402",
+              "comment": "پیدات می کنم"
+            },
+            {
+              "commenter": "سید نوید",
+              "dateComment": "اردیبهشت 1402",
+              "comment": "تمیز نبود"
+            }
+          ],
+          "rules": [
+            {
+              "statement": "همراه داشتن کارت ملی الزامی می‌باشد.",
+              "permission": true
+            },
+            {
+              "statement": "استعمال دخانیات مجاز نمی‌باشد.",
+              "permission": false
+            },
+            {
+              "statement": "ورود حیوانات خانگی مجاز نمی‌باشد.",
+              "permission": false
+            },
+            { "statement": "برگزاری مراسم مجاز نمی‌باشد", "permission": false },
+            { "statement": "پذیرش 24 ساعته مهمان ممنوع", "permission": false },
+            {
+              "statement": "امکان پذیرش گروه‌های مجردی فراهم نمی‌باشد.",
+              "permission": false
+            }
+          ]
         },
         {
           "id": 2,
@@ -97,14 +182,98 @@
             "foreignWC": 1,
             "shower": 2
           },
-          "hasCooling": true,
-          "hasHeating": true,
-          "hasFurniture": true,
-          "hasTV": true,
-          "hasWifi": true,
-          "hasWater": true,
-          "hasElectricity": true,
-          "hasGas": true
+          "facility": [
+            {
+              "exist": false,
+              "name": "سیستم سرمایشی",
+              "icon": "https://img.icons8.com/sf-ultralight/25/air-conditioner.png",
+              "alt": "cooling-system"
+            },
+            {
+              "exist": true,
+              "name": "سیستم گرمایشی",
+              "icon": "https://img.icons8.com/external-xnimrodx-lineal-xnimrodx/64/external-heater-electronics-xnimrodx-lineal-xnimrodx.png",
+              "alt": "heating-system"
+            },
+            {
+              "exist": true,
+              "name": "مبلمان",
+              "icon": "https://img.icons8.com/ios/50/three-seater-sofa.png",
+              "alt": "furniture"
+            },
+            {
+              "exist": true,
+              "name": "تلویزیون",
+              "icon": "https://img.icons8.com/external-royyan-wijaya-detailed-outline-royyan-wijaya/24/external-tv-furniture-royyan-wijaya-detailed-outline-royyan-wijaya.png",
+              "alt": "TV"
+            },
+            {
+              "exist": true,
+              "name": "وای فای",
+              "icon": "https://img.icons8.com/external-outline-berkahicon/64/external-drop-smart-home-outline-berkahicon.png",
+              "alt": "wifi"
+            },
+            {
+              "exist": true,
+              "name": "آب",
+              "icon": "https://img.icons8.com/external-outline-berkahicon/64/external-drop-smart-home-outline-berkahicon.png",
+              "alt": "water"
+            },
+            {
+              "exist": true,
+              "name": "برق",
+              "icon": "https://img.icons8.com/external-royyan-wijaya-detailed-outline-royyan-wijaya/24/external-electric-plug-bolt-energy-royyan-wijaya-detailed-outline-royyan-wijaya.png",
+              "alt": "electricity"
+            },
+            {
+              "exist": true,
+              "name": "گاز",
+              "icon": "https://img.icons8.com/external-xnimrodx-lineal-xnimrodx/64/external-gas-camping-xnimrodx-lineal-xnimrodx.png",
+              "alt": "gas"
+            }
+          ],
+          "reviews": [
+            {
+              "commenter": "سید مصطفی",
+              "dateComment": "مرداد 1402",
+              "comment": "خیلی خوب بود"
+            },
+            {
+              "commenter": "سید علی",
+              "dateComment": "تیر 1402",
+              "comment": "مزخرف"
+            },
+            {
+              "commenter": "سید احمد",
+              "dateComment": "شهریور 1402",
+              "comment": "پیدات می کنم"
+            },
+            {
+              "commenter": "سید نوید",
+              "dateComment": "اردیبهشت 1402",
+              "comment": "تمیز نبود"
+            }
+          ],
+          "rules": [
+            {
+              "statement": "همراه داشتن کارت ملی الزامی می‌باشد.",
+              "permission": true
+            },
+            {
+              "statement": "استعمال دخانیات مجاز نمی‌باشد.",
+              "permission": false
+            },
+            {
+              "statement": "ورود حیوانات خانگی مجاز نمی‌باشد.",
+              "permission": false
+            },
+            { "statement": "برگزاری مراسم مجاز نمی‌باشد", "permission": false },
+            { "statement": "پذیرش 24 ساعته مهمان ممنوع", "permission": false },
+            {
+              "statement": "امکان پذیرش گروه‌های مجردی فراهم نمی‌باشد.",
+              "permission": false
+            }
+          ]
         },
         {
           "id": 3,
@@ -151,14 +320,98 @@
             "foreignWC": 1,
             "shower": 1
           },
-          "hasCooling": true,
-          "hasHeating": true,
-          "hasFurniture": true,
-          "hasTV": false,
-          "hasWifi": false,
-          "hasWater": true,
-          "hasElectricity": true,
-          "hasGas": true
+          "facility": [
+            {
+              "exist": true,
+              "name": "سیستم سرمایشی",
+              "icon": "https://img.icons8.com/sf-ultralight/25/air-conditioner.png",
+              "alt": "cooling-system"
+            },
+            {
+              "exist": true,
+              "name": "سیستم گرمایشی",
+              "icon": "https://img.icons8.com/external-xnimrodx-lineal-xnimrodx/64/external-heater-electronics-xnimrodx-lineal-xnimrodx.png",
+              "alt": "heating-system"
+            },
+            {
+              "exist": true,
+              "name": "مبلمان",
+              "icon": "https://img.icons8.com/ios/50/three-seater-sofa.png",
+              "alt": "furniture"
+            },
+            {
+              "exist": false,
+              "name": "تلویزیون",
+              "icon": "https://img.icons8.com/external-royyan-wijaya-detailed-outline-royyan-wijaya/24/external-tv-furniture-royyan-wijaya-detailed-outline-royyan-wijaya.png",
+              "alt": "TV"
+            },
+            {
+              "exist": false,
+              "name": "وای فای",
+              "icon": "https://img.icons8.com/external-outline-berkahicon/64/external-drop-smart-home-outline-berkahicon.png",
+              "alt": "wifi"
+            },
+            {
+              "exist": true,
+              "name": "آب",
+              "icon": "https://img.icons8.com/external-outline-berkahicon/64/external-drop-smart-home-outline-berkahicon.png",
+              "alt": "water"
+            },
+            {
+              "exist": true,
+              "name": "برق",
+              "icon": "https://img.icons8.com/external-royyan-wijaya-detailed-outline-royyan-wijaya/24/external-electric-plug-bolt-energy-royyan-wijaya-detailed-outline-royyan-wijaya.png",
+              "alt": "electricity"
+            },
+            {
+              "exist": true,
+              "name": "گاز",
+              "icon": "https://img.icons8.com/external-xnimrodx-lineal-xnimrodx/64/external-gas-camping-xnimrodx-lineal-xnimrodx.png",
+              "alt": "gas"
+            }
+          ],
+          "reviews": [
+            {
+              "commenter": "سید مصطفی",
+              "dateComment": "مرداد 1402",
+              "comment": "خیلی خوب بود"
+            },
+            {
+              "commenter": "سید علی",
+              "dateComment": "تیر 1402",
+              "comment": "مزخرف"
+            },
+            {
+              "commenter": "سید احمد",
+              "dateComment": "شهریور 1402",
+              "comment": "پیدات می کنم"
+            },
+            {
+              "commenter": "سید نوید",
+              "dateComment": "اردیبهشت 1402",
+              "comment": "تمیز نبود"
+            }
+          ],
+          "rules": [
+            {
+              "statement": "همراه داشتن کارت ملی الزامی می‌باشد.",
+              "permission": true
+            },
+            {
+              "statement": "استعمال دخانیات مجاز نمی‌باشد.",
+              "permission": false
+            },
+            {
+              "statement": "ورود حیوانات خانگی مجاز نمی‌باشد.",
+              "permission": false
+            },
+            { "statement": "برگزاری مراسم مجاز نمی‌باشد", "permission": false },
+            { "statement": "پذیرش 24 ساعته مهمان ممنوع", "permission": false },
+            {
+              "statement": "امکان پذیرش گروه‌های مجردی فراهم نمی‌باشد.",
+              "permission": false
+            }
+          ]
         },
         {
           "id": 4,
@@ -205,14 +458,98 @@
             "foreignWC": 1,
             "shower": 1
           },
-          "hasCooling": true,
-          "hasHeating": true,
-          "hasFurniture": true,
-          "hasTV": false,
-          "hasWifi": false,
-          "hasWater": true,
-          "hasElectricity": true,
-          "hasGas": true
+          "facility": [
+            {
+              "exist": true,
+              "name": "سیستم سرمایشی",
+              "icon": "https://img.icons8.com/sf-ultralight/25/air-conditioner.png",
+              "alt": "cooling-system"
+            },
+            {
+              "exist": true,
+              "name": "سیستم گرمایشی",
+              "icon": "https://img.icons8.com/external-xnimrodx-lineal-xnimrodx/64/external-heater-electronics-xnimrodx-lineal-xnimrodx.png",
+              "alt": "heating-system"
+            },
+            {
+              "exist": true,
+              "name": "مبلمان",
+              "icon": "https://img.icons8.com/ios/50/three-seater-sofa.png",
+              "alt": "furniture"
+            },
+            {
+              "exist": false,
+              "name": "تلویزیون",
+              "icon": "https://img.icons8.com/external-royyan-wijaya-detailed-outline-royyan-wijaya/24/external-tv-furniture-royyan-wijaya-detailed-outline-royyan-wijaya.png",
+              "alt": "TV"
+            },
+            {
+              "exist": false,
+              "name": "وای فای",
+              "icon": "https://img.icons8.com/external-outline-berkahicon/64/external-drop-smart-home-outline-berkahicon.png",
+              "alt": "wifi"
+            },
+            {
+              "exist": true,
+              "name": "آب",
+              "icon": "https://img.icons8.com/external-outline-berkahicon/64/external-drop-smart-home-outline-berkahicon.png",
+              "alt": "water"
+            },
+            {
+              "exist": true,
+              "name": "برق",
+              "icon": "https://img.icons8.com/external-royyan-wijaya-detailed-outline-royyan-wijaya/24/external-electric-plug-bolt-energy-royyan-wijaya-detailed-outline-royyan-wijaya.png",
+              "alt": "electricity"
+            },
+            {
+              "exist": true,
+              "name": "گاز",
+              "icon": "https://img.icons8.com/external-xnimrodx-lineal-xnimrodx/64/external-gas-camping-xnimrodx-lineal-xnimrodx.png",
+              "alt": "gas"
+            }
+          ],
+          "reviews": [
+            {
+              "commenter": "سید مصطفی",
+              "dateComment": "مرداد 1402",
+              "comment": "خیلی خوب بود"
+            },
+            {
+              "commenter": "سید علی",
+              "dateComment": "تیر 1402",
+              "comment": "مزخرف"
+            },
+            {
+              "commenter": "سید احمد",
+              "dateComment": "شهریور 1402",
+              "comment": "پیدات می کنم"
+            },
+            {
+              "commenter": "سید نوید",
+              "dateComment": "اردیبهشت 1402",
+              "comment": "تمیز نبود"
+            }
+          ],
+          "rules": [
+            {
+              "statement": "همراه داشتن کارت ملی الزامی می‌باشد.",
+              "permission": true
+            },
+            {
+              "statement": "استعمال دخانیات مجاز نمی‌باشد.",
+              "permission": false
+            },
+            {
+              "statement": "ورود حیوانات خانگی مجاز نمی‌باشد.",
+              "permission": false
+            },
+            { "statement": "برگزاری مراسم مجاز نمی‌باشد", "permission": false },
+            { "statement": "پذیرش 24 ساعته مهمان ممنوع", "permission": false },
+            {
+              "statement": "امکان پذیرش گروه‌های مجردی فراهم نمی‌باشد.",
+              "permission": false
+            }
+          ]
         },
         {
           "id": 5,
@@ -256,14 +593,98 @@
             "foreignWC": 1,
             "shower": 1
           },
-          "hasCooling": true,
-          "hasHeating": true,
-          "hasFurniture": true,
-          "hasTV": true,
-          "hasWifi": false,
-          "hasWater": true,
-          "hasElectricity": true,
-          "hasGas": true
+          "facility": [
+            {
+              "exist": true,
+              "name": "سیستم سرمایشی",
+              "icon": "https://img.icons8.com/sf-ultralight/25/air-conditioner.png",
+              "alt": "cooling-system"
+            },
+            {
+              "exist": true,
+              "name": "سیستم گرمایشی",
+              "icon": "https://img.icons8.com/external-xnimrodx-lineal-xnimrodx/64/external-heater-electronics-xnimrodx-lineal-xnimrodx.png",
+              "alt": "heating-system"
+            },
+            {
+              "exist": true,
+              "name": "مبلمان",
+              "icon": "https://img.icons8.com/ios/50/three-seater-sofa.png",
+              "alt": "furniture"
+            },
+            {
+              "exist": true,
+              "name": "تلویزیون",
+              "icon": "https://img.icons8.com/external-royyan-wijaya-detailed-outline-royyan-wijaya/24/external-tv-furniture-royyan-wijaya-detailed-outline-royyan-wijaya.png",
+              "alt": "TV"
+            },
+            {
+              "exist": false,
+              "name": "وای فای",
+              "icon": "https://img.icons8.com/external-outline-berkahicon/64/external-drop-smart-home-outline-berkahicon.png",
+              "alt": "wifi"
+            },
+            {
+              "exist": true,
+              "name": "آب",
+              "icon": "https://img.icons8.com/external-outline-berkahicon/64/external-drop-smart-home-outline-berkahicon.png",
+              "alt": "water"
+            },
+            {
+              "exist": true,
+              "name": "برق",
+              "icon": "https://img.icons8.com/external-royyan-wijaya-detailed-outline-royyan-wijaya/24/external-electric-plug-bolt-energy-royyan-wijaya-detailed-outline-royyan-wijaya.png",
+              "alt": "electricity"
+            },
+            {
+              "exist": true,
+              "name": "گاز",
+              "icon": "https://img.icons8.com/external-xnimrodx-lineal-xnimrodx/64/external-gas-camping-xnimrodx-lineal-xnimrodx.png",
+              "alt": "gas"
+            }
+          ],
+          "reviews": [
+            {
+              "commenter": "سید مصطفی",
+              "dateComment": "مرداد 1402",
+              "comment": "خیلی خوب بود"
+            },
+            {
+              "commenter": "سید علی",
+              "dateComment": "تیر 1402",
+              "comment": "مزخرف"
+            },
+            {
+              "commenter": "سید احمد",
+              "dateComment": "شهریور 1402",
+              "comment": "پیدات می کنم"
+            },
+            {
+              "commenter": "سید نوید",
+              "dateComment": "اردیبهشت 1402",
+              "comment": "تمیز نبود"
+            }
+          ],
+          "rules": [
+            {
+              "statement": "همراه داشتن کارت ملی الزامی می‌باشد.",
+              "permission": true
+            },
+            {
+              "statement": "استعمال دخانیات مجاز نمی‌باشد.",
+              "permission": false
+            },
+            {
+              "statement": "ورود حیوانات خانگی مجاز نمی‌باشد.",
+              "permission": false
+            },
+            { "statement": "برگزاری مراسم مجاز نمی‌باشد", "permission": false },
+            { "statement": "پذیرش 24 ساعته مهمان ممنوع", "permission": false },
+            {
+              "statement": "امکان پذیرش گروه‌های مجردی فراهم نمی‌باشد.",
+              "permission": false
+            }
+          ]
         },
         {
           "id": 6,
@@ -312,17 +733,98 @@
             "foreignWC": 1,
             "shower": 1
           },
-          "hasCooling": true,
-          "hasHeating": true,
-          "hasFurniture": true,
-          "hasTV": true,
-          "hasWifi": false,
-          "hasWater": true,
-          "hasElectricity": true,
-          "hasGas": true,
-          "hasParking": true,
-          "hasPool": false,
-          "hasBarbecue": true
+          "facility": [
+            {
+              "exist": true,
+              "name": "سیستم سرمایشی",
+              "icon": "https://img.icons8.com/sf-ultralight/25/air-conditioner.png",
+              "alt": "cooling-system"
+            },
+            {
+              "exist": true,
+              "name": "سیستم گرمایشی",
+              "icon": "https://img.icons8.com/external-xnimrodx-lineal-xnimrodx/64/external-heater-electronics-xnimrodx-lineal-xnimrodx.png",
+              "alt": "heating-system"
+            },
+            {
+              "exist": true,
+              "name": "مبلمان",
+              "icon": "https://img.icons8.com/ios/50/three-seater-sofa.png",
+              "alt": "furniture"
+            },
+            {
+              "exist": true,
+              "name": "تلویزیون",
+              "icon": "https://img.icons8.com/external-royyan-wijaya-detailed-outline-royyan-wijaya/24/external-tv-furniture-royyan-wijaya-detailed-outline-royyan-wijaya.png",
+              "alt": "TV"
+            },
+            {
+              "exist": false,
+              "name": "وای فای",
+              "icon": "https://img.icons8.com/external-outline-berkahicon/64/external-drop-smart-home-outline-berkahicon.png",
+              "alt": "wifi"
+            },
+            {
+              "exist": true,
+              "name": "آب",
+              "icon": "https://img.icons8.com/external-outline-berkahicon/64/external-drop-smart-home-outline-berkahicon.png",
+              "alt": "water"
+            },
+            {
+              "exist": true,
+              "name": "برق",
+              "icon": "https://img.icons8.com/external-royyan-wijaya-detailed-outline-royyan-wijaya/24/external-electric-plug-bolt-energy-royyan-wijaya-detailed-outline-royyan-wijaya.png",
+              "alt": "electricity"
+            },
+            {
+              "exist": true,
+              "name": "گاز",
+              "icon": "https://img.icons8.com/external-xnimrodx-lineal-xnimrodx/64/external-gas-camping-xnimrodx-lineal-xnimrodx.png",
+              "alt": "gas"
+            }
+          ],
+          "reviews": [
+            {
+              "commenter": "سید مصطفی",
+              "dateComment": "مرداد 1402",
+              "comment": "خیلی خوب بود"
+            },
+            {
+              "commenter": "سید علی",
+              "dateComment": "تیر 1402",
+              "comment": "مزخرف"
+            },
+            {
+              "commenter": "سید احمد",
+              "dateComment": "شهریور 1402",
+              "comment": "پیدات می کنم"
+            },
+            {
+              "commenter": "سید نوید",
+              "dateComment": "اردیبهشت 1402",
+              "comment": "تمیز نبود"
+            }
+          ],
+          "rules": [
+            {
+              "statement": "همراه داشتن کارت ملی الزامی می‌باشد.",
+              "permission": true
+            },
+            {
+              "statement": "استعمال دخانیات مجاز نمی‌باشد.",
+              "permission": false
+            },
+            {
+              "statement": "ورود حیوانات خانگی مجاز نمی‌باشد.",
+              "permission": false
+            },
+            { "statement": "برگزاری مراسم مجاز نمی‌باشد", "permission": false },
+            { "statement": "پذیرش 24 ساعته مهمان ممنوع", "permission": false },
+            {
+              "statement": "امکان پذیرش گروه‌های مجردی فراهم نمی‌باشد.",
+              "permission": false
+            }
+          ]
         },
         {
           "id": 7,
@@ -371,17 +873,98 @@
             "foreignWC": 1,
             "shower": 2
           },
-          "hasCooling": true,
-          "hasHeating": true,
-          "hasFurniture": true,
-          "hasTV": true,
-          "hasWifi": false,
-          "hasWater": true,
-          "hasElectricity": true,
-          "hasGas": true,
-          "hasParking": true,
-          "hasPool": false,
-          "hasBarbecue": true
+          "facility": [
+            {
+              "exist": true,
+              "name": "سیستم سرمایشی",
+              "icon": "https://img.icons8.com/sf-ultralight/25/air-conditioner.png",
+              "alt": "cooling-system"
+            },
+            {
+              "exist": true,
+              "name": "سیستم گرمایشی",
+              "icon": "https://img.icons8.com/external-xnimrodx-lineal-xnimrodx/64/external-heater-electronics-xnimrodx-lineal-xnimrodx.png",
+              "alt": "heating-system"
+            },
+            {
+              "exist": true,
+              "name": "مبلمان",
+              "icon": "https://img.icons8.com/ios/50/three-seater-sofa.png",
+              "alt": "furniture"
+            },
+            {
+              "exist": true,
+              "name": "تلویزیون",
+              "icon": "https://img.icons8.com/external-royyan-wijaya-detailed-outline-royyan-wijaya/24/external-tv-furniture-royyan-wijaya-detailed-outline-royyan-wijaya.png",
+              "alt": "TV"
+            },
+            {
+              "exist": false,
+              "name": "وای فای",
+              "icon": "https://img.icons8.com/external-outline-berkahicon/64/external-drop-smart-home-outline-berkahicon.png",
+              "alt": "wifi"
+            },
+            {
+              "exist": true,
+              "name": "آب",
+              "icon": "https://img.icons8.com/external-outline-berkahicon/64/external-drop-smart-home-outline-berkahicon.png",
+              "alt": "water"
+            },
+            {
+              "exist": true,
+              "name": "برق",
+              "icon": "https://img.icons8.com/external-royyan-wijaya-detailed-outline-royyan-wijaya/24/external-electric-plug-bolt-energy-royyan-wijaya-detailed-outline-royyan-wijaya.png",
+              "alt": "electricity"
+            },
+            {
+              "exist": true,
+              "name": "گاز",
+              "icon": "https://img.icons8.com/external-xnimrodx-lineal-xnimrodx/64/external-gas-camping-xnimrodx-lineal-xnimrodx.png",
+              "alt": "gas"
+            }
+          ],
+          "reviews": [
+            {
+              "commenter": "سید مصطفی",
+              "dateComment": "مرداد 1402",
+              "comment": "خیلی خوب بود"
+            },
+            {
+              "commenter": "سید علی",
+              "dateComment": "تیر 1402",
+              "comment": "مزخرف"
+            },
+            {
+              "commenter": "سید احمد",
+              "dateComment": "شهریور 1402",
+              "comment": "پیدات می کنم"
+            },
+            {
+              "commenter": "سید نوید",
+              "dateComment": "اردیبهشت 1402",
+              "comment": "تمیز نبود"
+            }
+          ],
+          "rules": [
+            {
+              "statement": "همراه داشتن کارت ملی الزامی می‌باشد.",
+              "permission": true
+            },
+            {
+              "statement": "استعمال دخانیات مجاز نمی‌باشد.",
+              "permission": false
+            },
+            {
+              "statement": "ورود حیوانات خانگی مجاز نمی‌باشد.",
+              "permission": false
+            },
+            { "statement": "برگزاری مراسم مجاز نمی‌باشد", "permission": false },
+            { "statement": "پذیرش 24 ساعته مهمان ممنوع", "permission": false },
+            {
+              "statement": "امکان پذیرش گروه‌های مجردی فراهم نمی‌باشد.",
+              "permission": false
+            }
+          ]
         },
         {
           "id": 8,
@@ -423,14 +1006,98 @@
             "foreignWC": 1,
             "shower": 1
           },
-          "hasCooling": true,
-          "hasHeating": true,
-          "hasFurniture": true,
-          "hasTV": false,
-          "hasWifi": true,
-          "hasWater": true,
-          "hasElectricity": true,
-          "hasGas": true
+          "facility": [
+            {
+              "exist": false,
+              "name": "سیستم سرمایشی",
+              "icon": "https://img.icons8.com/sf-ultralight/25/air-conditioner.png",
+              "alt": "cooling-system"
+            },
+            {
+              "exist": true,
+              "name": "سیستم گرمایشی",
+              "icon": "https://img.icons8.com/external-xnimrodx-lineal-xnimrodx/64/external-heater-electronics-xnimrodx-lineal-xnimrodx.png",
+              "alt": "heating-system"
+            },
+            {
+              "exist": true,
+              "name": "مبلمان",
+              "icon": "https://img.icons8.com/ios/50/three-seater-sofa.png",
+              "alt": "furniture"
+            },
+            {
+              "exist": true,
+              "name": "تلویزیون",
+              "icon": "https://img.icons8.com/external-royyan-wijaya-detailed-outline-royyan-wijaya/24/external-tv-furniture-royyan-wijaya-detailed-outline-royyan-wijaya.png",
+              "alt": "TV"
+            },
+            {
+              "exist": true,
+              "name": "وای فای",
+              "icon": "https://img.icons8.com/external-outline-berkahicon/64/external-drop-smart-home-outline-berkahicon.png",
+              "alt": "wifi"
+            },
+            {
+              "exist": true,
+              "name": "آب",
+              "icon": "https://img.icons8.com/external-outline-berkahicon/64/external-drop-smart-home-outline-berkahicon.png",
+              "alt": "water"
+            },
+            {
+              "exist": true,
+              "name": "برق",
+              "icon": "https://img.icons8.com/external-royyan-wijaya-detailed-outline-royyan-wijaya/24/external-electric-plug-bolt-energy-royyan-wijaya-detailed-outline-royyan-wijaya.png",
+              "alt": "electricity"
+            },
+            {
+              "exist": true,
+              "name": "گاز",
+              "icon": "https://img.icons8.com/external-xnimrodx-lineal-xnimrodx/64/external-gas-camping-xnimrodx-lineal-xnimrodx.png",
+              "alt": "gas"
+            }
+          ],
+          "reviews": [
+            {
+              "commenter": "سید مصطفی",
+              "dateComment": "مرداد 1402",
+              "comment": "خیلی خوب بود"
+            },
+            {
+              "commenter": "سید علی",
+              "dateComment": "تیر 1402",
+              "comment": "مزخرف"
+            },
+            {
+              "commenter": "سید احمد",
+              "dateComment": "شهریور 1402",
+              "comment": "پیدات می کنم"
+            },
+            {
+              "commenter": "سید نوید",
+              "dateComment": "اردیبهشت 1402",
+              "comment": "تمیز نبود"
+            }
+          ],
+          "rules": [
+            {
+              "statement": "همراه داشتن کارت ملی الزامی می‌باشد.",
+              "permission": true
+            },
+            {
+              "statement": "استعمال دخانیات مجاز نمی‌باشد.",
+              "permission": false
+            },
+            {
+              "statement": "ورود حیوانات خانگی مجاز نمی‌باشد.",
+              "permission": false
+            },
+            { "statement": "برگزاری مراسم مجاز نمی‌باشد", "permission": false },
+            { "statement": "پذیرش 24 ساعته مهمان ممنوع", "permission": false },
+            {
+              "statement": "امکان پذیرش گروه‌های مجردی فراهم نمی‌باشد.",
+              "permission": false
+            }
+          ]
         },
         {
           "id": 9,
@@ -472,14 +1139,98 @@
             "foreignWC": 1,
             "shower": 2
           },
-          "hasCooling": true,
-          "hasHeating": true,
-          "hasFurniture": true,
-          "hasTV": false,
-          "hasWifi": true,
-          "hasWater": true,
-          "hasElectricity": true,
-          "hasGas": true
+          "facility": [
+            {
+              "exist": false,
+              "name": "سیستم سرمایشی",
+              "icon": "https://img.icons8.com/sf-ultralight/25/air-conditioner.png",
+              "alt": "cooling-system"
+            },
+            {
+              "exist": true,
+              "name": "سیستم گرمایشی",
+              "icon": "https://img.icons8.com/external-xnimrodx-lineal-xnimrodx/64/external-heater-electronics-xnimrodx-lineal-xnimrodx.png",
+              "alt": "heating-system"
+            },
+            {
+              "exist": true,
+              "name": "مبلمان",
+              "icon": "https://img.icons8.com/ios/50/three-seater-sofa.png",
+              "alt": "furniture"
+            },
+            {
+              "exist": true,
+              "name": "تلویزیون",
+              "icon": "https://img.icons8.com/external-royyan-wijaya-detailed-outline-royyan-wijaya/24/external-tv-furniture-royyan-wijaya-detailed-outline-royyan-wijaya.png",
+              "alt": "TV"
+            },
+            {
+              "exist": true,
+              "name": "وای فای",
+              "icon": "https://img.icons8.com/external-outline-berkahicon/64/external-drop-smart-home-outline-berkahicon.png",
+              "alt": "wifi"
+            },
+            {
+              "exist": true,
+              "name": "آب",
+              "icon": "https://img.icons8.com/external-outline-berkahicon/64/external-drop-smart-home-outline-berkahicon.png",
+              "alt": "water"
+            },
+            {
+              "exist": true,
+              "name": "برق",
+              "icon": "https://img.icons8.com/external-royyan-wijaya-detailed-outline-royyan-wijaya/24/external-electric-plug-bolt-energy-royyan-wijaya-detailed-outline-royyan-wijaya.png",
+              "alt": "electricity"
+            },
+            {
+              "exist": true,
+              "name": "گاز",
+              "icon": "https://img.icons8.com/external-xnimrodx-lineal-xnimrodx/64/external-gas-camping-xnimrodx-lineal-xnimrodx.png",
+              "alt": "gas"
+            }
+          ],
+          "reviews": [
+            {
+              "commenter": "سید مصطفی",
+              "dateComment": "مرداد 1402",
+              "comment": "خیلی خوب بود"
+            },
+            {
+              "commenter": "سید علی",
+              "dateComment": "تیر 1402",
+              "comment": "مزخرف"
+            },
+            {
+              "commenter": "سید احمد",
+              "dateComment": "شهریور 1402",
+              "comment": "پیدات می کنم"
+            },
+            {
+              "commenter": "سید نوید",
+              "dateComment": "اردیبهشت 1402",
+              "comment": "تمیز نبود"
+            }
+          ],
+          "rules": [
+            {
+              "statement": "همراه داشتن کارت ملی الزامی می‌باشد.",
+              "permission": true
+            },
+            {
+              "statement": "استعمال دخانیات مجاز نمی‌باشد.",
+              "permission": false
+            },
+            {
+              "statement": "ورود حیوانات خانگی مجاز نمی‌باشد.",
+              "permission": false
+            },
+            { "statement": "برگزاری مراسم مجاز نمی‌باشد", "permission": false },
+            { "statement": "پذیرش 24 ساعته مهمان ممنوع", "permission": false },
+            {
+              "statement": "امکان پذیرش گروه‌های مجردی فراهم نمی‌باشد.",
+              "permission": false
+            }
+          ]
         },
         {
           "id": 10,
@@ -523,14 +1274,98 @@
             "foreignWC": 3,
             "shower": 3
           },
-          "hasCooling": true,
-          "hasHeating": true,
-          "hasFurniture": true,
-          "hasTV": false,
-          "hasWifi": false,
-          "hasWater": true,
-          "hasElectricity": true,
-          "hasGas": true
+          "facility": [
+            {
+              "exist": false,
+              "name": "سیستم سرمایشی",
+              "icon": "https://img.icons8.com/sf-ultralight/25/air-conditioner.png",
+              "alt": "cooling-system"
+            },
+            {
+              "exist": true,
+              "name": "سیستم گرمایشی",
+              "icon": "https://img.icons8.com/external-xnimrodx-lineal-xnimrodx/64/external-heater-electronics-xnimrodx-lineal-xnimrodx.png",
+              "alt": "heating-system"
+            },
+            {
+              "exist": true,
+              "name": "مبلمان",
+              "icon": "https://img.icons8.com/ios/50/three-seater-sofa.png",
+              "alt": "furniture"
+            },
+            {
+              "exist": true,
+              "name": "تلویزیون",
+              "icon": "https://img.icons8.com/external-royyan-wijaya-detailed-outline-royyan-wijaya/24/external-tv-furniture-royyan-wijaya-detailed-outline-royyan-wijaya.png",
+              "alt": "TV"
+            },
+            {
+              "exist": true,
+              "name": "وای فای",
+              "icon": "https://img.icons8.com/external-outline-berkahicon/64/external-drop-smart-home-outline-berkahicon.png",
+              "alt": "wifi"
+            },
+            {
+              "exist": true,
+              "name": "آب",
+              "icon": "https://img.icons8.com/external-outline-berkahicon/64/external-drop-smart-home-outline-berkahicon.png",
+              "alt": "water"
+            },
+            {
+              "exist": true,
+              "name": "برق",
+              "icon": "https://img.icons8.com/external-royyan-wijaya-detailed-outline-royyan-wijaya/24/external-electric-plug-bolt-energy-royyan-wijaya-detailed-outline-royyan-wijaya.png",
+              "alt": "electricity"
+            },
+            {
+              "exist": true,
+              "name": "گاز",
+              "icon": "https://img.icons8.com/external-xnimrodx-lineal-xnimrodx/64/external-gas-camping-xnimrodx-lineal-xnimrodx.png",
+              "alt": "gas"
+            }
+          ],
+          "reviews": [
+            {
+              "commenter": "سید مصطفی",
+              "dateComment": "مرداد 1402",
+              "comment": "خیلی خوب بود"
+            },
+            {
+              "commenter": "سید علی",
+              "dateComment": "تیر 1402",
+              "comment": "مزخرف"
+            },
+            {
+              "commenter": "سید احمد",
+              "dateComment": "شهریور 1402",
+              "comment": "پیدات می کنم"
+            },
+            {
+              "commenter": "سید نوید",
+              "dateComment": "اردیبهشت 1402",
+              "comment": "تمیز نبود"
+            }
+          ],
+          "rules": [
+            {
+              "statement": "همراه داشتن کارت ملی الزامی می‌باشد.",
+              "permission": true
+            },
+            {
+              "statement": "استعمال دخانیات مجاز نمی‌باشد.",
+              "permission": false
+            },
+            {
+              "statement": "ورود حیوانات خانگی مجاز نمی‌باشد.",
+              "permission": false
+            },
+            { "statement": "برگزاری مراسم مجاز نمی‌باشد", "permission": false },
+            { "statement": "پذیرش 24 ساعته مهمان ممنوع", "permission": false },
+            {
+              "statement": "امکان پذیرش گروه‌های مجردی فراهم نمی‌باشد.",
+              "permission": false
+            }
+          ]
         },
         {
           "id": 11,
@@ -574,14 +1409,98 @@
             "foreignWC": 1,
             "shower": 1
           },
-          "hasCooling": true,
-          "hasHeating": false,
-          "hasFurniture": true,
-          "hasTV": true,
-          "hasWifi": false,
-          "hasWater": true,
-          "hasElectricity": true,
-          "hasGas": true
+          "facility": [
+            {
+              "exist": false,
+              "name": "سیستم سرمایشی",
+              "icon": "https://img.icons8.com/sf-ultralight/25/air-conditioner.png",
+              "alt": "cooling-system"
+            },
+            {
+              "exist": true,
+              "name": "سیستم گرمایشی",
+              "icon": "https://img.icons8.com/external-xnimrodx-lineal-xnimrodx/64/external-heater-electronics-xnimrodx-lineal-xnimrodx.png",
+              "alt": "heating-system"
+            },
+            {
+              "exist": true,
+              "name": "مبلمان",
+              "icon": "https://img.icons8.com/ios/50/three-seater-sofa.png",
+              "alt": "furniture"
+            },
+            {
+              "exist": true,
+              "name": "تلویزیون",
+              "icon": "https://img.icons8.com/external-royyan-wijaya-detailed-outline-royyan-wijaya/24/external-tv-furniture-royyan-wijaya-detailed-outline-royyan-wijaya.png",
+              "alt": "TV"
+            },
+            {
+              "exist": true,
+              "name": "وای فای",
+              "icon": "https://img.icons8.com/external-outline-berkahicon/64/external-drop-smart-home-outline-berkahicon.png",
+              "alt": "wifi"
+            },
+            {
+              "exist": true,
+              "name": "آب",
+              "icon": "https://img.icons8.com/external-outline-berkahicon/64/external-drop-smart-home-outline-berkahicon.png",
+              "alt": "water"
+            },
+            {
+              "exist": true,
+              "name": "برق",
+              "icon": "https://img.icons8.com/external-royyan-wijaya-detailed-outline-royyan-wijaya/24/external-electric-plug-bolt-energy-royyan-wijaya-detailed-outline-royyan-wijaya.png",
+              "alt": "electricity"
+            },
+            {
+              "exist": true,
+              "name": "گاز",
+              "icon": "https://img.icons8.com/external-xnimrodx-lineal-xnimrodx/64/external-gas-camping-xnimrodx-lineal-xnimrodx.png",
+              "alt": "gas"
+            }
+          ],
+          "reviews": [
+            {
+              "commenter": "سید مصطفی",
+              "dateComment": "مرداد 1402",
+              "comment": "خیلی خوب بود"
+            },
+            {
+              "commenter": "سید علی",
+              "dateComment": "تیر 1402",
+              "comment": "مزخرف"
+            },
+            {
+              "commenter": "سید احمد",
+              "dateComment": "شهریور 1402",
+              "comment": "پیدات می کنم"
+            },
+            {
+              "commenter": "سید نوید",
+              "dateComment": "اردیبهشت 1402",
+              "comment": "تمیز نبود"
+            }
+          ],
+          "rules": [
+            {
+              "statement": "همراه داشتن کارت ملی الزامی می‌باشد.",
+              "permission": true
+            },
+            {
+              "statement": "استعمال دخانیات مجاز نمی‌باشد.",
+              "permission": false
+            },
+            {
+              "statement": "ورود حیوانات خانگی مجاز نمی‌باشد.",
+              "permission": false
+            },
+            { "statement": "برگزاری مراسم مجاز نمی‌باشد", "permission": false },
+            { "statement": "پذیرش 24 ساعته مهمان ممنوع", "permission": false },
+            {
+              "statement": "امکان پذیرش گروه‌های مجردی فراهم نمی‌باشد.",
+              "permission": false
+            }
+          ]
         }
       ]
     },
@@ -626,14 +1545,98 @@
             "foreignWC": 1,
             "shower": 1
           },
-          "hasCooling": true,
-          "hasHeating": true,
-          "hasFurniture": true,
-          "hasTV": false,
-          "hasWifi": true,
-          "hasWater": true,
-          "hasElectricity": true,
-          "hasGas": true
+          "facility": [
+            {
+              "exist": true,
+              "name": "سیستم سرمایشی",
+              "icon": "https://img.icons8.com/sf-ultralight/25/air-conditioner.png",
+              "alt": "cooling-system"
+            },
+            {
+              "exist": true,
+              "name": "سیستم گرمایشی",
+              "icon": "https://img.icons8.com/external-xnimrodx-lineal-xnimrodx/64/external-heater-electronics-xnimrodx-lineal-xnimrodx.png",
+              "alt": "heating-system"
+            },
+            {
+              "exist": true,
+              "name": "مبلمان",
+              "icon": "https://img.icons8.com/ios/50/three-seater-sofa.png",
+              "alt": "furniture"
+            },
+            {
+              "exist": false,
+              "name": "تلویزیون",
+              "icon": "https://img.icons8.com/external-royyan-wijaya-detailed-outline-royyan-wijaya/24/external-tv-furniture-royyan-wijaya-detailed-outline-royyan-wijaya.png",
+              "alt": "TV"
+            },
+            {
+              "exist": false,
+              "name": "وای فای",
+              "icon": "https://img.icons8.com/external-outline-berkahicon/64/external-drop-smart-home-outline-berkahicon.png",
+              "alt": "wifi"
+            },
+            {
+              "exist": true,
+              "name": "آب",
+              "icon": "https://img.icons8.com/external-outline-berkahicon/64/external-drop-smart-home-outline-berkahicon.png",
+              "alt": "water"
+            },
+            {
+              "exist": true,
+              "name": "برق",
+              "icon": "https://img.icons8.com/external-royyan-wijaya-detailed-outline-royyan-wijaya/24/external-electric-plug-bolt-energy-royyan-wijaya-detailed-outline-royyan-wijaya.png",
+              "alt": "electricity"
+            },
+            {
+              "exist": true,
+              "name": "گاز",
+              "icon": "https://img.icons8.com/external-xnimrodx-lineal-xnimrodx/64/external-gas-camping-xnimrodx-lineal-xnimrodx.png",
+              "alt": "gas"
+            }
+          ],
+          "reviews": [
+            {
+              "commenter": "سید مصطفی",
+              "dateComment": "مرداد 1402",
+              "comment": "خیلی خوب بود"
+            },
+            {
+              "commenter": "سید علی",
+              "dateComment": "تیر 1402",
+              "comment": "مزخرف"
+            },
+            {
+              "commenter": "سید احمد",
+              "dateComment": "شهریور 1402",
+              "comment": "پیدات می کنم"
+            },
+            {
+              "commenter": "سید نوید",
+              "dateComment": "اردیبهشت 1402",
+              "comment": "تمیز نبود"
+            }
+          ],
+          "rules": [
+            {
+              "statement": "همراه داشتن کارت ملی الزامی می‌باشد.",
+              "permission": true
+            },
+            {
+              "statement": "استعمال دخانیات مجاز نمی‌باشد.",
+              "permission": false
+            },
+            {
+              "statement": "ورود حیوانات خانگی مجاز نمی‌باشد.",
+              "permission": false
+            },
+            { "statement": "برگزاری مراسم مجاز نمی‌باشد", "permission": false },
+            { "statement": "پذیرش 24 ساعته مهمان ممنوع", "permission": false },
+            {
+              "statement": "امکان پذیرش گروه‌های مجردی فراهم نمی‌باشد.",
+              "permission": false
+            }
+          ]
         },
         {
           "id": 13,
@@ -674,14 +1677,98 @@
             "foreignWC": 1,
             "shower": 1
           },
-          "hasCooling": true,
-          "hasHeating": true,
-          "hasFurniture": true,
-          "hasTV": true,
-          "hasWifi": true,
-          "hasWater": true,
-          "hasElectricity": true,
-          "hasGas": true
+          "facility": [
+            {
+              "exist": true,
+              "name": "سیستم سرمایشی",
+              "icon": "https://img.icons8.com/sf-ultralight/25/air-conditioner.png",
+              "alt": "cooling-system"
+            },
+            {
+              "exist": true,
+              "name": "سیستم گرمایشی",
+              "icon": "https://img.icons8.com/external-xnimrodx-lineal-xnimrodx/64/external-heater-electronics-xnimrodx-lineal-xnimrodx.png",
+              "alt": "heating-system"
+            },
+            {
+              "exist": true,
+              "name": "مبلمان",
+              "icon": "https://img.icons8.com/ios/50/three-seater-sofa.png",
+              "alt": "furniture"
+            },
+            {
+              "exist": false,
+              "name": "تلویزیون",
+              "icon": "https://img.icons8.com/external-royyan-wijaya-detailed-outline-royyan-wijaya/24/external-tv-furniture-royyan-wijaya-detailed-outline-royyan-wijaya.png",
+              "alt": "TV"
+            },
+            {
+              "exist": false,
+              "name": "وای فای",
+              "icon": "https://img.icons8.com/external-outline-berkahicon/64/external-drop-smart-home-outline-berkahicon.png",
+              "alt": "wifi"
+            },
+            {
+              "exist": true,
+              "name": "آب",
+              "icon": "https://img.icons8.com/external-outline-berkahicon/64/external-drop-smart-home-outline-berkahicon.png",
+              "alt": "water"
+            },
+            {
+              "exist": true,
+              "name": "برق",
+              "icon": "https://img.icons8.com/external-royyan-wijaya-detailed-outline-royyan-wijaya/24/external-electric-plug-bolt-energy-royyan-wijaya-detailed-outline-royyan-wijaya.png",
+              "alt": "electricity"
+            },
+            {
+              "exist": true,
+              "name": "گاز",
+              "icon": "https://img.icons8.com/external-xnimrodx-lineal-xnimrodx/64/external-gas-camping-xnimrodx-lineal-xnimrodx.png",
+              "alt": "gas"
+            }
+          ],
+          "reviews": [
+            {
+              "commenter": "سید مصطفی",
+              "dateComment": "مرداد 1402",
+              "comment": "خیلی خوب بود"
+            },
+            {
+              "commenter": "سید علی",
+              "dateComment": "تیر 1402",
+              "comment": "مزخرف"
+            },
+            {
+              "commenter": "سید احمد",
+              "dateComment": "شهریور 1402",
+              "comment": "پیدات می کنم"
+            },
+            {
+              "commenter": "سید نوید",
+              "dateComment": "اردیبهشت 1402",
+              "comment": "تمیز نبود"
+            }
+          ],
+          "rules": [
+            {
+              "statement": "همراه داشتن کارت ملی الزامی می‌باشد.",
+              "permission": true
+            },
+            {
+              "statement": "استعمال دخانیات مجاز نمی‌باشد.",
+              "permission": false
+            },
+            {
+              "statement": "ورود حیوانات خانگی مجاز نمی‌باشد.",
+              "permission": false
+            },
+            { "statement": "برگزاری مراسم مجاز نمی‌باشد", "permission": false },
+            { "statement": "پذیرش 24 ساعته مهمان ممنوع", "permission": false },
+            {
+              "statement": "امکان پذیرش گروه‌های مجردی فراهم نمی‌باشد.",
+              "permission": false
+            }
+          ]
         },
         {
           "id": 14,
@@ -728,17 +1815,98 @@
             "foreignWC": 0,
             "shower": 1
           },
-          "hasCooling": true,
-          "hasHeating": true,
-          "hasFurniture": true,
-          "hasTV": false,
-          "hasWifi": false,
-          "hasWater": true,
-          "hasElectricity": true,
-          "hasGas": true,
-          "hasParking": false,
-          "hasPool": false,
-          "hasBarbecue": false
+          "facility": [
+            {
+              "exist": true,
+              "name": "سیستم سرمایشی",
+              "icon": "https://img.icons8.com/sf-ultralight/25/air-conditioner.png",
+              "alt": "cooling-system"
+            },
+            {
+              "exist": true,
+              "name": "سیستم گرمایشی",
+              "icon": "https://img.icons8.com/external-xnimrodx-lineal-xnimrodx/64/external-heater-electronics-xnimrodx-lineal-xnimrodx.png",
+              "alt": "heating-system"
+            },
+            {
+              "exist": true,
+              "name": "مبلمان",
+              "icon": "https://img.icons8.com/ios/50/three-seater-sofa.png",
+              "alt": "furniture"
+            },
+            {
+              "exist": false,
+              "name": "تلویزیون",
+              "icon": "https://img.icons8.com/external-royyan-wijaya-detailed-outline-royyan-wijaya/24/external-tv-furniture-royyan-wijaya-detailed-outline-royyan-wijaya.png",
+              "alt": "TV"
+            },
+            {
+              "exist": false,
+              "name": "وای فای",
+              "icon": "https://img.icons8.com/external-outline-berkahicon/64/external-drop-smart-home-outline-berkahicon.png",
+              "alt": "wifi"
+            },
+            {
+              "exist": true,
+              "name": "آب",
+              "icon": "https://img.icons8.com/external-outline-berkahicon/64/external-drop-smart-home-outline-berkahicon.png",
+              "alt": "water"
+            },
+            {
+              "exist": true,
+              "name": "برق",
+              "icon": "https://img.icons8.com/external-royyan-wijaya-detailed-outline-royyan-wijaya/24/external-electric-plug-bolt-energy-royyan-wijaya-detailed-outline-royyan-wijaya.png",
+              "alt": "electricity"
+            },
+            {
+              "exist": true,
+              "name": "گاز",
+              "icon": "https://img.icons8.com/external-xnimrodx-lineal-xnimrodx/64/external-gas-camping-xnimrodx-lineal-xnimrodx.png",
+              "alt": "gas"
+            }
+          ],
+          "reviews": [
+            {
+              "commenter": "سید مصطفی",
+              "dateComment": "مرداد 1402",
+              "comment": "خیلی خوب بود"
+            },
+            {
+              "commenter": "سید علی",
+              "dateComment": "تیر 1402",
+              "comment": "مزخرف"
+            },
+            {
+              "commenter": "سید احمد",
+              "dateComment": "شهریور 1402",
+              "comment": "پیدات می کنم"
+            },
+            {
+              "commenter": "سید نوید",
+              "dateComment": "اردیبهشت 1402",
+              "comment": "تمیز نبود"
+            }
+          ],
+          "rules": [
+            {
+              "statement": "همراه داشتن کارت ملی الزامی می‌باشد.",
+              "permission": true
+            },
+            {
+              "statement": "استعمال دخانیات مجاز نمی‌باشد.",
+              "permission": false
+            },
+            {
+              "statement": "ورود حیوانات خانگی مجاز نمی‌باشد.",
+              "permission": false
+            },
+            { "statement": "برگزاری مراسم مجاز نمی‌باشد", "permission": false },
+            { "statement": "پذیرش 24 ساعته مهمان ممنوع", "permission": false },
+            {
+              "statement": "امکان پذیرش گروه‌های مجردی فراهم نمی‌باشد.",
+              "permission": false
+            }
+          ]
         },
         {
           "id": 15,
@@ -779,14 +1947,98 @@
             "foreignWC": 1,
             "shower": 1
           },
-          "hasCooling": true,
-          "hasHeating": true,
-          "hasFurniture": true,
-          "hasTV": false,
-          "hasWifi": true,
-          "hasWater": true,
-          "hasElectricity": true,
-          "hasGas": true
+          "facility": [
+            {
+              "exist": true,
+              "name": "سیستم سرمایشی",
+              "icon": "https://img.icons8.com/sf-ultralight/25/air-conditioner.png",
+              "alt": "cooling-system"
+            },
+            {
+              "exist": true,
+              "name": "سیستم گرمایشی",
+              "icon": "https://img.icons8.com/external-xnimrodx-lineal-xnimrodx/64/external-heater-electronics-xnimrodx-lineal-xnimrodx.png",
+              "alt": "heating-system"
+            },
+            {
+              "exist": true,
+              "name": "مبلمان",
+              "icon": "https://img.icons8.com/ios/50/three-seater-sofa.png",
+              "alt": "furniture"
+            },
+            {
+              "exist": false,
+              "name": "تلویزیون",
+              "icon": "https://img.icons8.com/external-royyan-wijaya-detailed-outline-royyan-wijaya/24/external-tv-furniture-royyan-wijaya-detailed-outline-royyan-wijaya.png",
+              "alt": "TV"
+            },
+            {
+              "exist": false,
+              "name": "وای فای",
+              "icon": "https://img.icons8.com/external-outline-berkahicon/64/external-drop-smart-home-outline-berkahicon.png",
+              "alt": "wifi"
+            },
+            {
+              "exist": true,
+              "name": "آب",
+              "icon": "https://img.icons8.com/external-outline-berkahicon/64/external-drop-smart-home-outline-berkahicon.png",
+              "alt": "water"
+            },
+            {
+              "exist": true,
+              "name": "برق",
+              "icon": "https://img.icons8.com/external-royyan-wijaya-detailed-outline-royyan-wijaya/24/external-electric-plug-bolt-energy-royyan-wijaya-detailed-outline-royyan-wijaya.png",
+              "alt": "electricity"
+            },
+            {
+              "exist": true,
+              "name": "گاز",
+              "icon": "https://img.icons8.com/external-xnimrodx-lineal-xnimrodx/64/external-gas-camping-xnimrodx-lineal-xnimrodx.png",
+              "alt": "gas"
+            }
+          ],
+          "reviews": [
+            {
+              "commenter": "سید مصطفی",
+              "dateComment": "مرداد 1402",
+              "comment": "خیلی خوب بود"
+            },
+            {
+              "commenter": "سید علی",
+              "dateComment": "تیر 1402",
+              "comment": "مزخرف"
+            },
+            {
+              "commenter": "سید احمد",
+              "dateComment": "شهریور 1402",
+              "comment": "پیدات می کنم"
+            },
+            {
+              "commenter": "سید نوید",
+              "dateComment": "اردیبهشت 1402",
+              "comment": "تمیز نبود"
+            }
+          ],
+          "rules": [
+            {
+              "statement": "همراه داشتن کارت ملی الزامی می‌باشد.",
+              "permission": true
+            },
+            {
+              "statement": "استعمال دخانیات مجاز نمی‌باشد.",
+              "permission": false
+            },
+            {
+              "statement": "ورود حیوانات خانگی مجاز نمی‌باشد.",
+              "permission": false
+            },
+            { "statement": "برگزاری مراسم مجاز نمی‌باشد", "permission": false },
+            { "statement": "پذیرش 24 ساعته مهمان ممنوع", "permission": false },
+            {
+              "statement": "امکان پذیرش گروه‌های مجردی فراهم نمی‌باشد.",
+              "permission": false
+            }
+          ]
         },
         {
           "id": 16,
@@ -827,14 +2079,98 @@
             "foreignWC": 1,
             "shower": 1
           },
-          "hasCooling": true,
-          "hasHeating": true,
-          "hasFurniture": true,
-          "hasTV": false,
-          "hasWifi": true,
-          "hasWater": true,
-          "hasElectricity": true,
-          "hasGas": true
+          "facility": [
+            {
+              "exist": true,
+              "name": "سیستم سرمایشی",
+              "icon": "https://img.icons8.com/sf-ultralight/25/air-conditioner.png",
+              "alt": "cooling-system"
+            },
+            {
+              "exist": true,
+              "name": "سیستم گرمایشی",
+              "icon": "https://img.icons8.com/external-xnimrodx-lineal-xnimrodx/64/external-heater-electronics-xnimrodx-lineal-xnimrodx.png",
+              "alt": "heating-system"
+            },
+            {
+              "exist": true,
+              "name": "مبلمان",
+              "icon": "https://img.icons8.com/ios/50/three-seater-sofa.png",
+              "alt": "furniture"
+            },
+            {
+              "exist": false,
+              "name": "تلویزیون",
+              "icon": "https://img.icons8.com/external-royyan-wijaya-detailed-outline-royyan-wijaya/24/external-tv-furniture-royyan-wijaya-detailed-outline-royyan-wijaya.png",
+              "alt": "TV"
+            },
+            {
+              "exist": false,
+              "name": "وای فای",
+              "icon": "https://img.icons8.com/external-outline-berkahicon/64/external-drop-smart-home-outline-berkahicon.png",
+              "alt": "wifi"
+            },
+            {
+              "exist": true,
+              "name": "آب",
+              "icon": "https://img.icons8.com/external-outline-berkahicon/64/external-drop-smart-home-outline-berkahicon.png",
+              "alt": "water"
+            },
+            {
+              "exist": true,
+              "name": "برق",
+              "icon": "https://img.icons8.com/external-royyan-wijaya-detailed-outline-royyan-wijaya/24/external-electric-plug-bolt-energy-royyan-wijaya-detailed-outline-royyan-wijaya.png",
+              "alt": "electricity"
+            },
+            {
+              "exist": true,
+              "name": "گاز",
+              "icon": "https://img.icons8.com/external-xnimrodx-lineal-xnimrodx/64/external-gas-camping-xnimrodx-lineal-xnimrodx.png",
+              "alt": "gas"
+            }
+          ],
+          "reviews": [
+            {
+              "commenter": "سید مصطفی",
+              "dateComment": "مرداد 1402",
+              "comment": "خیلی خوب بود"
+            },
+            {
+              "commenter": "سید علی",
+              "dateComment": "تیر 1402",
+              "comment": "مزخرف"
+            },
+            {
+              "commenter": "سید احمد",
+              "dateComment": "شهریور 1402",
+              "comment": "پیدات می کنم"
+            },
+            {
+              "commenter": "سید نوید",
+              "dateComment": "اردیبهشت 1402",
+              "comment": "تمیز نبود"
+            }
+          ],
+          "rules": [
+            {
+              "statement": "همراه داشتن کارت ملی الزامی می‌باشد.",
+              "permission": true
+            },
+            {
+              "statement": "استعمال دخانیات مجاز نمی‌باشد.",
+              "permission": false
+            },
+            {
+              "statement": "ورود حیوانات خانگی مجاز نمی‌باشد.",
+              "permission": false
+            },
+            { "statement": "برگزاری مراسم مجاز نمی‌باشد", "permission": false },
+            { "statement": "پذیرش 24 ساعته مهمان ممنوع", "permission": false },
+            {
+              "statement": "امکان پذیرش گروه‌های مجردی فراهم نمی‌باشد.",
+              "permission": false
+            }
+          ]
         }
       ]
     },
@@ -882,14 +2218,98 @@
             "foreignWC": 1,
             "shower": 1
           },
-          "hasCooling": true,
-          "hasHeating": true,
-          "hasFurniture": true,
-          "hasTV": false,
-          "hasWifi": true,
-          "hasWater": true,
-          "hasElectricity": true,
-          "hasGas": true
+          "facility": [
+            {
+              "exist": true,
+              "name": "سیستم سرمایشی",
+              "icon": "https://img.icons8.com/sf-ultralight/25/air-conditioner.png",
+              "alt": "cooling-system"
+            },
+            {
+              "exist": true,
+              "name": "سیستم گرمایشی",
+              "icon": "https://img.icons8.com/external-xnimrodx-lineal-xnimrodx/64/external-heater-electronics-xnimrodx-lineal-xnimrodx.png",
+              "alt": "heating-system"
+            },
+            {
+              "exist": true,
+              "name": "مبلمان",
+              "icon": "https://img.icons8.com/ios/50/three-seater-sofa.png",
+              "alt": "furniture"
+            },
+            {
+              "exist": false,
+              "name": "تلویزیون",
+              "icon": "https://img.icons8.com/external-royyan-wijaya-detailed-outline-royyan-wijaya/24/external-tv-furniture-royyan-wijaya-detailed-outline-royyan-wijaya.png",
+              "alt": "TV"
+            },
+            {
+              "exist": false,
+              "name": "وای فای",
+              "icon": "https://img.icons8.com/external-outline-berkahicon/64/external-drop-smart-home-outline-berkahicon.png",
+              "alt": "wifi"
+            },
+            {
+              "exist": true,
+              "name": "آب",
+              "icon": "https://img.icons8.com/external-outline-berkahicon/64/external-drop-smart-home-outline-berkahicon.png",
+              "alt": "water"
+            },
+            {
+              "exist": true,
+              "name": "برق",
+              "icon": "https://img.icons8.com/external-royyan-wijaya-detailed-outline-royyan-wijaya/24/external-electric-plug-bolt-energy-royyan-wijaya-detailed-outline-royyan-wijaya.png",
+              "alt": "electricity"
+            },
+            {
+              "exist": true,
+              "name": "گاز",
+              "icon": "https://img.icons8.com/external-xnimrodx-lineal-xnimrodx/64/external-gas-camping-xnimrodx-lineal-xnimrodx.png",
+              "alt": "gas"
+            }
+          ],
+          "reviews": [
+            {
+              "commenter": "سید مصطفی",
+              "dateComment": "مرداد 1402",
+              "comment": "خیلی خوب بود"
+            },
+            {
+              "commenter": "سید علی",
+              "dateComment": "تیر 1402",
+              "comment": "مزخرف"
+            },
+            {
+              "commenter": "سید احمد",
+              "dateComment": "شهریور 1402",
+              "comment": "پیدات می کنم"
+            },
+            {
+              "commenter": "سید نوید",
+              "dateComment": "اردیبهشت 1402",
+              "comment": "تمیز نبود"
+            }
+          ],
+          "rules": [
+            {
+              "statement": "همراه داشتن کارت ملی الزامی می‌باشد.",
+              "permission": true
+            },
+            {
+              "statement": "استعمال دخانیات مجاز نمی‌باشد.",
+              "permission": false
+            },
+            {
+              "statement": "ورود حیوانات خانگی مجاز نمی‌باشد.",
+              "permission": false
+            },
+            { "statement": "برگزاری مراسم مجاز نمی‌باشد", "permission": false },
+            { "statement": "پذیرش 24 ساعته مهمان ممنوع", "permission": false },
+            {
+              "statement": "امکان پذیرش گروه‌های مجردی فراهم نمی‌باشد.",
+              "permission": false
+            }
+          ]
         },
         {
           "id": 18,
@@ -932,14 +2352,98 @@
             "foreignWC": 0,
             "shower": 0
           },
-          "hasCooling": true,
-          "hasHeating": true,
-          "hasFurniture": true,
-          "hasTV": false,
-          "hasWifi": true,
-          "hasWater": true,
-          "hasElectricity": true,
-          "hasGas": true
+          "facility": [
+            {
+              "exist": true,
+              "name": "سیستم سرمایشی",
+              "icon": "https://img.icons8.com/sf-ultralight/25/air-conditioner.png",
+              "alt": "cooling-system"
+            },
+            {
+              "exist": true,
+              "name": "سیستم گرمایشی",
+              "icon": "https://img.icons8.com/external-xnimrodx-lineal-xnimrodx/64/external-heater-electronics-xnimrodx-lineal-xnimrodx.png",
+              "alt": "heating-system"
+            },
+            {
+              "exist": true,
+              "name": "مبلمان",
+              "icon": "https://img.icons8.com/ios/50/three-seater-sofa.png",
+              "alt": "furniture"
+            },
+            {
+              "exist": false,
+              "name": "تلویزیون",
+              "icon": "https://img.icons8.com/external-royyan-wijaya-detailed-outline-royyan-wijaya/24/external-tv-furniture-royyan-wijaya-detailed-outline-royyan-wijaya.png",
+              "alt": "TV"
+            },
+            {
+              "exist": false,
+              "name": "وای فای",
+              "icon": "https://img.icons8.com/external-outline-berkahicon/64/external-drop-smart-home-outline-berkahicon.png",
+              "alt": "wifi"
+            },
+            {
+              "exist": true,
+              "name": "آب",
+              "icon": "https://img.icons8.com/external-outline-berkahicon/64/external-drop-smart-home-outline-berkahicon.png",
+              "alt": "water"
+            },
+            {
+              "exist": true,
+              "name": "برق",
+              "icon": "https://img.icons8.com/external-royyan-wijaya-detailed-outline-royyan-wijaya/24/external-electric-plug-bolt-energy-royyan-wijaya-detailed-outline-royyan-wijaya.png",
+              "alt": "electricity"
+            },
+            {
+              "exist": true,
+              "name": "گاز",
+              "icon": "https://img.icons8.com/external-xnimrodx-lineal-xnimrodx/64/external-gas-camping-xnimrodx-lineal-xnimrodx.png",
+              "alt": "gas"
+            }
+          ],
+          "reviews": [
+            {
+              "commenter": "سید مصطفی",
+              "dateComment": "مرداد 1402",
+              "comment": "خیلی خوب بود"
+            },
+            {
+              "commenter": "سید علی",
+              "dateComment": "تیر 1402",
+              "comment": "مزخرف"
+            },
+            {
+              "commenter": "سید احمد",
+              "dateComment": "شهریور 1402",
+              "comment": "پیدات می کنم"
+            },
+            {
+              "commenter": "سید نوید",
+              "dateComment": "اردیبهشت 1402",
+              "comment": "تمیز نبود"
+            }
+          ],
+          "rules": [
+            {
+              "statement": "همراه داشتن کارت ملی الزامی می‌باشد.",
+              "permission": true
+            },
+            {
+              "statement": "استعمال دخانیات مجاز نمی‌باشد.",
+              "permission": false
+            },
+            {
+              "statement": "ورود حیوانات خانگی مجاز نمی‌باشد.",
+              "permission": false
+            },
+            { "statement": "برگزاری مراسم مجاز نمی‌باشد", "permission": false },
+            { "statement": "پذیرش 24 ساعته مهمان ممنوع", "permission": false },
+            {
+              "statement": "امکان پذیرش گروه‌های مجردی فراهم نمی‌باشد.",
+              "permission": false
+            }
+          ]
         },
         {
           "id": 19,
@@ -982,14 +2486,98 @@
             "foreignWC": 2,
             "shower": 2
           },
-          "hasCooling": true,
-          "hasHeating": true,
-          "hasFurniture": true,
-          "hasTV": true,
-          "hasWifi": false,
-          "hasWater": true,
-          "hasElectricity": true,
-          "hasGas": true
+          "facility": [
+            {
+              "exist": true,
+              "name": "سیستم سرمایشی",
+              "icon": "https://img.icons8.com/sf-ultralight/25/air-conditioner.png",
+              "alt": "cooling-system"
+            },
+            {
+              "exist": true,
+              "name": "سیستم گرمایشی",
+              "icon": "https://img.icons8.com/external-xnimrodx-lineal-xnimrodx/64/external-heater-electronics-xnimrodx-lineal-xnimrodx.png",
+              "alt": "heating-system"
+            },
+            {
+              "exist": true,
+              "name": "مبلمان",
+              "icon": "https://img.icons8.com/ios/50/three-seater-sofa.png",
+              "alt": "furniture"
+            },
+            {
+              "exist": false,
+              "name": "تلویزیون",
+              "icon": "https://img.icons8.com/external-royyan-wijaya-detailed-outline-royyan-wijaya/24/external-tv-furniture-royyan-wijaya-detailed-outline-royyan-wijaya.png",
+              "alt": "TV"
+            },
+            {
+              "exist": false,
+              "name": "وای فای",
+              "icon": "https://img.icons8.com/external-outline-berkahicon/64/external-drop-smart-home-outline-berkahicon.png",
+              "alt": "wifi"
+            },
+            {
+              "exist": true,
+              "name": "آب",
+              "icon": "https://img.icons8.com/external-outline-berkahicon/64/external-drop-smart-home-outline-berkahicon.png",
+              "alt": "water"
+            },
+            {
+              "exist": true,
+              "name": "برق",
+              "icon": "https://img.icons8.com/external-royyan-wijaya-detailed-outline-royyan-wijaya/24/external-electric-plug-bolt-energy-royyan-wijaya-detailed-outline-royyan-wijaya.png",
+              "alt": "electricity"
+            },
+            {
+              "exist": true,
+              "name": "گاز",
+              "icon": "https://img.icons8.com/external-xnimrodx-lineal-xnimrodx/64/external-gas-camping-xnimrodx-lineal-xnimrodx.png",
+              "alt": "gas"
+            }
+          ],
+          "reviews": [
+            {
+              "commenter": "سید مصطفی",
+              "dateComment": "مرداد 1402",
+              "comment": "خیلی خوب بود"
+            },
+            {
+              "commenter": "سید علی",
+              "dateComment": "تیر 1402",
+              "comment": "مزخرف"
+            },
+            {
+              "commenter": "سید احمد",
+              "dateComment": "شهریور 1402",
+              "comment": "پیدات می کنم"
+            },
+            {
+              "commenter": "سید نوید",
+              "dateComment": "اردیبهشت 1402",
+              "comment": "تمیز نبود"
+            }
+          ],
+          "rules": [
+            {
+              "statement": "همراه داشتن کارت ملی الزامی می‌باشد.",
+              "permission": true
+            },
+            {
+              "statement": "استعمال دخانیات مجاز نمی‌باشد.",
+              "permission": false
+            },
+            {
+              "statement": "ورود حیوانات خانگی مجاز نمی‌باشد.",
+              "permission": false
+            },
+            { "statement": "برگزاری مراسم مجاز نمی‌باشد", "permission": false },
+            { "statement": "پذیرش 24 ساعته مهمان ممنوع", "permission": false },
+            {
+              "statement": "امکان پذیرش گروه‌های مجردی فراهم نمی‌باشد.",
+              "permission": false
+            }
+          ]
         },
         {
           "id": 20,
@@ -1030,64 +2618,98 @@
             "foreignWC": 1,
             "shower": 1
           },
-          "hasCooling": true,
-          "hasHeating": true,
-          "hasFurniture": true,
-          "hasTV": false,
-          "hasWifi": true,
-          "hasWater": true,
-          "hasElectricity": true,
-          "hasGas": true
-        },
-        {
-          "id": 21,
-          "title": "اجاره بوم گردی خانه دوست - واحد حجله قشم",
-          "type": "ecoTourism",
-          "rate": 4.1,
-          "comments": 96,
-          "HasImmediateReserve": true,
-          "city": "قشم",
-          "province": "هرمزگان",
-          "images": [
-            "https://cdn.jabama.com/image/890x492/jabama-images/959393/7e28b12e-f98f-48b1-b2db-3a7b2da45f95.JPG",
-            "https://cdn.jabama.com/image/383x240/jabama-images/959393/6e9dac27-d7ff-4c71-860c-2a302a07ab4b.JPG",
-            "https://cdn.jabama.com/image/383x240/jabama-images/959393/e9eb454a-3a29-4205-a727-04a07d7a980c.JPG",
-            "https://cdn.jabama.com/image/383x240/jabama-images/959393/a45a82f3-3560-4e77-a8e0-b2dc24fcf96d.JPG",
-            "https://cdn.jabama.com/image/383x240/jabama-images/959393/3435b89b-e2dc-4003-ab25-460fba4bef36.JPG"
+          "facility": [
+            {
+              "exist": true,
+              "name": "سیستم سرمایشی",
+              "icon": "https://img.icons8.com/sf-ultralight/25/air-conditioner.png",
+              "alt": "cooling-system"
+            },
+            {
+              "exist": true,
+              "name": "سیستم گرمایشی",
+              "icon": "https://img.icons8.com/external-xnimrodx-lineal-xnimrodx/64/external-heater-electronics-xnimrodx-lineal-xnimrodx.png",
+              "alt": "heating-system"
+            },
+            {
+              "exist": true,
+              "name": "مبلمان",
+              "icon": "https://img.icons8.com/ios/50/three-seater-sofa.png",
+              "alt": "furniture"
+            },
+            {
+              "exist": false,
+              "name": "تلویزیون",
+              "icon": "https://img.icons8.com/external-royyan-wijaya-detailed-outline-royyan-wijaya/24/external-tv-furniture-royyan-wijaya-detailed-outline-royyan-wijaya.png",
+              "alt": "TV"
+            },
+            {
+              "exist": false,
+              "name": "وای فای",
+              "icon": "https://img.icons8.com/external-outline-berkahicon/64/external-drop-smart-home-outline-berkahicon.png",
+              "alt": "wifi"
+            },
+            {
+              "exist": true,
+              "name": "آب",
+              "icon": "https://img.icons8.com/external-outline-berkahicon/64/external-drop-smart-home-outline-berkahicon.png",
+              "alt": "water"
+            },
+            {
+              "exist": true,
+              "name": "برق",
+              "icon": "https://img.icons8.com/external-royyan-wijaya-detailed-outline-royyan-wijaya/24/external-electric-plug-bolt-energy-royyan-wijaya-detailed-outline-royyan-wijaya.png",
+              "alt": "electricity"
+            },
+            {
+              "exist": true,
+              "name": "گاز",
+              "icon": "https://img.icons8.com/external-xnimrodx-lineal-xnimrodx/64/external-gas-camping-xnimrodx-lineal-xnimrodx.png",
+              "alt": "gas"
+            }
           ],
-          "host": {
-            "avatar": "https://cdn.jabama.com/image/jabama-images/image_290b4a43-8caf-4503-9e4a-9b63fcee72ed.jpg",
-            "name": "هومن حقیقی فرد"
-          },
-          "summary": "۶ متر زیربنا",
-          "description": "اتاق حجله از جمله اتاق‌های سنتی و اشتراکی مجموعه اقامتگاه بومگردی خانه دوست به حساب می آید که سرویس بهداشتی و حمام این اتاق در حیاط اقامتگاه واقع شده است. این اتاق با ظرفیت پایه ۱ نفر و ظرفیت اضافه ۱ نفر توانایی میزبانی ۲ مهمان را دارد. لازم به ذکر است صبحانه نهار و شام جداگانه است و طبق منوی اقامتگاه با پرداخت هزینه انجام می شود. گشت جزیره و ویژه و هنگام هرمز و گشت آبی را از دست ندهید. اقامتگاه در منطقه سوزا قرار دارد وفاصله اقامتگاه تا قشم ۲۳ کیلومتر تا جزیره ناز ۲ کیلومتر تا دره ستاره ها ۹ کیلومتر و تا هنگام ۱۷ کیلومتر است. این قیمت برای میهمانان ایرانی است. دوستان عزیزی که از خارج ایران قصد دارند میهمان ما باشند لطفا حتما قبل از رزرو با پشتیبانی تماس حاصل فرمایند و شرایط را جویا شوند. لازم به ذکر است از پذیرش میهمانان خارجی بدون هماهنگی معذوریم. ‌مهمان بیایید و دوست بمانید..",
-          "capacity": {
-            "base": 1,
-            "extra": 1
-          },
-          "price": {
-            "base": 200000,
-            "extra": 150000
-          },
-          "bedroom": {
-            "rooms": 0,
-            "single": 1,
-            "double": 0,
-            "traditional": 2
-          },
-          "bathroom": {
-            "persianWC": 0,
-            "foreignWC": 0,
-            "shower": 0
-          },
-          "hasCooling": true,
-          "hasHeating": true,
-          "hasFurniture": false,
-          "hasTV": true,
-          "hasWifi": true,
-          "hasWater": true,
-          "hasElectricity": true,
-          "hasGas": true
+          "reviews": [
+            {
+              "commenter": "سید مصطفی",
+              "dateComment": "مرداد 1402",
+              "comment": "خیلی خوب بود"
+            },
+            {
+              "commenter": "سید علی",
+              "dateComment": "تیر 1402",
+              "comment": "مزخرف"
+            },
+            {
+              "commenter": "سید احمد",
+              "dateComment": "شهریور 1402",
+              "comment": "پیدات می کنم"
+            },
+            {
+              "commenter": "سید نوید",
+              "dateComment": "اردیبهشت 1402",
+              "comment": "تمیز نبود"
+            }
+          ],
+          "rules": [
+            {
+              "statement": "همراه داشتن کارت ملی الزامی می‌باشد.",
+              "permission": true
+            },
+            {
+              "statement": "استعمال دخانیات مجاز نمی‌باشد.",
+              "permission": false
+            },
+            {
+              "statement": "ورود حیوانات خانگی مجاز نمی‌باشد.",
+              "permission": false
+            },
+            { "statement": "برگزاری مراسم مجاز نمی‌باشد", "permission": false },
+            { "statement": "پذیرش 24 ساعته مهمان ممنوع", "permission": false },
+            {
+              "statement": "امکان پذیرش گروه‌های مجردی فراهم نمی‌باشد.",
+              "permission": false
+            }
+          ]
         },
         {
           "id": 22,
@@ -1129,14 +2751,98 @@
             "foreignWC": 1,
             "shower": 1
           },
-          "hasCooling": true,
-          "hasHeating": false,
-          "hasFurniture": true,
-          "hasTV": false,
-          "hasWifi": false,
-          "hasWater": true,
-          "hasElectricity": true,
-          "hasGas": false
+          "facility": [
+            {
+              "exist": true,
+              "name": "سیستم سرمایشی",
+              "icon": "https://img.icons8.com/sf-ultralight/25/air-conditioner.png",
+              "alt": "cooling-system"
+            },
+            {
+              "exist": true,
+              "name": "سیستم گرمایشی",
+              "icon": "https://img.icons8.com/external-xnimrodx-lineal-xnimrodx/64/external-heater-electronics-xnimrodx-lineal-xnimrodx.png",
+              "alt": "heating-system"
+            },
+            {
+              "exist": true,
+              "name": "مبلمان",
+              "icon": "https://img.icons8.com/ios/50/three-seater-sofa.png",
+              "alt": "furniture"
+            },
+            {
+              "exist": false,
+              "name": "تلویزیون",
+              "icon": "https://img.icons8.com/external-royyan-wijaya-detailed-outline-royyan-wijaya/24/external-tv-furniture-royyan-wijaya-detailed-outline-royyan-wijaya.png",
+              "alt": "TV"
+            },
+            {
+              "exist": false,
+              "name": "وای فای",
+              "icon": "https://img.icons8.com/external-outline-berkahicon/64/external-drop-smart-home-outline-berkahicon.png",
+              "alt": "wifi"
+            },
+            {
+              "exist": true,
+              "name": "آب",
+              "icon": "https://img.icons8.com/external-outline-berkahicon/64/external-drop-smart-home-outline-berkahicon.png",
+              "alt": "water"
+            },
+            {
+              "exist": true,
+              "name": "برق",
+              "icon": "https://img.icons8.com/external-royyan-wijaya-detailed-outline-royyan-wijaya/24/external-electric-plug-bolt-energy-royyan-wijaya-detailed-outline-royyan-wijaya.png",
+              "alt": "electricity"
+            },
+            {
+              "exist": true,
+              "name": "گاز",
+              "icon": "https://img.icons8.com/external-xnimrodx-lineal-xnimrodx/64/external-gas-camping-xnimrodx-lineal-xnimrodx.png",
+              "alt": "gas"
+            }
+          ],
+          "reviews": [
+            {
+              "commenter": "سید مصطفی",
+              "dateComment": "مرداد 1402",
+              "comment": "خیلی خوب بود"
+            },
+            {
+              "commenter": "سید علی",
+              "dateComment": "تیر 1402",
+              "comment": "مزخرف"
+            },
+            {
+              "commenter": "سید احمد",
+              "dateComment": "شهریور 1402",
+              "comment": "پیدات می کنم"
+            },
+            {
+              "commenter": "سید نوید",
+              "dateComment": "اردیبهشت 1402",
+              "comment": "تمیز نبود"
+            }
+          ],
+          "rules": [
+            {
+              "statement": "همراه داشتن کارت ملی الزامی می‌باشد.",
+              "permission": true
+            },
+            {
+              "statement": "استعمال دخانیات مجاز نمی‌باشد.",
+              "permission": false
+            },
+            {
+              "statement": "ورود حیوانات خانگی مجاز نمی‌باشد.",
+              "permission": false
+            },
+            { "statement": "برگزاری مراسم مجاز نمی‌باشد", "permission": false },
+            { "statement": "پذیرش 24 ساعته مهمان ممنوع", "permission": false },
+            {
+              "statement": "امکان پذیرش گروه‌های مجردی فراهم نمی‌باشد.",
+              "permission": false
+            }
+          ]
         }
       ]
     },
@@ -1184,14 +2890,98 @@
             "foreignWC": 0,
             "shower": 1
           },
-          "hasCooling": true,
-          "hasHeating": true,
-          "hasFurniture": true,
-          "hasTV": true,
-          "hasWifi": true,
-          "hasWater": true,
-          "hasElectricity": true,
-          "hasGas": true
+          "facility": [
+            {
+              "exist": true,
+              "name": "سیستم سرمایشی",
+              "icon": "https://img.icons8.com/sf-ultralight/25/air-conditioner.png",
+              "alt": "cooling-system"
+            },
+            {
+              "exist": true,
+              "name": "سیستم گرمایشی",
+              "icon": "https://img.icons8.com/external-xnimrodx-lineal-xnimrodx/64/external-heater-electronics-xnimrodx-lineal-xnimrodx.png",
+              "alt": "heating-system"
+            },
+            {
+              "exist": true,
+              "name": "مبلمان",
+              "icon": "https://img.icons8.com/ios/50/three-seater-sofa.png",
+              "alt": "furniture"
+            },
+            {
+              "exist": false,
+              "name": "تلویزیون",
+              "icon": "https://img.icons8.com/external-royyan-wijaya-detailed-outline-royyan-wijaya/24/external-tv-furniture-royyan-wijaya-detailed-outline-royyan-wijaya.png",
+              "alt": "TV"
+            },
+            {
+              "exist": false,
+              "name": "وای فای",
+              "icon": "https://img.icons8.com/external-outline-berkahicon/64/external-drop-smart-home-outline-berkahicon.png",
+              "alt": "wifi"
+            },
+            {
+              "exist": true,
+              "name": "آب",
+              "icon": "https://img.icons8.com/external-outline-berkahicon/64/external-drop-smart-home-outline-berkahicon.png",
+              "alt": "water"
+            },
+            {
+              "exist": true,
+              "name": "برق",
+              "icon": "https://img.icons8.com/external-royyan-wijaya-detailed-outline-royyan-wijaya/24/external-electric-plug-bolt-energy-royyan-wijaya-detailed-outline-royyan-wijaya.png",
+              "alt": "electricity"
+            },
+            {
+              "exist": true,
+              "name": "گاز",
+              "icon": "https://img.icons8.com/external-xnimrodx-lineal-xnimrodx/64/external-gas-camping-xnimrodx-lineal-xnimrodx.png",
+              "alt": "gas"
+            }
+          ],
+          "reviews": [
+            {
+              "commenter": "سید مصطفی",
+              "dateComment": "مرداد 1402",
+              "comment": "خیلی خوب بود"
+            },
+            {
+              "commenter": "سید علی",
+              "dateComment": "تیر 1402",
+              "comment": "مزخرف"
+            },
+            {
+              "commenter": "سید احمد",
+              "dateComment": "شهریور 1402",
+              "comment": "پیدات می کنم"
+            },
+            {
+              "commenter": "سید نوید",
+              "dateComment": "اردیبهشت 1402",
+              "comment": "تمیز نبود"
+            }
+          ],
+          "rules": [
+            {
+              "statement": "همراه داشتن کارت ملی الزامی می‌باشد.",
+              "permission": true
+            },
+            {
+              "statement": "استعمال دخانیات مجاز نمی‌باشد.",
+              "permission": false
+            },
+            {
+              "statement": "ورود حیوانات خانگی مجاز نمی‌باشد.",
+              "permission": false
+            },
+            { "statement": "برگزاری مراسم مجاز نمی‌باشد", "permission": false },
+            { "statement": "پذیرش 24 ساعته مهمان ممنوع", "permission": false },
+            {
+              "statement": "امکان پذیرش گروه‌های مجردی فراهم نمی‌باشد.",
+              "permission": false
+            }
+          ]
         },
         {
           "id": 24,
@@ -1235,14 +3025,98 @@
             "foreignWC": 0,
             "shower": 1
           },
-          "hasCooling": true,
-          "hasHeating": true,
-          "hasFurniture": true,
-          "hasTV": true,
-          "hasWifi": true,
-          "hasWater": true,
-          "hasElectricity": true,
-          "hasGas": true
+          "facility": [
+            {
+              "exist": true,
+              "name": "سیستم سرمایشی",
+              "icon": "https://img.icons8.com/sf-ultralight/25/air-conditioner.png",
+              "alt": "cooling-system"
+            },
+            {
+              "exist": true,
+              "name": "سیستم گرمایشی",
+              "icon": "https://img.icons8.com/external-xnimrodx-lineal-xnimrodx/64/external-heater-electronics-xnimrodx-lineal-xnimrodx.png",
+              "alt": "heating-system"
+            },
+            {
+              "exist": true,
+              "name": "مبلمان",
+              "icon": "https://img.icons8.com/ios/50/three-seater-sofa.png",
+              "alt": "furniture"
+            },
+            {
+              "exist": false,
+              "name": "تلویزیون",
+              "icon": "https://img.icons8.com/external-royyan-wijaya-detailed-outline-royyan-wijaya/24/external-tv-furniture-royyan-wijaya-detailed-outline-royyan-wijaya.png",
+              "alt": "TV"
+            },
+            {
+              "exist": false,
+              "name": "وای فای",
+              "icon": "https://img.icons8.com/external-outline-berkahicon/64/external-drop-smart-home-outline-berkahicon.png",
+              "alt": "wifi"
+            },
+            {
+              "exist": true,
+              "name": "آب",
+              "icon": "https://img.icons8.com/external-outline-berkahicon/64/external-drop-smart-home-outline-berkahicon.png",
+              "alt": "water"
+            },
+            {
+              "exist": true,
+              "name": "برق",
+              "icon": "https://img.icons8.com/external-royyan-wijaya-detailed-outline-royyan-wijaya/24/external-electric-plug-bolt-energy-royyan-wijaya-detailed-outline-royyan-wijaya.png",
+              "alt": "electricity"
+            },
+            {
+              "exist": true,
+              "name": "گاز",
+              "icon": "https://img.icons8.com/external-xnimrodx-lineal-xnimrodx/64/external-gas-camping-xnimrodx-lineal-xnimrodx.png",
+              "alt": "gas"
+            }
+          ],
+          "reviews": [
+            {
+              "commenter": "سید مصطفی",
+              "dateComment": "مرداد 1402",
+              "comment": "خیلی خوب بود"
+            },
+            {
+              "commenter": "سید علی",
+              "dateComment": "تیر 1402",
+              "comment": "مزخرف"
+            },
+            {
+              "commenter": "سید احمد",
+              "dateComment": "شهریور 1402",
+              "comment": "پیدات می کنم"
+            },
+            {
+              "commenter": "سید نوید",
+              "dateComment": "اردیبهشت 1402",
+              "comment": "تمیز نبود"
+            }
+          ],
+          "rules": [
+            {
+              "statement": "همراه داشتن کارت ملی الزامی می‌باشد.",
+              "permission": true
+            },
+            {
+              "statement": "استعمال دخانیات مجاز نمی‌باشد.",
+              "permission": false
+            },
+            {
+              "statement": "ورود حیوانات خانگی مجاز نمی‌باشد.",
+              "permission": false
+            },
+            { "statement": "برگزاری مراسم مجاز نمی‌باشد", "permission": false },
+            { "statement": "پذیرش 24 ساعته مهمان ممنوع", "permission": false },
+            {
+              "statement": "امکان پذیرش گروه‌های مجردی فراهم نمی‌باشد.",
+              "permission": false
+            }
+          ]
         },
         {
           "id": 25,
@@ -1289,16 +3163,98 @@
             "foreignWC": 1,
             "shower": 3
           },
-          "hasCooling": true,
-          "hasHeating": true,
-          "hasFurniture": true,
-          "hasTV": true,
-          "hasWifi": true,
-          "hasWater": true,
-          "hasElectricity": true,
-          "hasGas": true,
-          "hasParking": true,
-          "hasPool": true
+          "facility": [
+            {
+              "exist": true,
+              "name": "سیستم سرمایشی",
+              "icon": "https://img.icons8.com/sf-ultralight/25/air-conditioner.png",
+              "alt": "cooling-system"
+            },
+            {
+              "exist": true,
+              "name": "سیستم گرمایشی",
+              "icon": "https://img.icons8.com/external-xnimrodx-lineal-xnimrodx/64/external-heater-electronics-xnimrodx-lineal-xnimrodx.png",
+              "alt": "heating-system"
+            },
+            {
+              "exist": true,
+              "name": "مبلمان",
+              "icon": "https://img.icons8.com/ios/50/three-seater-sofa.png",
+              "alt": "furniture"
+            },
+            {
+              "exist": false,
+              "name": "تلویزیون",
+              "icon": "https://img.icons8.com/external-royyan-wijaya-detailed-outline-royyan-wijaya/24/external-tv-furniture-royyan-wijaya-detailed-outline-royyan-wijaya.png",
+              "alt": "TV"
+            },
+            {
+              "exist": false,
+              "name": "وای فای",
+              "icon": "https://img.icons8.com/external-outline-berkahicon/64/external-drop-smart-home-outline-berkahicon.png",
+              "alt": "wifi"
+            },
+            {
+              "exist": true,
+              "name": "آب",
+              "icon": "https://img.icons8.com/external-outline-berkahicon/64/external-drop-smart-home-outline-berkahicon.png",
+              "alt": "water"
+            },
+            {
+              "exist": true,
+              "name": "برق",
+              "icon": "https://img.icons8.com/external-royyan-wijaya-detailed-outline-royyan-wijaya/24/external-electric-plug-bolt-energy-royyan-wijaya-detailed-outline-royyan-wijaya.png",
+              "alt": "electricity"
+            },
+            {
+              "exist": true,
+              "name": "گاز",
+              "icon": "https://img.icons8.com/external-xnimrodx-lineal-xnimrodx/64/external-gas-camping-xnimrodx-lineal-xnimrodx.png",
+              "alt": "gas"
+            }
+          ],
+          "reviews": [
+            {
+              "commenter": "سید مصطفی",
+              "dateComment": "مرداد 1402",
+              "comment": "خیلی خوب بود"
+            },
+            {
+              "commenter": "سید علی",
+              "dateComment": "تیر 1402",
+              "comment": "مزخرف"
+            },
+            {
+              "commenter": "سید احمد",
+              "dateComment": "شهریور 1402",
+              "comment": "پیدات می کنم"
+            },
+            {
+              "commenter": "سید نوید",
+              "dateComment": "اردیبهشت 1402",
+              "comment": "تمیز نبود"
+            }
+          ],
+          "rules": [
+            {
+              "statement": "همراه داشتن کارت ملی الزامی می‌باشد.",
+              "permission": true
+            },
+            {
+              "statement": "استعمال دخانیات مجاز نمی‌باشد.",
+              "permission": false
+            },
+            {
+              "statement": "ورود حیوانات خانگی مجاز نمی‌باشد.",
+              "permission": false
+            },
+            { "statement": "برگزاری مراسم مجاز نمی‌باشد", "permission": false },
+            { "statement": "پذیرش 24 ساعته مهمان ممنوع", "permission": false },
+            {
+              "statement": "امکان پذیرش گروه‌های مجردی فراهم نمی‌باشد.",
+              "permission": false
+            }
+          ]
         },
         {
           "id": 26,
@@ -1345,16 +3301,98 @@
             "foreignWC": 1,
             "shower": 1
           },
-          "hasCooling": true,
-          "hasHeating": true,
-          "hasFurniture": true,
-          "hasTV": true,
-          "hasWifi": true,
-          "hasWater": true,
-          "hasElectricity": true,
-          "hasGas": true,
-          "hasParking": false,
-          "hasPool": false
+          "facility": [
+            {
+              "exist": true,
+              "name": "سیستم سرمایشی",
+              "icon": "https://img.icons8.com/sf-ultralight/25/air-conditioner.png",
+              "alt": "cooling-system"
+            },
+            {
+              "exist": true,
+              "name": "سیستم گرمایشی",
+              "icon": "https://img.icons8.com/external-xnimrodx-lineal-xnimrodx/64/external-heater-electronics-xnimrodx-lineal-xnimrodx.png",
+              "alt": "heating-system"
+            },
+            {
+              "exist": true,
+              "name": "مبلمان",
+              "icon": "https://img.icons8.com/ios/50/three-seater-sofa.png",
+              "alt": "furniture"
+            },
+            {
+              "exist": false,
+              "name": "تلویزیون",
+              "icon": "https://img.icons8.com/external-royyan-wijaya-detailed-outline-royyan-wijaya/24/external-tv-furniture-royyan-wijaya-detailed-outline-royyan-wijaya.png",
+              "alt": "TV"
+            },
+            {
+              "exist": false,
+              "name": "وای فای",
+              "icon": "https://img.icons8.com/external-outline-berkahicon/64/external-drop-smart-home-outline-berkahicon.png",
+              "alt": "wifi"
+            },
+            {
+              "exist": true,
+              "name": "آب",
+              "icon": "https://img.icons8.com/external-outline-berkahicon/64/external-drop-smart-home-outline-berkahicon.png",
+              "alt": "water"
+            },
+            {
+              "exist": true,
+              "name": "برق",
+              "icon": "https://img.icons8.com/external-royyan-wijaya-detailed-outline-royyan-wijaya/24/external-electric-plug-bolt-energy-royyan-wijaya-detailed-outline-royyan-wijaya.png",
+              "alt": "electricity"
+            },
+            {
+              "exist": true,
+              "name": "گاز",
+              "icon": "https://img.icons8.com/external-xnimrodx-lineal-xnimrodx/64/external-gas-camping-xnimrodx-lineal-xnimrodx.png",
+              "alt": "gas"
+            }
+          ],
+          "reviews": [
+            {
+              "commenter": "سید مصطفی",
+              "dateComment": "مرداد 1402",
+              "comment": "خیلی خوب بود"
+            },
+            {
+              "commenter": "سید علی",
+              "dateComment": "تیر 1402",
+              "comment": "مزخرف"
+            },
+            {
+              "commenter": "سید احمد",
+              "dateComment": "شهریور 1402",
+              "comment": "پیدات می کنم"
+            },
+            {
+              "commenter": "سید نوید",
+              "dateComment": "اردیبهشت 1402",
+              "comment": "تمیز نبود"
+            }
+          ],
+          "rules": [
+            {
+              "statement": "همراه داشتن کارت ملی الزامی می‌باشد.",
+              "permission": true
+            },
+            {
+              "statement": "استعمال دخانیات مجاز نمی‌باشد.",
+              "permission": false
+            },
+            {
+              "statement": "ورود حیوانات خانگی مجاز نمی‌باشد.",
+              "permission": false
+            },
+            { "statement": "برگزاری مراسم مجاز نمی‌باشد", "permission": false },
+            { "statement": "پذیرش 24 ساعته مهمان ممنوع", "permission": false },
+            {
+              "statement": "امکان پذیرش گروه‌های مجردی فراهم نمی‌باشد.",
+              "permission": false
+            }
+          ]
         },
         {
           "id": 27,
@@ -1398,14 +3436,98 @@
             "foreignWC": 0,
             "shower": 1
           },
-          "hasCooling": true,
-          "hasHeating": true,
-          "hasFurniture": true,
-          "hasTV": false,
-          "hasWifi": true,
-          "hasWater": true,
-          "hasElectricity": true,
-          "hasGas": true
+          "facility": [
+            {
+              "exist": true,
+              "name": "سیستم سرمایشی",
+              "icon": "https://img.icons8.com/sf-ultralight/25/air-conditioner.png",
+              "alt": "cooling-system"
+            },
+            {
+              "exist": true,
+              "name": "سیستم گرمایشی",
+              "icon": "https://img.icons8.com/external-xnimrodx-lineal-xnimrodx/64/external-heater-electronics-xnimrodx-lineal-xnimrodx.png",
+              "alt": "heating-system"
+            },
+            {
+              "exist": true,
+              "name": "مبلمان",
+              "icon": "https://img.icons8.com/ios/50/three-seater-sofa.png",
+              "alt": "furniture"
+            },
+            {
+              "exist": false,
+              "name": "تلویزیون",
+              "icon": "https://img.icons8.com/external-royyan-wijaya-detailed-outline-royyan-wijaya/24/external-tv-furniture-royyan-wijaya-detailed-outline-royyan-wijaya.png",
+              "alt": "TV"
+            },
+            {
+              "exist": false,
+              "name": "وای فای",
+              "icon": "https://img.icons8.com/external-outline-berkahicon/64/external-drop-smart-home-outline-berkahicon.png",
+              "alt": "wifi"
+            },
+            {
+              "exist": true,
+              "name": "آب",
+              "icon": "https://img.icons8.com/external-outline-berkahicon/64/external-drop-smart-home-outline-berkahicon.png",
+              "alt": "water"
+            },
+            {
+              "exist": true,
+              "name": "برق",
+              "icon": "https://img.icons8.com/external-royyan-wijaya-detailed-outline-royyan-wijaya/24/external-electric-plug-bolt-energy-royyan-wijaya-detailed-outline-royyan-wijaya.png",
+              "alt": "electricity"
+            },
+            {
+              "exist": true,
+              "name": "گاز",
+              "icon": "https://img.icons8.com/external-xnimrodx-lineal-xnimrodx/64/external-gas-camping-xnimrodx-lineal-xnimrodx.png",
+              "alt": "gas"
+            }
+          ],
+          "reviews": [
+            {
+              "commenter": "سید مصطفی",
+              "dateComment": "مرداد 1402",
+              "comment": "خیلی خوب بود"
+            },
+            {
+              "commenter": "سید علی",
+              "dateComment": "تیر 1402",
+              "comment": "مزخرف"
+            },
+            {
+              "commenter": "سید احمد",
+              "dateComment": "شهریور 1402",
+              "comment": "پیدات می کنم"
+            },
+            {
+              "commenter": "سید نوید",
+              "dateComment": "اردیبهشت 1402",
+              "comment": "تمیز نبود"
+            }
+          ],
+          "rules": [
+            {
+              "statement": "همراه داشتن کارت ملی الزامی می‌باشد.",
+              "permission": true
+            },
+            {
+              "statement": "استعمال دخانیات مجاز نمی‌باشد.",
+              "permission": false
+            },
+            {
+              "statement": "ورود حیوانات خانگی مجاز نمی‌باشد.",
+              "permission": false
+            },
+            { "statement": "برگزاری مراسم مجاز نمی‌باشد", "permission": false },
+            { "statement": "پذیرش 24 ساعته مهمان ممنوع", "permission": false },
+            {
+              "statement": "امکان پذیرش گروه‌های مجردی فراهم نمی‌باشد.",
+              "permission": false
+            }
+          ]
         },
         {
           "id": 28,
@@ -1449,14 +3571,98 @@
             "foreignWC": 0,
             "shower": 1
           },
-          "hasCooling": true,
-          "hasHeating": true,
-          "hasFurniture": true,
-          "hasTV": false,
-          "hasWifi": true,
-          "hasWater": true,
-          "hasElectricity": true,
-          "hasGas": true
+          "facility": [
+            {
+              "exist": true,
+              "name": "سیستم سرمایشی",
+              "icon": "https://img.icons8.com/sf-ultralight/25/air-conditioner.png",
+              "alt": "cooling-system"
+            },
+            {
+              "exist": true,
+              "name": "سیستم گرمایشی",
+              "icon": "https://img.icons8.com/external-xnimrodx-lineal-xnimrodx/64/external-heater-electronics-xnimrodx-lineal-xnimrodx.png",
+              "alt": "heating-system"
+            },
+            {
+              "exist": true,
+              "name": "مبلمان",
+              "icon": "https://img.icons8.com/ios/50/three-seater-sofa.png",
+              "alt": "furniture"
+            },
+            {
+              "exist": false,
+              "name": "تلویزیون",
+              "icon": "https://img.icons8.com/external-royyan-wijaya-detailed-outline-royyan-wijaya/24/external-tv-furniture-royyan-wijaya-detailed-outline-royyan-wijaya.png",
+              "alt": "TV"
+            },
+            {
+              "exist": false,
+              "name": "وای فای",
+              "icon": "https://img.icons8.com/external-outline-berkahicon/64/external-drop-smart-home-outline-berkahicon.png",
+              "alt": "wifi"
+            },
+            {
+              "exist": true,
+              "name": "آب",
+              "icon": "https://img.icons8.com/external-outline-berkahicon/64/external-drop-smart-home-outline-berkahicon.png",
+              "alt": "water"
+            },
+            {
+              "exist": true,
+              "name": "برق",
+              "icon": "https://img.icons8.com/external-royyan-wijaya-detailed-outline-royyan-wijaya/24/external-electric-plug-bolt-energy-royyan-wijaya-detailed-outline-royyan-wijaya.png",
+              "alt": "electricity"
+            },
+            {
+              "exist": true,
+              "name": "گاز",
+              "icon": "https://img.icons8.com/external-xnimrodx-lineal-xnimrodx/64/external-gas-camping-xnimrodx-lineal-xnimrodx.png",
+              "alt": "gas"
+            }
+          ],
+          "reviews": [
+            {
+              "commenter": "سید مصطفی",
+              "dateComment": "مرداد 1402",
+              "comment": "خیلی خوب بود"
+            },
+            {
+              "commenter": "سید علی",
+              "dateComment": "تیر 1402",
+              "comment": "مزخرف"
+            },
+            {
+              "commenter": "سید احمد",
+              "dateComment": "شهریور 1402",
+              "comment": "پیدات می کنم"
+            },
+            {
+              "commenter": "سید نوید",
+              "dateComment": "اردیبهشت 1402",
+              "comment": "تمیز نبود"
+            }
+          ],
+          "rules": [
+            {
+              "statement": "همراه داشتن کارت ملی الزامی می‌باشد.",
+              "permission": true
+            },
+            {
+              "statement": "استعمال دخانیات مجاز نمی‌باشد.",
+              "permission": false
+            },
+            {
+              "statement": "ورود حیوانات خانگی مجاز نمی‌باشد.",
+              "permission": false
+            },
+            { "statement": "برگزاری مراسم مجاز نمی‌باشد", "permission": false },
+            { "statement": "پذیرش 24 ساعته مهمان ممنوع", "permission": false },
+            {
+              "statement": "امکان پذیرش گروه‌های مجردی فراهم نمی‌باشد.",
+              "permission": false
+            }
+          ]
         },
         {
           "id": 29,
@@ -1498,14 +3704,98 @@
             "foreignWC": 0,
             "shower": 1
           },
-          "hasCooling": true,
-          "hasHeating": true,
-          "hasFurniture": true,
-          "hasTV": false,
-          "hasWifi": true,
-          "hasWater": true,
-          "hasElectricity": true,
-          "hasGas": true
+          "facility": [
+            {
+              "exist": true,
+              "name": "سیستم سرمایشی",
+              "icon": "https://img.icons8.com/sf-ultralight/25/air-conditioner.png",
+              "alt": "cooling-system"
+            },
+            {
+              "exist": true,
+              "name": "سیستم گرمایشی",
+              "icon": "https://img.icons8.com/external-xnimrodx-lineal-xnimrodx/64/external-heater-electronics-xnimrodx-lineal-xnimrodx.png",
+              "alt": "heating-system"
+            },
+            {
+              "exist": true,
+              "name": "مبلمان",
+              "icon": "https://img.icons8.com/ios/50/three-seater-sofa.png",
+              "alt": "furniture"
+            },
+            {
+              "exist": false,
+              "name": "تلویزیون",
+              "icon": "https://img.icons8.com/external-royyan-wijaya-detailed-outline-royyan-wijaya/24/external-tv-furniture-royyan-wijaya-detailed-outline-royyan-wijaya.png",
+              "alt": "TV"
+            },
+            {
+              "exist": false,
+              "name": "وای فای",
+              "icon": "https://img.icons8.com/external-outline-berkahicon/64/external-drop-smart-home-outline-berkahicon.png",
+              "alt": "wifi"
+            },
+            {
+              "exist": true,
+              "name": "آب",
+              "icon": "https://img.icons8.com/external-outline-berkahicon/64/external-drop-smart-home-outline-berkahicon.png",
+              "alt": "water"
+            },
+            {
+              "exist": true,
+              "name": "برق",
+              "icon": "https://img.icons8.com/external-royyan-wijaya-detailed-outline-royyan-wijaya/24/external-electric-plug-bolt-energy-royyan-wijaya-detailed-outline-royyan-wijaya.png",
+              "alt": "electricity"
+            },
+            {
+              "exist": true,
+              "name": "گاز",
+              "icon": "https://img.icons8.com/external-xnimrodx-lineal-xnimrodx/64/external-gas-camping-xnimrodx-lineal-xnimrodx.png",
+              "alt": "gas"
+            }
+          ],
+          "reviews": [
+            {
+              "commenter": "سید مصطفی",
+              "dateComment": "مرداد 1402",
+              "comment": "خیلی خوب بود"
+            },
+            {
+              "commenter": "سید علی",
+              "dateComment": "تیر 1402",
+              "comment": "مزخرف"
+            },
+            {
+              "commenter": "سید احمد",
+              "dateComment": "شهریور 1402",
+              "comment": "پیدات می کنم"
+            },
+            {
+              "commenter": "سید نوید",
+              "dateComment": "اردیبهشت 1402",
+              "comment": "تمیز نبود"
+            }
+          ],
+          "rules": [
+            {
+              "statement": "همراه داشتن کارت ملی الزامی می‌باشد.",
+              "permission": true
+            },
+            {
+              "statement": "استعمال دخانیات مجاز نمی‌باشد.",
+              "permission": false
+            },
+            {
+              "statement": "ورود حیوانات خانگی مجاز نمی‌باشد.",
+              "permission": false
+            },
+            { "statement": "برگزاری مراسم مجاز نمی‌باشد", "permission": false },
+            { "statement": "پذیرش 24 ساعته مهمان ممنوع", "permission": false },
+            {
+              "statement": "امکان پذیرش گروه‌های مجردی فراهم نمی‌باشد.",
+              "permission": false
+            }
+          ]
         }
       ]
     }

@@ -52,7 +52,7 @@ const Favplc = ({ data, title }) => {
           </div>
           <button
             className={clsx(
-              "sm:hidden md:block border border-main-silver rounded-lg p-2",
+              "sm:hidden lg:block border border-main-silver rounded-lg p-2",
               { "opacity-40": scrolStart },
               { "opacity-100": !scrolStart }
             )}
@@ -67,7 +67,7 @@ const Favplc = ({ data, title }) => {
           </button>
           <button
             className={clsx(
-              "sm:hidden md:flex  border border-main-silver rounded-lg p-2",
+              "sm:hidden lg:flex  border border-main-silver rounded-lg p-2",
               { "opacity-40": scrolEnd },
               { "opacity-100": !scrolEnd }
             )}
@@ -86,14 +86,24 @@ const Favplc = ({ data, title }) => {
       <div ref={scrl} onScroll={scrollCheck} className="mybox">
         {data.map((item) => {
           return (
-            <div>
+            <div key={item.name}>
               <img
-                className="aspect-[3/4] lg:aspect-[3/5] min-h-[108px] max-h-[216px] lg:max-h-[226px] object-fill rounded-md"
+                style={{
+                  backgroundImage: "url(/images/image-placeholder.svg)",
+                  backgroundPosition: "center",
+                  backgroundSize: "cover",
+                  backgroundColor: "#d7d7d9",
+                }}
+                className="aspect-[3/4] md:aspect-[4/5] lg:aspect-[3/5] min-h-[108px] max-h-[216px] lg:max-h-[226px] object-fill rounded-md"
                 src={item.image}
+                loading="lazy"
               />
-              <span className="w-full flex text-[.95rem] justify-start font-medium pl-1">
-                {item.name}،{" "}
-                <span className="font-light mr-1"> {item.province}</span>
+              <span className="w-full flex text-[.75rem] md:text-[.95rem] justify-start font-medium pl-1">
+                <span className=" whitespace-nowrap">{item.name}،</span>
+                <span className="font-light mr-1 sm:truncate">
+                  {" "}
+                  {item.province}
+                </span>
               </span>
             </div>
           );

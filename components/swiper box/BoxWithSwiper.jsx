@@ -48,13 +48,13 @@ export default function BoxWithSwiper({
           <span className="font-light text-xs">{subtitle}</span>
         </p>
 
-        <div className="flex items-start gap-2 pb-4">
-          <div className=" md:block border border-main-light-gray rounded-lg px-2 pb-2 pt-1 ml-4">
+        <div className="sm:w-1/3 flex items-start sm:justify-end gap-2 pb-4 ">
+          <div className=" md:block border sm:ml-2 border-main-light-gray rounded-lg px-2 pb-2 pt-1 lg:ml-4">
             <button className="font-medium text-xs">مشاهده همه</button>
           </div>
           <button
             className={clsx(
-              "sm:hidden md:block border border-main-silver rounded-lg p-2",
+              "sm:hidden lg:block border border-main-silver rounded-lg p-2",
               { "opacity-40": scrolStart },
               { "opacity-100": !scrolStart }
             )}
@@ -69,7 +69,7 @@ export default function BoxWithSwiper({
           </button>
           <button
             className={clsx(
-              "sm:hidden md:flex  border border-main-silver rounded-lg p-2",
+              "sm:hidden lg:flex  border border-main-silver rounded-lg p-2",
               { "opacity-40": scrolEnd },
               { "opacity-100": !scrolEnd }
             )}
@@ -89,8 +89,9 @@ export default function BoxWithSwiper({
       <ul ref={scrl} onScroll={scrollCheck} className="box">
         {data && data.map((item) => {
           return (
-            <li>
+            <li key={item.id}>
               {React.cloneElement(children, {
+                obj: item,
                 rate: item.rate,
                 comments: item.comments,
                 title: item.title,
@@ -100,6 +101,9 @@ export default function BoxWithSwiper({
                 images: item.images,
                 bedroom: item.bedroom.rooms,
                 capacity: item.capacity,
+                hasDiscount: item.discount,
+                hasFavorit: true,
+                isFavorite: false,
               })}
             </li>
           );

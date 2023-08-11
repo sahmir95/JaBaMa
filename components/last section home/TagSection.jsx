@@ -16,9 +16,12 @@ const TagSection = ({ data }) => {
           "sm:h-[64px]": !isOpen,
         })}
       >
-        {data && data.map((item) => {
+        {data.map((item, index) => {
           return (
-            <p className="lg:h-[28px] lg:flex lg:items-center rounded-2xl font-medium text-xs text-main-steel-gray py-1 lg:py-0 px-2 text-center bg-main-light-silver">
+            <p
+              key={index}
+              className="lg:h-[28px] lg:flex lg:items-center rounded-2xl font-medium text-xs text-main-steel-gray py-1 lg:py-0 px-2 text-center bg-main-light-silver"
+            >
               اجاره ویلا در {item.city}
             </p>
           );

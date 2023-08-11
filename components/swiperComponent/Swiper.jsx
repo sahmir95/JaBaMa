@@ -8,7 +8,7 @@ import {
   Keyboard,
   Lazy,
 } from "swiper/modules";
-import React, { lazy, useEffect, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import clsx from "clsx";
 // Import Swiper styles
 import "./swiper.css";
@@ -19,19 +19,20 @@ import "swiper/css/mousewheel";
 import "swiper/css/keyboard";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import { Icon } from "@iconify/react";
+import { useDispatch } from "react-redux";
+import { addDetailItem } from "@/redux/featchers/detailSlice";
+import Link from "next/link";
 import { twMerge } from "tailwind-merge";
 
-export default function SwiperComponent({ images , aspect="" }) {
+export default function SwiperComponent({ obj, images }) {
   const [imgs, setImgs] = useState(images);
   const [swiperRef, setSwiperRef] = useState(null);
   const [isHide, setIsHide] = useState(true);
   const [isEnd, setIsEnd] = useState(false);
   const [isHover, setIsHover] = useState(false);
-  const [loading, setLoading] = useState(true);
-  const counter = useRef(0);
-  const imageLoaded = () => {
-    setLoading(false);
-  };
+
+  const dispatch = useDispatch();
+
   const nextHandler = () => {
     swiperRef.slideNext();
     if (!isEnd) {
@@ -54,7 +55,7 @@ export default function SwiperComponent({ images , aspect="" }) {
     <div
       onMouseEnter={() => setIsHover(true)}
       onMouseLeave={() => setIsHover(false)}
-      className={twMerge("w-full aspect-[5/3] sm:h-full  box-border md:h-[220px]  lg:h-full flex justify-center items-center rounded-lg", aspect)}
+      className={twMerge("w-full  sm:h-full  box-border md:h-[220px]  lg:h-full flex justify-center items-center rounded-lg", aspect)}
     >
       <Swiper
         cssMode={true}
@@ -62,13 +63,13 @@ export default function SwiperComponent({ images , aspect="" }) {
         pagination={true}
         mousewheel={true}
         keyboard={true}
-        lazy={true}
+        lazy={"true"}
         modules={[Navigation, Pagination, Mousewheel, Keyboard]}
         onSwiper={(swiper) => setSwiperRef(swiper)}
         onReachBeginning={() => setIsHide(true)}
         onReachEnd={() => setIsHide(false)}
         dir="rtl"
-        className="swiper"
+        className="myswiper"
       >
         <div
           className={clsx(
@@ -81,7 +82,7 @@ export default function SwiperComponent({ images , aspect="" }) {
         >
           <button
             onClick={() => nextHandler()}
-            class="bg-white  flex justify-center items-center w-full h-full rounded-full shadow focus:outline-none"
+            className="bg-white  flex justify-center items-center w-full h-full rounded-full shadow focus:outline-none"
           >
             <Icon
               icon="grommet-icons:next"
@@ -92,30 +93,36 @@ export default function SwiperComponent({ images , aspect="" }) {
             />
           </button>
         </div>
-        {imgs.map((item) => {
+        {imgs.map((item, index) => {
           return (
-            <SwiperSlide>
-              <div
-                className="w-full h-full"
-                style={{
-                  backgroundImage: `url("/images/image-placeholder.svg")`,
-                  backgroundRepeat: "no-repeat",
-                  backgroundPosition: "center",
-                  backgroundSize: "cover",
+            <SwiperSlide key={index}>
+              <Link
+                href={{
+                  pathname: "/stay",
+                  query: obj,
                 }}
+                onClick={() => dispatch(addDetailItem(obj))}
+                className="w-full"
               >
                 <img
-                  className="w-full h-full object-cover"
+                  style={{
+                    backgroundImage: "url(/images/image-placeholder.svg)",
+                    backgroundPosition: "center",
+                    backgroundSize: "64px 64px",
+                    backgroundColor: "#d7d7d9",
+                  }}
+                  className="w-full aspect-[5/3] object-cover"
                   key={item}
                   src={item}
                   loading="lazy"
                 />
-              </div>
+                <div className=" swiper-lazy-preloader-white "></div>
+              </Link>
             </SwiperSlide>
           );
         })}
         <div
-          class={clsx(
+          className={clsx(
             "absolute justify-center   top-1/2 right-2 z-10 flex items-center bg-main-snow rounded-full w-[28px] h-[28px]",
             { "opacity-40": isHide == true },
             { "opacity-100": isHide == "" },
@@ -125,7 +132,7 @@ export default function SwiperComponent({ images , aspect="" }) {
         >
           <button
             onClick={prevHandler}
-            class="bg-white  flex justify-center items-center w-full h-full rounded-full shadow focus:outline-none"
+            className="bg-white  flex justify-center items-center w-full h-full rounded-full shadow focus:outline-none"
           >
             <Icon
               icon="grommet-icons:next"

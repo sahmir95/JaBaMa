@@ -38,7 +38,6 @@
     width: 4px;
     height: 4px;
     margin: 0;
-    background-color: #fff;
     border-radius: 100%;
     cursor: pointer;
     transition: 0.3s ease width;
@@ -48,7 +47,7 @@
     margin: 0 2px !important;
   }
   .swiper-pagination .swiper-pagination-bullet-active {
-    width: 10px;
+    width: 12px;
     height: 3px;
     background-color: #fff;
     border-radius: 4px;
