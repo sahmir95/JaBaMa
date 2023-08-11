@@ -2,33 +2,29 @@
 import React, { useState } from "react";
 import Sidbar from "@/components/sidebar/Sidbar";
 import TitlePage from "@/components/titlepage/TiTlePage";
-import HeaderPages from "@/components/header/headerDesktop/HeaderPages";
-import HeaderMobilePages from "@/components/header/headerMobile/HeaderMobilePages";
 import { useSelector } from "react-redux";
 import CardWithSwiper from "@/components/card with swiper/CardWithSwiper";
+import './style.css'
+
 const FavoritePage = () => {
   const data = useSelector((state) => state.favoriteSlice.favorite);
   const [favorite, setfavorite] = useState([]);
 
   return (
-    <>
-      <HeaderPages
-        display="static"
-        loc=""
-        border="border-b border-b-main-light-gray"
-        compFilter=""
-      />
-      <HeaderMobilePages title="مورد علاقه‌ها" />
-      <div className="w-full h-[2000px]">
+    <div className=" container"> 
+    
+      <div >
         {data.length > 0 ? (
-          <div className="w-full flex">
+          <div className="w-full h-auto flex pb-[58px]">
             <div className="hidden lg:block mb-10 mr-5 lg:w-72">
               <Sidbar />
             </div>
-            <div className="w-full h-full lg:w-2/4 ">
-              <div className="w-full h-full">
+            <div className="w-full h-full lg:w-2/4 mx-1">
+              <div className="w-full h-auto">
+              <div className="hidden lg:block  ">
                 <TitlePage title="مورد علاقه ها" />
-                <div className="w-[50%] h-[50%] flex flex-wrap flex-col mr-2 gap-3 ">
+              </div>
+                <div className="w-full h-full grid grid-cols-1 md:grid md:grid-cols-3 lg:grid lg:grid-cols-2 gap-3 sm:pt-[50px] lg:pt-4">
                   {data.map((item) => {
                     return (
                       <CardWithSwiper
@@ -84,7 +80,7 @@ const FavoritePage = () => {
           </div>
         )}
       </div>
-    </>
+    </div>
   );
 };
 
