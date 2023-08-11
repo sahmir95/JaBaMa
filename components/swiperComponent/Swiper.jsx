@@ -107,6 +107,7 @@ export default function SwiperComponent({ obj, images }) {
                   style={{
                     backgroundImage: "url(/images/image-placeholder.svg)",
                     backgroundPosition: "center",
+                    backgroundRepeat: "no-repeat",
                     backgroundSize: "64px 64px",
                     backgroundColor: "#d7d7d9",
                   }}

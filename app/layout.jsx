@@ -4,7 +4,7 @@ import Menu from "@/components/menu/Menu";
 import React from "react";
 import AppBanner from "@/components/menu/jabamaAppNotif/AppBanner";
 import Footer from "@/components/footer/Footer";
-import { Providers } from "@/redux/provider/privider";
+import { Providers } from "@/redux/provider/provider";
 
 const inter = Inter({ subsets: ["latin"] });
 

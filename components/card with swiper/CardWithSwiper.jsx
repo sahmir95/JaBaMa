@@ -21,7 +21,7 @@ export default function CardWithSwiper({
   price,
   bedroom,
   capacity,
-  isCocacity,
+  isCopacity,
   hasDiscount,
   isBeginText,
   hasReserv,
@@ -86,7 +86,7 @@ export default function CardWithSwiper({
                 <span>{bedroom} اتاق</span>
               </span>
             )}
-            {isCocacity && (
+            {isCopacity && (
               <span className="flex items-end text-right">
                 <span className=" flex mr-[2px] text-xl"> . </span>
                 <span className="mx-1"> {capacity.base} نفر پایه </span> +
