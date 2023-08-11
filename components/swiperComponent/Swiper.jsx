@@ -24,7 +24,7 @@ import { addDetailItem } from "@/redux/featchers/detailSlice";
 import Link from "next/link";
 import { twMerge } from "tailwind-merge";
 
-export default function SwiperComponent({ obj, images }) {
+export default function SwiperComponent({ obj, images , aspect}) {
   const [imgs, setImgs] = useState(images);
   const [swiperRef, setSwiperRef] = useState(null);
   const [isHide, setIsHide] = useState(true);

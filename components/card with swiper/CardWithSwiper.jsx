@@ -24,6 +24,7 @@ export default function CardWithSwiper({
   bedroom,
   capacity,
   classNames = {
+    aspect: '',
     images: "",
     title: "",
     rate: "",
@@ -42,7 +43,8 @@ export default function CardWithSwiper({
   hasReserv,
   hasFavorit,
   isFavorite,
-  showDiscountPrice
+  showDiscountPrice,
+  dontShowCircle
 }) {
   const dispatch = useDispatch();
   const [isFavor, setIsFavor] = useState(isFavorite);
@@ -75,7 +77,7 @@ export default function CardWithSwiper({
             </Link>
           </div>
         )}
-        <SwiperComponent obj={obj} images={images} />
+        <SwiperComponent obj={obj} images={images} aspect={classNames?.aspect} />
       </div>
       <Link
         href={{
@@ -120,12 +122,15 @@ export default function CardWithSwiper({
               <p className={twMerge("sm:hidden lg:flex w-[42%] flex justify-center bg-[rgb(255,245,246)] text-main-dark-red py-[1px] rounded-2xl border border-main-dark-red font-medium text-[0.75rem]", classNames?.discount)}>
                 % تا {toFarsiNumber(hasDiscount)} درصد تخفیف
               </p>
+             {!dontShowCircle &&
+             <>
               <span className="sm:block lg:hidden text-[0.75rem] line-through text-main-silver">
                 {price}
               </span>
               <p className="sm:flex lg:hidden w-[24px] h-[24px] flex items-center justify-center bg-main-dark-red text-main-white p-[2px] rounded-full  font-medium text-[0.75rem]">
                 {hasDiscount}%
               </p>
+             </>}
             </div>
           )}
           <p className={twMerge("w-full font-medium text-[0.75rem] flex items-center text-main-slate-gray", classNames?.bottom)}>

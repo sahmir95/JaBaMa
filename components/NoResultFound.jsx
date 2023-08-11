@@ -5,7 +5,7 @@ import { reset } from "@/redux/featchers/filterSlice"
 
 const NoResultFound = () => {
 
-  const filter = useSelector((state) => state.filterReducer)
+  const filter = useSelector((state) => state.filterSlice)
   const dispatch = useDispatch()
 
   return (

@@ -5,7 +5,7 @@ import { sortCheap,sortExpensive,sortRate,sortReset } from "@/redux/featchers/fi
 import { AiOutlineCheckSquare,AiFillCheckSquare } from "react-icons/ai"
 function CategoryModal() {
 
-  const sort = useSelector((state) => state.filterReducer.sort)
+  const sort = useSelector((state) => state.filterSlice.sort)
   const dispatch = useDispatch()
 
   const [active,setActive] = useState(sort);

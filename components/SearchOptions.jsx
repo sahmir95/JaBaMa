@@ -17,9 +17,9 @@ import ToolTip from "./ToolTip"
 
 const SearchOptions = ({ mode }) => {
 
-  const sort = useSelector((state) => state.filterReducer.sort)
-  const city = useSelector((state) => state.filterReducer.city)
-  const type = useSelector((state) => state.filterReducer.type)
+  const sort = useSelector((state) => state.filterSlice.sort)
+  const city = useSelector((state) => state.filterSlice.city)
+  const type = useSelector((state) => state.filterSlice.type)
   const dispatch = useDispatch()
 
 

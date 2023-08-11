@@ -5,7 +5,7 @@ import { setTypeCottage,setTypeEcoTourism,setTypeHotel,setTypeVilla,setTypeReset
 import { AiOutlineCheckSquare,AiFillCheckSquare } from "react-icons/ai"
 function TypeTool() {
 
-  const type = useSelector((state) => state.filterReducer.type)
+  const type = useSelector((state) => state.filterSlice.type)
   const dispatch = useDispatch()
 
   const [active,setActive] = useState(type);

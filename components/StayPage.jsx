@@ -15,10 +15,10 @@ function StayPage({ stays }) {
   const [loading, setLoading] = useState(false);
   const [products, setProducts] = useState(stays);
   const [amount, setAmount] = useState(stays.length);
-  const filter = useSelector((state) => state.filterReducer);
-  const type = useSelector((state) => state.filterReducer.type);
-  const city = useSelector((state) => state.filterReducer.city);
-  const sort = useSelector((state) => state.filterReducer.sort);
+  const filter = useSelector((state) => state.filterSlice);
+  const type = useSelector((state) => state.filterSlice.type);
+  const city = useSelector((state) => state.filterSlice.city);
+  const sort = useSelector((state) => state.filterSlice.sort);
   const dispatch = useDispatch();
 
 
@@ -156,12 +156,14 @@ function StayPage({ stays }) {
                       bottom: "text-xs",
                       price: "font-bold flex items-center gap-x-1 text-[0.9rem] pl-[0.15rem]",
                       reserve: "w-fit text-xs px-2 py-1 border-main-border-gray font-medium mt-[0.35rem]",
-                      discount: "w-fit text-xs px-2 py-[0.15rem] font-medium",
+                      discount: "w-fit sm:flex text-xs px-2 py-[0.15rem] font-medium",
                     }}
                     province={stay?.province}
                     images={stay?.images}
                     capacity={stay?.capacity}
                     hasDiscount={stay?.discount}
+                    isCocacity={true}
+                    dontShowCircle={true}
                     isBeginText={true}
                     hasReserv={stay?.HasImmediateReserve}
                     hasFavorit={true}
