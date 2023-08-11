@@ -4,7 +4,7 @@ import persistReducer from "redux-persist/es/persistReducer";
 import persistStore from "redux-persist/es/persistStore";
 import storage from "redux-persist/lib/storage";
 import thunk from "redux-thunk";
-
+import filterSlice from "./featchers/filterSlice";
 import dataSlice from "./featchers/dataSlice";
 import favoriteSlice from "./featchers/favoriteSlice";
 import detailSlice from "./featchers/detailSlice";

@@ -32,7 +32,9 @@ module.exports = {
       "main-light-silver": "#e7e8e9",
       "main-white-smoke": "#f0f0f0",
       "main-snow": "#f1f1f1",
+      "main-border-gray": "#dddedf",
       "main-light-grayish-silver": "#f5f5f5",
+      "main-lightish-gray": "#f3f4f5",
       "main-light-grayish-white": "#f7f7f7",
       "main-white": "#ffffff",
       "main-light-orange": "#ffa41b",
@@ -52,6 +54,8 @@ module.exports = {
       // => @media (min-width: 768px) { ... }
 
       lg: "1024px",
+      xl: "1366px",
+      dxl: "1600px",
       // => @media (min-width: 1024px) { ... }
     },
   },
