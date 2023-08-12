@@ -85,6 +85,7 @@ export const ReservationBox = ({data}) => {
                         <div className="flex justify-start items-start flex-col">
                             <div className="font-light text-[0.7rem]">تاریخ خروج</div>
                             <DatePicker
+                                multiple={false}
                                 value={valueExit}
                                 onChange={handleChangeExit}
                                 inputClass="custom-input"

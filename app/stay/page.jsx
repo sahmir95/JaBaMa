@@ -81,7 +81,6 @@ export default function Detail() {
                             </div>
                                 <AvatarCondition data={data}/>
                         </div>
-                        <div className="w-full h-[1px] bg-main-light-gray mt-[20px]"></div>
                         <ImmediateReservation data={data}/>
                         <div className="w-full h-[1px] bg-main-light-gray mt-[20px]"></div>
                         <div className="w-full flex justify-start items-start flex-col mt-[20px]">
