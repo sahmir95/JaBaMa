@@ -54,7 +54,6 @@ export default function CardWithSwiper({
     } else {
       dispatch(removeFavorite(obj));
     }
-
     setIsFavor(!isFavor);
   };
   return (

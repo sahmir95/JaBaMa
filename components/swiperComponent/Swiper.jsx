@@ -102,7 +102,6 @@ export default function SwiperComponent({ obj, images, aspect }) {
               <Link
                 href={{
                   pathname: "/stay",
-                  query: obj,
                 }}
                 onClick={() => dispatch(addDetailItem(obj))}
                 className="w-full"
