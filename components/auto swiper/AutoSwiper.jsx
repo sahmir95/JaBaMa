@@ -21,7 +21,7 @@ export default function AutoSwiper() {
     "https://cdn.jabama.com/image/jabama-images/1297502/34609171-bc26-498d-a378-1862c117ed5f.jpg",
   ];
   return (
-    <div className="w-full sm:min-h-[160px] lg:hidden px-[20px] flex items-center justify-center">
+    <div className="w-full sm:min-h-[160px] lg:hidden px-[20px] flex items-center justify-center rounded">
       <Swiper
         dir="rtl"
         spaceBetween={30}
@@ -40,7 +40,7 @@ export default function AutoSwiper() {
         {images.map((item, index) => {
           return (
             <SwiperSlide key={index}>
-              <img src={item} loading="lazy" />
+              <img src={item} loading="lazy" className="rounded" />
             </SwiperSlide>
           );
         })}

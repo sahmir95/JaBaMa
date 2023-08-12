@@ -10,13 +10,13 @@ import SwiperDetailPage from "../../components/swiperDetailPageComponent/SwiperD
 import React from "react";
 import {useSelector} from "react-redux";
 import ButtonFav from "@/components/buttonfav/ButtonFav";
-import {ImageDetailComponent} from "@/components/imageDetailComponent/ImageDetailComponent";
-import {ReservationBox} from "@/components/ReservationBox/ReservationBox";
-import {DiscountCondition} from "@/components/detailCondition/DiscountCondition";
-import {AvatarCondition} from "@/components/detailCondition/AvatarCondition";
-import {ImmediateReservation} from "@/components/detailCondition/ImmediateReservation";
-import {BedroomCondition} from "@/components/detailCondition/BedroomCondition";
-import {BathroomCondition} from "@/components/detailCondition/BathroomCondition";
+import { ImageDetailComponent } from "@/components/imageDetailComponent/ImageDetailComponent";
+import { ReservationBox } from "@/components/ReservationBox/ReservationBox";
+import { DiscountCondition } from "@/components/detailCondition/DiscountCondition";
+import { AvatarCondition } from "@/components/detailCondition/AvatarCondition";
+import { ImmediateReservation } from "@/components/detailCondition/ImmediateReservation";
+import { BedroomCondition } from "@/components/detailCondition/BedroomCondition";
+import { BathroomCondition } from "@/components/detailCondition/BathroomCondition";
 
 export default function Detail() {
     const detailData = useSelector((state) => state.detailSlice.detailData);
