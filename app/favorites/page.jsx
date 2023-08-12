@@ -2,37 +2,30 @@
 import React, { useState } from "react";
 import Sidbar from "@/components/sidebar/Sidbar";
 import TitlePage from "@/components/titlepage/TiTlePage";
-import HeaderPages from "@/components/header/headerDesktop/HeaderPages";
-import HeaderMobilePages from "@/components/header/headerMobile/HeaderMobilePages";
-import ButtonFav from "@/components/buttonfav/ButtonFav";
 import { useSelector } from "react-redux";
 import CardWithSwiper from "@/components/card with swiper/CardWithSwiper";
+import "./style.css";
+
 const FavoritePage = () => {
   const data = useSelector((state) => state.favoriteSlice.favorite);
-  const [favorite, setfavorite] = useState([]);
-
   return (
-    <>
-      <HeaderPages
-        display="static"
-        loc=""
-        border="border-b border-b-main-light-gray"
-        compFilter=""
-      />
-      <HeaderMobilePages title="مورد علاقه‌ها" />
+    <div className="max-w-[1400px] mx-auto">
       <div>
         {data.length > 0 ? (
-          <div className="flex">
-            <div className="hidden lg:block w-1/4 mb-10">
+          <div className="w-full h-auto flex pb-[58px]">
+            <div className="hidden lg:block mb-10 mr-5 lg:w-72">
               <Sidbar />
             </div>
-            <div className="w-full lg:w-3/4 ">
-              <div>
-                <TitlePage title="مورد علاقه ها" />
-                <div className="w-full flex sm:flex-wrap sm:px-4 sm:flex-col sm:gap-3">
+            <div className="w-full h-full lg:w-2/4 mx-3">
+              <div className="w-full h-auto">
+                <div className="hidden lg:block  ">
+                  <TitlePage title="مورد علاقه ها" />
+                </div>
+                <div className="w-full h-full grid grid-cols-1 md:grid md:grid-cols-2 lg:grid lg:grid-cols-2 gap-3 sm:pt-[50px] lg:pt-4">
                   {data.map((item) => {
                     return (
                       <CardWithSwiper
+                        key={item.id}
                         obj={item}
                         rate={item.rate}
                         comments={item.comments}
@@ -58,16 +51,16 @@ const FavoritePage = () => {
           </div>
         ) : (
           <div className="flex">
-            <div className="hidden lg:block w-1/4 mb-10">
+            <div className="hidden lg:block mb-10 mr-5 lg:w-72">
               <Sidbar />
             </div>
-            <div className="w-full lg:w-3/4 h-3/4 ">
-              <div className="hidden lg:block mr-8 ">
+            <div className="w-full h-auto ">
+              <div className="hidden lg:block ">
                 <TitlePage title="مورد علاقه ها" />
               </div>
-              <div className="flex flex-col items-center justify-center pt-20 ">
+              <div className="h-[100vh] flex flex-col items-center justify-center pb-[40px] lg:pb-[140px] ">
                 <img
-                  className="w-3/4 lg:w-1/3 md:w-1/3 mb-4 lg:mr-4"
+                  className="w-[200px] h-[200px] lg:w-[250px] lg:h-[250px]"
                   src="https://cdn.jabama.com/original/statics/mobile/img/favorites-empty-state.5eacc43.svg"
                   alt=""
                 />
@@ -85,7 +78,7 @@ const FavoritePage = () => {
           </div>
         )}
       </div>
-    </>
+    </div>
   );
 };
 

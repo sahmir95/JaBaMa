@@ -1,4 +1,4 @@
-import { Providers } from "@/redux/provider/privider";
+import { Providers } from "@/redux/provider/provider";
 
 export const metadata = {
   title: "Next.js",
