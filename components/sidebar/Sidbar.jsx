@@ -4,7 +4,7 @@ import { Icon } from "@iconify/react";
 import TextComp from '../textcomp/TextCopm';
 const Sidbar = () => {
     return (
-      <div className=' w-[17rem] bg-main-white border border-main-light-gray rounded-lg mr-5 mt-5 shadow-lg'>
+      <div className=' w-[17rem] bg-main-white border border-main-light-gray rounded-lg mt-5 shadow-lg'>
         <MyComp title="سفرهای من" icon={<Icon icon="zondicons:travel"/>} desc="لیست سفرها و درخواست ها" showBorder={true} />
         <MyComp title="  مورد علاقه ها" icon={<Icon icon="teenyicons:heart-outline" />} desc="لیست اقامتگاه‌ها و هتل‌های مورد علاقه" showBorder={false} />
         <TextComp text="میزبانی اقامتگاه"/>

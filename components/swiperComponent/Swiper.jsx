@@ -22,8 +22,9 @@ import { Icon } from "@iconify/react";
 import { useDispatch } from "react-redux";
 import { addDetailItem } from "@/redux/featchers/detailSlice";
 import Link from "next/link";
+import { twMerge } from "tailwind-merge";
 
-export default function SwiperComponent({ obj, images }) {
+export default function SwiperComponent({ obj, images, aspect }) {
   const [imgs, setImgs] = useState(images);
   const [swiperRef, setSwiperRef] = useState(null);
   const [isHide, setIsHide] = useState(true);
@@ -54,7 +55,10 @@ export default function SwiperComponent({ obj, images }) {
     <div
       onMouseEnter={() => setIsHover(true)}
       onMouseLeave={() => setIsHover(false)}
-      className="w-full  sm:h-full  box-border md:h-[220px]  lg:h-full flex justify-center items-center rounded-lg"
+      className={twMerge(
+        "w-full  sm:h-full  box-border md:h-[220px]  lg:h-full flex justify-center items-center rounded-lg",
+        aspect
+      )}
     >
       <Swiper
         cssMode={true}
@@ -98,7 +102,6 @@ export default function SwiperComponent({ obj, images }) {
               <Link
                 href={{
                   pathname: "/stay",
-                  query: obj,
                 }}
                 onClick={() => dispatch(addDetailItem(obj))}
                 className="w-full"
@@ -107,6 +110,7 @@ export default function SwiperComponent({ obj, images }) {
                   style={{
                     backgroundImage: "url(/images/image-placeholder.svg)",
                     backgroundPosition: "center",
+                    backgroundRepeat: "no-repeat",
                     backgroundSize: "64px 64px",
                     backgroundColor: "#d7d7d9",
                   }}
