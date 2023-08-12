@@ -2,11 +2,12 @@
 import MyComp from '../mycomp/MyComp';
 import { Icon } from "@iconify/react";
 import TextComp from '../textcomp/TextCopm';
+import Link from "next/link";
 const Sidbar = () => {
     return (
       <div className=' w-[17rem] bg-main-white border border-main-light-gray rounded-lg mt-5 shadow-lg'>
-        <MyComp title="سفرهای من" icon={<Icon icon="zondicons:travel"/>} desc="لیست سفرها و درخواست ها" showBorder={true} />
-        <MyComp title="  مورد علاقه ها" icon={<Icon icon="teenyicons:heart-outline" />} desc="لیست اقامتگاه‌ها و هتل‌های مورد علاقه" showBorder={false} />
+        <Link href={"/trips"}><MyComp title="سفرهای من" icon={<Icon icon="zondicons:travel"/>} desc="لیست سفرها و درخواست ها" showBorder={true} /></Link>
+        <Link href={"/favorites"}><MyComp title="  مورد علاقه ها" icon={<Icon icon="teenyicons:heart-outline" />} desc="لیست اقامتگاه‌ها و هتل‌های مورد علاقه" showBorder={false} /></Link>
         <TextComp text="میزبانی اقامتگاه"/>
         <MyComp title="میزبان شوید" icon={<Icon icon="fluent:arrow-swap-20-regular" />} desc="لیست سفرها و درخواست ها" showBorder={false} />
         <TextComp text="حساب کاربری"/>
