@@ -6,7 +6,6 @@ import HeaderPages from "@/components/header/headerDesktop/HeaderPages";
 import HeaderMobilePages from "@/components/header/headerMobile/HeaderMobilePages";
 
 const MyTrips = ({ data }) =>{
-    const [favorite, setfavorite] = useState([1,2,4]);
     return (
         <>
           <HeaderPages
