@@ -48,7 +48,7 @@ export const ReservationBox = ({data}) => {
                     <div className="text-[0.9rem] font-light">({data.comments})</div>
                 </div>
             </div>
-            <div className="w-full flex justify-center items-center flex-col mt-[20px]">
+            <div className="w-full flex justify-center items-center flex-col mt-[10px]">
                 <div className="w-full flex justify-center items-center">
                     <div
                         className="w-full flex justify-start items-center px-[20px] py-[10px] border-[1px] border-l-0 border-main-light-gray rounded-tr-[6px]">

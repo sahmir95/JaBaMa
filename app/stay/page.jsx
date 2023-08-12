@@ -70,7 +70,7 @@ export default function Detail() {
                     <ImageDetailComponent data={data}/>
                 </div>
                 <div className="w-full h-[1px] bg-main-light-gray mt-[20px] lg:hidden"></div>
-                <div className="w-full flex justify-between items-center lg:relative">
+                <div className="w-full flex justify-between items-start lg:relative">
                     <div className="w-full lg:w-[68%]">
                         <div className="w-full mt-[20px] flex justify-between items-center">
                             <div className="w-[74%]">
@@ -200,10 +200,10 @@ export default function Detail() {
                         <RulesComponent rules={data.rules} type={data.type} />
                         <div className="w-full h-[1px] bg-main-light-gray mt-[8px]"></div>
                         <CommentsComponent comments={data.reviews} />
-                    <div className="w-full h-[1px] bg-main-light-gray mt-[20px]"></div>
-                    <div className="w-full mt-[20px] flex flex-col px-[20px]">
+                    <div className="w-full h-[1px] bg-main-light-gray mt-[20px] lg:hidden"></div>
+                    <div className="w-full mt-[20px] flex flex-col px-[20px] lg:hidden">
                         <div className="font-bold">جستجو {data.type} مشابه</div>
-                        <div className="w-full h-[200px] flex items-start scroll-smooth scroll-p-[20px] gap-x-[20px] mt-[20px] whitespace-nowrap overflow-x-scroll">
+                        <div className="w-full h-[200px] flex items-start scroll-smooth scroll-p-[20px] gap-x-[20px] mt-[20px] whitespace-nowrap overflow-x-scroll lg:hidden">
                             <a
                                 href="#"
                                 className="w-fit h-fit bg-main-light-grayish-silver font-medium text-[0.9rem] p-[20px] border-[1px] border-main-light-gray rounded-[10px]"
@@ -225,13 +225,35 @@ export default function Detail() {
                         </div>
                     </div>
                     </div>
-                    <div className="hidden  lg:inline lg:sticky lg:w-[26%] lg:p-[20px] lg:border-[1px] lg:border-main-light-gray lg:rounded-[10px]">
+                    <div className="hidden lg:h-full lg:inline lg:sticky lg:top-0 left-0 lg:w-[26%] lg:p-[20px] lg:border-[1px] lg:border-main-light-gray lg:rounded-[10px] mt-[20px] mb-[40px]">
                         <ReservationBox data={data}/>
                     </div>
 
-
                 </div>
-
+                <div className="hidden lg:w-full lg:inline lg:h-[1px] lg:bg-main-light-gray lg:mt-[20px]"></div>
+                <div className="hidden lg:w-full lg:mt-[20px] lg:flex lg:flex-col lg:px-[20px]">
+                    <div className="font-bold">جستجو {data.type} مشابه</div>
+                <div className="hidden lg:w-full lg:h-[100px] lg:flex lg:items-start lg:gap-x-[20px] lg:mt-[20px]">
+                    <a
+                        href="#"
+                        className="w-fit h-fit bg-main-light-grayish-silver font-medium text-[0.9rem] p-[20px] border-[1px] border-main-light-gray rounded-[10px]"
+                    >
+                        اجاره ویلا و سوئیت در کردان{" "}
+                    </a>
+                    <a
+                        href="#"
+                        className="w-fit h-fit bg-main-light-grayish-silver font-medium text-[0.9rem] p-[20px] border-[1px] border-main-light-gray rounded-[10px]"
+                    >
+                        اجاره ویلا و سوئیت باربیکیودار (منقل) در کردان{" "}
+                    </a>
+                    <a
+                        href="#"
+                        className="w-fit h-fit bg-main-light-grayish-silver font-medium text-[0.9rem] p-[20px] border-[1px] border-main-light-gray rounded-[10px]"
+                    >
+                        اجاره ویلا و سوئیت در استان البرز{" "}
+                    </a>
+                </div>
+                </div>
             </div>
         </div>
     );
