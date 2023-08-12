@@ -37,7 +37,7 @@ export default function CardWithSwiper({
     discount: "",
     reserve: "",
   },
-  isCocacity,
+  isCopacity,
   hasDiscount,
   isBeginText,
   hasReserv,
@@ -124,13 +124,15 @@ export default function CardWithSwiper({
           >
             <span>{`استان ${province}،`}</span>
             <span> {city}</span>
-            {bedroom && (
+            {bedroom > 0 ? (
               <span className="flex items-end text-right">
                 <span className="flex items-end mx-[2px] text-xl"> . </span>
                 <span>{bedroom} اتاق</span>
               </span>
+            ) : (
+              ""
             )}
-            {isCocacity && (
+            {isCopacity && (
               <span className="flex items-end text-right">
                 <span className=" flex mr-[2px] text-xl"> . </span>
                 <span className="mx-1">

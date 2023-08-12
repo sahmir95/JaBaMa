@@ -5,6 +5,8 @@ import React from "react";
 import AppBanner from "@/components/menu/jabamaAppNotif/AppBanner";
 import Footer from "@/components/footer/Footer";
 import { Providers } from "@/redux/provider/provider";
+import LoadingHome from "./LoadingHome";
+import { Suspense } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,10 +21,12 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         <Providers>
-          {children}
-          <AppBanner />
-          <Menu />
-          <Footer />
+          <Suspense fallback={<LoadingHome />}>
+            {children}
+            <AppBanner />
+            <Menu />
+            <Footer />
+          </Suspense>
         </Providers>
       </body>
     </html>

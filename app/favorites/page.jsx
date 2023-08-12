@@ -8,10 +8,6 @@ import ButtonFav from "@/components/buttonfav/ButtonFav";
 import { useSelector } from "react-redux";
 import CardWithSwiper from "@/components/card with swiper/CardWithSwiper";
 const FavoritePage = () => {
-  const data = useSelector((state) => state.favoriteSlice.favorite);
-  console.log(sort);
-  const [favorite, setfavorite] = useState([]);
-
   return (
     <>
       <HeaderPages

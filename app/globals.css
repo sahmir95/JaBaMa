@@ -3,71 +3,71 @@
 @tailwind utilities;
 
 html {
-    direction: rtl;
+  direction: rtl;
 }
 
 @font-face {
-    font-family: medium;
-    src: url("../public/fonts/Qs_Iranyekan\ medium.woff") format("woff");
+  font-family: medium;
+  src: url("../public/fonts/Qs_Iranyekan\ medium.woff") format("woff");
 }
 
 @font-face {
-    font-family: bold;
-    src: url("../public/fonts/Qs_Iranyekan\ bold.woff") format("woff");
+  font-family: bold;
+  src: url("../public/fonts/Qs_Iranyekan\ bold.woff") format("woff");
 }
 
 @font-face {
-    font-family: light;
-    src: url("../public/fonts/Qs_Iranyekan\ light.woff") format("woff");
+  font-family: light;
+  src: url("../public/fonts/Qs_Iranyekan\ light.woff") format("woff");
 }
 
 @font-face {
-    font-family: thin;
-    src: url("../public/fonts/Qs_Iranyekan\ thin.woff") format("woff");
+  font-family: thin;
+  src: url("../public/fonts/Qs_Iranyekan\ thin.woff") format("woff");
 }
 
 @font-face {
-    font-family: extrabold;
-    src: url("../public/fonts/Qs_Iranyekan\ extrabold.woff") format("woff");
+  font-family: extrabold;
+  src: url("../public/fonts/Qs_Iranyekan\ extrabold.woff") format("woff");
 }
 
 @font-face {
-    font-family: black_Iranyekan;
-    src: url("../public/fonts/Qs_Iranyekan\ black.woff") format("woff");
+  font-family: black_Iranyekan;
+  src: url("../public/fonts/Qs_Iranyekan\ black.woff") format("woff");
 }
 
 @layer utilities {
   @variants responsive {
     .no-scrollbar::-webkit-scrollbar {
-        display: none;
+      display: none;
     }
 
     .no-scrollbar {
-        -ms-overflow-style: none;  
-        scrollbar-width: none; 
+      -ms-overflow-style: none;
+      scrollbar-width: none;
     }
   }
 }
 
 body {
-    position: relative;
+  position: relative;
 }
 
 .bodyContainer {
-    position: fixed;
-    z-index: 1000;
-    bottom: 0;
+  position: fixed;
+  z-index: 1000;
+  bottom: 0;
   background-color: white;
   overflow: hidden;
 }
 
 .tooltipContainer {
-    position: absolute;
-    z-index: 1000;
-    top: 1rem;
-    right: 0;
-    background-color: white;
-    overflow: hidden;
+  position: absolute;
+  z-index: 1000;
+  top: 1rem;
+  right: 0;
+  background-color: white;
+  overflow: hidden;
 }
 
 body.modal-open {
@@ -75,58 +75,58 @@ body.modal-open {
 }
 
 .overlay {
-    position: fixed;
-    inset: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: 100vh;
-    background: #7e7e7e7c;
-    z-index: 900;
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background: #7e7e7e7c;
+  z-index: 900;
 }
 
 .tooltip {
-position: fixed;
-width: 100vw;
-height: 100vh;
-z-index: 900;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 900;
 }
-  
+
 .customButtonPad {
-    padding: 8.675px 14px 8.675px 13px;
+  padding: 8.675px 14px 8.675px 13px;
 }
 
 @keyframes scaleup {
-    0% {
-        opacity: 0;
-        transform: scale(1) translateY(1000px);
-    }
-    100% {
-        opacity: 1;
-        transform: scale(1) translateY(0);
-    }
+  0% {
+    opacity: 0;
+    transform: scale(1) translateY(1000px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
 }
 
 @keyframes scaleuptwo {
-    0% {
-        opacity: 0;
-        transform: scale(1) translateY(20px);
-    }
-    100% {
-        opacity: 1;
-        transform: scale(1) translateY(0);
-    }
-}
-.animationScaleUp {
-    border-radius: 24px 24px 0 0;
-    animation: scaleup 0.3s cubic-bezier(.165,.84,.44,1) forwards;
-}
-.animationScaleUpTwo {
-    border-radius: 0.75rem;
-    animation: scaleuptwo 0.3s cubic-bezier(.165,.84,.44,1) forwards;
+  0% {
+    opacity: 0;
+    transform: scale(1) translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
 }
 
+.animationScaleUp {
+  border-radius: 24px 24px 0 0;
+  animation: scaleup 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+.animationScaleUpTwo {
+  border-radius: 0.75rem;
+  animation: scaleuptwo 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
 
 .customPadOption {
   padding: 5.49px 11px 5.32px 14px;
@@ -138,45 +138,49 @@ z-index: 900;
 }
 
 .scrollHorizontal {
-    overflow-x: auto;
+  overflow-x: auto;
 }
 
 .scrollHorizontal::-webkit-scrollbar {
-    width: 0;
-    height: 0;
+  width: 0;
+  height: 0;
 }
 
 .scrollHorizontal::-webkit-scrollbar-track {
-    background-color: transparent;
+  background-color: transparent;
 }
 
 .scrollHorizontal::-webkit-scrollbar-thumb {
-    background-color: transparent;
+  background-color: transparent;
 }
 
 .shadowHeader::before {
-    position: absolute;
-    content: "";
-    inset: 0;
-    width: 100%;
-    height: 200px;
-    background: linear-gradient(180deg, rgba(115,119,121,0.7455357142857143) 0%, rgba(115,119,121,0) 100%);
+  position: absolute;
+  content: "";
+  inset: 0;
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(
+    180deg,
+    rgba(115, 119, 121, 0.7455357142857143) 0%,
+    rgba(115, 119, 121, 0) 100%
+  );
 }
 
 .imageRendering {
-    image-rendering: pixelated;
+  image-rendering: pixelated;
 }
 
 .shadowBox {
-    box-shadow: 0 0.125rem 1.5rem 0 rgba(14,16,17,.08);
+  box-shadow: 0 0.125rem 1.5rem 0 rgba(14, 16, 17, 0.08);
 }
 
 .transformIcon {
-    transform: translate(50%, -40%);
+  transform: translate(50%, -40%);
 }
 
 @media only screen and (min-width: 1601px) {
-    .customPadOption {
-        padding: 1.1rem 0.9rem;
-    }
+  .customPadOption {
+    padding: 1.1rem 0.9rem;
+  }
 }
