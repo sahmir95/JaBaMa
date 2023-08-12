@@ -25,6 +25,7 @@ export default function CardWithSwiper({
   capacity,
   classNames = {
     aspect: "",
+    describtion: "",
     images: "",
     title: "",
     rate: "",
@@ -89,7 +90,7 @@ export default function CardWithSwiper({
         onClick={() => dispatch(addDetailItem(obj))}
         className="w-full"
       >
-        <div className="w-full flex flex-col gap-2 lg:h-2/3">
+        <div className={twMerge("w-full flex flex-col gap-2 lg:h-2/3", classNames?.describtion)}>
           <div className="w-full flex  items-center gap-1">
             <Icon icon="ic:round-star" width="14" heigth="14" color="orange" />
             <p
