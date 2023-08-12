@@ -56,7 +56,7 @@ export default function SwiperComponent({ obj, images, aspect }) {
       onMouseEnter={() => setIsHover(true)}
       onMouseLeave={() => setIsHover(false)}
       className={twMerge(
-        "w-full  sm:h-full  box-border md:h-[220px]  lg:h-full flex justify-center items-center rounded-lg",
+        "w-full  sm:h-full  box-border   lg:h-full flex justify-center items-center rounded-lg",
         aspect
       )}
     >
@@ -114,7 +114,7 @@ export default function SwiperComponent({ obj, images, aspect }) {
                     backgroundSize: "64px 64px",
                     backgroundColor: "#d7d7d9",
                   }}
-                  className="w-full aspect-[5/3] object-cover"
+                  className="w-full aspect-[5/3] object-cover md:"
                   key={item}
                   src={item}
                   loading="lazy"
