@@ -8,12 +8,14 @@ import filterSlice from "./featchers/filterSlice";
 import dataSlice from "./featchers/dataSlice";
 import favoriteSlice from "./featchers/favoriteSlice";
 import detailSlice from "./featchers/detailSlice";
+import travelSlice from "./featchers/travelSlice";
 
 const rootReducer = combineReducers({
   dataSlice,
   favoriteSlice,
   detailSlice,
-  filterSlice
+  travelSlice,
+  filterSlice,
 });
 
 const persistConfig = {

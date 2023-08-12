@@ -24,27 +24,27 @@ export default function CardWithSwiper({
   bedroom,
   capacity,
   classNames = {
-    aspect: '',
+    aspect: "",
     images: "",
     title: "",
     rate: "",
     aspect: "",
     comment: "",
-    middle: '',
+    middle: "",
     bottom: "",
     startPrice: "",
     price: "",
     discount: "",
-    reserve: ""
+    reserve: "",
   },
-  isCocacity,
+  isCopacity,
   hasDiscount,
   isBeginText,
   hasReserv,
   hasFavorit,
   isFavorite,
   showDiscountPrice,
-  dontShowCircle
+  dontShowCircle,
 }) {
   const dispatch = useDispatch();
   const [isFavor, setIsFavor] = useState(isFavorite);
@@ -54,7 +54,6 @@ export default function CardWithSwiper({
     } else {
       dispatch(removeFavorite(obj));
     }
-
     setIsFavor(!isFavor);
   };
   return (
@@ -77,7 +76,11 @@ export default function CardWithSwiper({
             </Link>
           </div>
         )}
-        <SwiperComponent obj={obj} images={images} aspect={classNames?.aspect} />
+        <SwiperComponent
+          obj={obj}
+          images={images}
+          aspect={classNames?.aspect}
+        />
       </div>
       <Link
         href={{
@@ -89,63 +92,119 @@ export default function CardWithSwiper({
         <div className="w-full flex flex-col gap-2 lg:h-2/3">
           <div className="w-full flex  items-center gap-1">
             <Icon icon="ic:round-star" width="14" heigth="14" color="orange" />
-            <p className={twMerge("font-medium text-[0.625rem]", classNames?.rate)}>{toFarsiNumber(rate)}</p>
-            <p className={twMerge("font-light text-[0.625rem]", classNames?.comment)}>{`(${toFarsiNumber(comments)} دیدگاه)`}</p>
+            <p
+              className={twMerge(
+                "font-medium text-[0.625rem]",
+                classNames?.rate
+              )}
+            >
+              {toFarsiNumber(rate)}
+            </p>
+            <p
+              className={twMerge(
+                "font-light text-[0.625rem]",
+                classNames?.comment
+              )}
+            >{`(${toFarsiNumber(comments)} دیدگاه)`}</p>
           </div>
-          <p className={twMerge("w-full font-medium text-sm text-right truncate", classNames?.title)}>
+          <p
+            className={twMerge(
+              "w-full font-medium text-sm text-right truncate",
+              classNames?.title
+            )}
+          >
             {`${title.replace("اجاره", "").replace(`${city}`, "")}`}
           </p>
-          <p className={twMerge("w-full h-4 font-medium text-[0.67rem] flex items-end text-right text-main-slate-gray", classNames?.middle)}>
+          <p
+            className={twMerge(
+              "w-full h-4 font-medium text-[0.67rem] flex items-end text-right text-main-slate-gray",
+              classNames?.middle
+            )}
+          >
             <span>{`استان ${province}،`}</span>
             <span> {city}</span>
-            {bedroom && (
+            {bedroom > 0 ? (
               <span className="flex items-end text-right">
                 <span className="flex items-end mx-[2px] text-xl"> . </span>
                 <span>{bedroom} اتاق</span>
               </span>
+            ) : (
+              ""
             )}
-            {isCocacity && (
-            <span className="flex items-end text-right">
-              <span className=" flex mr-[2px] text-xl"> . </span>
-              <span className="mx-1"> {toFarsiNumber(capacity?.base)} نفر پایه </span>
-              {capacity?.extra && 
-              <>
-                <span> + </span>
-                <span className="mr-1"> {capacity?.extra && toFarsiNumber(capacity.extra)} نفر اضافه </span>
-              </>
-              }
-            </span>
+            {isCopacity && (
+              <span className="flex items-end text-right">
+                <span className=" flex mr-[2px] text-xl"> . </span>
+                <span className="mx-1">
+                  {" "}
+                  {toFarsiNumber(capacity?.base)} نفر پایه{" "}
+                </span>
+                {capacity?.extra && (
+                  <>
+                    <span> + </span>
+                    <span className="mr-1">
+                      {" "}
+                      {capacity?.extra && toFarsiNumber(capacity.extra)} نفر
+                      اضافه{" "}
+                    </span>
+                  </>
+                )}
+              </span>
             )}
           </p>
           {hasDiscount > 0 && (
             <div className="w-full flex items-center gap-2">
-              <p className={twMerge("sm:hidden lg:flex w-[42%] flex justify-center bg-[rgb(255,245,246)] text-main-dark-red py-[1px] rounded-2xl border border-main-dark-red font-medium text-[0.75rem]", classNames?.discount)}>
+              <p
+                className={twMerge(
+                  "sm:hidden lg:flex w-[42%] flex justify-center bg-[rgb(255,245,246)] text-main-dark-red py-[1px] rounded-2xl border border-main-dark-red font-medium text-[0.75rem]",
+                  classNames?.discount
+                )}
+              >
                 % تا {toFarsiNumber(hasDiscount)} درصد تخفیف
               </p>
-             {!dontShowCircle &&
-             <>
-              <span className="sm:block lg:hidden text-[0.75rem] line-through text-main-silver">
-                {price}
-              </span>
-              <p className="sm:flex lg:hidden w-[24px] h-[24px] flex items-center justify-center bg-main-dark-red text-main-white p-[2px] rounded-full  font-medium text-[0.75rem]">
-                {hasDiscount}%
-              </p>
-             </>}
+              {!dontShowCircle && (
+                <>
+                  <span className="sm:block lg:hidden text-[0.75rem] line-through text-main-silver">
+                    {price}
+                  </span>
+                  <p className="sm:flex lg:hidden w-[24px] h-[24px] flex items-center justify-center bg-main-dark-red text-main-white p-[2px] rounded-full  font-medium text-[0.75rem]">
+                    {hasDiscount}%
+                  </p>
+                </>
+              )}
             </div>
           )}
-          <p className={twMerge("w-full font-medium text-[0.75rem] flex items-center text-main-slate-gray", classNames?.bottom)}>
+          <p
+            className={twMerge(
+              "w-full font-medium text-[0.75rem] flex items-center text-main-slate-gray",
+              classNames?.bottom
+            )}
+          >
             {isBeginText && (
-              <span className={twMerge("sm:hidden lg:block text-main-black text-[0.65rem]", classNames?.startPrice)}>
+              <span
+                className={twMerge(
+                  "sm:hidden lg:block text-main-black text-[0.65rem]",
+                  classNames?.startPrice
+                )}
+              >
                 شروع قیمت از:
               </span>
             )}
-            <span className={twMerge("flex font-medium text-[0.75rem] mr-[4px] text-main-black", classNames?.price)}>
+            <span
+              className={twMerge(
+                "flex font-medium text-[0.75rem] mr-[4px] text-main-black",
+                classNames?.price
+              )}
+            >
               {hasDiscount > 0 ? (
                 <span className="text-right flex gap-1">
-                  {showDiscountPrice && <span className="line-through text-main-silver sm:hidden lg:block">
-                  {toFarsiNumber(price)}
-                  </span>}
-                  <span>{toFarsiNumber(price - (price * hasDiscount) / 100)}</span>
+                  {showDiscountPrice && (
+                    <span className="line-through text-main-silver sm:hidden lg:block">
+                      {toFarsiNumber(price)}
+                    </span>
+                  )}
+                  <span>
+                    {toFarsiNumber(price - (price * hasDiscount) / 100)}
+                  </span>
                 </span>
               ) : (
                 <span>{toFarsiNumber(price)}</span>
@@ -156,7 +215,12 @@ export default function CardWithSwiper({
           </p>
           {hasReserv && (
             <div className="w-full">
-              <p className={twMerge(" w-[36%] py-[3px] flex gap-1 justify-center items-center border border-main-light-gray rounded-lg font-medium text-[0.65rem] text-main-deep-teal", classNames?.reserve)}>
+              <p
+                className={twMerge(
+                  " w-[36%] py-[3px] flex gap-1 justify-center items-center border border-main-light-gray rounded-lg font-medium text-[0.65rem] text-main-deep-teal",
+                  classNames?.reserve
+                )}
+              >
                 <Icon icon="ant-design:thunderbolt-filled" width="12" />
                 <span>رزرو آنی و قطعی</span>
               </p>
