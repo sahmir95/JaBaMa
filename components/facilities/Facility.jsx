@@ -18,7 +18,7 @@ export const Facility = ({ facility, type }) => {
             <h2 className="w-full font-bold text-[0.9rem]">
               امکانات رفاهی {type}
             </h2>
-            <ul className="w-full h-[250px] flex justify-between items-start flex-col mt-[20px] ">
+            <ul className="w-full h-[250px] flex justify-between items-start flex-col mt-[20px]">
               {[...facility].sort((a,b) => b.exist - a.exist).map((item) => {
                 return (
                   <li
@@ -31,7 +31,7 @@ export const Facility = ({ facility, type }) => {
                   >
                     <span className="w-[40px]">
                       <img
-                        className="w-[24px] h-[24px]"
+                        className="w-[25px] h-[25px]"
                         src={item.icon}
                         alt={item.alt}
                       />

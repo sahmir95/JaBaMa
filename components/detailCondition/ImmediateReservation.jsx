@@ -1,12 +1,16 @@
+import React from "react";
 
 export const ImmediateReservation = ({data}) => {
     return (
-        <div className="mt-[20px] ">
-            {data.HasImmediateReserve ? (
-                    <div className="flex justify-start items-start">
-                        <div className="w-[50px] mt-[8px] ">
+        <div>
+            <div className="w-full h-[1px] bg-main-light-gray mt-[32px]"></div>
+            <div className="mt-[20px] ">
+
+                {data.HasImmediateReserve ? (
+                    <div className="flex justify-start items-start gap-x-[10px]">
+                        <div className=" mt-[8px] ">
                             <img
-                                className="w-[36px] h-[25px]"
+                                className="w-[25px] h-[25px]"
                                 src="https://img.icons8.com/external-tanah-basah-basic-outline-tanah-basah/24/1A1A1A/external-flash-multimedia-tanah-basah-basic-outline-tanah-basah.png"
                                 alt="thunder"
                             />
@@ -22,9 +26,11 @@ export const ImmediateReservation = ({data}) => {
                         </div>
                     </div>
 
-            ) : null}
+                ) : null}
 
+            </div>
         </div>
+
     );
 };
 

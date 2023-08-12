@@ -1,17 +1,46 @@
 'use client'
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import DatePicker from "react-multi-date-picker";
 import persian from "react-date-object/calendars/persian";
 import persian_fa from "react-date-object/locales/persian_fa";
 import transition from "react-element-popper/animations/transition";
-import InputIcon from "react-multi-date-picker/components/input_icon";
 import "./date-picker-container.css"
+import { useRouter } from 'next/navigation'
+import { useDispatch } from "react-redux";
+import { addTravelData } from "@/redux/featchers/travelSlice";
 
 
 export const ReservationBox = ({data}) => {
-    const [valueEnter, setValueEnter] = useState([])
-    const [valueExit, setValueExit] = useState([])
+    const [valueEnter, setValueEnter] = useState("")
+    const [valueExit, setValueExit] = useState("")
     const [person, setPerson] = useState(0)
+
+    const dispatch = useDispatch()
+    const router = useRouter()
+    const [totalPrice, setTotalPrice] = useState(0)
+
+
+    const calculateExtras = () => {
+        if( person - data.capacity.base > 0 ) {
+            return person - data.capacity.base
+        } else {
+            return 0
+        }
+    }
+
+    const calculatePrice = () => {
+        if (valueExit.dayOfBeginning - valueEnter.dayOfBeginning > 0) {
+            let price = ( ((data.price.base + (calculateExtras() * data.price?.extra)) * (valueExit.dayOfBeginning - valueEnter.dayOfBeginning)) )
+            return `${price} تومان`
+        } else {
+            return "لطفا تاریخ را درست انتخاب کنید"
+        }
+    }
+
+    useEffect(() => {
+        setTotalPrice(calculatePrice())
+    },[valueEnter, valueExit, data])
+
 
 
     const handleChangeEnter = (newEnter) => {
@@ -30,6 +59,36 @@ export const ReservationBox = ({data}) => {
         if (person > 0)
             setPerson(person - 1);
     };
+
+
+    const handleSend = () => {
+        if (valueExit.dayOfBeginning - valueEnter.dayOfBeginning > 0) {
+            const newTrip = {
+                date: {
+                    from: valueEnter,
+                    to: valueExit
+                },
+                price: data.price.base,
+                overall: totalPrice,
+                person: person,
+                province: data.province,
+                city: data.city,
+                title: data.title,
+                image: data.images[0],
+                host: data.host,
+                rooms: data?.bedroom?.rooms,
+            }
+            dispatch(addTravelData(newTrip))
+            router.push("/trips")
+        } else {
+            alert("لطفا تاریخ درست انتخاب نمایید")
+        }
+    }
+
+
+
+
+
 
     return (
         <div className="w-full flex justify-center items-center flex-col">
@@ -122,7 +181,7 @@ export const ReservationBox = ({data}) => {
                         </button>
                     </div>
                 </div>
-                <button className="w-full text-center text-main-white text-[0.8rem] mt-[20px] font-medium bg-main-deep-teal rounded-[6px] px-[4px] py-[12px]">
+                <button onClick={handleSend} className="w-full text-center text-main-white text-[0.8rem] mt-[20px] font-medium bg-main-deep-teal rounded-[6px] px-[4px] py-[12px]">
                     ثبت رزرو
                 </button>
                 <div className="w-full text-center text-[0.6rem] font-medium mt-[12px] text-main-silver">
@@ -135,7 +194,7 @@ export const ReservationBox = ({data}) => {
                 <div className="w-full h-[1px] bg-main-light-gray mt-[12px]"></div>
                 <div className="w-full flex justify-between items-center mt-[20px]">
                     <div className="text-center text-[0.7rem] font-medium">جمع مبلغ قابل پرداخت</div>
-                    <div className="text-center text-[0.7rem] font-medium"> {data.price.base} تومان</div>
+                    <div className="text-center text-[0.7rem] font-medium">{totalPrice}</div>
                 </div>
             </div>
         </div>

@@ -1,10 +1,10 @@
 
 export const BathroomCondition = ({data}) => {
     return (
-            <div className="w-full flex justify-start items-center">
-                <div className="w-[50px] ">
+            <div className="w-full flex justify-start items-center gap-x-[10px]">
+                <div>
                     <img
-                        className="w-[28px] h-[30px]"
+                        className="w-[25px] h-[25px]"
                         src="https://img.icons8.com/external-those-icons-lineal-those-icons/24/external-Toilet-Paper-halloween-those-icons-lineal-those-icons.png"
                         alt="paper"
                     />

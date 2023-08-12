@@ -70,29 +70,28 @@ export default function Detail() {
                     <ImageDetailComponent data={data}/>
                 </div>
                 <div className="w-full h-[1px] bg-main-light-gray mt-[20px] lg:hidden"></div>
-                <div className="w-full flex justify-between items-start lg:relative">
+                <div className="w-full flex justify-between items-start lg:relative lg:mt-[40px]">
                     <div className="w-full lg:w-[68%]">
                         <div className="w-full mt-[20px] flex justify-between items-center">
                             <div className="w-[74%]">
                                 <div className="w-full font-bold">{data.type}</div>
-                                <div className="w-full font-bold text-[0.9rem] text-main-slate-gray text-right">
+                                <div className="w-full font-bold text-[0.9rem] text-main-slate-gray text-right lg:font-medium lg:text-main-black text-[0.85rem]">
                                     اجاره {data.type} در {data.city} به میزبانی {data.host.name}
                                 </div>
                             </div>
                                 <AvatarCondition data={data}/>
                         </div>
                         <ImmediateReservation data={data}/>
-                        <div className="w-full h-[1px] bg-main-light-gray mt-[20px]"></div>
+                        <div className="w-full h-[1px] bg-main-light-gray mt-[20px] lg:mt-[32px]"></div>
                         <div className="w-full flex justify-start items-start flex-col mt-[20px]">
                             <div>
                                 <h2 className="font-bold text-[1rem]">مشخصات کلی {data.type}</h2>
                             </div>
                             <div className="mt-[20px] flex flex-col justify-around items-center gap-y-[20px]">
-                                <div className="w-full flex justify-start items-center">
-                                    <div className="w-[50px] ">
-                                        {" "}
+                                <div className="w-full flex justify-start items-center gap-x-[10px]">
+                                    <div>
                                         <img
-                                            className="w-[28px] h-[30px]"
+                                            className="w-[25] h-[25px]"
                                             src="https://img.icons8.com/external-tanah-basah-basic-outline-tanah-basah/24/external-line-wedding-tanah-basah-basic-outline-tanah-basah-27.png"
                                             alt="thunder"
                                         />
@@ -102,10 +101,10 @@ export default function Detail() {
                                         <p className="font-light text-[0.75rem]">{data.summary}</p>
                                     </div>
                                 </div>
-                                <div className="w-full flex justify-start items-center">
-                                    <div className="w-[50px] ">
+                                <div className="w-full flex justify-start items-center gap-x-[10px]">
+                                    <div>
                                         <img
-                                            className="w-[28px] h-[30px]"
+                                            className="w-[25px] h-[25px]"
                                             src="https://img.icons8.com/ios/50/user-group-man-man.png"
                                             alt="capacity"
                                         />
@@ -119,10 +118,10 @@ export default function Detail() {
                                         </p>
                                     </div>
                                 </div>
-                                <div className="w-full flex justify-start items-center ">
-                                    <div className="w-[50px] ">
+                                <div className="w-full flex justify-start items-center gap-x-[10px]">
+                                    <div>
                                         <img
-                                            className="w-[28px] h-[30px]"
+                                            className="w-[25px] h-[25px]"
                                             src="https://img.icons8.com/pastel-glyph/64/single-bed--v5.png"
                                             alt="bed"
                                         />
