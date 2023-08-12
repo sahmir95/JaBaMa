@@ -14,9 +14,15 @@ import HeaderPopDesktop from "@/components/header/headerPop/HeaderPopDesktop";
 import SearchBoxLanding from "@/components/header/headerDesktop/SearchBoxLanding";
 import HeaderDesktop from "@/components/header/headerDesktop/HeaderDesktop";
 
-const data = await getLocalData();
-
-const Page = () => {
+const Page = async () => {
+  const data = await getLocalData();
+  if (!data) {
+    return (
+      <div className="w-full h-screen flex justify-center items-center text-4xl">
+        مثل اینکه مشکلی پیش اومده
+      </div>
+    );
+  }
   return (
     <div>
       <HeaderPop />
@@ -31,10 +37,11 @@ const Page = () => {
           <Favplc data={data.cities} title={"محبوب ترین مقصد‌ها"} />
         </div>
         <BoxWithSwiper
-          data={data.data[0].vila}
+          data={data.data[0].villa}
           city={data.cities[2].province}
           title="جذاب ترین ویلاها در جاباما"
           subtitle="ویلاهای استخردار واسه سفر آخر هفته"
+          type={"villa"}
         >
           <CardWithSwiper isCocacity={false} />
         </BoxWithSwiper>
@@ -43,6 +50,7 @@ const Page = () => {
           city={data.cities[2].province}
           title="بهترین هتل ها با جاباما"
           subtitle="اقامتِ باکیفت در بهترین هتل"
+          type={"hotel"}
         >
           <CardWithSwiper isCocacity={false} />
         </BoxWithSwiper>
@@ -51,11 +59,12 @@ const Page = () => {
           city={data.cities[2].province}
           title="کلبه‌های خاص"
           subtitle="کلبه‌هلی مثلثی و چوبی"
+          type={"cottage"}
         >
           <CardWithSwiper isCocacity={false} />
         </BoxWithSwiper>
         <LastSection />
-        <TagSection data={data.data[0].vila} />
+        <TagSection data={data.data[0].villa} />
       </div>
     </div>
   );

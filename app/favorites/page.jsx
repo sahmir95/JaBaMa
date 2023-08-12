@@ -4,16 +4,13 @@ import Sidbar from "@/components/sidebar/Sidbar";
 import TitlePage from "@/components/titlepage/TiTlePage";
 import { useSelector } from "react-redux";
 import CardWithSwiper from "@/components/card with swiper/CardWithSwiper";
-import './style.css'
+import "./style.css";
 
 const FavoritePage = () => {
   const data = useSelector((state) => state.favoriteSlice.favorite);
-  const [favorite, setfavorite] = useState([]);
-
   return (
-    <div className=" container"> 
-    
-      <div >
+    <div className=" container">
+      <div>
         {data.length > 0 ? (
           <div className="w-full h-auto flex pb-[58px]">
             <div className="hidden lg:block mb-10 mr-5 lg:w-72">
@@ -21,13 +18,14 @@ const FavoritePage = () => {
             </div>
             <div className="w-full h-full lg:w-2/4 mx-1">
               <div className="w-full h-auto">
-              <div className="hidden lg:block  ">
-                <TitlePage title="مورد علاقه ها" />
-              </div>
+                <div className="hidden lg:block  ">
+                  <TitlePage title="مورد علاقه ها" />
+                </div>
                 <div className="w-full h-full grid grid-cols-1 md:grid md:grid-cols-3 lg:grid lg:grid-cols-2 gap-3 sm:pt-[50px] lg:pt-4">
                   {data.map((item) => {
                     return (
                       <CardWithSwiper
+                        key={item.id}
                         obj={item}
                         rate={item.rate}
                         comments={item.comments}
