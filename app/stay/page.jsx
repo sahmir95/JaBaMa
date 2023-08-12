@@ -12,6 +12,11 @@ import { useSelector } from "react-redux";
 import ButtonFav from "@/components/buttonfav/ButtonFav";
 import {ImageDetailComponent} from "@/components/imageDetailComponent/ImageDetailComponent";
 import {ReservationBox} from "@/components/ReservationBox/ReservationBox";
+import {DiscountCondition} from "@/components/detailCondition/DiscountCondition";
+import {AvatarCondition} from "@/components/detailCondition/AvatarCondition";
+import {ImmediateReservation} from "@/components/detailCondition/ImmediateReservation";
+import {BedroomCondition} from "@/components/detailCondition/BedroomCondition";
+import {BathroomCondition} from "@/components/detailCondition/BathroomCondition";
 
 export default function Detail() {
     const detailData = useSelector((state) => state.detailSlice.detailData);
@@ -20,8 +25,16 @@ export default function Detail() {
         <div className="w-full flex justify-center items-center flex-col">
             <div className="w-full inline relative lg:hidden">
                 <SwiperDetailPage images={data.images} id={data.id}/>
-                <img className="w-6 h-6 absolute top-0 z-10"
-                     src="https://img.icons8.com/material-outlined/24/1A1A1A/right.png" alt="right"/>
+                <div className="w-full flex justify-center items-center">
+                    <button className="w-[50px] bg-[#fafafa]">
+                        <img className="w-6 h-6 absolute top-0 z-10"
+                             src="/images/right-arrow.svg" alt="right"/>
+                    </button>
+                    <div>
+                        <button></button>
+                        <button></button>
+                    </div>
+                </div>
             </div>
             <div className="w-full px-[20px] mt-[20px] flex justify-center items-center flex-col">
                 <div className="w-full font-light flex justify-center items-center lg:flex lg:justify-between">
@@ -46,10 +59,7 @@ export default function Detail() {
                                 </div>
                                 <p className="text-lg">.</p>
                             </div>
-                            <div
-                                className="px-[8px] py-[4px] rounded-[16px] bg-main-dark-red mt-[8px] font-medium text-[0.65rem] text-main-white lg:font-bold lg:text-[0.7rem] lg:px-[10px] lg:mt-0">%
-                                تا {data.discount} درصد تخفیف
-                            </div>
+                            <DiscountCondition data={data}/>
                         </div>
                     </div>
                     <div className="hidden lg:inline lg:flex lg:justify-around lg:items-center">
@@ -69,40 +79,10 @@ export default function Detail() {
                                     اجاره {data.type} در {data.city} به میزبانی {data.host.name}
                                 </div>
                             </div>
-                                <div className=" w-[30%] flex justify-end">
-                                    {data.host.avatar ? (
-                                        <img
-                                            src={data.host.avatar}
-                                            className="w-[50px] h-[50px] rounded-[50%] border-main-black border-[2px]"
-                                            alt="avatar"
-                                        />
-                                    ) : (
-                                        <div className="w-[50px] h-[50px] bg-main-slate-gray rounded-[50%] border-main-black border-[2px]">
-                                            <img className="w-[50px] h-[50px] rounded-[50%] border-main-black border-[2px]" src="https://cdn.jabama.com/original/jabama-images/12345/52acb96f-472e-413e-9204-9a02bab95a94.svg" alt="avatar"/>
-                                        </div>
-                                    )}
-                                </div>
+                                <AvatarCondition data={data}/>
                         </div>
                         <div className="w-full h-[1px] bg-main-light-gray mt-[20px]"></div>
-                        <div className="mt-[20px] flex justify-start items-start">
-                            <div className="w-[50px] mt-[8px] ">
-                                {" "}
-                                <img
-                                    className="w-[36px] h-[25px]"
-                                    src="https://img.icons8.com/external-tanah-basah-basic-outline-tanah-basah/24/1A1A1A/external-flash-multimedia-tanah-basah-basic-outline-tanah-basah.png"
-                                    alt="thunder"
-                                />
-                            </div>
-                            <div className="w-full">
-                                <p className="w-full font-bold text-[0.9rem]">
-                                    رزرو آنی و قطعی جاباما
-                                </p>
-                                <p className="w-full font-light text-[0.75rem]">
-                                    برای رزرو نهایی این آپارتمان نیازی به تأیید از سمت میزبان نخواهید
-                                    داشت و رزرو شما قطعی خواهد بود.
-                                </p>
-                            </div>
-                        </div>
+                        <ImmediateReservation data={data}/>
                         <div className="w-full h-[1px] bg-main-light-gray mt-[20px]"></div>
                         <div className="w-full flex justify-start items-start flex-col mt-[20px]">
                             <div>
@@ -125,12 +105,11 @@ export default function Detail() {
                                 </div>
                                 <div className="w-full flex justify-start items-center">
                                     <div className="w-[50px] ">
-                                        {" "}
                                         <img
                                             className="w-[28px] h-[30px]"
                                             src="https://img.icons8.com/ios/50/user-group-man-man.png"
                                             alt="capacity"
-                                        />{" "}
+                                        />
                                     </div>
                                     <div className="w-full">
                                         <p className="font-bold text-[0.9rem]">ظرفیت</p>
@@ -143,40 +122,15 @@ export default function Detail() {
                                 </div>
                                 <div className="w-full flex justify-start items-center ">
                                     <div className="w-[50px] ">
-                                        {" "}
                                         <img
                                             className="w-[28px] h-[30px]"
                                             src="https://img.icons8.com/pastel-glyph/64/single-bed--v5.png"
                                             alt="bed"
                                         />
                                     </div>
-                                    <div className="w-full">
-                                        <p className="font-bold text-[0.9rem]">سرویس‌های خواب</p>
-                                        <p className=" font-light text-[0.75rem]">
-                                            {data.bedroom.rooms} اتاق . {data.bedroom.double} تخت دو نفره
-                                            . {data.bedroom.single} تخت یک نفره .{" "}
-                                            {data.bedroom.traditional} رخت خواب سنتی
-                                        </p>
-                                    </div>
+                                    <BedroomCondition data={data}/>
                                 </div>
-                                <div className="w-full flex justify-start items-center">
-                                    <div className="w-[50px] ">
-                                        {" "}
-                                        <img
-                                            className="w-[28px] h-[30px]"
-                                            src="https://img.icons8.com/external-those-icons-lineal-those-icons/24/external-Toilet-Paper-halloween-those-icons-lineal-those-icons.png"
-                                            alt="paper"
-                                        />
-                                    </div>
-                                    <div className="w-full">
-                                        <p className="font-bold text-[0.9rem]">سرویس‌های بهداشتی</p>
-                                        <p className="font-light text-[0.75rem]">
-                                            {data.bathroom.persianWC} سرویس ایرانی .{" "}
-                                            {data.bathroom.foreignWC} سرویس فرنگی . {data.bathroom.shower}{" "}
-                                            حمام
-                                        </p>
-                                    </div>
-                                </div>
+                                <BathroomCondition data={data}/>
                             </div>
                         </div>
                         <div className="w-full h-[1px] bg-main-light-gray mt-[20px]"></div>
