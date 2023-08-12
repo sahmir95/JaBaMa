@@ -1,6 +1,6 @@
-import SupportCall from "@/components/SupportCall"
-import GoBackButton from "@/components/GoBackButton"
-import SearchOptions from "@/components/SearchOptions"
+import SupportCall from "@/components/stays/SupportCall"
+import GoBackButton from "@/components/stays/GoBackButton"
+import SearchOptions from "@/components/stays/SearchOptions"
 
 function StaysSearchMobile() {
   return (

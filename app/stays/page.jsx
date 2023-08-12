@@ -1,5 +1,5 @@
 import { getLocalData } from "@/lib/localdata";
-import StayPage from "@/components/StayPage";
+import StayPage from "@/components/stays/StayPage";
 
 
 export default async function page() {
