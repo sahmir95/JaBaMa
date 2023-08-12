@@ -47,9 +47,6 @@ const Favplc = ({ data, title }) => {
         </p>
 
         <div className="sm:w-1/3 flex items-start sm:justify-end gap-2 pb-4 ">
-          <div className=" md:block border sm:ml-2 border-main-light-gray rounded-lg px-2 pb-2 pt-1 lg:ml-4">
-            <button className="font-medium text-xs">مشاهده همه</button>
-          </div>
           <button
             className={clsx(
               "sm:hidden lg:block border border-main-silver rounded-lg p-2",
