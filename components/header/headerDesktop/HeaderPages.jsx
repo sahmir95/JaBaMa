@@ -1,5 +1,6 @@
 import React from "react";
 import { HiOutlineHeart } from "react-icons/hi";
+import Link from "next/link";
 
 const HeaderPages = ({
   display,
@@ -19,26 +20,21 @@ const HeaderPages = ({
           className={`flex items-center justify-between mx-auto w-full h-20 px-4 z-40`}
         >
           <div className="flex items-center justify-start">
-            <a href="https://www.jabama.com/">
+            <Link href="/">
               <img src="/images/color-logo.svg" alt="logo" />
-            </a>
+            </Link>
           </div>
           {compSearch}
           <div className="flex items-center justify-end">
-            <div className="flex items-center justify-center cursor-pointer ml-5 px-5 py-[13px] border border-main-light-gray rounded-lg">
+            <Link href="/favorites" className="flex items-center justify-center cursor-pointer ml-5 px-5 py-[13px] border border-main-light-gray rounded-lg">
               <HiOutlineHeart className="text-main-black text-xl ml-2" />
               <span className="text-main-black font-medium text-sm">
                 مورد علاقه‌ها
               </span>
-            </div>
-            <div className="flex items-center justify-center cursor-pointer bg-[#fafafa] px-5 py-3 rounded-lg">
-              <img
-                className="w-6 rounded-full"
-                src="/images/userIcon.svg"
-                alt="user"
-              />
-              <span className="font-medium text-sm mr-2">گروه سوم</span>
-            </div>
+            </Link>
+            <Link href="/trips" className="flex items-center justify-center cursor-pointer bg-[#fafafa] px-5 py-3 rounded-lg">
+              <span className="font-medium text-sm mr-2">سفرهای من</span>
+            </Link>
           </div>
         </div>
         {compFilter}
