@@ -8,7 +8,7 @@ import "./date-picker-container.css"
 import { useRouter } from 'next/navigation'
 import { useDispatch } from "react-redux";
 import { addTravelData } from "@/redux/featchers/travelSlice";
-
+import toFarsiNumber from "@/utils/toFaNumber";
 
 export const ReservationBox = ({data}) => {
     const [valueEnter, setValueEnter] = useState("")
@@ -52,11 +52,12 @@ export const ReservationBox = ({data}) => {
     }
 
     const handleAddPerson = () => {
-        setPerson(person + 1);
+        if (person < data.capacity.base + data.capacity?.extra)
+            setPerson(person + 1);
     }
 
     const handleRemovePerson = () => {
-        if (person > 0)
+        if (person > 1)
             setPerson(person - 1);
     };
 
@@ -85,17 +86,12 @@ export const ReservationBox = ({data}) => {
         }
     }
 
-
-
-
-
-
     return (
         <div className="w-full flex justify-center items-center flex-col">
             <div className="w-full flex items-center justify-between">
                 <div className="w-[70%] flex justify-start items-center gap-x-[4px]">
                     <div className="  text-[0.7rem] font-medium">شروع از:</div>
-                    <div className=" text-[0.8rem] font-medium">{data.price.base}</div>
+                    <div className=" text-[0.8rem] font-medium">{toFarsiNumber(data.price.base)}</div>
                     <div className="  text-[0.55rem] font-light">تومان</div>
                     <div className="  text-[0.65rem] font-light text-main-silver">/ هرشب</div>
                 </div>
@@ -103,8 +99,8 @@ export const ReservationBox = ({data}) => {
                     <img className="w-4 h-4"
                          src="https://img.icons8.com/material-rounded/24/FAB005/star--v1.png"
                          alt="star--v1"/>
-                    <div className="font-medium text-[1rem]">{data.rate}</div>
-                    <div className="text-[0.9rem] font-light">({data.comments})</div>
+                    <div className="font-medium text-[1rem]">{toFarsiNumber(data.rate)}</div>
+                    <div className="text-[0.9rem] font-light">({toFarsiNumber(data.comments)})</div>
                 </div>
             </div>
             <div className="w-full flex justify-center items-center flex-col mt-[10px]">
@@ -168,14 +164,14 @@ export const ReservationBox = ({data}) => {
                         </div>
                         <div className="w-full">
                             <div className="w-full font-medium text-[0.6rem]">تعداد مسافران</div>
-                            <div className="font-bold text-[0.7rem]"> {person} نفر</div>
+                            <div className="font-bold text-[0.7rem]"> {toFarsiNumber(person)} نفر</div>
                         </div>
                     </div>
                     <div className="w-full flex justify-end items-center gap-x-[10px]">
                         <button className="border-[1px] px-[6px] rounded-[8px]" onClick={handleAddPerson}>
                             +
                         </button>
-                        {person}
+                        {toFarsiNumber(person)}
                         <button className="border-[1px] px-[8px] rounded-[8px]" onClick={handleRemovePerson}>
                             -
                         </button>
@@ -189,12 +185,12 @@ export const ReservationBox = ({data}) => {
                 </div>
                 <div className="w-full flex justify-between items-center mt-[12px] ">
                     <div className="text-center text-[0.7rem] font-medium text-main-silver">1 شب اقامت</div>
-                    <div className="text-center text-[0.7rem] font-medium text-main-silver"> {data.price.base} تومان</div>
+                    <div className="text-center text-[0.7rem] font-medium text-main-silver"> {toFarsiNumber(data.price.base)} تومان</div>
                 </div>
                 <div className="w-full h-[1px] bg-main-light-gray mt-[12px]"></div>
                 <div className="w-full flex justify-between items-center mt-[20px]">
                     <div className="text-center text-[0.7rem] font-medium">جمع مبلغ قابل پرداخت</div>
-                    <div className="text-center text-[0.7rem] font-medium">{totalPrice}</div>
+                    <div className="text-center text-[0.7rem] font-medium">{toFarsiNumber(totalPrice)}</div>
                 </div>
             </div>
         </div>
