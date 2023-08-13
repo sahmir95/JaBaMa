@@ -3,8 +3,9 @@ import React, {useRef, useState} from 'react';
 import {RiSearchLine} from "react-icons/ri";
 import styles from "./headerPages.module.css";
 import LandingSearchBoxResult from "@/components/landingPage/LandingSearchBoxResult";
+import { twMerge } from 'tailwind-merge';
 
-const HeaderPagesSearch = ({city}) => {
+const HeaderPagesSearch = ({city, classNames={container: ""}}) => {
 
     const searchBoxRef = useRef(null);
     const [showBox, setShowBox] = useState(false);
@@ -28,7 +29,7 @@ const HeaderPagesSearch = ({city}) => {
             ref={searchBoxRef}
             onClick={handleDivClick}
             onBlur={handleBoxBlur}
-            className={`flex items-center justify-center border border-[#ddd] rounded-[10px] py-[14px] px-5 mr-[200px] ${styles.searchShadow}`}>
+            className={twMerge(`flex items-center justify-center border border-[#ddd] rounded-[10px] py-[14px] px-5 mr-[200px] ${styles.searchShadow}`, classNames?.container)}>
             <RiSearchLine className="text-main-light-orange ml-2"/>
             <input
                 className="font-medium text-sm w-[260px] outline-none border-none"
