@@ -10,6 +10,8 @@ const HeaderPages = ({
   compSearch,
   background,
   position,
+  city,
+  data,
 }) => {
   return (
     <div
@@ -26,13 +28,19 @@ const HeaderPages = ({
           </div>
           {compSearch}
           <div className="flex items-center justify-end">
-            <Link href="/favorites" className="flex items-center justify-center cursor-pointer ml-5 px-5 py-[13px] border border-main-light-gray rounded-lg">
+            <Link
+              href="/favorites"
+              className="flex items-center justify-center cursor-pointer ml-5 px-5 py-[13px] border border-main-light-gray rounded-lg"
+            >
               <HiOutlineHeart className="text-main-black text-xl ml-2" />
               <span className="text-main-black font-medium text-sm">
                 مورد علاقه‌ها
               </span>
             </Link>
-            <Link href="/trips" className="flex items-center justify-center cursor-pointer bg-[#fafafa] px-5 py-3 rounded-lg">
+            <Link
+              href="/trips"
+              className="flex items-center justify-center cursor-pointer bg-[#fafafa] px-5 py-3 rounded-lg"
+            >
               <span className="font-medium text-sm mr-2">سفرهای من</span>
             </Link>
           </div>
