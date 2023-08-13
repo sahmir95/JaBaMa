@@ -88,7 +88,8 @@ const Favplc = ({ data, title }) => {
                 style={{
                   backgroundImage: "url(/images/image-placeholder.svg)",
                   backgroundPosition: "center",
-                  backgroundSize: "cover",
+                  backgroundRepeat: "no-repeat",
+                  backgroundSize: "64px 64px",
                   backgroundColor: "#d7d7d9",
                 }}
                 className="aspect-[3/4] md:aspect-[4/5] lg:aspect-[3/5] min-h-[108px] max-h-[216px] lg:max-h-[226px] object-fill rounded-md"

@@ -8,12 +8,8 @@ import { setCityReset, setTypeReset } from "@/redux/featchers/filterSlice";
 
 import { twMerge } from "tailwind-merge";
 
-const HeaderPagesSearch = ({
-  city,
-  data,
-  isHome,
-  classNames = { container: "" },
-}) => {
+const HeaderPagesSearch = ({ city, data, isHome, classNames }) => {
+  console.log(classNames);
   const searchBoxRef = useRef(null);
   const [showBox, setShowBox] = useState(false);
   const boxRef = useRef(null);
@@ -121,7 +117,7 @@ const HeaderPagesSearch = ({
           onBlur={handleBoxBlur}
           className={twMerge(
             `flex items-center justify-center border border-[#ddd] rounded-[10px] py-[14px] px-5 mr-[200px] ${styles.searchShadow}`,
-            classNames?.container
+            `${classNames?.container}`
           )}
         >
           <RiSearchLine className="text-main-light-orange ml-2" />
