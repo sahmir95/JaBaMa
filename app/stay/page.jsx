@@ -64,7 +64,8 @@ export default function Detail() {
     }
 
     return (
-        <div className="w-full flex justify-center items-center flex-col">
+        <>
+        {data && (<div className="w-full flex justify-center items-center flex-col">
             <div className="w-full inline relative lg:hidden">
                 <SwiperDetailPage images={data.images} id={data.id}/>
             </div>
@@ -295,6 +296,8 @@ export default function Detail() {
                     </div>
                 </div>
             </div>
-        </div>
+        </div>)}   
+        
+        </>
     );
 }
