@@ -4,7 +4,6 @@ import clsx from "clsx";
 
 export const ImageDetailComponent = ({data}) => {
 
-    const [activeMouse, setActiveMouse] = useState(null)
     const [isHover, setIsHover] = useState("")
     const handleMouseEnter = (index) => {
         setIsHover(index)

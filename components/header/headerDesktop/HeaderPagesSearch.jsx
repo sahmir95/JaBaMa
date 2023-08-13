@@ -6,7 +6,14 @@ import LandingSearchBoxResult from "@/components/landingPage/LandingSearchBoxRes
 import { useDispatch } from "react-redux";
 import { setCityReset, setTypeReset } from "@/redux/featchers/filterSlice";
 
-const HeaderPagesSearch = ({ city, data, isHome }) => {
+import { twMerge } from "tailwind-merge";
+
+const HeaderPagesSearch = ({
+  city,
+  data,
+  isHome,
+  classNames = { container: "" },
+}) => {
   const searchBoxRef = useRef(null);
   const [showBox, setShowBox] = useState(false);
   const boxRef = useRef(null);
@@ -109,16 +116,36 @@ const HeaderPagesSearch = ({ city, data, isHome }) => {
       />
       {showBox && (
         <div
-          ref={boxRef}
-          className="absolute p-4 bg-main-white w-[410px] mx-auto rounded-lg mt-4 left-1/2 top-[70px] transform translate-x-[-50%]"
+          ref={searchBoxRef}
+          onClick={handleDivClick}
+          onBlur={handleBoxBlur}
+          className={twMerge(
+            `flex items-center justify-center border border-[#ddd] rounded-[10px] py-[14px] px-5 mr-[200px] ${styles.searchShadow}`,
+            classNames?.container
+          )}
         >
-          <LandingSearchBoxResult
+          <RiSearchLine className="text-main-light-orange ml-2" />
+          <input
+            className="font-medium text-sm w-[260px] outline-none border-none"
+            type="text"
+            placeholder="جستجو شهر، استان یا اقامتگاه"
             value={value}
-            type={type}
-            searchCity={searchCity}
-            city={city}
-            data={data}
+            onChange={(e) => setValue(e.target.value)}
           />
+          {showBox && (
+            <div
+              ref={boxRef}
+              className="absolute p-4 bg-main-white w-[410px] mx-auto rounded-lg mt-4 left-1/2 top-[70px] transform translate-x-[-50%]"
+            >
+              <LandingSearchBoxResult
+                value={value}
+                type={type}
+                searchCity={searchCity}
+                city={city}
+                data={data}
+              />
+            </div>
+          )}
         </div>
       )}
     </div>
