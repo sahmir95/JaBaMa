@@ -3,7 +3,6 @@ import HeaderMobile from "@/components/header/headerMobile/HeaderMobile";
 import { getLocalData } from "@/lib/localdata";
 
 const data = await getLocalData();
-const city = data.cities;
 
 const SearchBoxLanding = () => {
   const stays = data.data.flatMap((category) => Object.values(category).flat());
@@ -15,7 +14,10 @@ const SearchBoxLanding = () => {
           اجاره ویلا، سوئیت و اقامتگاه در شمال و سراسر ایران
         </h5>
       </div>
-      <HeaderMobile data={stays} city={city} />
+      <HeaderMobile
+          data={data.data}
+          city={data.cities}
+      />
     </div>
   );
 };

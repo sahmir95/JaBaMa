@@ -5,6 +5,7 @@ import { IoCloseCircleSharp } from "react-icons/io5";
 import styles from "./landingPage.module.css";
 import HeaderPages from "@/components/header/headerDesktop/HeaderPages";
 import HeaderPagesSearch from "@/components/header/headerDesktop/HeaderPagesSearch";
+import LandingSearchBoxResult from "@/components/landingPage/LandingSearchBoxResult";
 import { useDispatch } from "react-redux";
 import {
   setTypeCottage,
@@ -13,10 +14,13 @@ import {
   setTypeVilla,
 } from "@/redux/featchers/filterSlice";
 import Link from "next/link";
-
-const LandingPage = () => {
+const LandingPage = ({ city }) => {
   const searchBoxRef = useRef(null);
   const [isHeaderVisible, setHeaderVisible] = useState(false);
+  const [showBox, setShowBox] = useState(false);
+  const boxRef = useRef(null);
+  const [value, setValue] = useState("");
+  const refInput = useRef(null);
 
   useEffect(() => {
     const observerOptions = {
@@ -38,9 +42,6 @@ const LandingPage = () => {
       intersectionObserver.disconnect();
     };
   }, []);
-
-  const [value, setValue] = useState("");
-  const refInput = useRef(null);
 
   const closeHandler = () => {
     setValue("");
@@ -64,6 +65,22 @@ const LandingPage = () => {
       default:
         break;
     }
+
+    const handleBoxBlur = (event) => {
+      const newFocusedElement = event.relatedTarget;
+      if (
+        newFocusedElement &&
+        boxRef.current &&
+        boxRef.current.contains(newFocusedElement)
+      ) {
+        return;
+      }
+      setShowBox(false);
+    };
+
+    const handleDivClick = () => {
+      setShowBox(!showBox);
+    };
   };
 
   return (
