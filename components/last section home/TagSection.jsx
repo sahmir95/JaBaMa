@@ -9,11 +9,11 @@ const TagSection = ({ data }) => {
     setIsOpen(!isOpen);
   };
   return (
-    <div className="w-full   sm:px-5 lg:px-20 flex flex-col gap-5 mt-7 sm:mb-[106px] lg:mb-0 lg:pb-0">
+    <div className="w-full   sm:px-5 lg:px-20 flex flex-col gap-5 mt-7 sm:mb-[124px] lg:mb-0 lg:pb-0">
       <p className="font-bold">از شمال تا جنوب ایران، جاباما جوره</p>
       <div
         className={clsx("w-full flex gap-2 flex-wrap  overflow-hidden", {
-          "sm:h-[64px]": !isOpen,
+          "sm:h-[64px] md:[80px]": !isOpen,
         })}
       >
         {data.map((item, index) => {
@@ -30,7 +30,7 @@ const TagSection = ({ data }) => {
       <div className="w-full flex justify-start  lg:px-20 ">
         <button
           onClick={triggerText}
-          className="font-medium text-xs flex items-center gap-1 lg:hidden"
+          className="font-medium text-xs flex items-center gap-1 md:hidden"
         >
           {isOpen ? "بستن" : "مشاهده همه"}
           <Icon
