@@ -39,6 +39,7 @@ const SwiperDetailPage = ({ images }) => {
                   loading="lazy"
                   className="aspect-[5/4] w-full "
                   src={item}
+                  alt={`image ${index + 1}`}
                 />
               </div>
             </SwiperSlide>
