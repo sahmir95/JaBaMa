@@ -1,10 +1,11 @@
 import React from 'react';
+import Link from "next/link";
 
 const SearchItem = ({name}) => {
     return (
-        <div className="border border-main-gainsboro rounded-[20px] w-fit py-3 px-5 font-medium text-xs h-fit">
+        <Link href="/stays" className="border border-main-gainsboro rounded-[20px] w-fit py-3 px-5 font-medium text-xs h-fit hover:bg-main-light-gray">
             {name}
-        </div>
+        </Link>
     );
 };
 
