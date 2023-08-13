@@ -49,7 +49,7 @@ const HeaderSinglePage = () => {
                 <Link href="#" className="py-[13px] px-[12px] rounded-md bg-main-white">
                     <BiShareAlt className="text-lg text-main-black"/>
                 </Link>
-                <Link onClick={handleSend} className="py-[13px] px-[12px] rounded-md bg-main-white mr-2">
+                <Link href="/favorites" onClick={handleSend} className="py-[13px] px-[12px] rounded-md bg-main-white mr-2">
                     <FaRegHeart className="text-lg text-main-black"/>
                 </Link>
             </div>
