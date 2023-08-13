@@ -1,24 +1,26 @@
 "use client";
 import "../globals.css";
-import {ReadMoreLink} from "@/components/ReadMore/ReadMore";
-import {Facility} from "@/components/facilities/Facility";
+import { ReadMoreLink } from "@/components/ReadMore/ReadMore";
+import { Facility } from "@/components/facilities/Facility";
 import "../../public/images/clock.png";
 import "./page.css";
-import {RulesComponent} from "@/components/rulesComponent/RulesComponent";
-import {CommentsComponent} from "@/components/commentsComponent/CommentsComponent";
+import { RulesComponent } from "@/components/rulesComponent/RulesComponent";
+import { CommentsComponent } from "@/components/commentsComponent/CommentsComponent";
 import SwiperDetailPage from "../../components/swiperDetailPageComponent/SwiperDetailPage";
 import React from "react";
-import {useSelector} from "react-redux";
+import { useSelector } from "react-redux";
 import ButtonFav from "@/components/buttonfav/ButtonFav";
-import {ImageDetailComponent} from "@/components/imageDetailComponent/ImageDetailComponent";
-import {ReservationBox} from "@/components/ReservationBox/ReservationBox";
-import {DiscountCondition} from "@/components/detailCondition/DiscountCondition";
-import {AvatarCondition} from "@/components/detailCondition/AvatarCondition";
-import {ImmediateReservation} from "@/components/detailCondition/ImmediateReservation";
-import {BedroomCondition} from "@/components/detailCondition/BedroomCondition";
-import {BathroomCondition} from "@/components/detailCondition/BathroomCondition";
+import { ImageDetailComponent } from "@/components/imageDetailComponent/ImageDetailComponent";
+import { ReservationBox } from "@/components/ReservationBox/ReservationBox";
+import { DiscountCondition } from "@/components/detailCondition/DiscountCondition";
+import { AvatarCondition } from "@/components/detailCondition/AvatarCondition";
+import { ImmediateReservation } from "@/components/detailCondition/ImmediateReservation";
+import { BedroomCondition } from "@/components/detailCondition/BedroomCondition";
+import { BathroomCondition } from "@/components/detailCondition/BathroomCondition";
 import toFarsiNumber from "@/utils/toFaNumber";
-import {comment} from "postcss";
+import { comment } from "postcss";
+import {data} from "autoprefixer";
+
 
 export default function Detail() {
 

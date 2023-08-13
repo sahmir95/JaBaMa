@@ -1,14 +1,15 @@
 'use client'
-import React, {useEffect, useState} from "react";
+import React, {useEffect, useRef, useState} from "react";
 import DatePicker from "react-multi-date-picker";
 import persian from "react-date-object/calendars/persian";
 import persian_fa from "react-date-object/locales/persian_fa";
 import transition from "react-element-popper/animations/transition";
 import "./date-picker-container.css"
 import {useRouter} from 'next/navigation'
-import {useDispatch} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import {addTravelData} from "@/redux/featchers/travelSlice";
 import toFarsiNumber from "@/utils/toFaNumber";
+
 
 export const ReservationBox = ({data}) => {
     const [valueEnter, setValueEnter] = useState("")
@@ -17,7 +18,9 @@ export const ReservationBox = ({data}) => {
     const dispatch = useDispatch()
     const router = useRouter()
     const [totalPrice, setTotalPrice] = useState(0)
-    // const [discountPrice, setDiscountPrice] = useState("")
+    const travel = useSelector((state) => state.travelSlice.travel);
+    const idRef = useRef(travel.length);
+
 
 
     const calculateExtras = () => {
@@ -36,13 +39,6 @@ export const ReservationBox = ({data}) => {
             return "لطفا تاریخ را درست انتخاب کنید"
         }
     }
-
-    // const handlePrice= () => {
-    //     let price= data.price.base + (data.price.base * data.discount)
-    //     return (
-    //         {price}
-    //     )
-    // }
 
     useEffect(() => {
         setTotalPrice(calculatePrice())
@@ -71,6 +67,7 @@ export const ReservationBox = ({data}) => {
     const handleSend = () => {
         if (valueExit.dayOfBeginning - valueEnter.dayOfBeginning > 0) {
             const newTrip = {
+                id: idRef.current,
                 date: {
                     from: valueEnter,
                     to: valueExit
@@ -90,6 +87,7 @@ export const ReservationBox = ({data}) => {
         } else {
             alert("لطفا تاریخ درست انتخاب نمایید")
         }
+        idRef.current = idRef.current + 1;
     }
 
     const priceDiscount = (price,discount) => {
@@ -234,4 +232,3 @@ export const ReservationBox = ({data}) => {
         </div>
     );
 };
-
