@@ -170,6 +170,7 @@ function StayPage({ stays }) {
                       classNames={{
                         images: "",
                         rate: "text-xs font-bold pl-[0.1rem]",
+                        describtion: "lg:h-full",
                         aspect: "sm:aspect-[8/5] md:aspect-[8/5] md:h-fit",
                         comment: "text-xs inline",
                         title: "",
