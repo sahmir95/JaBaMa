@@ -11,7 +11,7 @@ const stays = data.data.flatMap((category) => Object.values(category).flat());
 export default function layout({ children }) {
   return (
     <section className="relative h-100%">
-      <StaysSearchMobile />
+      <StaysSearchMobile city={data.cities} data={stays} />
       <HeaderPages
         display="block"
         loc=""
