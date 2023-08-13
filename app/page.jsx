@@ -33,7 +33,7 @@ const Page = async () => {
       <LandingPage
           city={data.cities}
       />
-      <div className="w-full min-h-screen flex flex-col items-center">
+      <div className="w-full min-h-screen flex flex-col items-center pt-[100px]">
         <AutoSwiper />
         <IconsSection />
         <div className="w-full">
