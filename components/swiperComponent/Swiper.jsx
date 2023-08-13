@@ -96,7 +96,7 @@ export default function SwiperComponent({ obj, images, aspect }) {
             />
           </button>
         </div>
-        {imgs.map((item, index) => {
+        {imgs && imgs.map((item, index) => {
           return (
             <SwiperSlide key={index}>
               <Link

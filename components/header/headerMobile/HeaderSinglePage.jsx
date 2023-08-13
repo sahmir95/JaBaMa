@@ -4,6 +4,7 @@ import styles from "./headerSinglePage.module.css";
 import {FaRegHeart} from "react-icons/fa";
 import {BiShareAlt} from "react-icons/bi";
 import {RiArrowRightLine} from "react-icons/ri";
+import Link from "next/link";
 
 const HeaderSinglePage = () => {
 
@@ -29,17 +30,17 @@ const HeaderSinglePage = () => {
         <div
             className={`sm:flex lg:hidden items-center justify-between bg-main-transparent z-50 fixed inset-0 px-[15px] h-[60px] text-center ${isScroll ? `${styles.scroll}` : ''}`}>
             <div className="">
-                <div className="py-[13px] px-[12px] rounded-md bg-main-white">
+                <Link href="/" className="py-[13px] px-[12px] rounded-md bg-main-white">
                     <RiArrowRightLine className="text-lg text-main-black"/>
-                </div>
+                </Link>
             </div>
             <div className="flex items-center justify-center">
-                <div className="py-[13px] px-[12px] rounded-md bg-main-white">
+                <Link href="#" className="py-[13px] px-[12px] rounded-md bg-main-white">
                     <BiShareAlt className="text-lg text-main-black"/>
-                </div>
-                <div className="py-[13px] px-[12px] rounded-md bg-main-white mr-2">
+                </Link>
+                <Link className="py-[13px] px-[12px] rounded-md bg-main-white mr-2">
                     <FaRegHeart className="text-lg text-main-black"/>
-                </div>
+                </Link>
             </div>
         </div>
     );
