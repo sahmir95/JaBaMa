@@ -5,23 +5,23 @@ import persian from "react-date-object/calendars/persian";
 import persian_fa from "react-date-object/locales/persian_fa";
 import transition from "react-element-popper/animations/transition";
 import "./date-picker-container.css"
-import { useRouter } from 'next/navigation'
-import { useDispatch } from "react-redux";
-import { addTravelData } from "@/redux/featchers/travelSlice";
+import {useRouter} from 'next/navigation'
+import {useDispatch} from "react-redux";
+import {addTravelData} from "@/redux/featchers/travelSlice";
 import toFarsiNumber from "@/utils/toFaNumber";
 
 export const ReservationBox = ({data}) => {
     const [valueEnter, setValueEnter] = useState("")
     const [valueExit, setValueExit] = useState("")
     const [person, setPerson] = useState(0)
-
     const dispatch = useDispatch()
     const router = useRouter()
     const [totalPrice, setTotalPrice] = useState(0)
+    // const [discountPrice, setDiscountPrice] = useState("")
 
 
     const calculateExtras = () => {
-        if( person - data.capacity.base > 0 ) {
+        if (person - data.capacity.base > 0) {
             return person - data.capacity.base
         } else {
             return 0
@@ -30,17 +30,23 @@ export const ReservationBox = ({data}) => {
 
     const calculatePrice = () => {
         if (valueExit.dayOfBeginning - valueEnter.dayOfBeginning > 0) {
-            let price = ( ((data.price.base + (calculateExtras() * data.price?.extra)) * (valueExit.dayOfBeginning - valueEnter.dayOfBeginning)) )
+            let price = (((data.price.base + (calculateExtras() * data.price?.extra)) * (valueExit.dayOfBeginning - valueEnter.dayOfBeginning)))
             return `${price} تومان`
         } else {
             return "لطفا تاریخ را درست انتخاب کنید"
         }
     }
 
+    // const handlePrice= () => {
+    //     let price= data.price.base + (data.price.base * data.discount)
+    //     return (
+    //         {price}
+    //     )
+    // }
+
     useEffect(() => {
         setTotalPrice(calculatePrice())
-    },[valueEnter, valueExit, data])
-
+    }, [valueEnter, valueExit, data])
 
 
     const handleChangeEnter = (newEnter) => {
@@ -86,14 +92,35 @@ export const ReservationBox = ({data}) => {
         }
     }
 
+    const priceDiscount = (price,discount) => {
+        return ((price - (price * discount) / 100))
+    }
+
     return (
         <div className="w-full flex justify-center items-center flex-col">
             <div className="w-full flex items-center justify-between">
-                <div className="w-[70%] flex justify-start items-center gap-x-[4px]">
-                    <div className="  text-[0.7rem] font-medium">شروع از:</div>
-                    <div className=" text-[0.8rem] font-medium">{toFarsiNumber(data.price.base)}</div>
-                    <div className="  text-[0.55rem] font-light">تومان</div>
-                    <div className="  text-[0.65rem] font-light text-main-silver">/ هرشب</div>
+                <div className="w-[70%] flex justify-start items-center flex-col gap-y-[4px]">
+                    <div className="w-full">
+                        {data.discount &&
+                            (
+                                <div className="w-full flex justify-start items-center gap-x-[4px]">
+                                    <div className=" font-bold text-[0.8rem] text-main-silver line-through">
+                                        {toFarsiNumber(data.price.base)}
+                                    </div>
+                                    <div
+                                        className=" py-[2px] px-[6px] rounded-[14px] bg-main-dark-red text-main-white font-bold text-[0.8rem]">
+                                        % {toFarsiNumber(data.discount)}
+                                    </div>
+                                </div>
+                            )}
+                    </div>
+                    <div className="w-full flex justify-start items-center gap-x-[4px]">
+                        <div className="  text-[0.7rem] font-medium">شروع از:</div>
+                        <div className=" text-[0.8rem] font-medium">{toFarsiNumber(priceDiscount(data.price.base,data.discount))}</div>
+                        <div className="  text-[0.55rem] font-light">تومان</div>
+                        <div className="  text-[0.65rem] font-light text-main-silver">/ هرشب</div>
+                    </div>
+
                 </div>
                 <div className="w-[30%] flex justify-end items-center gap-x-[4px]">
                     <img className="w-4 h-4"
@@ -157,14 +184,19 @@ export const ReservationBox = ({data}) => {
                         </div>
                     </div>
                 </div>
-                <div className="w-full flex justify-between items-center rounded-b-[6px] border-[1px] border-t-0 border-main-light-gray px-[20px] py-[12px]">
+                <div
+                    className="w-full flex justify-between items-center rounded-b-[6px] border-[1px] border-t-0 border-main-light-gray px-[20px] py-[12px]">
                     <div className="w-full flex justify-start items-start">
                         <div className="w-[40px]">
-                            <img className="w-[16px] h-[16px]" src="https://img.icons8.com/external-kmg-design-basic-outline-kmg-design/32/external-group-ui-essentials-kmg-design-basic-outline-kmg-design.png" alt="group"/>
+                            <img className="w-[16px] h-[16px]"
+                                 src="https://img.icons8.com/external-kmg-design-basic-outline-kmg-design/32/external-group-ui-essentials-kmg-design-basic-outline-kmg-design.png"
+                                 alt="group"/>
                         </div>
                         <div className="w-full">
                             <div className="w-full font-medium text-[0.6rem]">تعداد مسافران</div>
-                            <div className="font-bold text-[0.7rem]"> {toFarsiNumber(person)} نفر</div>
+                            <div className="font-bold text-[0.7rem]">
+                                {toFarsiNumber(person)} نفر
+                            </div>
                         </div>
                     </div>
                     <div className="w-full flex justify-end items-center gap-x-[10px]">
@@ -177,7 +209,8 @@ export const ReservationBox = ({data}) => {
                         </button>
                     </div>
                 </div>
-                <button onClick={handleSend} className="w-full text-center text-main-white text-[0.8rem] mt-[20px] font-medium bg-main-deep-teal rounded-[6px] px-[4px] py-[12px]">
+                <button onClick={handleSend}
+                        className="w-full text-center text-main-white text-[0.8rem] mt-[20px] font-medium bg-main-deep-teal rounded-[6px] px-[4px] py-[12px]">
                     ثبت رزرو
                 </button>
                 <div className="w-full text-center text-[0.6rem] font-medium mt-[12px] text-main-silver">
@@ -185,12 +218,17 @@ export const ReservationBox = ({data}) => {
                 </div>
                 <div className="w-full flex justify-between items-center mt-[12px] ">
                     <div className="text-center text-[0.7rem] font-medium text-main-silver">1 شب اقامت</div>
-                    <div className="text-center text-[0.7rem] font-medium text-main-silver"> {toFarsiNumber(data.price.base)} تومان</div>
+                    <div
+                        className="text-center text-[0.7rem] font-medium text-main-silver">
+                        {toFarsiNumber(priceDiscount(data.price.base,data.discount))} تومان
+                    </div>
                 </div>
                 <div className="w-full h-[1px] bg-main-light-gray mt-[12px]"></div>
                 <div className="w-full flex justify-between items-center mt-[20px]">
                     <div className="text-center text-[0.7rem] font-medium">جمع مبلغ قابل پرداخت</div>
-                    <div className="text-center text-[0.7rem] font-medium">{toFarsiNumber(totalPrice)}</div>
+                    <div className="text-center text-[0.7rem] font-medium">
+                        {toFarsiNumber(totalPrice)}
+                    </div>
                 </div>
             </div>
         </div>

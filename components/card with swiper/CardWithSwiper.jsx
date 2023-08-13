@@ -29,7 +29,6 @@ export default function CardWithSwiper({
     images: "",
     title: "",
     rate: "",
-    aspect: "",
     comment: "",
     middle: "",
     bottom: "",

@@ -25,6 +25,27 @@ export default function Detail() {
     const detailData = useSelector((state) => state.detailSlice.detailData);
     const data = detailData;
 
+    {
+        if (!detailData) {
+            return (
+                <div className="w-full h-[75vh] flex flex-col gap-y-2 justify-center items-center text-sm font-medium">
+                    <h2>یه چیزی اشتباه شد!</h2>
+                    <h3>
+                        میتونی ارور رو توی کنسول چک کنی
+                    </h3>
+                    <button
+                        className="p-2 rounded-md shadow-md border-2 border-main-light-orange hover:bg-main-orange hover:text-main-white"
+                        onClick={
+                            () => window.location.reload()
+                        }
+                    >
+                        تلاش دوباره
+                    </button>
+                </div>
+            )
+        }
+    }
+
     const engToFaType = (type) => {
         switch (type) {
             case "villa":
@@ -44,19 +65,10 @@ export default function Detail() {
         <div className="w-full flex justify-center items-center flex-col">
             <div className="w-full inline relative lg:hidden">
                 <SwiperDetailPage images={data.images} id={data.id}/>
-                <div className="w-full flex justify-center items-center">
-                    <button className="w-[50px] bg-[#fafafa]">
-
-                    </button>
-                    <div>
-                        <button></button>
-                        <button></button>
-                    </div>
-                </div>
             </div>
             <div className="w-full px-[20px] flex justify-center items-center flex-col lg:mt-[20px]">
                 <div className="w-full font-light flex justify-center items-center lg:flex lg:justify-between">
-                    <div className="lg:flex lg:justify-start lg:items-start lg:flex-col">
+                    <div className="lg:flex lg:justify-start lg:items-start lg:flex-col mt-[20px]">
                         <h1 className="text-center font-medium text-lg lg:text-[1rem] ">{data.title}</h1>
                         <div
                             className="font-light flex justify-center items-center flex-col mt-5 text-xs gap-1 lg:flex-row lg:gap-[4px]">
@@ -65,8 +77,10 @@ export default function Detail() {
                                     <img className="w-3 h-3"
                                          src="https://img.icons8.com/material-rounded/24/FAB005/star--v1.png"
                                          alt="star--v1"/>
-                                    <div className="font-medium text-[0.7rem] lg:text-[0.9rem]">{toFarsiNumber(data.rate)}</div>
-                                    <a className="underline font-medium text-main-slate-gray lg:text-[0.85rem]">({toFarsiNumber(comment.length)} نظر ثبت شده)</a>
+                                    <div
+                                        className="font-medium text-[0.7rem] lg:text-[0.9rem]">{toFarsiNumber(data.rate)}</div>
+                                    <a className="underline font-medium text-main-slate-gray lg:text-[0.85rem]">({toFarsiNumber(comment.length)} نظر
+                                        ثبت شده)</a>
                                 </div>
                                 <p className="text-lg lg:text-[0.85rem]">.</p>
                                 <div className="flex justify-center items-center gap-1">
@@ -84,7 +98,7 @@ export default function Detail() {
                         <ButtonFav/>
                     </div>
                 </div>
-                <div className="hidden lg:inline">
+                <div className="hidden lg:inline lg:w-full">
                     <ImageDetailComponent data={data}/>
                 </div>
                 <div className="w-full h-[1px] bg-main-light-gray mt-[20px] lg:hidden"></div>
@@ -101,7 +115,7 @@ export default function Detail() {
                             <AvatarCondition data={data}/>
                         </div>
                         <ImmediateReservation data={data}/>
-                        <div className="w-full h-[1px] bg-main-light-gray mt-[20px] lg:mt-[32px]"></div>
+                        <div className="w-full h-[1px] bg-main-light-gray mt-[20px] lg:mt-[24px]"></div>
                         <div className="w-full flex justify-start items-start flex-col mt-[20px]">
                             <div>
                                 <h2 className="font-bold text-[1rem]">مشخصات کلی {engToFaType(data.type)}</h2>
@@ -132,7 +146,8 @@ export default function Detail() {
                                         <p className="font-bold text-[0.9rem]">ظرفیت</p>
                                         <p className="font-light text-[0.75rem]">
                                             ظرفیت تا {toFarsiNumber(data.capacity.base + data.capacity.extra)} (
-                                            {toFarsiNumber(data.capacity.base)} نفر پایه + تا {toFarsiNumber(data.capacity.extra)} نفر
+                                            {toFarsiNumber(data.capacity.base)} نفر پایه +
+                                            تا {toFarsiNumber(data.capacity.extra)} نفر
                                             اضافه)
                                         </p>
                                     </div>
@@ -247,7 +262,7 @@ export default function Detail() {
                             </div>
                         </div>
                     </div>
-                    <div className="hidden lg:h-full lg:inline lg:sticky lg:top-[40px] left-0 mt-[20px] mb-[40px]
+                    <div className="hidden lg:h-full lg:inline lg:sticky lg:z-10 lg:top-[40px] lg:left-0 lg:mt-[20px] lg:mb-[40px]
                     lg:w-[26%] lg:p-[20px] lg:border-[1px] lg:border-main-light-gray lg:rounded-[8px]">
                         <ReservationBox data={data}/>
                     </div>
@@ -279,5 +294,5 @@ export default function Detail() {
                 </div>
             </div>
         </div>
-  );
+    );
 }

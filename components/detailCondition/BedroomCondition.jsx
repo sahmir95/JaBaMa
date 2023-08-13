@@ -4,7 +4,7 @@ export const BedroomCondition = ({data}) => {
     return (
             <div className="w-full ">
                 <p className=" font-bold text-[0.9rem]">سرویس‌های خواب</p>
-                    <div className="w-full flex justify-start items-start flex-wrap font-light text-[0.75rem] lg:gap-x-[4px]">
+                    <div className="w-full flex justify-start items-start flex-wrap font-light text-[0.75rem] lg:gap-x-[4px] mt-[4px]">
                         <p>
                             {toFarsiNumber(data.bedroom.rooms)} اتاق .
                         </p>
