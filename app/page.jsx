@@ -43,7 +43,8 @@ const Page = async () => {
           subtitle="ویلاهای استخردار واسه سفر آخر هفته"
           type={"villa"}
         >
-          <CardWithSwiper isCocacity={false} />
+          <CardWithSwiper isCocacity={false} showDiscountPrice={true} classNames={{
+            price: "font-bold flex items-center gap-x-1 text-[0.9rem] pl-[0.15rem]"}}/>
         </BoxWithSwiper>
         <BoxWithSwiper
           data={data.data[1].hotel}
@@ -52,7 +53,8 @@ const Page = async () => {
           subtitle="اقامتِ باکیفت در بهترین هتل"
           type={"hotel"}
         >
-          <CardWithSwiper isCocacity={false} />
+          <CardWithSwiper isCocacity={false} showDiscountPrice={true} classNames={{
+            price: "font-bold flex items-center gap-x-1 text-[0.9rem] pl-[0.15rem]"}}/>
         </BoxWithSwiper>
         <BoxWithSwiper
           data={data.data[3].cottage}
@@ -61,7 +63,8 @@ const Page = async () => {
           subtitle="کلبه‌هلی مثلثی و چوبی"
           type={"cottage"}
         >
-          <CardWithSwiper isCocacity={false} />
+          <CardWithSwiper isCocacity={false} showDiscountPrice={true} classNames={{
+            price: "font-bold flex items-center gap-x-1 text-[0.9rem] pl-[0.15rem]"}}/>
         </BoxWithSwiper>
         <LastSection />
         <TagSection data={data.data[0].villa} />

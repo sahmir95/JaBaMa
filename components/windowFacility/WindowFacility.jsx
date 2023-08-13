@@ -8,7 +8,9 @@ export const WindowFacility = ({facility,onClose,type}) => {
             <div onClick={onClose} className=" text-[20px] cursor-pointer ">
                 <img className="sm:w-5 h-6 cursor-pointer" src="https://img.icons8.com/material-outlined/24/1A1A1A/right.png" alt="right"/>
             </div>
+
             <div className=" w-full mt-[50px] flex flex-col justify-center items-start">
+
                 <div className="w-full h-[300px]  ">
                     <h2 className="w-full font-bold text-[0.9rem]">امکانات رفاهی {type}</h2>
                     <ul className="w-full h-[250px] flex justify-between items-start flex-col mt-[20px] ">

@@ -1,17 +1,46 @@
 'use client'
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import DatePicker from "react-multi-date-picker";
 import persian from "react-date-object/calendars/persian";
 import persian_fa from "react-date-object/locales/persian_fa";
 import transition from "react-element-popper/animations/transition";
-import InputIcon from "react-multi-date-picker/components/input_icon";
 import "./date-picker-container.css"
-
+import { useRouter } from 'next/navigation'
+import { useDispatch } from "react-redux";
+import { addTravelData } from "@/redux/featchers/travelSlice";
+import toFarsiNumber from "@/utils/toFaNumber";
 
 export const ReservationBox = ({data}) => {
-    const [valueEnter, setValueEnter] = useState([])
-    const [valueExit, setValueExit] = useState([])
+    const [valueEnter, setValueEnter] = useState("")
+    const [valueExit, setValueExit] = useState("")
     const [person, setPerson] = useState(0)
+
+    const dispatch = useDispatch()
+    const router = useRouter()
+    const [totalPrice, setTotalPrice] = useState(0)
+
+
+    const calculateExtras = () => {
+        if( person - data.capacity.base > 0 ) {
+            return person - data.capacity.base
+        } else {
+            return 0
+        }
+    }
+
+    const calculatePrice = () => {
+        if (valueExit.dayOfBeginning - valueEnter.dayOfBeginning > 0) {
+            let price = ( ((data.price.base + (calculateExtras() * data.price?.extra)) * (valueExit.dayOfBeginning - valueEnter.dayOfBeginning)) )
+            return `${price} تومان`
+        } else {
+            return "لطفا تاریخ را درست انتخاب کنید"
+        }
+    }
+
+    useEffect(() => {
+        setTotalPrice(calculatePrice())
+    },[valueEnter, valueExit, data])
+
 
 
     const handleChangeEnter = (newEnter) => {
@@ -23,20 +52,46 @@ export const ReservationBox = ({data}) => {
     }
 
     const handleAddPerson = () => {
-        setPerson(person + 1);
+        if (person < data.capacity.base + data.capacity?.extra)
+            setPerson(person + 1);
     }
 
     const handleRemovePerson = () => {
-        if (person > 0)
+        if (person > 1)
             setPerson(person - 1);
     };
+
+
+    const handleSend = () => {
+        if (valueExit.dayOfBeginning - valueEnter.dayOfBeginning > 0) {
+            const newTrip = {
+                date: {
+                    from: valueEnter,
+                    to: valueExit
+                },
+                price: data.price.base,
+                overall: totalPrice,
+                person: person,
+                province: data.province,
+                city: data.city,
+                title: data.title,
+                image: data.images[0],
+                host: data.host,
+                rooms: data?.bedroom?.rooms,
+            }
+            dispatch(addTravelData(newTrip))
+            router.push("/trips")
+        } else {
+            alert("لطفا تاریخ درست انتخاب نمایید")
+        }
+    }
 
     return (
         <div className="w-full flex justify-center items-center flex-col">
             <div className="w-full flex items-center justify-between">
                 <div className="w-[70%] flex justify-start items-center gap-x-[4px]">
                     <div className="  text-[0.7rem] font-medium">شروع از:</div>
-                    <div className=" text-[0.8rem] font-medium">{data.price.base}</div>
+                    <div className=" text-[0.8rem] font-medium">{toFarsiNumber(data.price.base)}</div>
                     <div className="  text-[0.55rem] font-light">تومان</div>
                     <div className="  text-[0.65rem] font-light text-main-silver">/ هرشب</div>
                 </div>
@@ -44,8 +99,8 @@ export const ReservationBox = ({data}) => {
                     <img className="w-4 h-4"
                          src="https://img.icons8.com/material-rounded/24/FAB005/star--v1.png"
                          alt="star--v1"/>
-                    <div className="font-medium text-[1rem]">{data.rate}</div>
-                    <div className="text-[0.9rem] font-light">({data.comments})</div>
+                    <div className="font-medium text-[1rem]">{toFarsiNumber(data.rate)}</div>
+                    <div className="text-[0.9rem] font-light">({toFarsiNumber(data.comments)})</div>
                 </div>
             </div>
             <div className="w-full flex justify-center items-center flex-col mt-[10px]">
@@ -109,20 +164,20 @@ export const ReservationBox = ({data}) => {
                         </div>
                         <div className="w-full">
                             <div className="w-full font-medium text-[0.6rem]">تعداد مسافران</div>
-                            <div className="font-bold text-[0.7rem]"> {person} نفر</div>
+                            <div className="font-bold text-[0.7rem]"> {toFarsiNumber(person)} نفر</div>
                         </div>
                     </div>
                     <div className="w-full flex justify-end items-center gap-x-[10px]">
                         <button className="border-[1px] px-[6px] rounded-[8px]" onClick={handleAddPerson}>
                             +
                         </button>
-                        {person}
+                        {toFarsiNumber(person)}
                         <button className="border-[1px] px-[8px] rounded-[8px]" onClick={handleRemovePerson}>
                             -
                         </button>
                     </div>
                 </div>
-                <button className="w-full text-center text-main-white text-[0.8rem] mt-[20px] font-medium bg-main-deep-teal rounded-[6px] px-[4px] py-[12px]">
+                <button onClick={handleSend} className="w-full text-center text-main-white text-[0.8rem] mt-[20px] font-medium bg-main-deep-teal rounded-[6px] px-[4px] py-[12px]">
                     ثبت رزرو
                 </button>
                 <div className="w-full text-center text-[0.6rem] font-medium mt-[12px] text-main-silver">
@@ -130,12 +185,12 @@ export const ReservationBox = ({data}) => {
                 </div>
                 <div className="w-full flex justify-between items-center mt-[12px] ">
                     <div className="text-center text-[0.7rem] font-medium text-main-silver">1 شب اقامت</div>
-                    <div className="text-center text-[0.7rem] font-medium text-main-silver"> {data.price.base} تومان</div>
+                    <div className="text-center text-[0.7rem] font-medium text-main-silver"> {toFarsiNumber(data.price.base)} تومان</div>
                 </div>
                 <div className="w-full h-[1px] bg-main-light-gray mt-[12px]"></div>
                 <div className="w-full flex justify-between items-center mt-[20px]">
                     <div className="text-center text-[0.7rem] font-medium">جمع مبلغ قابل پرداخت</div>
-                    <div className="text-center text-[0.7rem] font-medium"> {data.price.base} تومان</div>
+                    <div className="text-center text-[0.7rem] font-medium">{toFarsiNumber(totalPrice)}</div>
                 </div>
             </div>
         </div>
