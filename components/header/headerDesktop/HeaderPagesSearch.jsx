@@ -1,14 +1,22 @@
 "use client";
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { RiSearchLine } from "react-icons/ri";
 import styles from "./headerPages.module.css";
 import LandingSearchBoxResult from "@/components/landingPage/LandingSearchBoxResult";
+import { useDispatch } from "react-redux";
+import { setCityReset, setTypeReset } from "@/redux/featchers/filterSlice";
 
-const HeaderPagesSearch = ({ city }) => {
+const HeaderPagesSearch = ({ city, data, isHome }) => {
   const searchBoxRef = useRef(null);
   const [showBox, setShowBox] = useState(false);
   const boxRef = useRef(null);
   const [value, setValue] = useState("");
+  const [type, setType] = useState("");
+  const [searchCity, setSearchCity] = useState("");
+  const refInput = useRef(null);
+  const ourData = [...data];
+  const ourCities = [...city];
+  const dispatch = useDispatch();
 
   const handleBoxBlur = (event) => {
     const newFocusedElement = event.relatedTarget;
@@ -24,6 +32,64 @@ const HeaderPagesSearch = ({ city }) => {
 
   const handleDivClick = () => {
     setShowBox(!showBox);
+  };
+  useEffect(() => {
+    const type = ourData.find((items) => {
+      let typ = "";
+      switch (items.type) {
+        case "villa":
+          typ = "ویلا";
+          break;
+        case "cottage":
+          typ = "کلبه";
+          break;
+        case "hotel":
+          typ = "هتل";
+          break;
+        case "ecoTourism":
+          typ = "بومگردی";
+          break;
+        default:
+          break;
+      }
+      if (value.includes(typ)) {
+        return typ;
+      }
+    });
+    if (type) {
+      switch (type.type) {
+        case "villa":
+          setType("ویلا");
+          break;
+        case "cottage":
+          setType("کلبه");
+          break;
+        case "hotel":
+          setType("هتل");
+          break;
+        case "ecoTourism":
+          setType("بومگردی");
+          break;
+        default:
+          break;
+      }
+    } else {
+      setType("");
+    }
+    const city = ourCities.find((items) => {
+      if (value.includes(items.name)) {
+        return items.name;
+      }
+    });
+    if (city) {
+      setSearchCity(city.name);
+    } else {
+      setSearchCity("");
+    }
+  }, [value]);
+  const deleteInputValue = () => {
+    setValue("");
+    refInput.current.focus();
   };
 
   return (
@@ -46,7 +112,13 @@ const HeaderPagesSearch = ({ city }) => {
           ref={boxRef}
           className="absolute p-4 bg-main-white w-[410px] mx-auto rounded-lg mt-4 left-1/2 top-[70px] transform translate-x-[-50%]"
         >
-          <LandingSearchBoxResult city={city} />
+          <LandingSearchBoxResult
+            value={value}
+            type={type}
+            searchCity={searchCity}
+            city={city}
+            data={data}
+          />
         </div>
       )}
     </div>

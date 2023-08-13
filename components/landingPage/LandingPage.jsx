@@ -14,7 +14,7 @@ import {
   setTypeVilla,
 } from "@/redux/featchers/filterSlice";
 import Link from "next/link";
-const LandingPage = ({ city }) => {
+const LandingPage = ({ city, data }) => {
   const searchBoxRef = useRef(null);
   const [isHeaderVisible, setHeaderVisible] = useState(false);
   const [showBox, setShowBox] = useState(false);
@@ -65,32 +65,34 @@ const LandingPage = ({ city }) => {
       default:
         break;
     }
+  };
 
-    const handleBoxBlur = (event) => {
-      const newFocusedElement = event.relatedTarget;
-      if (
-        newFocusedElement &&
-        boxRef.current &&
-        boxRef.current.contains(newFocusedElement)
-      ) {
-        return;
-      }
-      setShowBox(false);
-    };
+  const handleBoxBlur = (event) => {
+    const newFocusedElement = event.relatedTarget;
+    if (
+      newFocusedElement &&
+      boxRef.current &&
+      boxRef.current.contains(newFocusedElement)
+    ) {
+      return;
+    }
+    setShowBox(false);
+  };
 
-    const handleDivClick = () => {
-      setShowBox(!showBox);
-    };
+  const handleDivClick = () => {
+    setShowBox(!showBox);
   };
 
   return (
     <div>
       <HeaderPages
+        city={city}
+        data={data}
         display={isHeaderVisible ? "hidden" : "block"}
         loc="inset-0"
         border="border-b border-b-main-light-gray"
         compFilter=""
-        compSearch={<HeaderPagesSearch />}
+        compSearch={<HeaderPagesSearch city={city} data={data} isHome={true} />}
         position="fixed"
         background="bg-main-white"
       />
