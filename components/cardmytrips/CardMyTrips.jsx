@@ -1,71 +1,74 @@
 import React from 'react';
 import { Icon } from '@iconify/react';
-const data = {
-  date: {
-    from: "1402/05/28",
-    to: "1402/06/03"
-  },
-  price: 0,
-  overall: 101010101,
-  person: 0,
-  province: "البرز",
-  city: "کردان",
-  title: "اجاره ویلا دوخوابه استخردار آبگرم سروستان کردان",
-  image: "https://cdn.jabama.com/image/890x492/jabama-images/1737810/9e7aa908-13af-4708-84a4-0442400b0ebb.jpg",
-  host: {
-    avatar: "https://cdn.jabama.com/image/jabama-images/image_500d6b88-93c4-4ff8-b55c-823300064bee.jpg",
-    name: "مهرداد چهری"
-  },
-  rooms: 0,
-};
 
-const CardMyTrips = ({ tripData }) => {
-  let data = tripData;
+const CardMyTrips = ({ 
+  obj,
+  city,
+  title,
+  image,
+  province,
+  price,
+  person,
+  overall,
+  host,
+  avatar,
+  name,
+  date,
+  rooms,
+  from,
+  to
+ }) => {
+  
 
   return (
-  <div className="w-full h-full">
-    <div className="">
-      <img className="" src={data.image} alt={data.title} />
-    </div>
-    <div>
+  <div className="w-[280px]  px-[20px] py-[20px] mx-auto overflow-hidden bg-main-white rounded-lg shadow-10xl">
+    {/* <div className=""> */}
+      <img className="w-full rounded-lg overflow-hidden" src={image} alt={title} />
+    {/* </div> */}
+   <div className='pt-[50px]'>
+   <div className=''>
       <div className='flex'>
       <Icon icon="gridicons:location" />
-      <p>{data.province},{data.city}</p>
+      <p className='text-[14px] text-main-slate-gray font-medium mr-2'>{province} , {city}</p>
       </div>
       <div>
-      <p className= 'block text-main-dark-red text-[50px]'>{data.title}</p>
+      <p className= ''>{title}</p>
       </div>
-      <div>
+    </div>
+    <div className='flex flex-col pt-[10px]'>
         <div className='flex'>
         <Icon icon="streamline:interface-calendar-check-approve-calendar-check-date-day-month-success" />
-        <p>تاریخ سفر</p>
+        <p className='text-[14px] text-main-slate-gray   font-medium mr-2'>تاریخ سفر</p>
         </div>
-        <div className='flex justify-between w-[200px]'>
-        <span>{data.date.from}</span>
-        <span>{data.date.to} </span>
+        <div className='flex justify-between w-[200px] pt-1'>
+        <span>{date.from}</span>
+        <span>{date.to} </span>
+        </div>
+    </div>
+    <div className='flex justify-between pt-[20px] '>
+      <div className='flex-col'>
+        <div className='flex'>
+        <Icon icon="streamline:interface-calendar-check-approve-calendar-check-date-day-month-success" />
+        <p className='text-[14px] text-main-slate-gray  font-medium mr-1'>مشخصات</p>
+        </div>
+        <div> اتاق{rooms}</div>
+      </div>
+      <div className='flex-col'>
+        <div className='flex'>
+        <Icon icon="streamline:interface-calendar-check-approve-calendar-check-date-day-month-success" />
+        <p className='text-[14px] text-main-slate-gray   font-medium mr-2'>میزبان شما</p>
+        </div>
+        <div className='flex '> 
+          <p>{host.name}</p>
+           <img className='w-[30px] h-[30px] rounded-[50%] mr-2 ' src={host.avatar} alt={title} />
         </div>
       </div>
     </div>
-    <p>قیمت: {data.price}</p>
-    <div>
-      <p>میزبانی: {data.host.name}</p>
-      <img src={data.host.avatar} alt={data.title} />
-    </div>
+   </div>
+    <p>قیمت: {price}</p>
   </div>
+  
   );
 };
 
 export default CardMyTrips;
-
-
-// import React, { useState } from 'react';
-
-// const MyComponent = () => {
-//   const [myData, setMyData] = useState({
-//     title: "عنوان",
-//     description: "توضیحات",
-//     imageUrl: "https://example.com/image.jpg",
-//   });
-
- 
-// };
