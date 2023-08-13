@@ -22,7 +22,7 @@ function StaysSearchMobile({ city, data }) {
           <HeaderPagesSearch
             city={city}
             data={data}
-            classNames={{ container: "m-0 ml-4" }}
+            classNames={{ body: "m-0 px-1",inner: "w-[200px] sm:w-[240px]" }}
           />
         </div>
         <div className="font-medium text-xs">

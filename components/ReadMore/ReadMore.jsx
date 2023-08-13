@@ -26,5 +26,3 @@ export const ReadMoreLink = ({text,type}) => {
      </div>
     );
 };
-
-

@@ -82,7 +82,7 @@ export default function Detail() {
                                          alt="star--v1"/>
                                     <div
                                         className="font-medium text-[0.7rem] lg:text-[0.9rem]">{data.rate && toFarsiNumber(data.rate)}</div>
-                                    <a className="underline font-medium text-main-slate-gray lg:text-[0.85rem]">({comment && toFarsiNumber(comment.length)} نظر
+                                    <a className="underline font-medium text-main-slate-gray lg:text-[0.85rem]">({data?.comment && toFarsiNumber(data?.comment.length)} نظر
                                         ثبت شده)</a>
                                 </div>
                                 <p className="text-lg lg:text-[0.85rem]">.</p>
