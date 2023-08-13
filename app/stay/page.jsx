@@ -193,8 +193,8 @@ export default function Detail() {
                         <div className="w-full mt-[20px] lg:w-[40%]">
                             <div className="w-full font-bold">قوانین و مقررات {engToFaType(data.type)}</div>
                             <div className="w-full h-[140px] flex justify-between items-center">
-                                <div className="w-[48%] h-[100px] flex justify-around items-start flex-col rounded-[10px] border-[1px] border-solid border-main-light-gray shadow-none p-[10px]
-                                lg:border-main-gainsboro lg:rounded-[8px]"
+                                <div className="w-[48%] h-[100px] flex justify-around items-start flex-col rounded-[8px] border-[1px] border-solid border-main-light-gray shadow-none p-[10px]
+                                lg:border-main-gainsboro"
                                 >
                                     <img
                                         className="w-[25px] h-[25px]"
@@ -204,8 +204,8 @@ export default function Detail() {
                                     <p className="font-bold text-[1rem]">ساعت ورود</p>
                                     <p className="font-light text-[0.8rem]">02:00 (بعد از ظهر)</p>
                                 </div>
-                                <div className="w-[48%] h-[100px] flex justify-around items-start flex-col rounded-[10px] border-[1px] border-solid border-main-light-gray shadow-none p-[10px]
-                                lg:border-main-gainsboro lg:rounded-[8px]"
+                                <div className="w-[48%] h-[100px] flex justify-around items-start flex-col rounded-[8px] border-[1px] border-solid border-main-light-gray shadow-none p-[10px]
+                                lg:border-main-gainsboro"
                                 >
                                     <img
                                         className="w-[25px] h-[25px]"
