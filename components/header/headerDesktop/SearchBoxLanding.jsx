@@ -5,6 +5,7 @@ import { getLocalData } from "@/lib/localdata";
 const data = await getLocalData();
 
 const SearchBoxLanding = () => {
+  const stays = data.data.flatMap((category) => Object.values(category).flat());
   return (
     <div className="lg:hidden">
       <div className="px-5 pt-[15px]">
