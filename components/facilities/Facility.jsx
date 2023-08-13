@@ -4,12 +4,17 @@ import { useState } from "react";
 import clsx from "clsx";
 
 export const Facility = ({ facility, type }) => {
-  const [data, setData] = useState(facility);
   const [otherFacilities, setOtherFacility] = useState(false);
 
-  const handleClick = () => {
+  const handleOpen = () => {
     setOtherFacility(true);
   };
+
+  const handleClose = () => {
+    setOtherFacility(false);
+  };
+
+
   return (
     <div className="w-full">
       <div className="w-full">
@@ -45,7 +50,7 @@ export const Facility = ({ facility, type }) => {
         </div>
         <div className="w-full flex justify-center items-center lg:justify-start">
           <button
-              onClick={handleClick}
+              onClick={handleOpen}
               className="w-full px-[20px] py-[8px] mt-[20px] cursor-pointer shadow-none border-solid border-[1px]
               rounded-[10px] lg:w-[200px] lg:text-[0.7rem] lg:font-bold flex justify-center items-center gap-x-[4px]"
           >
@@ -54,13 +59,7 @@ export const Facility = ({ facility, type }) => {
           </button>
         </div>
       </div>
-      {!otherFacilities ? null : (
-          <WindowFacility
-              facility={facility}
-              type={type}
-              onClose={() => setOtherFacility(false)}
-          />
-      )}
+      {otherFacilities && <WindowFacility facility={facility} type={type} onClose={handleClose} isOpen={handleOpen}/>}
     </div>
   );
 };
