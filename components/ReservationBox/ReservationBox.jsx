@@ -34,7 +34,7 @@ export const ReservationBox = ({data}) => {
     const calculatePrice = () => {
         if (valueExit.dayOfBeginning - valueEnter.dayOfBeginning > 0) {
             let price = (((data.price.base + (calculateExtras() * data.price?.extra)) * (valueExit.dayOfBeginning - valueEnter.dayOfBeginning)))
-            return `${price} تومان`
+            return `${toFarsiNumber(price)} تومان`
         } else {
             return "لطفا تاریخ را درست انتخاب کنید"
         }
@@ -105,18 +105,18 @@ export const ReservationBox = ({data}) => {
                             (
                                 <div className="w-full flex justify-start items-center gap-x-[4px]">
                                     <div className=" font-bold text-[0.8rem] text-main-silver line-through">
-                                        {data.price && toFarsiNumber(data.price.base)}
+                                        {data?.price && toFarsiNumber(data.price.base)}
                                     </div>
                                     <div
                                         className=" py-[2px] px-[6px] rounded-[14px] bg-main-dark-red text-main-white font-bold text-[0.8rem]">
-                                        % {data.discount && toFarsiNumber(data.discount)}
+                                        % {data?.discount && toFarsiNumber(data.discount)}
                                     </div>
                                 </div>
                             )}
                     </div>
                     <div className="w-full flex justify-start items-center gap-x-[4px]">
                         <div className="  text-[0.7rem] font-medium">شروع از:</div>
-                        <div className=" text-[0.8rem] font-medium">{data.discount && toFarsiNumber(priceDiscount(data.price.base,data.discount))}</div>
+                        <div className=" text-[0.8rem] font-medium">{data?.discount && toFarsiNumber(priceDiscount(data.price.base,data.discount))}</div>
                         <div className="  text-[0.55rem] font-light">تومان</div>
                         <div className="  text-[0.65rem] font-light text-main-silver">/ هرشب</div>
                     </div>
@@ -126,8 +126,8 @@ export const ReservationBox = ({data}) => {
                     <img className="w-4 h-4"
                          src="https://img.icons8.com/material-rounded/24/FAB005/star--v1.png"
                          alt="star--v1"/>
-                    <div className="font-medium text-[1rem]">{data.rate && toFarsiNumber(data.rate)}</div>
-                    <div className="text-[0.9rem] font-light">({data.comments && toFarsiNumber(data.comments)})</div>
+                    <div className="font-medium text-[1rem]">{data?.rate && toFarsiNumber(data.rate)}</div>
+                    <div className="text-[0.9rem] font-light">({data?.comments && toFarsiNumber(data.comments)})</div>
                 </div>
             </div>
             <div className="w-full flex justify-center items-center flex-col mt-[10px]">
@@ -220,7 +220,7 @@ export const ReservationBox = ({data}) => {
                     <div className="text-center text-[0.7rem] font-medium text-main-silver">1 شب اقامت</div>
                     <div
                         className="text-center text-[0.7rem] font-medium text-main-silver">
-                        {toFarsiNumber(priceDiscount(data.price.base,data.discount))} تومان
+                        {data?.discount && toFarsiNumber(priceDiscount(data.price.base,data.discount))} تومان
                     </div>
                 </div>
                 <div className="w-full h-[1px] bg-main-light-gray mt-[12px]"></div>

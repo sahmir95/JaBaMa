@@ -16,10 +16,10 @@ export const CommentsComponent = ({comments}) => {
                 <div className="w-full">
                     <div className="w-full flex justify-start items-center lg: ">
                         <div className="w-[200px] font-bold text-[1.2rem] lg:w-[140px]">دیدگاه کاربران</div>
-                        <div className="w-full font-light text-[0.9]"> ({toFarsiNumber(comments.length)} دیدگاه)</div>
+                        <div className="w-full font-light text-[0.9]"> ({comments && toFarsiNumber(comments.length)} دیدگاه)</div>
                     </div>
                     <div className="w-full mt-[16px] lg:flex lg:justify-between lg:items-center lg:flex-wrap">
-                        {comments.map((item) => {
+                        {comments && comments.map((item) => {
                             return (
                                 <div key={item.commenter}
                                     className="w-full h-[100px] flex justify-between items-start mt-[16px] flex-col border-[1px]
@@ -46,7 +46,7 @@ export const CommentsComponent = ({comments}) => {
                                 className="w-full px-[20px] py-[8px] mt-[20px] flex justify-center items-center cursor-pointer shadow-none
                                 border-solid border-[1px] rounded-[8px] text-sm text-center font-light lg:w-[250px]">
                             <div className="w-[150px] font-bold text-[0.9rem] lg:text-[0.7rem] lg:w-[116px]">مشاهده همه بازخوردها</div>
-                            <div className="font-light text-[0.9] lg:text-[0.7rem]"> ({toFarsiNumber(comments.length)} مورد)</div>
+                            <div className="font-light text-[0.9] lg:text-[0.7rem]"> ({comments && toFarsiNumber(comments.length)} مورد)</div>
                         </button>
                     </div>
 
