@@ -24,7 +24,6 @@ export default function CardWithSwiper({
   bedroom,
   capacity,
   classNames = {
-    aspect: "",
     describtion: "",
     images: "",
     title: "",
@@ -105,7 +104,7 @@ export default function CardWithSwiper({
                 "font-light text-[0.625rem]",
                 classNames?.comment
               )}
-            >{`(${toFarsiNumber(comments)} دیدگاه)`}</p>
+            >{`(${toFarsiNumber(comments)}) دیدگاه`}</p>
           </div>
           <p
             className={twMerge(
