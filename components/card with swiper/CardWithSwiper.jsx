@@ -112,7 +112,7 @@ export default function CardWithSwiper({
               classNames?.title
             )}
           >
-            {`${title.replace("اجاره", "").replace(`${city}`, "")}`}
+            {title && city && `${title.replace("اجاره", "").replace(`${city}`, "")}`}
           </p>
           <p
             className={twMerge(
