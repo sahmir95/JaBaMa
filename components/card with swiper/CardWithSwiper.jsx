@@ -97,14 +97,14 @@ export default function CardWithSwiper({
                 classNames?.rate
               )}
             >
-              {toFarsiNumber(rate)}
+              {rate && toFarsiNumber(rate)}
             </p>
             <p
               className={twMerge(
                 "font-light text-[0.625rem]",
                 classNames?.comment
               )}
-            >{`(${toFarsiNumber(comments)} دیدگاه`}</p>
+            >{comments && `(${toFarsiNumber(comments)} دیدگاه`}</p>
           </div>
           <p
             className={twMerge(
@@ -135,7 +135,7 @@ export default function CardWithSwiper({
                 <span className=" flex mr-[2px] text-xl"> . </span>
                 <span className="mx-1">
                   {" "}
-                  {toFarsiNumber(capacity?.base)} نفر پایه{" "}
+                  {capacity?.base && toFarsiNumber(capacity?.base)} نفر پایه{" "}
                 </span>
                 {capacity?.extra && (
                   <>
@@ -158,7 +158,7 @@ export default function CardWithSwiper({
                   classNames?.discount
                 )}
               >
-                % تا {toFarsiNumber(hasDiscount)} درصد تخفیف
+                % تا {hasDiscount && toFarsiNumber(hasDiscount)} درصد تخفیف
               </p>
               {!dontShowCircle && (
                 <>
@@ -198,15 +198,15 @@ export default function CardWithSwiper({
                 <span className="text-right flex gap-1">
                   {showDiscountPrice && (
                     <span className="line-through text-main-silver sm:hidden lg:block">
-                      {toFarsiNumber(price)}
+                      {price && toFarsiNumber(price)}
                     </span>
                   )}
                   <span>
-                    {toFarsiNumber(price - (price * hasDiscount) / 100)}
+                    {hasDiscount && toFarsiNumber(price - (price * hasDiscount) / 100)}
                   </span>
                 </span>
               ) : (
-                <span>{toFarsiNumber(price)}</span>
+                <span>{price && toFarsiNumber(price)}</span>
               )}{" "}
               تومان
             </span>
