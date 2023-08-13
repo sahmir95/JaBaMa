@@ -24,7 +24,7 @@ const MyTrips = () => {
                   <TitlePage title="سفرهای من" />
                 </div>
                 <div className="w-full h-full grid grid-cols-1 md:grid md:grid-cols-2 lg:grid lg:grid-cols-2 gap-3 sm:pt-[50px] lg:pt-4">
-                  {travel.map((item) => {
+                  {travel && travel.map((item) => {
                     return (<CardMyTrips        
                       item={item}
                       title={item.title}

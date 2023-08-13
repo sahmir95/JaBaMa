@@ -14,7 +14,7 @@ import toFarsiNumber from "@/utils/toFaNumber";
 export const ReservationBox = ({data}) => {
     const [valueEnter, setValueEnter] = useState("")
     const [valueExit, setValueExit] = useState("")
-    const [person, setPerson] = useState(0)
+    const [person, setPerson] = useState(1)
     const dispatch = useDispatch()
     const router = useRouter()
     const [totalPrice, setTotalPrice] = useState(0)
@@ -91,7 +91,9 @@ export const ReservationBox = ({data}) => {
     }
 
     const priceDiscount = (price,discount) => {
-        return ((price - (price * discount) / 100))
+        if (price, discount) {
+            return ((price - (price * discount) / 100))
+        }
     }
 
     return (
@@ -197,7 +199,7 @@ export const ReservationBox = ({data}) => {
                             </div>
                         </div>
                     </div>
-                    <div className="w-full flex justify-end items-center gap-x-[10px]">
+                    <div className="w-full flex justify-end items-center font-medium gap-x-[10px]">
                         <button className="border-[1px] px-[6px] rounded-[8px]" onClick={handleAddPerson}>
                             +
                         </button>
