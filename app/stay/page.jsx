@@ -20,6 +20,7 @@ import { BathroomCondition } from "@/components/detailCondition/BathroomConditio
 import toFarsiNumber from "@/utils/toFaNumber";
 import { comment } from "postcss";
 
+
 export default function Detail() {
   const detailData = useSelector((state) => state.detailSlice.detailData);
   const data = detailData;

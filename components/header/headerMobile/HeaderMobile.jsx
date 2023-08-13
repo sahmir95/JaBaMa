@@ -3,6 +3,7 @@ import React, { useRef, useState } from "react";
 import { FaSearch } from "react-icons/fa";
 import { FaArrowRight } from "react-icons/fa6";
 import { FaCircleXmark } from "react-icons/fa6";
+
 import SearchHelper from "@/components/header/headerMobile/SearchHelper";
 import { useEffect } from "react";
 import { data } from "autoprefixer";
@@ -76,18 +77,22 @@ const HeaderMobile = ({ data, city }) => {
   };
 
   return (
-    <div className="p-5 relative top-0">
-      <div
-        onClick={() => setSearchMenu(true)}
-        className="flex items-center justify-start border border-b-4 shadow-md border-b-main-light-orange border-main-gainsboro rounded-lg p-4"
-      >
-        <FaSearch className="text-main-slate-gray ml-4" />
-        <span className="font-medium text-sm text-main-slate-gray">
-          جستجو شهر، استان یا اقامتگاه
-        </span>
+    <>
+      <div className="absolute top-[106px] w-full h-full">
+        <div className="bg-main-white sticky p-5 top-0 z-40">
+          <div
+            onClick={() => setSearchMenu(true)}
+            className="flex items-center justify-start border border-b-4 shadow-md border-b-main-light-orange border-main-gainsboro rounded-lg p-4"
+          >
+            <FaSearch className="text-main-slate-gray ml-4" />
+            <span className="font-medium text-sm text-main-slate-gray">
+              جستجو شهر، استان یا اقامتگاه
+            </span>
+          </div>
+        </div>
       </div>
       <div
-        className={`fixed w-full h-full bg-main-white transition-all ease left-0 z-50 ${
+        className={`fixed w-full h-full bg-main-white transition-all ease left-0 z-[999] ${
           searchMenu ? "bottom-0" : "bottom-[-100%]"
         }`}
       >
@@ -114,7 +119,7 @@ const HeaderMobile = ({ data, city }) => {
             )}
           </div>
         </div>
-        <div className="px-4">
+        <div className="p-4">
           <SearchHelper title="محبوب‌ترین مقصدها" data={city} />
         </div>
         <div className="flex items-center justify-center flex-col mt-12">
@@ -144,30 +149,7 @@ const HeaderMobile = ({ data, city }) => {
           </>
         )}
       </div>
-    </div>
-    // {value && (
-    //   <div>
-    //     {type != "" && searchCity == "" && (
-    //       <p className="flex flex-col gap-2">
-    //         {city.map((items) => {
-    //           return (
-    //             <span>
-    //               مشاهده همه {type} ها <span>در شهر {items.name}</span>
-    //             </span>
-    //           );
-    //         })}
-    //       </p>
-    //     )}
-    //     {searchCity != "" && type == "" && (
-    //       <p>همه اقامتگاه ها در {searchCity}</p>
-    //     )}
-    //     {searchCity != "" && type != "" && (
-    //       <p>
-    //         همه {type} ها در {searchCity}
-    //       </p>
-    //     )}
-    //   </div>
-    // )}
+    </>
   );
 };
 

@@ -1,6 +1,6 @@
 'use client'
 import React, {useState, useEffect} from 'react';
-import styles from "./HeaderMobilePages.module.css";
+import styles from "./headerMobilePages.module.css";
 
 const HeaderMobilePages = ({title}) => {
 
