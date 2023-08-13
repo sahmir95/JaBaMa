@@ -1,7 +1,7 @@
 'use client'
 import {useState} from "react";
 import {WindowComment} from "@/components/windowComment/WindowComment";
-
+import toFarsiNumber from "@/utils/toFaNumber";
 export const CommentsComponent = ({comments}) => {
 
     const [openComment, setOpenComment] = useState(false);
@@ -14,15 +14,16 @@ export const CommentsComponent = ({comments}) => {
         <div className="w-full mt-[32px]">
             {!openComment ? (
                 <div className="w-full">
-                    <div className="w-full flex justify-start items-center ">
-                        <div className="w-[200px] font-bold text-[1.2rem]">دیدگاه کاربران</div>
-                        <div className="w-full font-light text-[0.9]"> ({comments.length} دیدگاه)</div>
+                    <div className="w-full flex justify-start items-center lg: ">
+                        <div className="w-[200px] font-bold text-[1.2rem] lg:w-[140px]">دیدگاه کاربران</div>
+                        <div className="w-full font-light text-[0.9]"> ({toFarsiNumber(comments.length)} دیدگاه)</div>
                     </div>
-                    <div className="w-full mt-[16px]">
+                    <div className="w-full mt-[16px] lg:flex lg:justify-between lg:items-center lg:flex-wrap">
                         {comments.map((item) => {
                             return (
                                 <div key={item.commenter}
-                                    className="w-full h-[100px] flex justify-between items-start mt-[16px] flex-col border-[1px] border-main-light-silver border-solid p-[16px] rounded-[10px]">
+                                    className="w-full h-[100px] flex justify-between items-start mt-[16px] flex-col border-[1px]
+                                    border-main-light-silver border-solid p-[16px] rounded-[10px] lg:w-[45%] lg:h-[150px] lg:justify-start lg:gap-y-[20px]">
                                     <div className="w-full flex justify-start items-start">
                                         <div className="w-[60px]">
                                             <img className="w-[40px] h-[40px] rounded-[50%]"
@@ -42,9 +43,10 @@ export const CommentsComponent = ({comments}) => {
                     </div>
                     <div className="w-full">
                         <button onClick={handleClick}
-                                className="w-full px-[20px] py-[8px] mt-[20px] flex justify-center items-center cursor-pointer shadow-none border-solid border-[1px] rounded-[8px] text-sm text-center font-light px-[]">
-                            <div className="w-[150px] font-bold text-[0.9rem]">مشاهده همه بازخوردها</div>
-                            <div className="font-light text-[0.9]"> ({comments.length} مورد)</div>
+                                className="w-full px-[20px] py-[8px] mt-[20px] flex justify-center items-center cursor-pointer shadow-none
+                                border-solid border-[1px] rounded-[8px] text-sm text-center font-light lg:w-[250px]">
+                            <div className="w-[150px] font-bold text-[0.9rem] lg:text-[0.7rem] lg:w-[116px]">مشاهده همه بازخوردها</div>
+                            <div className="font-light text-[0.9] lg:text-[0.7rem]"> ({toFarsiNumber(comments.length)} مورد)</div>
                         </button>
                     </div>
 
