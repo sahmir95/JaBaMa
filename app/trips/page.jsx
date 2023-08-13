@@ -5,7 +5,7 @@ import TitlePage from "@/components/titlepage/TiTlePage";
 import CardMyTrips from "@/components/cardmytrips/CardMyTrips";
 import React from 'react';
 import { useDispatch, useSelector } from "react-redux";
-import { removeTravelData } from "@/redux/featchers/travelSlice";
+
 const MyTrips = () => {
   const travel = useSelector((state) => state.travelSlice.travel)
   const dispatch = useDispatch()
@@ -25,9 +25,8 @@ const MyTrips = () => {
                 </div>
                 <div className="w-full h-full grid grid-cols-1 md:grid md:grid-cols-2 lg:grid lg:grid-cols-2 gap-3 sm:pt-[50px] lg:pt-4">
                   {travel.map((item) => {
-                    return (<CardMyTrips 
-                      key={item.id}
-                      obj={item}
+                    return (<CardMyTrips        
+                      item={item}
                       title={item.title}
                       city={item.city}
                       image={item.image}
@@ -40,7 +39,7 @@ const MyTrips = () => {
                       rooms={item.rooms}
                       date={item.date}
                       avatar={item.avatar}
-                        />
+                      />
                     );
                   })}
                 </div>

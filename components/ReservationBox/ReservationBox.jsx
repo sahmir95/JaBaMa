@@ -67,8 +67,8 @@ export const ReservationBox = ({ data }) => {
       const newTrip = {
         id: idRef.current,
         date: {
-          from: valueEnter,
-          to: valueExit,
+          from: valueEnter.format(),
+          to: valueExit.format(),
         },
         price: data.price.base,
         overall: totalPrice,
