@@ -104,7 +104,7 @@ export default function CardWithSwiper({
                 "font-light text-[0.625rem]",
                 classNames?.comment
               )}
-            >{`(${toFarsiNumber(comments)}) دیدگاه`}</p>
+            >{`(${toFarsiNumber(comments)} دیدگاه`}</p>
           </div>
           <p
             className={twMerge(
