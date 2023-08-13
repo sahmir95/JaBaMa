@@ -16,6 +16,7 @@ import HeaderDesktop from "@/components/header/headerDesktop/HeaderDesktop";
 
 const Page = async () => {
   const data = await getLocalData();
+
   if (!data) {
     return (
       <div className="w-full h-screen flex justify-center items-center text-4xl">
@@ -29,7 +30,9 @@ const Page = async () => {
       <HeaderPopDesktop />
       <SearchBoxLanding />
       <HeaderDesktop />
-      <LandingPage />
+      <LandingPage
+          city={data.cities}
+      />
       <div className="w-full min-h-screen flex flex-col items-center">
         <AutoSwiper />
         <IconsSection />

@@ -4,8 +4,9 @@ import {FaSearch} from "react-icons/fa";
 import {FaArrowRight} from "react-icons/fa6";
 import {FaCircleXmark} from "react-icons/fa6";
 import SearchHelper from "@/components/header/headerMobile/SearchHelper";
+import LandingSearchResult from "@/components/landingPage/LandingSearchResult";
 
-const HeaderMobile = ({data}) => {
+const HeaderMobile = ({data, city}) => {
 
     const [searchMenu, setSearchMenu] = useState(false);
     const [value, setValue] = useState("");
@@ -48,18 +49,33 @@ const HeaderMobile = ({data}) => {
                     </div>
                 </div>
                 <div className="px-4">
-                    <h2 className="font-medium text-main-slate-gray text-xs mb-4 mt-6">
-                        آخرین جستوجوها
-                    </h2>
-                    <div
-                        className="border border-main-gainsboro rounded-[20px] w-fit py-3 px-5 font-medium text-xs">
-                        کردان
-                    </div>
                     <SearchHelper
                         title="محبوب‌ترین مقصدها"
-                        data={data}
+                        data={city}
                     />
                 </div>
+                <div className="flex items-center justify-center flex-col mt-12">
+                    <img className="w-[140px] h-[140px]" src="/images/searchnotfound.svg" alt="notfound"/>
+                    <span className="font-medium text-base">نتیجه‌ای پیدا نشد!</span>
+                </div>
+                {value && (
+                    <>
+                        <div className="px-4 mt-4">
+                            <LandingSearchResult
+                                icon="/images/location.png"
+                                text="کیش"
+                                data={city}
+                            />
+                        </div>
+                        <div className="px-4 mt-4">
+                            <LandingSearchResult
+                                icon="/images/apartment.png"
+                                text="ویلا"
+                                data={city}
+                            />
+                        </div>
+                    </>
+                )}
             </div>
         </div>
     );
