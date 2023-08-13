@@ -1,4 +1,6 @@
 import { Providers } from "@/redux/provider/provider";
+import HeaderSinglePage from "@/components/header/headerMobile/HeaderSinglePage";
+import MenuPrice from "@/components/menu/MenuPrice";
 
 export const metadata = {
   title: "Next.js",
@@ -8,7 +10,9 @@ export const metadata = {
 export default function StayLayout({ children }) {
   return (
     <Providers>
+      <HeaderSinglePage/>
       <section>{children}</section>
+        <MenuPrice/>
     </Providers>
   );
 }
