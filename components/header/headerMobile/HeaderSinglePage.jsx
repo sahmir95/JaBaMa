@@ -5,10 +5,19 @@ import {FaRegHeart} from "react-icons/fa";
 import {BiShareAlt} from "react-icons/bi";
 import {RiArrowRightLine} from "react-icons/ri";
 import Link from "next/link";
+import {useRouter} from 'next/navigation'
+import {useDispatch, useSelector} from "react-redux";
 
 const HeaderSinglePage = () => {
 
     const [isScroll, setIsScrolled] = useState(false);
+    const dispatch = useDispatch()
+    const router = useRouter()
+
+    const handleSend = () => {
+        dispatch(addTravelData(newTrip))
+        router.push("/favorites")
+    }
 
     useEffect(() => {
         const handleScroll = () => {
