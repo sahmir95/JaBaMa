@@ -124,13 +124,25 @@ const HeaderMobile = ({ data, city }) => {
         </div>
         {value && (
           <div>
-            {type != "" && (
-              <p>
-                مشاهده همه {type} ها{" "}
-                {searchCity !== "" && <span>در شهر {searchCity}</span>}
+            {type != "" && searchCity == "" && (
+              <p className="flex flex-col gap-2">
+                {city.map((items) => {
+                  return (
+                    <span>
+                      مشاهده همه {type} ها <span>در شهر {items.name}</span>
+                    </span>
+                  );
+                })}
               </p>
             )}
-            {searchCity != "" && <p>همه اقامتگاه ها در {searchCity}</p>}
+            {searchCity != "" && type == "" && (
+              <p>همه اقامتگاه ها در {searchCity}</p>
+            )}
+            {searchCity != "" && type != "" && (
+              <p>
+                همه {type} ها در {searchCity}
+              </p>
+            )}
           </div>
         )}
       </div>
