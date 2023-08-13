@@ -14,10 +14,7 @@ const SearchBoxLanding = () => {
           اجاره ویلا، سوئیت و اقامتگاه در شمال و سراسر ایران
         </h5>
       </div>
-      <HeaderMobile
-          data={data.data}
-          city={data.cities}
-      />
+      <HeaderMobile data={stays} city={data.cities} />
     </div>
   );
 };
