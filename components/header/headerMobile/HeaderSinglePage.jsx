@@ -7,15 +7,17 @@ import {RiArrowRightLine} from "react-icons/ri";
 import Link from "next/link";
 import {useRouter} from 'next/navigation'
 import {useDispatch, useSelector} from "react-redux";
+import { addFavoritePlace } from '@/redux/featchers/favoriteSlice';
 
 const HeaderSinglePage = () => {
 
+    const detailData = useSelector((state) => state.detailSlice.detailData)
     const [isScroll, setIsScrolled] = useState(false);
     const dispatch = useDispatch()
     const router = useRouter()
 
     const handleSend = () => {
-        dispatch(addTravelData(newTrip))
+        dispatch(addFavoritePlace(detailData))
         router.push("/favorites")
     }
 
