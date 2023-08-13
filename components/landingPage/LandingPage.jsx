@@ -14,6 +14,8 @@ import {
   setTypeVilla,
 } from "@/redux/featchers/filterSlice";
 import Link from "next/link";
+import { reset } from "@/redux/featchers/filterSlice";
+
 const LandingPage = ({ city, data }) => {
   const searchBoxRef = useRef(null);
   const [isHeaderVisible, setHeaderVisible] = useState(false);
@@ -152,9 +154,9 @@ const LandingPage = ({ city, data }) => {
               سفر تابستونی از تو، جاباما
             </h4>
             <div className="flex items-center justify-center bg-main-white rounded-lg px-4 py-2 mt-3 w-fit">
-              <a className="font-medium text-sm text-main-black" href="#">
+              <Link className="font-medium text-sm text-main-black" onClick={() => dispatch(reset())} href="/stays">
                 مشاهده اقامتگاه‌ها
-              </a>
+              </Link>
             </div>
           </div>
         </div>
