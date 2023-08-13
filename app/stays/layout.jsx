@@ -17,9 +17,8 @@ export default function layout({ children }) {
         loc=""
         border="border-b border-main-border-gray pb-4 dxl:pt-[0.8rem] sticky top-0 z-20 bg-main-white"
         compFilter={<SearchOptions mode={"essential"} />}
-        compSearch={
-          <HeaderPagesSearch city={data.cities} data={stays} isHome={false} />
-        }
+        compSearch= {<HeaderPagesSearch city={data.cities} data={stays} isHome={false}/>}
+        
       />
       {children}
     </section>

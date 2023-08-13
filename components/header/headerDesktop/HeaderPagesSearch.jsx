@@ -12,7 +12,7 @@ const HeaderPagesSearch = ({
   city,
   data,
   isHome,
-  classNames = { container: "" },
+  classNames={body: ""}
 }) => {
   const searchBoxRef = useRef(null);
   const [showBox, setShowBox] = useState(false);
@@ -104,11 +104,11 @@ const HeaderPagesSearch = ({
       ref={searchBoxRef}
       onClick={handleDivClick}
       onBlur={handleBoxBlur}
-      className={`flex items-center justify-center border border-[#ddd] rounded-[10px] py-[14px] px-5 mr-[200px] ${styles.searchShadow}`}
+      className={twMerge(`flex items-center justify-center border border-[#ddd] rounded-[10px] py-[14px] px-5 mr-[200px] ${styles.searchShadow}`, classNames.body)}
     >
       <RiSearchLine className="text-main-light-orange ml-2" />
       <input
-        className="font-medium text-sm w-[260px] outline-none border-none"
+        className={twMerge("font-medium text-sm w-[260px] outline-none border-none", classNames.inner)}
         type="text"
         placeholder="جستجو شهر، استان یا اقامتگاه"
         value={value}
@@ -119,14 +119,11 @@ const HeaderPagesSearch = ({
           ref={searchBoxRef}
           onClick={handleDivClick}
           onBlur={handleBoxBlur}
-          className={twMerge(
-            `flex items-center justify-center border border-[#ddd] rounded-[10px] py-[14px] px-5 mr-[200px] ${styles.searchShadow}`,
-            classNames?.container
-          )}
+          className={twMerge(`flex items-center justify-center border border-[#ddd] rounded-[10px] py-[14px] px-5 mr-[200px] ${styles.searchShadow}`, classNames.body)}
         >
           <RiSearchLine className="text-main-light-orange ml-2" />
           <input
-            className="font-medium text-sm w-[260px] outline-none border-none"
+            className={twMerge("font-medium text-sm w-[260px] outline-none border-none", classNames.inner)}
             type="text"
             placeholder="جستجو شهر، استان یا اقامتگاه"
             value={value}
