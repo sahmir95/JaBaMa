@@ -9,8 +9,6 @@ const data = await getLocalData();
 const stays = data.data.flatMap((category) => Object.values(category).flat());
 
 export default function StayLayout({children}) {
-    
-
 
     return (
         <Providers>
@@ -22,7 +20,6 @@ export default function StayLayout({children}) {
                 background="bg-main-white"
             />
             <section>{children}</section>
-            <MenuPrice />
         </Providers>
     );
 }

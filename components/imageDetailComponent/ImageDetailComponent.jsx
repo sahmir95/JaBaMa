@@ -29,7 +29,7 @@ export const ImageDetailComponent = ({data}) => {
                 )}
                      src={data.images[0]} alt="image-0"/>
             </div>
-            <div className="w-[48%] h-full flex flex-wrap gap-[10px]">
+            <div className="w-[48%] h-full flex flex-wrap justify-between gap-y-[10px]">
                 {data.images.filter((item, index) => index > 0 && index < 5).map((item, index) => {
                     return (
                         <div key={index} onMouseEnter={() => handleMouseEnter(index)} onMouseLeave={() => handleMouseLeave()} className="w-[49%] h-[200px]">

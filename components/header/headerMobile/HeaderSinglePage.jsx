@@ -39,8 +39,8 @@ const HeaderSinglePage = () => {
 
     return (
         <div
-            className={`sm:flex lg:hidden items-center justify-between bg-main-transparent z-50 fixed inset-0 px-[15px] h-[60px] text-center ${isScroll ? `${styles.scroll}` : ''}`}>
-            <div className="">
+            className={`flex lg:hidden items-center justify-between bg-main-transparent z-50 fixed inset-0 px-[15px] h-[60px] text-center ${isScroll ? `${styles.scroll}` : ''}`}>
+            <div className="flex">
                 <Link href="/" className="py-[13px] px-[12px] rounded-md bg-main-white">
                     <RiArrowRightLine className="text-lg text-main-black"/>
                 </Link>

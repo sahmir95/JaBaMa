@@ -18,8 +18,7 @@ import { ImmediateReservation } from "@/components/detailCondition/ImmediateRese
 import { BedroomCondition } from "@/components/detailCondition/BedroomCondition";
 import { BathroomCondition } from "@/components/detailCondition/BathroomCondition";
 import toFarsiNumber from "@/utils/toFaNumber";
-import { comment } from "postcss";
-import {data} from "autoprefixer";
+import MenuPrice from "@/components/menu/MenuPrice";
 
 
 export default function Detail() {
@@ -106,7 +105,7 @@ export default function Detail() {
                 </div>
                 <div className="w-full h-[1px] bg-main-light-gray mt-[20px] lg:hidden"></div>
                 <div className="w-full flex justify-between items-start lg:relative lg:mt-[40px]">
-                    <div className="w-full lg:w-[68%]">
+                    <div className="w-full lg:w-[66%]">
                         <div className="w-full mt-[20px] flex justify-between items-center">
                             <div className="w-[74%]">
                                 <div className="w-full font-bold">{engToFaType(data.type)}</div>
@@ -184,7 +183,7 @@ export default function Detail() {
                             <div className="w-full mt-[20px] font-bold">
                                 محاسبه قیمت {engToFaType(data.type)}
                             </div>
-                            <div className="w-full flex justify-start items-start mt-[20px] lg:w-[36%]">
+                            <div className="w-full flex justify-start items-start mt-[20px] lg:w-[46%]">
                                 <div className="w-[50px] mt-[8px]">
                                     <img
                                         className="w-[28px] h-[28px]"
@@ -193,12 +192,12 @@ export default function Detail() {
                                     />
                                 </div>
                                 <div className="w-full flex justify-start items-start flex-col">
-                                    <p className="font-medium text-[0.9rem]">نفر اضافه</p>
-                                    <p className="font-light text-[0.75rem]">
+                                    <p className="font-medium text-[0.9rem] lg:text-[0.85rem]">نفر اضافه</p>
+                                    <p className="font-light text-[0.75rem] text-[0.7rem]">
                                         هزینه‌ای که برای نفرات بیش از استاندارد (سرویس خواب و ... ) به
                                         میلغ رزرو اضافه می‌شود.
                                     </p>
-                                    <p className="font-light text-[0.75rem]">
+                                    <p className="font-light text-[0.75rem] text-[0.7rem] lg:mt-[4px]">
                                         قیمت برای هر نفر اضافه به ازای هر شب :
                                         <strong className="font-bold text-[0.75rem]">
                                             {data.price && toFarsiNumber(data.price.extra)} هزار تومان
@@ -266,7 +265,7 @@ export default function Detail() {
                         </div>
                     </div>
                     <div className="hidden lg:h-full lg:inline lg:sticky lg:z-10 lg:top-[40px] lg:left-0 lg:mt-[20px] lg:mb-[40px]
-                    lg:w-[26%] lg:p-[20px] lg:border-[1px] lg:border-main-light-gray lg:rounded-[8px]">
+                    lg:w-[30%] lg:p-[20px] lg:border-[1px] lg:border-main-light-gray lg:rounded-[8px]">
                         <ReservationBox data={data}/>
                     </div>
 
@@ -296,8 +295,8 @@ export default function Detail() {
                     </div>
                 </div>
             </div>
-        </div>)}   
-        
+        </div>)}
+            <MenuPrice data={data}/>
         </>
     );
 }
