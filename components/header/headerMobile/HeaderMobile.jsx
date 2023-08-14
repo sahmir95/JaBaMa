@@ -6,8 +6,6 @@ import { FaCircleXmark } from "react-icons/fa6";
 
 import SearchHelper from "@/components/header/headerMobile/SearchHelper";
 import { useEffect } from "react";
-import { data } from "autoprefixer";
-import LandingSearchResult from "@/components/landingPage/LandingSearchResult";
 import { useSelector } from "react-redux";
 import SearchResultMobile from "./SearchResultMobile";
 
@@ -20,7 +18,6 @@ const HeaderMobile = ({ data, city }) => {
   const refInput = useRef(null);
   const ourData = [...data];
   const ourCities = [...city];
-  console.log(city);
   const handleSetValue = (name) => {
     setValue(cityType);
   };
@@ -85,7 +82,7 @@ const HeaderMobile = ({ data, city }) => {
 
   return (
     <>
-      <div className="absolute top-[106px] w-full h-full overflow-y-scroll">
+      <div className="absolute top-[106px] w-full h-full">
         <div className="bg-main-white sticky p-5 top-0 z-40">
           <div
             onClick={() => setSearchMenu(true)}
@@ -99,10 +96,7 @@ const HeaderMobile = ({ data, city }) => {
         </div>
       </div>
       <div
-        className={`fixed w-full h-full bg-main-white transition-all ease left-0 z-[999] ${
-          searchMenu ? "bottom-0" : "bottom-[-100%]"
-        }`}
-      >
+        className={`fixed w-full h-full bg-main-white transition-all ease left-0 z-[999] ${searchMenu ? "bottom-0" : "bottom-[-100%]"}`}>
         <div className="flex items-center justify-center border-b border-main-gainsboro px-5 py-6">
           <div onClick={() => setSearchMenu(false)} className="text-lg">
             <FaArrowRight />
@@ -133,25 +127,29 @@ const HeaderMobile = ({ data, city }) => {
             handleSetValue={handleSetValue}
           />
         </div>
-        {value == "" && (
-          <div className="flex items-center justify-center flex-col mt-12">
-            <img
-              className="w-[140px] h-[140px]"
-              src="/images/searchnotfound.svg"
-              alt="notfound"
-            />
-            <span className="font-medium text-base">نتیجه‌ای پیدا نشد!</span>
-          </div>
+        {value && (
+            <>
+              {!searchCity && !type && (
+                  <div className="flex items-center justify-center flex-col mt-12">
+                    <img
+                        className="w-[140px] h-[140px]"
+                        src="/images/searchnotfound.svg"
+                        alt="notfound"
+                    />
+                    <span className="font-medium text-base">نتیجه‌ای پیدا نشد!</span>
+                  </div>
+              )}
+            </>
         )}
         {value && (
           <>
-            {searchCity != "" && type == "" && (
+            {searchCity !== "" && type === "" && (
               <SearchResultMobile
                 icon="/images/location.png"
                 searchCity={searchCity}
               />
             )}
-            {searchCity != "" && type != "" && (
+            {searchCity !== "" && type !== "" && (
               <p>
                 <SearchResultMobile
                   icon="/images/location.png"
@@ -160,7 +158,7 @@ const HeaderMobile = ({ data, city }) => {
                 />
               </p>
             )}
-            {type != "" && searchCity == "" && (
+            {type !== "" && searchCity === "" && (
               <p className="flex flex-col gap-2">
                 {city.map((items) => {
                   return (
@@ -176,25 +174,6 @@ const HeaderMobile = ({ data, city }) => {
           </>
         )}
       </div>
-      {/* {type != "" && searchCity == "" && (
-              <p className="flex flex-col gap-2">
-                {city.map((items) => {
-                  return (
-                    <span>
-                      مشاهده همه {type} ها <span>در شهر {items.name}</span>
-                    </span>
-                  );
-                })}
-              </p>
-            )}
-            {searchCity != "" && type == "" && (
-              <p>همه اقامتگاه ها در {searchCity}</p>
-            )}
-            {searchCity != "" && type != "" && (
-              <p>
-                همه {type} ها در {searchCity}
-              </p>
-            )} */}
     </>
   );
 };

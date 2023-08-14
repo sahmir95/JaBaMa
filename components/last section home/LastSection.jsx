@@ -36,7 +36,7 @@ const LastSection = () => {
           راحت است، می‌توانی برای هر ثانیه حالِ خوش در سفر برنامه‌ریزی کنی!
         </p>
       </div>
-      <div className="w-full flex justify-start pt-4 px-4 lg:px-20 ">
+      <div className="w-full flex justify-start pt-4 px-4 lg:px-20 relative z-10">
         <button
           onClick={triggerText}
           className="font-medium text-xs flex items-center gap-1"

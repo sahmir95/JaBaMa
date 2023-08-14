@@ -16,9 +16,9 @@ function StaysSearchMobile({ city, data }) {
           <SupportCall />
         </div>
       </div>
-      <div className="flex flex-col pt-2 pb-3 border-b bg-main-white border-main-light-silver h-fit sticky top-0 z-50 lg:hidden">
-        <div className="pr-3 mb-3 pl-5 h-11 flex items-center justify-between">
-          <GoBackButton />
+      <div className="flex flex-col px-2 pt-2 pb-3 border-b bg-main-white border-main-light-silver h-fit sticky top-0 z-50 lg:hidden">
+        <div className="mb-3 h-11 flex items-center justify-between">
+          <GoBackButton/>
           <HeaderPagesSearch
             city={city}
             data={data}

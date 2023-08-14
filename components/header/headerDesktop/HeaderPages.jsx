@@ -10,8 +10,6 @@ const HeaderPages = ({
   compSearch,
   background,
   position,
-  city,
-  data,
 }) => {
   return (
     <div
