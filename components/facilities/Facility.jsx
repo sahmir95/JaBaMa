@@ -25,7 +25,7 @@ export const Facility = ({ facility, type }) => {
           </h2>
           <ul className="w-full h-[250px] flex justify-between items-start flex-col mt-[20px]
             lg:w-[60%] lg:flex-row lg:flex-wrap lg:h-[180px]">
-            {[...facility].sort((a,b) => b.exist - a.exist).map((item) => {
+            {facility && [...facility].sort((a,b) => b.exist - a.exist).map((item) => {
               return (
                   <li
                       key={item.name}

@@ -9,14 +9,14 @@ export const travelSlice = createSlice({
   initialState,
   reducers: {
     addTravelData: (state, payload) => {
-      const check = state.travel.find((item) => item.id === payload.payload.id);
+      const check = state.travel.find((item) => item.id === payload.payload);
       if (!check) {
         state.travel = [...state.travel, payload.payload];
       }
     },
     removeTravelData: (state, payload) => {
       const copy = state.travel.filter(
-        (item) => item.id !== payload.payload.id
+        (item) => item.id !== payload.payload
       );
       state.travel = [...copy];
     },

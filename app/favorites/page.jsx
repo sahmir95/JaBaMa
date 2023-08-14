@@ -11,7 +11,7 @@ const FavoritePage = () => {
   return (
     <div className="max-w-[1400px] mx-auto">
       <div>
-        {data.length > 0 ? (
+        {data?.length > 0 ? (
           <div className="w-full h-auto flex pb-[58px]">
             <div className="hidden lg:block mb-10 mr-5 lg:w-72">
               <Sidbar />
@@ -22,24 +22,24 @@ const FavoritePage = () => {
                   <TitlePage title="مورد علاقه ها" />
                 </div>
                 <div className="w-full h-full grid grid-cols-1 md:grid md:grid-cols-2 lg:grid lg:grid-cols-2 gap-3 sm:pt-[50px] lg:pt-4">
-                  {data.map((item) => {
+                  {data && data.map((item) => {
                     return (
                       <CardWithSwiper
-                        key={item.id}
+                        key={item?.id}
                         obj={item}
-                        rate={item.rate}
-                        comments={item.comments}
-                        title={item.title}
-                        images={item.images}
-                        city={item.city}
-                        province={item.province}
-                        price={item.price.base}
-                        bedroom={item.bedroom.rooms}
-                        capacity={item.capacity}
+                        rate={item?.rate}
+                        comments={item?.comments}
+                        title={item?.title}
+                        images={item?.images}
+                        city={item?.city}
+                        province={item?.province}
+                        price={item?.price.base}
+                        bedroom={item?.bedroom.rooms}
+                        capacity={item?.capacity}
                         isCocacity={true}
-                        hasDiscount={item.discount}
+                        hasDiscount={item?.discount}
                         isBeginText={true}
-                        hasReserv={item.HasImmediateReserve}
+                        hasReserv={item?.HasImmediateReserve}
                         hasFavorit={true}
                         isFavorite={true}
                       />

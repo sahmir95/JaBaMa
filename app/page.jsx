@@ -13,10 +13,9 @@ import HeaderPop from "@/components/header/headerPop/HeaderPop";
 import HeaderPopDesktop from "@/components/header/headerPop/HeaderPopDesktop";
 import SearchBoxLanding from "@/components/header/headerDesktop/SearchBoxLanding";
 import HeaderDesktop from "@/components/header/headerDesktop/HeaderDesktop";
-
-const Page = async () => {
-  const data = await getLocalData();
-
+const data = await getLocalData();
+const stays = data.data.flatMap((category) => Object.values(category).flat());
+const Page = () => {
   if (!data) {
     return (
       <div className="w-full h-screen flex justify-center items-center text-4xl">
@@ -30,9 +29,7 @@ const Page = async () => {
       <HeaderPopDesktop />
       <SearchBoxLanding />
       <HeaderDesktop />
-      <LandingPage
-          city={data.cities}
-      />
+      <LandingPage city={data.cities} data={stays} />
       <div className="w-full min-h-screen flex flex-col items-center pt-[100px]">
         <AutoSwiper />
         <IconsSection />
@@ -46,8 +43,14 @@ const Page = async () => {
           subtitle="ویلاهای استخردار واسه سفر آخر هفته"
           type={"villa"}
         >
-          <CardWithSwiper isCocacity={false} showDiscountPrice={true} classNames={{
-            price: "font-bold flex items-center gap-x-1 text-[0.9rem] pl-[0.15rem]"}}/>
+          <CardWithSwiper
+            isCocacity={false}
+            showDiscountPrice={true}
+            classNames={{
+              price:
+                "font-bold flex items-center gap-x-1 text-[0.9rem] pl-[0.15rem]",
+            }}
+          />
         </BoxWithSwiper>
         <BoxWithSwiper
           data={data.data[1].hotel}
@@ -56,8 +59,14 @@ const Page = async () => {
           subtitle="اقامتِ باکیفت در بهترین هتل"
           type={"hotel"}
         >
-          <CardWithSwiper isCocacity={false} showDiscountPrice={true} classNames={{
-            price: "font-bold flex items-center gap-x-1 text-[0.9rem] pl-[0.15rem]"}}/>
+          <CardWithSwiper
+            isCocacity={false}
+            showDiscountPrice={true}
+            classNames={{
+              price:
+                "font-bold flex items-center gap-x-1 text-[0.9rem] pl-[0.15rem]",
+            }}
+          />
         </BoxWithSwiper>
         <BoxWithSwiper
           data={data.data[3].cottage}
@@ -66,8 +75,14 @@ const Page = async () => {
           subtitle="کلبه‌هلی مثلثی و چوبی"
           type={"cottage"}
         >
-          <CardWithSwiper isCocacity={false} showDiscountPrice={true} classNames={{
-            price: "font-bold flex items-center gap-x-1 text-[0.9rem] pl-[0.15rem]"}}/>
+          <CardWithSwiper
+            isCocacity={false}
+            showDiscountPrice={true}
+            classNames={{
+              price:
+                "font-bold flex items-center gap-x-1 text-[0.9rem] pl-[0.15rem]",
+            }}
+          />
         </BoxWithSwiper>
         <LastSection />
         <TagSection data={data.data[0].villa} />

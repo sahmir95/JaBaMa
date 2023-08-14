@@ -4,8 +4,7 @@ import React from "react";
 
 export const WindowComment = ({comments,onClose}) => {
     return (
-        <div className={clsx(
-            " fixed top-0 left-0 w-full lg:h-full flex justify-center bg-main-white items-center lg:bg-main-silver lg:bg-opacity-50 lg:z-20 z-[60]")}>
+        <div className="fixed top-0 left-0 w-full lg:h-full flex justify-center bg-main-white items-center lg:bg-main-silver lg:bg-opacity-50 lg:z-20 z-[60]">
             <div className="lg:w-[500px] lg:h-[500px] w-full bg-main-white p-6 rounded-[8px] shadow-lg overflow-auto">
                 <div onClick={onClose} className="w-[50px] text-[20px] cursor-pointer ">
                     <img className="sm:w-5 h-6 cursor-pointer"
@@ -14,10 +13,10 @@ export const WindowComment = ({comments,onClose}) => {
                 <div className="w-full mt-[20px]">
                     <div className="w-full flex justify-start items-center ">
                         <div className="w-[200px] font-bold text-[1.2rem]">دیدگاه کاربران</div>
-                        <div className="w-full font-light text-[0.9]"> ({comments.length} دیدگاه)</div>
+                        <div className="w-full font-light text-[0.9]"> ({comments && comments.length} دیدگاه)</div>
                     </div>
                     <div className="w-full mt-[16px]">
-                        {comments.map((item) => {
+                        {comments && comments.map((item) => {
                             return (
                                 <div
                                     className="w-full h-[100px] flex justify-between items-start mt-[16px] flex-col border-[1px] border-main-light-silver border-solid p-[16px] rounded-[10px]">
@@ -28,11 +27,11 @@ export const WindowComment = ({comments,onClose}) => {
                                                  alt="unknown"/>
                                         </div>
                                         <div className="w-full flex justify-start items-start flex-col">
-                                            <div className="w-full font-medium text-[0.75rem]">{item.commenter}</div>
-                                            <div className="w-full font-light text-[0.6rem]">{item.dateComment}</div>
+                                            <div className="w-full font-medium text-[0.75rem]">{item?.commenter}</div>
+                                            <div className="w-full font-light text-[0.6rem]">{item?.dateComment}</div>
                                         </div>
                                     </div>
-                                    <div className="w-full text-[0.75rem] font-light ">{item.comment}</div>
+                                    <div className="w-full text-[0.75rem] font-light ">{item?.comment}</div>
                                 </div>
                             )
                         })}

@@ -6,7 +6,7 @@ const initialState = {
   hasReserve: undefined,
   price: {
     from: 50000,
-    to: 500000
+    to: 500000,
   },
   city: "",
   type: "",
@@ -20,8 +20,7 @@ const initialState = {
   hasWater: undefined,
   hasElectricity: undefined,
   hasGas: undefined,
-}
-
+};
 
 export const filter = createSlice({
   name: "filter",
@@ -118,51 +117,50 @@ export const filter = createSlice({
       state.hasElectricity = undefined;
     },
     setTypeVilla: (state) => {
-      state.type = "villa"
+      state.type = "villa";
     },
     setTypeCottage: (state) => {
-      state.type = "cottage"
+      state.type = "cottage";
     },
     setTypeHotel: (state) => {
-      state.type = "hotel"
+      state.type = "hotel";
     },
     setTypeEcoTourism: (state) => {
-      state.type = "ecoTourism"
+      state.type = "ecoTourism";
     },
     setTypeReset: (state) => {
-      state.type = ""
+      state.type = "";
     },
     setCityReset: (state) => {
-      state.city = ""
+      state.city = "";
     },
     setCityMasal: (state) => {
-      state.city = "ماسال"
+      state.city = "ماسال";
     },
     setCityQeshm: (state) => {
-      state.city = "قشم"
+      state.city = "قشم";
     },
     setCityRasht: (state) => {
-      state.city = "رشت"
+      state.city = "رشت";
     },
     setCityRamsar: (state) => {
-      state.city = "رامسر"
+      state.city = "رامسر";
     },
     setCityKish: (state) => {
-      state.city = "کیش"
+      state.city = "کیش";
     },
     sortReset: (state) => {
-      state.sort = ""
+      state.sort = "";
     },
     sortExpensive: (state) => {
-      state.sort = "expensive"
+      state.sort = "expensive";
     },
     sortRate: (state) => {
-      state.sort = "rate"
+      state.sort = "rate";
     },
     sortCheap: (state) => {
-      state.sort = "cheap"
+      state.sort = "cheap";
     },
-    
   },
 });
 
@@ -195,20 +193,20 @@ export const {
   gasReset,
   electricity,
   electricityReset,
-  setTypeVilla, 
-  setTypeCottage, 
-  setTypeHotel, 
-  setTypeEcoTourism, 
-  setTypeReset, 
-  setCityReset, 
-  setCityMasal, 
-  setCityQeshm, 
-  setCityRasht, 
-  setCityRamsar, 
-  setCityKish, 
-  sortReset, 
-  sortExpensive, 
-  sortRate, 
-  sortCheap
+  setTypeVilla,
+  setTypeCottage,
+  setTypeHotel,
+  setTypeEcoTourism,
+  setTypeReset,
+  setCityReset,
+  setCityMasal,
+  setCityQeshm,
+  setCityRasht,
+  setCityRamsar,
+  setCityKish,
+  sortReset,
+  sortExpensive,
+  sortRate,
+  sortCheap,
 } = filter.actions;
 export default filter.reducer;

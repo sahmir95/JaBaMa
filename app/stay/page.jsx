@@ -18,8 +18,7 @@ import { ImmediateReservation } from "@/components/detailCondition/ImmediateRese
 import { BedroomCondition } from "@/components/detailCondition/BedroomCondition";
 import { BathroomCondition } from "@/components/detailCondition/BathroomCondition";
 import toFarsiNumber from "@/utils/toFaNumber";
-import { comment } from "postcss";
-import {data} from "autoprefixer";
+import MenuPrice from "@/components/menu/MenuPrice";
 
 
 export default function Detail() {
@@ -64,7 +63,8 @@ export default function Detail() {
     }
 
     return (
-        <div className="w-full flex justify-center items-center flex-col">
+        <>
+        {data && (<div className="w-full flex justify-center items-center flex-col">
             <div className="w-full inline relative lg:hidden">
                 <SwiperDetailPage images={data.images} id={data.id}/>
             </div>
@@ -80,8 +80,8 @@ export default function Detail() {
                                          src="https://img.icons8.com/material-rounded/24/FAB005/star--v1.png"
                                          alt="star--v1"/>
                                     <div
-                                        className="font-medium text-[0.7rem] lg:text-[0.9rem]">{toFarsiNumber(data.rate)}</div>
-                                    <a className="underline font-medium text-main-slate-gray lg:text-[0.85rem]">({toFarsiNumber(comment.length)} نظر
+                                        className="font-medium text-[0.7rem] lg:text-[0.9rem]">{data.rate && toFarsiNumber(data.rate)}</div>
+                                    <a className="underline font-medium text-main-slate-gray lg:text-[0.85rem]">({data?.comment && toFarsiNumber(data?.comment.length)} نظر
                                         ثبت شده)</a>
                                 </div>
                                 <p className="text-lg lg:text-[0.85rem]">.</p>
@@ -147,9 +147,9 @@ export default function Detail() {
                                     <div className="w-full">
                                         <p className="font-bold text-[0.9rem]">ظرفیت</p>
                                         <p className="font-light text-[0.75rem]">
-                                            ظرفیت تا {toFarsiNumber(data.capacity.base + data.capacity.extra)} (
-                                            {toFarsiNumber(data.capacity.base)} نفر پایه +
-                                            تا {toFarsiNumber(data.capacity.extra)} نفر
+                                            ظرفیت تا {data.capacity && toFarsiNumber(data.capacity.base + data.capacity.extra)} (
+                                            {data.capacity && toFarsiNumber(data.capacity.base)} نفر پایه +
+                                            تا {data.capacity && toFarsiNumber(data.capacity.extra)} نفر
                                             اضافه)
                                         </p>
                                     </div>
@@ -199,8 +199,8 @@ export default function Detail() {
                                     </p>
                                     <p className="font-light text-[0.75rem] text-[0.7rem] lg:mt-[4px]">
                                         قیمت برای هر نفر اضافه به ازای هر شب :
-                                        <strong className="font-bold text-[0.75rem] text-[0.7rem]">
-                                            {toFarsiNumber(data.price.extra)} هزار تومان
+                                        <strong className="font-bold text-[0.75rem]">
+                                            {data.price && toFarsiNumber(data.price.extra)} هزار تومان
                                         </strong>
                                     </p>
                                 </div>
@@ -295,6 +295,8 @@ export default function Detail() {
                     </div>
                 </div>
             </div>
-        </div>
+        </div>)}
+            <MenuPrice data={data}/>
+        </>
     );
 }
