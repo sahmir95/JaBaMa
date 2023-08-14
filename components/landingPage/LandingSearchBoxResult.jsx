@@ -8,7 +8,7 @@ const LandingSearchBoxResult = ({ city, value, type, searchCity }) => {
       <SearchHelper title="محبوب‌ترین مقصدها" data={city} />
       {value && (
         <div>
-          {type != "" && searchCity == "" && (
+          {type !== "" && searchCity === "" && (
             <p className="flex flex-col gap-2">
               {city.map((items) => {
                 return (
@@ -21,13 +21,13 @@ const LandingSearchBoxResult = ({ city, value, type, searchCity }) => {
               })}
             </p>
           )}
-          {searchCity != "" && type == "" && (
+          {searchCity !== "" && type === "" && (
             <SearchResultMobile
               icon="/images/location.png"
               searchCity={searchCity}
             />
           )}
-          {searchCity != "" && type != "" && (
+          {searchCity !== "" && type !== "" && (
             <p>
               <SearchResultMobile
                 icon="/images/location.png"

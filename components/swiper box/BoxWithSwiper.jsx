@@ -71,7 +71,7 @@ export default function BoxWithSwiper({
   };
 
   return (
-    <div className="sm:w-full sm:mt-8  sm:pr-5 lg:max-w-[1400px] lg:w-full  lg:mx-auto  flex flex-col justify-start items-start rounded">
+    <div className="sm:w-full sm:mt-8  sm:pr-5 lg:max-w-[1400px] lg:w-full  lg:mx-auto relative flex flex-col justify-start items-start rounded z-10">
       <div className="w-full flex items-center md:justify-between">
         <p className="flex flex-col gap-3 pb-4 sm:w-2/3 font-light sm:font-medium  sm:text-lg  lg:text-base ">
           <span>{title}</span>

@@ -5,7 +5,6 @@ import styles from "./headerPages.module.css";
 import LandingSearchBoxResult from "@/components/landingPage/LandingSearchBoxResult";
 import { useDispatch } from "react-redux";
 import { setCityReset, setTypeReset } from "@/redux/featchers/filterSlice";
-
 import { twMerge } from "tailwind-merge";
 
 const HeaderPagesSearch = ({
@@ -100,52 +99,31 @@ const HeaderPagesSearch = ({
   };
 
   return (
-    <div
-      ref={searchBoxRef}
-      onClick={handleDivClick}
-      onBlur={handleBoxBlur}
-      className={twMerge(`flex items-center justify-center border border-[#ddd] rounded-[10px] py-[14px] px-5 mr-[200px] ${styles.searchShadow}`, classNames.body)}
-    >
-      <RiSearchLine className="text-main-light-orange ml-2" />
-      <input
-        className={twMerge("font-medium text-sm w-[260px] outline-none border-none", classNames.inner)}
-        type="text"
-        placeholder="جستجو شهر، استان یا اقامتگاه"
-        value={value}
-        onChange={(e) => setValue(e.target.value)}
-      />
-      {showBox && (
-        <div
+      <div
           ref={searchBoxRef}
           onClick={handleDivClick}
           onBlur={handleBoxBlur}
-          className={twMerge(`flex items-center justify-center border border-[#ddd] rounded-[10px] py-[14px] px-5 mr-[200px] ${styles.searchShadow}`, classNames.body)}
-        >
-          <RiSearchLine className="text-main-light-orange ml-2" />
-          <input
-            className={twMerge("font-medium text-sm w-[260px] outline-none border-none", classNames.inner)}
+          className={`flex items-center justify-center border border-[#ddd] rounded-[10px] py-[14px] px-5 sm:w-[85%] lg:w-fit lg:mr-[200px] ${styles.searchShadow}`}>
+        <RiSearchLine className="text-main-light-orange ml-2"/>
+        <input
+            className="font-medium text-sm w-[260px] outline-none border-none"
             type="text"
             placeholder="جستجو شهر، استان یا اقامتگاه"
             value={value}
             onChange={(e) => setValue(e.target.value)}
-          />
-          {showBox && (
-            <div
-              ref={boxRef}
-              className="absolute p-4 bg-main-white w-[410px] mx-auto rounded-lg mt-4 left-1/2 top-[70px] transform translate-x-[-50%]"
-            >
+        />
+        {showBox && (
+            <div ref={boxRef}
+                 className="absolute p-4 bg-main-white w-[410px] mx-auto rounded-lg mt-4 left-1/2 top-[70px] transform translate-x-[-50%]">
               <LandingSearchBoxResult
-                value={value}
-                type={type}
-                searchCity={searchCity}
-                city={city}
-                data={data}
+                  city={city}
+                  value={value}
+                  type={type}
+                  searchCity={searchCity}
               />
             </div>
-          )}
-        </div>
-      )}
-    </div>
+        )}
+      </div>
   );
 };
 
