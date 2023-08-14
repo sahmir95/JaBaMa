@@ -6,15 +6,18 @@ export const CommentsComponent = ({comments}) => {
 
     const [openComment, setOpenComment] = useState(false);
 
-    const handleClick = () => {
+    const handleOpen = () => {
         setOpenComment(true);
+    };
+
+    const handleClose = () => {
+        setOpenComment(false);
     };
 
     return (
         <div className="w-full mt-[32px]">
-            {!openComment ? (
                 <div className="w-full">
-                    <div className="w-full flex justify-start items-center lg: ">
+                    <div className="w-full flex justify-start items-center">
                         <div className="w-[200px] font-bold text-[1.2rem] lg:w-[140px]">دیدگاه کاربران</div>
                         <div className="w-full font-light text-[0.9]"> ({toFarsiNumber(comments.length)} دیدگاه)</div>
                     </div>
@@ -34,7 +37,6 @@ export const CommentsComponent = ({comments}) => {
                                             <div className="w-full font-medium text-[0.75rem]">{item.commenter}</div>
                                             <div className="w-full font-light text-[0.6rem]">{item.dateComment}</div>
                                         </div>
-
                                     </div>
                                     <div className="w-full text-[0.75rem] font-light ">{item.comment}</div>
                                 </div>
@@ -42,20 +44,15 @@ export const CommentsComponent = ({comments}) => {
                         })}
                     </div>
                     <div className="w-full">
-                        <button onClick={handleClick}
+                        <button onClick={handleOpen}
                                 className="w-full px-[20px] py-[8px] mt-[20px] flex justify-center items-center cursor-pointer shadow-none
                                 border-solid border-[1px] rounded-[8px] text-sm text-center font-light lg:w-[250px]">
                             <div className="w-[150px] font-bold text-[0.9rem] lg:text-[0.7rem] lg:w-[116px]">مشاهده همه بازخوردها</div>
                             <div className="font-light text-[0.9] lg:text-[0.7rem]"> ({toFarsiNumber(comments.length)} مورد)</div>
                         </button>
                     </div>
-
                 </div>
-
-
-            ) : (
-                <WindowComment comments={comments} openComment={openComment} onclose={() => setOpenComment(false)}/>
-            )}
+            {openComment && <WindowComment  comments={comments} onClose={handleClose}/>}
         </div>
 
 
