@@ -39,7 +39,7 @@ const Favplc = ({ data, title }) => {
   return (
     <div
       ref={withDiv}
-      className="sm:w-full lg:mt-[100px] lg:max-w-[1400px] lg:w-full  lg:mx-auto flex flex-col justify-center items-center pt-10 rounded z-10"
+      className="sm:w-full lg:mt-[100px] lg:max-w-[1400px] lg:w-full  lg:mx-auto flex flex-col justify-center items-center pt-10 rounded relative z-10"
     >
       <div className="w-full flex items-center md:justify-between">
         <p className="flex sm:pr-5 flex-col gap-3 pb-4 sm:w-2/3 font-light sm:font-medium  sm:text-lg  lg:text-base ">
