@@ -2,6 +2,7 @@
 import { WindowFacility } from "@/components/windowFacility/WindowFacility";
 import { useState } from "react";
 import clsx from "clsx";
+import {WindowContent} from "@/components/windowContent/WindowContent";
 
 export const Facility = ({ facility, type }) => {
   const [otherFacilities, setOtherFacility] = useState(false);
